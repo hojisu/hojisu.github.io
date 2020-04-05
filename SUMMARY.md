@@ -3,7 +3,8 @@
 * [Introduction](README.md)
 
 - [Data Science](posts/datascience/README.md)
-    - [기초 수학](posts/datascience/basicmath/README.md)
-        - [데이터와 행렬](posts/datascience/basicmath/data-and-matrix.md)
-    - [회귀분석과 시계열 분석](posts/datascience/regressionandtimeseries/README.md)
-        - [데이터 분석의 소개](posts/datascience/regressionandtimeseries/dataintro.md)
+    - [Basic Math](posts/datascience/basicmath/README.md)
+        - [Data & Matrix](posts/datascience/basicmath/data-and-matrix.md)
+    - [Regression & Time-series Analysis](posts/datascience/regressionandtimeseries/README.md)
+        - [Analysis Intro](posts/datascience/regressionandtimeseries/dataintro.md)
+- [Computer Science](posts/computerscience/README.md)
