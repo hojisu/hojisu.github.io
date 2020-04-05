@@ -1,4 +1,6 @@
-#선형 연립방정식(system of linear equations)
+<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+# 선형 연립방정식(system of linear equations)
 
 ### Summary
 
