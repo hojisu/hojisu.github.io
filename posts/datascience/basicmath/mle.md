@@ -1,0 +1,298 @@
+# 최대 가능도 모수 추정
+
+### Summary
+
+- 가능도함수는 확률밀도함수에서  x를 상수로  $$\theta$$를 변수로 보는 함수이다. 
+
+- 최대 가능도 추정(MLF: Maximun Likelihood Estimation) 은 주어진 표본에 대해 가능도를 가장 크게 해주는 모수 $$\theta$$ 를 찾는 방법이다. 
+- 로그 가능도 함수를 사용하는 경우가 많다 그 이유는 로그 변환에 의해서 최대값의 위치가 변치 않으며 반복시행으로 인한 복수 표본 데이터인 경우 결합 확률밀도함수가 동일한 함수의 곱으로 나타나는 경우가 많은데 이때 로그 변환에 의해 곱셈이 덧셈이 되어 계산이 단순해진다.
+
+_____________________________________
+
+### 가능도 함수(likelihood function) 
+
+$$x$$ 는 확률분포가 가질 수 있는 실수값 (카테고리 분포면 벡터, 그렇지 않으면 스칼라 값)이다. 
+$$
+p(x;\theta)
+$$
+$$\theta$$ 는 확률밀도함수의 모수이다.  (베르누이 확률분포면 $$\theta = \mu$$)
+
+함수의 관점에서 확률밀도함수는 모수 $$\theta$$ 는 고정된 값인 상수(constant) 계수이고 $$x$$ 를 변수(variable)로 가정하는 것이 일반적이다. 즉 **확률분포는 미리 정해져 있고 여러가지(변할 수 있는) 표본 데이터 $$x$$ 값이 나올 수 있는데 이 각각의 값이 나올 가능성의 분포를 그린 것이다.** 
+
+**모수 추정 문제** 에서는 $$x$$ 즉, 이미 실현된 표본값은 알고 있지만 모수 $$\theta$$ 를 모른다. **확률밀도함수에서 $$x$$ 를 이미 결정되어 버린 상수 계수로 놓고 $$\theta$$ 를 찾아내야 할 변수로 생각**한다.
+
+**가능도 함수(likelihood function)** 는 확률밀도함수에서 모수를 변수로 보는 함수이다.
+$$
+{L}(\theta;x) = p(x ; \theta)
+$$
+가능도 함수를 수식으로 나타내면 수식 자체는 확률밀도함수의 수식과 같다. 하지만 가능도 함수는 확률분포함수가 아니다. **확률밀도함수는 가능한 모든 표본값 x에 대해 적분하면 전체 면적이 1이 되지만, 가능도 함수는 가능한 모든 모수값 $$\theta$$ 에 대해 적분하였을 때 1이 된다는 보장이 없다.* **
+
+_____________
+
+####가능도 함수와 확률밀도함수
+
+1. 확률밀도함수 $$f(x;\theta)$$ 
+   - $$\theta $$ 값을 이미 알고 있다
+   - $$\theta $$ 는 상수, $$x$$ 는 변수
+   - $$\theta $$ 가 이미 정해져 있는 상황에서의 $$x$$ 값의 상대적 확률
+   - 적분하면 전체 면적은 항상 1
+2. 가능도함수 $$L(\theta) = p(x|\theta)$$
+   - $$x$$ 가 이미 발생. 값을 이미 알고 있다.
+   - $$x$$ 는 상수, $$\theta$$ 는 변수
+   - $$x$$ 가 이미 정해져 있는 상황에서의 $$\theta$$ 값의 상대적 확률
+   - 적분하면 전체 면적이 1이 아닐 수 있다. 
+
+_____________
+
+### 최대 가능도 추정
+
+**최대 가능도 추정(MLF: Maximun Likelihood Estimation)** 은 주어진 표본에 대해 가능도를 가장 크게 해주는 모수 $$\theta$$ 를 찾는 방법이다.  가능도 함수는 확률값을 가진다.
+$$
+\hat\theta_{\text{ML}} = \arg \max_{\theta} L(\theta; x)
+$$
+
+### 복수의 표본 데이터가 있는 경우의 가능도 함수
+
+일반적으로는 추정을 위해 확보하고 있는 확률변수 표본의 수가 하나가 아니라 복수개$${x_1, x_2, ..., x_N}$$ 이므로 가능도도 복수 표본값에 대한 결합확률밀도 $$p_{X_1, X_2, \cdots, X_N}(x_1, x_2, \cdots, x_N ; \theta)$$ 에서 구해야 한다. 표본 데이터 $${x_1, x_2, ..., x_N}$$ 는 같은 확률분포에서 나온 독립적인 값들이므로 결합 확률밀도함수는 다음처럼 곱으로 표현된다. 반복시행은 독립이 된다. 
+
+$$x_i$$ 는 상수로 다른 값일 수도 있다. $$\theta$$ 는 같은 확률변수 박스에서 나온 $$\theta$$ 이다. 
+$$
+L(\theta; x_1, \ldots, x_N) 
+= p(x_1, \ldots, x_N; \theta)
+= \prod_{i=1}^N p(x_i; \theta)
+$$
+
+### 로그가능도 함수
+
+실제로 최대 가능도 추정 방법을 사용하려면 가능도가 최대가 되는 $$\theta$$를 수치적으로 계산해야 한다. 즉 수치적 최적화(numerical optimization) 문제가 된다.
+$$
+\hat\theta_{\text{ML}} = \arg \max_{\theta} L(\theta; \{x_i\})
+$$
+
+로그 변환한 로그 가능도 함수 $$𝐿𝐿=log𝐿$$를 사용하는 경우가 많다.
+$$
+\hat\theta_{\text{ML}} = \arg \max_{\theta} \log{L}(\theta; \{x_i\})
+$$
+
+사용하는 이유는 로그 변환에 의해서 최대값의 위치가 변치 않으며 반복시행으로 인한 복수 표본 데이터인 경우 결합 확률밀도함수가 동일한 함수의 곱으로 나타나는 경우가 많은데 이때 로그 변환에 의해 곱셈이 덧셈이 되어 계산이 단순해진다.
+
+#### 베르누이 확률변수의 모수 추정
+
+모수가 $$\mu$$ 인 베르누이 분포의 확률질량함수
+$$
+p(x ; \mu ) = \text{Bern}(x ; \mu ) = \mu^x (1 - \mu)^{1-x}
+$$
+
+N 번의 반복 시행으로 표본 데이터가 $$x_1, … , x_N$$ 가 있는 경우에는 모두 독립이므로 전체 확률질량함수는 각각의 확률질량함수의 곱과 같다.
+$$
+L(\mu ; x_1, \cdots, x_N) = p(x_1, \cdots, x_N;\mu) = \prod_{i=1}^N  \mu^{x_i} (1 - \mu)^{1-x_i}
+$$
+
+미분을 쉽게 하기 위해 로그 변환을 한 로그 가능도
+$$
+\begin{aligned}
+\log L 
+&= \log p(x_1, \cdots, x_N;\mu)  \\
+&= \sum_{i=1}^N \big\{ {x_i} \log\mu + (1-x_i)\log(1 - \mu) \big\} \\
+&=  \sum_{i=1}^N {x_i} \log\mu +  \left( N-\sum_{i=1}^N x_i \right) \log( 1 - \mu ) \\
+\end{aligned}
+$$
+
+$$x = 1$$ (성공) 또는  $$x = 0$$ (실패) 이므로 성공 횟수와 실패 횟수를 다음과 같이 표기하도록 한다. 
+$$
+N_1 = \sum_{i=1}^N {x_i}, \;\;\; N_0 = N - \sum_{i=1}^N {x_i}
+$$
+
+로그 가능도는 다음과 같아진다.
+$$
+\begin{aligned}
+\log L 
+&=  N_1 \log\mu  + N_0 \log(1 - \mu) \\
+\end{aligned}
+$$
+
+이 목적함수를 모수로 미분한 값이 0이 되게 하는 모수 값을 구하면
+$$
+\begin{aligned}
+\dfrac{\partial \log L}{\partial \mu} 
+&= \dfrac{\partial}{\partial \mu} \big\{ N_1 \log\mu  + N_0 \log(1 - \mu)  \big\} = 0\\
+&= \dfrac{N_1}{\mu}  - \dfrac{N_0}{1-\mu} = 0 \\
+\end{aligned} \\
+\dfrac{1-\mu}{\mu} = \dfrac{N_0}{N_1} = \dfrac{N-N_1}{N_1} \\
+\dfrac{1}{\mu} - 1 = \dfrac{N}{N_1} - 1 \\
+\mu= \dfrac{N_1}{N}
+$$
+
+#### 카테고리 분포의 모수 추정
+
+모수가 $$\mu = (\mu_1, … , \mu_K)$$ 인 카테고리 분포의 확률질량함수
+$$
+p(x ; \mu_1, \cdots, \mu_K ) = \text{Cat}(x ; \mu_1, \cdots, \mu_K) = \prod_{k=1}^K \mu_k^{x_k} \\
+\sum_{k=1}^K \mu_k = 1
+$$
+
+N 번의 반복 시행으로 표본 데이터가 $$x_1, … , x_N$$ 가 있는 경우에는 모두 독립이므로 전체 확률질량함수는 각각의 확률질량함수의 곱과 같다.
+$$
+L(\mu_1, \cdots, \mu_K ; x_1, \cdots, x_i, \cdots, x_N) = p(x_1, \cdots, x_i, \cdots, x_N;\mu_1, \cdots, \mu_K) = \prod_{i=1}^N \prod_{k=1}^K \mu_k^{x_{i,k}} \\
+$$
+
+위 식에서 $$x_{i, k}$$ 는 $$i$$ 번째 시행 결과인 $$x_i$$ 의 $$k$$ 번째 원소를 뜻한다. 
+
+미분을 쉽게 하기 위해 로그 변환을 한 로그 가능도
+$$
+\begin{aligned}
+\log L 
+&= \log p(x_1, \cdots, x_N;\mu_1, \cdots, \mu_K)  \\
+&= \sum_{i=1}^N \sum_{k=1}^K  \left( {x_{i,k}} \log\mu_k  \right) \\
+&= \sum_{k=1}^K  \sum_{i=1}^N  \left(  \log\mu_k \cdot {x_{i,k}}\right) \\
+&= \sum_{k=1}^K \left( \log\mu_k \left( \sum_{i=1}^N {x_{i,k}}   \right)  \right)
+\end{aligned}
+$$
+
+$$x_k $$ 가 나온 횟수를 $$N_k$$ 이라고 표기하자.
+$$
+N_k = \sum_{i=1}^N {x_{i,k}}
+$$
+
+로그 가능도가 다음과 같아지며 이 함수를 최대화하는 모수의 값을 찾아야 한다.
+$$
+\begin{aligned}
+\log L 
+&= \sum_{k=1}^K \left( \log\mu_k  \cdot N_k  \right)
+\end{aligned}
+$$
+
+모수는 다음과 같은 제한 조건을 만족해야만 한다.
+$$
+\sum_{k=1}^K \mu_k = 1
+$$
+
+라그랑주 승수법을 사용하여 로그 가능도에 제한 조건을 추가한 새로운 목적함수를 생각할 수 있다.
+$$
+J = \sum_{k=1}^K \log\mu_k N_k  + \lambda \left(1- \sum_{k=1}^K \mu_k \right)
+$$
+
+$$
+\begin{aligned}
+\dfrac{\partial J}{\partial \mu_k} 
+&= \dfrac{\partial}{\partial \mu_k} \left\{ \sum_{k=1}^K \log\mu_k N_k  + \lambda \left(1- \sum_{k=1}^K \mu_k\right)  \right\} = 0 & \;\;\; (k=1, \cdots, K) \\
+\dfrac{\partial J}{\partial \lambda} 
+&= \dfrac{\partial}{\partial \lambda} \left\{ \sum_{k=1}^K \log\mu_k N_k  + \lambda \left(1- \sum_{k=1}^K \mu_k \right)  \right\} = 0 & \\
+\end{aligned}
+$$
+
+다음과 같이 모수를 추정을 한다.
+$$
+\dfrac{N_1}{\mu_1}  = \dfrac{N_2}{\mu_2} = \cdots = \dfrac{N_K}{\mu_K} = \lambda \\
+N_k = \lambda \mu_k \\
+\sum_{k=1}^K N_k = \lambda \sum_{k=1}^K \mu_k  = \lambda = N \\
+\mu_k = \dfrac{N_k}{N}
+$$
+
+#### 정규 분포의 모수 추정
+
+가우시안 정규 분포의 확률밀도함수는 다음과 같다. 여기에서 $$𝑥$$는 스칼라 값이다.
+$$
+p(x ; \theta ) = \mathcal{N}(x ; \mu, \sigma^2) = \dfrac{1}{\sqrt{2\pi\sigma^2}} \exp \left(-\dfrac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+
+N 번의 반복 시행으로 표본 데이터가 $$x_1, … , x_N$$ 가 있는 경우에는 모두 독립이므로 전체 확률질량함수는 각각의 확률질량함수의 곱과 같다.
+$$
+L(\mu;x_1, \cdots, x_N) = p(x_1, \cdots, x_N;\mu) = \prod_{i=1}^N  \dfrac{1}{\sqrt{2\pi\sigma^2}} \exp \left(-\dfrac{(x_i-\mu)^2}{2\sigma^2}\right)
+$$
+
+미분을 쉽게 하기 위해 로그 변환을 한 로그 가능도를 구하면 다음과 같다. 여기에서 상수 부분은 모아서 $$𝐶$$ 로 표기하였다.
+$$
+\begin{aligned}
+\log L 
+&= \log p(x_1, \cdots, x_N;\mu)  \\
+&= \sum_{i=1}^N \left\{ -\dfrac{1}{2}\log(2\pi\sigma^2) - \dfrac{(x_i-\mu)^2}{2\sigma^2} \right\} \\
+&= -\dfrac{N}{2} \log(2\pi\sigma^2) - \dfrac{1}{2\sigma^2}\sum_{i=1}^N (x_i-\mu)^2
+\end{aligned}
+$$
+
+이 확률밀도함수가 최대가 되는 모수 값을 찾기 위해서는 각각의 모수로 미분한 값이 0이 되어야 한다.
+$$
+\begin{aligned}
+\dfrac{\partial \log L}{\partial \mu} 
+&= \dfrac{\partial}{\partial \mu} \left\{ \dfrac{N}{2} \log(2\pi\sigma^2) + \dfrac{1}{2\sigma^2}\sum_{i=1}^N (x_i-\mu)^2  \right\} = 0 \\
+\dfrac{\partial \log L}{\partial \sigma^2} 
+&= \dfrac{\partial}{\partial \sigma^2} \left\{ \dfrac{N}{2} \log(2\pi\sigma^2) + \dfrac{1}{2\sigma^2}\sum_{i=1}^N (x_i-\mu)^2 \right\} = 0\\
+\end{aligned}
+$$
+
+이 두 식을 풀면 주어진 데이터 표본에 대해 모수의 가능도를 가장 크게 하는 모수의 값을 구할 수 있다. 먼저 $$𝜇$$에 대한 미분을 정리하면 다음과 같다.
+$$
+\dfrac{\partial \log L}{\partial \mu}  = \dfrac{2}{2\sigma^2}\sum_{i=1}^N (x_i-\mu) = 0 \\
+N \mu = \sum_{i=1}^N x_i \\
+\mu = \dfrac{1}{N}\sum_{i=1}^N x_i = \bar{x}
+$$
+
+다음으로 $$𝜎^2$$에 대한 미분을 정리하면 다음과 같다.
+$$
+\dfrac{\partial \log L}{\partial \sigma^2}  = \dfrac{N}{2\sigma^2} -  \dfrac{1}{2(\sigma^2)^2}\sum_{i=1}^N (x_i-\mu)^2  = 0 \\
+\sigma^2  =  \dfrac{1}{N}\sum_{i=1}^N (x_i-\mu)^2 = \dfrac{1}{N}\sum_{i=1}^N (x_i-\bar{x})^2 = s^2
+$$
+
+#### 다변수 정규 분포의 모수 추정
+
+다변수 가우시안 정규 분포의 확률밀도함수는 다음과 같다. 여기에서 $$𝑥$$는 $$𝑀$$차원 벡터이고 기댓값도 $$𝑀$$차원 벡터, 공분산 행렬은 $$𝑀×𝑀$$ 행렬이다. 지금까지와 마찬가지로 공분산 행렬 $$Σ$$가 양의 정부호(positive definite)라고 가정한다. 따라서 정밀도 행렬$$ Σ^{−1}=Λ$$가 존재할 수 있다.
+$$
+p(x ; \theta ) = \mathcal{N}(x ; \mu, \Sigma) = \dfrac{1}{(2\pi)^{M/2} |\Sigma|^{1/2}} \exp \left( -\dfrac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu) \right)
+$$
+
+N 번의 반복 시행으로 표본 데이터가 $$x_1, … , x_N$$ 가 있는 경우에는 모두 독립이므로 전체 확률질량함수는 각각의 확률질량함수의 곱과 같다.
+$$
+L(\mu;x_1, \cdots, x_N) = p(x_1, \cdots, x_N;\mu) = \prod_{i=1}^N  \dfrac{1}{(2\pi)^{M/2} |\Sigma|^{1/2}} \exp \left( -\dfrac{1}{2} (x_i-\mu)^T \Sigma^{-1} (x_i-\mu) \right)
+$$
+
+미분을 쉽게 하기 위해 로그 변환을 한 로그 가능도를 구하면 다음과 같다. 여기에서 상수 부분은 모아서 𝐶로 표기하였다.
+$$
+\begin{aligned}
+\log L 
+&= \log p(x_1, \cdots, x_N;\mu)  \\
+&= \sum_{i=1}^N \left\{ -\log((2\pi)^{M/2} |\Sigma|^{1/2}) - \dfrac{1}{2} (x_i-\mu)^T \Sigma^{-1} (x_i-\mu) \right\} \\
+&= C -\dfrac{N}{2} \log|\Sigma| - \dfrac{1}{2} \sum_i^N (x_i-\mu)^T \Sigma^{-1} (x_i-\mu) 
+\end{aligned}
+$$
+
+여기에서 기호를 단순하게 하기 위해 정밀도 행렬 $$\Sigma^{-1}$$ 를 $$\Lambda$$로 표시하자.
+$$
+\Lambda = \Sigma^{-1} \\
+\begin{aligned}
+\log L 
+&= C + \dfrac{N}{2} \log|\Lambda| - \dfrac{1}{2} \sum_i^N(x_i-\mu)^T \Lambda (x_i-\mu) 
+\end{aligned}
+$$
+
+이 확률밀도함수가 최대가 되는 모수 값을 찾기 위해서는 각각의 모수로 미분한 값이 0이 되어야 한다.
+$$
+\begin{aligned}
+\dfrac{\partial \log L}{\partial \mu} 
+&= -  \dfrac{\partial}{\partial \mu}  \sum_{i=1}^N (x_i-\mu)^T \Lambda (x_i-\mu) \\
+&= - \sum_{i=1}^N 2\Lambda (x_i - \mu) \\
+&= -2\Lambda \sum_{i=1}^N  (x_i - \mu) \\
+&= 0 
+\end{aligned} \\
+\begin{aligned}
+\dfrac{\partial \log L}{\partial \Lambda} 
+&= \dfrac{\partial}{\partial \Lambda} \dfrac{N}{2} \log|\Lambda| - \dfrac{\partial}{\partial \Lambda}  \dfrac{1}{2} \sum_{i=1}^N  (x_i-\mu)^T\Lambda (x_i-\mu)\\
+&= \dfrac{\partial}{\partial \Lambda} \dfrac{N}{2} \log|\Lambda| - \dfrac{\partial}{\partial \Lambda}  \dfrac{1}{2} \sum_{i=1}^N \text{tr}( (x_i-\mu)^T\Lambda (x_i-\mu)) \\
+&= \dfrac{\partial}{\partial \Lambda} \dfrac{N}{2} \log|\Lambda| - \dfrac{\partial}{\partial \Lambda}  \dfrac{1}{2} \sum_{i=1}^N \text{tr}( (x_i-\mu)(x_i-\mu)^T\Lambda) \\
+&= 0  
+\end{aligned}
+$$
+
+이 두 식을 풀면 주어진 데이터 표본에 대해 모수의 가능도를 가장 크게 하는 모수의 값을 구할 수 있다. 첫번째 식을 풀어 모수 $$𝜇$$ 벡터를 구한다.
+$$
+\dfrac{\partial \log L}{\partial \mu} = -2\Lambda \sum_{i=1}^N  (x_i - \mu) = 0 \\
+\mu = \dfrac{1}{N}\sum_{i=1}^N x_i = \bar{x}
+$$
+
+두번째 식을 풀어 모수 $$\Sigma$$ 행렬을 구하면 다음과 같다.
+$$
+\dfrac{\partial \log L}{\partial \Lambda}  = \dfrac{N}{2} \Lambda^{-T} - \dfrac{1}{2}\sum_{i=1}^N ((x_i-\mu)(x_i-\mu)^T)^T \\
+\Sigma = \dfrac{1}{N}\sum_{i=1}^N (x_i-\bar{x})(x_i-\bar{x})^T
+$$
+
+**최대가능도 추정법에 의한 다변수정규분포의 기댓값은 표본평균벡터와 같고 분산은 표본공분산행렬과 같다. 
