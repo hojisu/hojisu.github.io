@@ -1,3 +1,5 @@
+<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
 # 좌표와 변환
 
 ### Summary

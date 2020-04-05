@@ -1,3 +1,5 @@
+<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
 # 고윳값 분해
 
 ### Summary

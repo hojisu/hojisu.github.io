@@ -1,4 +1,6 @@
-## 데이터와 행렬(용어정리)
+<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+# 데이터와 행렬(용어정리)
 
 ### 데이터와 행렬
 
