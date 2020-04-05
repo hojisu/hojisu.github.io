@@ -1,0 +1,776 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>함수 미분 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mle.html" />
+    
+    
+    <link rel="prev" href="0401function.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Data Science
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Basic Math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="0201data-and-matrix.html">
+            
+                <a href="0201data-and-matrix.html">
+            
+                    
+                    데이터와 행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="0202vector-and-matrix-calculation.html">
+            
+                <a href="0202vector-and-matrix-calculation.html">
+            
+                    
+                    벡터와 행렬의 연산
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="0203matrix-character.html">
+            
+                <a href="0203matrix-character.html">
+            
+                    
+                    행렬의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="0204system-of-linear-equations.html">
+            
+                <a href="0204system-of-linear-equations.html">
+            
+                    
+                    선형연립방정식과 역행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="0301linear-algebra.html">
+            
+                <a href="0301linear-algebra.html">
+            
+                    
+                    선형대수와 해석기하의 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="0302coordinate-transform.html">
+            
+                <a href="0302coordinate-transform.html">
+            
+                    
+                    좌표변환
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="0303eigenvalue-decomposition.html">
+            
+                <a href="0303eigenvalue-decomposition.html">
+            
+                    
+                    고윳값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="0304svd.html">
+            
+                <a href="0304svd.html">
+            
+                    
+                    특이값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="0305pca.html">
+            
+                <a href="0305pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.10" data-path="0401function.html">
+            
+                <a href="0401function.html">
+            
+                    
+                    함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.11" data-path="0402function-decomposition.html">
+            
+                <a href="0402function-decomposition.html">
+            
+                    
+                    함수 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.12" data-path="mle.html">
+            
+                <a href="mle.html">
+            
+                    
+                    최대가능도와 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../regressionandtimeseries/">
+            
+                <a href="../regressionandtimeseries/">
+            
+                    
+                    Regression & Time-series Analysis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../regressionandtimeseries/dataintro.html">
+            
+                <a href="../regressionandtimeseries/dataintro.html">
+            
+                    
+                    Analysis Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../computerscience/">
+            
+                <a href="../../computerscience/">
+            
+                    
+                    Computer Science
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >함수 미분</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xD568;&#xC218;-&#xBBF8;&#xBD84;">&#xD568;&#xC218; &#xBBF8;&#xBD84;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#&#xC131;&#xB2A5;&#xD568;&#xC218;-&#xBAA9;&#xC801;&#xD568;&#xC218;-&#xC190;&#xC2E4;&#xD568;&#xC218;-&#xBE44;&#xC6A9;&#xD568;&#xC218;">&#xC131;&#xB2A5;&#xD568;&#xC218;, &#xBAA9;&#xC801;&#xD568;&#xC218;, &#xC190;&#xC2E4;&#xD568;&#xC218;, &#xBE44;&#xC6A9;&#xD568;&#xC218;</a></li>
+<li><a href="#&#xCD5C;&#xC801;&#xD654;">&#xCD5C;&#xC801;&#xD654;</a></li>
+<li><a href="#&#xB370;&#xC774;&#xD130;-&#xBD84;&#xC11D;&#xC5D0;&#xC11C;-&#xBBF8;&#xBD84;&#xC774;-&#xD544;&#xC694;&#xD55C;-&#xC774;&#xC720;">&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC5D0;&#xC11C; &#xBBF8;&#xBD84;&#xC774; &#xD544;&#xC694;&#xD55C; &#xC774;&#xC720;</a></li>
+<li><a href="#&#xAE30;&#xC6B8;&#xAE30;">&#xAE30;&#xC6B8;&#xAE30;</a></li>
+<li><a href="#&#xC218;&#xCE58;&#xBBF8;&#xBD84;">&#xC218;&#xCE58;&#xBBF8;&#xBD84;</a></li>
+<li><a href="#&#xBBF8;&#xBD84;">&#xBBF8;&#xBD84;</a></li>
+<li><a href="#&#xBBF8;&#xBD84;&#xAC00;&#xB2A5;">&#xBBF8;&#xBD84;&#xAC00;&#xB2A5;</a></li>
+<li><a href="#&#xBBF8;&#xBD84;&#xACF5;&#xC2DD;">&#xBBF8;&#xBD84;&#xACF5;&#xC2DD;</a></li>
+<li><a href="#2&#xCC28;-&#xB3C4;&#xD568;&#xC218;">2&#xCC28; &#xB3C4;&#xD568;&#xC218;</a></li>
+<li><a href="#&#xD3B8;&#xBBF8;&#xBD84;">&#xD3B8;&#xBBF8;&#xBD84;</a></li>
+<li><a href="#&#xB2E4;&#xBCC0;&#xC218;-&#xD568;&#xC218;&#xC758;-&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;">&#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xC758; &#xC5F0;&#xC1C4;&#xBC95;&#xCE59;</a></li>
+<li><a href="#2&#xCC28;-&#xD3B8;&#xBBF8;&#xBD84;">2&#xCC28; &#xD3B8;&#xBBF8;&#xBD84;</a></li>
+<li><a href="#&#xD14C;&#xC77C;&#xB7EC;-&#xC804;&#xAC1C;">&#xD14C;&#xC77C;&#xB7EC; &#xC804;&#xAC1C;</a></li>
+<li><a href="#sympy">SymPy</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="summary">Summary</h3>
+<ul>
+<li>&#xCD5C;&#xC801;&#xD654;(optimization)&#xB294; &#xD568;&#xC218;&#xC758; &#xAC12;&#xC774; &#xAC00;&#xC7A5; &#xCEE4;&#xC9C0;&#xAC70;&#xB098; &#xAC00;&#xC7A5; &#xC791;&#xC544;&#xC9C0;&#xAC8C; &#xD558;&#xB294; &#xC785;&#xB825;&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC744; &#xCC3E;&#xC544;&#xB0B4;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</li>
+</ul>
+<hr>
+<h3 id="&#xC131;&#xB2A5;&#xD568;&#xC218;-&#xBAA9;&#xC801;&#xD568;&#xC218;-&#xC190;&#xC2E4;&#xD568;&#xC218;-&#xBE44;&#xC6A9;&#xD568;&#xC218;">&#xC131;&#xB2A5;&#xD568;&#xC218;, &#xBAA9;&#xC801;&#xD568;&#xC218;, &#xC190;&#xC2E4;&#xD568;&#xC218;, &#xBE44;&#xC6A9;&#xD568;&#xC218;</h3>
+<p>&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC758; &#xBAA9;&#xD45C;&#xB294; &#xAC00;&#xC7A5; &#xCD5C;&#xC801;&#xC758;(optimal) &#xBAA8;&#xD615;&#xC744; &#xAD6C;&#xD558;&#xB294; &#xC77C;&#xC774;&#xB2E4;. &#xC608;&#xCE21; &#xBAA8;&#xD615;&#xC740; &#xC785;&#xB825; &#xB370;&#xC774;&#xD130; &#xC774;&#xC678;&#xC5D0;&#xB3C4; &#xBAA8;&#xC218;(parameter) &#xB77C;&#xACE0; &#xD558;&#xB294; &#xC22B;&#xC790;&#xB97C; &#xAC00;&#xC9C4;&#xB2E4;. &#xC120;&#xD615; &#xC608;&#xCE21; &#xBAA8;&#xD615;&#xC5D0;&#xC11C;&#xB294; &#xC785;&#xB825; &#xB370;&#xC774;&#xD130;&#xC5D0; &#xB300;&#xD55C; &#xAC00;&#xC911;&#xCE58;(weight)&#xAC00; &#xBAA8;&#xC218;&#xAC00; &#xB41C;&#xB2E4;. &#xBAA8;&#xC218;&#xB97C; &#xC5B4;&#xB5A4; &#xC22B;&#xC790;&#xB85C; &#xC815;&#xD558;&#xB290;&#xB0D0;&#xC5D0; &#xB530;&#xB77C; &#xC608;&#xCE21; &#xBAA8;&#xD615;&#xC758; &#xC131;&#xB2A5;&#xC774; &#xB2EC;&#xB77C;&#xC9C4;&#xB2E4;. &#xBAA8;&#xC218;&#xB97C; &#xD568;&#xC218;&#xC758; &#xC785;&#xB825;&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;&#xBA74; &#xC131;&#xB2A5;&#xC740; &#xD568;&#xC218;&#xC758; &#xCD9C;&#xB825;&#xC774; &#xB41C;&#xB2E4;.</p>
+<p><strong>&#xC131;&#xB2A5;&#xD568;&#xC218;(performance function), &#xBAA9;&#xC801;&#xD568;&#xC218;(objective function)</strong> &#xB294; &#xBAA8;&#xC218;&#xB97C; &#xC785;&#xB825;&#xBC1B;&#xC544; &#xBAA8;&#xD615;&#xC758; &#xC131;&#xB2A5;&#xC744; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xD568;&#xC218;&#xC774;&#xB2E4;.  <script type="math/tex; ">x</script> &#xB370;&#xC774;&#xD130;&#xB97C; &#xBC1B;&#xC544; <script type="math/tex; ">y</script> &#xB370;&#xC774;&#xD130;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xC608;&#xCE21;&#xD568;&#xC218;&#xC640;&#xB294; &#xB2E4;&#xB978; &#xD568;&#xC218;&#xC774;&#xB2E4;.  &#xC131;&#xB2A5;&#xD568;&#xC218;&#xB098; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xC758; &#xAC12;&#xC740; &#xD074;&#xC218;&#xB85D; &#xC88B;&#xB2E4;.</p>
+<p><strong>&#xC190;&#xC2E4;&#xD568;&#xC218;(loss function), &#xBE44;&#xC6A9;&#xD568;&#xC218;(cost function)</strong> &#xB294; &#xBAA8;&#xC218;&#xB97C; &#xC785;&#xB825;&#xBC1B;&#xC544; &#xC624;&#xCC28; &#xD639;&#xC740; &#xC624;&#xB958;&#xC758; &#xD06C;&#xAE30;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xD568;&#xC218;&#xB97C; &#xAC00;&#xC7A5; &#xC791;&#xAC8C; &#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;. </p>
+<p><img src="../../../resource/img/image-20190417191320250.png" alt="image-20190417191320250"></p>
+<h3 id="&#xCD5C;&#xC801;&#xD654;">&#xCD5C;&#xC801;&#xD654;</h3>
+<p>&#xCD5C;&#xC801;&#xD654;(optimization)&#xB294; &#xD568;&#xC218;&#xC758; &#xAC12;&#xC774; &#xAC00;&#xC7A5; &#xCEE4;&#xC9C0;&#xAC70;&#xB098; &#xAC00;&#xC7A5; &#xC791;&#xC544;&#xC9C0;&#xAC8C; &#xD558;&#xB294; &#xC785;&#xB825;&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC744; &#xCC3E;&#xC544;&#xB0B4;&#xB294; &#xAC83;&#xC774;&#xB2E4;. </p>
+<h3 id="&#xB370;&#xC774;&#xD130;-&#xBD84;&#xC11D;&#xC5D0;&#xC11C;-&#xBBF8;&#xBD84;&#xC774;-&#xD544;&#xC694;&#xD55C;-&#xC774;&#xC720;">&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC5D0;&#xC11C; &#xBBF8;&#xBD84;&#xC774; &#xD544;&#xC694;&#xD55C; &#xC774;&#xC720;</h3>
+<p>&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC5D0;&#xC11C; &#xC6B0;&#xB9AC;&#xAC00; &#xCD5C;&#xC885;&#xC801;&#xC73C;&#xB85C; &#xC6D0;&#xD558;&#xB294; &#xAC83;&#xC740; &#xACB0;&#xAD6D; &#xCD5C;&#xC801;&#xD654;(optimization) &#xC791;&#xC5C5;&#xC774;&#xB2E4;.  &#xADF8;&#xB7F0;&#xB370; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654;&#xB294; &#xBBF8;&#xBD84;(differentiation)&#xC5C6;&#xC774;&#xB294; &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;. &#xC774;&#xAC83;&#xC774; &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC5D0;&#xC11C; &#xBBF8;&#xBD84;&#xC774; &#xD544;&#xC694;&#xD55C; &#xC774;&#xC720;&#xC774;&#xB2E4;.  &#xB525;&#xB7EC;&#xB2DD;&#xC6A9; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xC778; theano, tensorflow &#xB4F1;&#xC5D0;&#xC11C; &#xD30C;&#xC774;&#xC36C;&#xC774; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC2EC;&#xBCFC;&#xB9AD; &#xBBF8;&#xBD84; &#xC5F0;&#xC0B0; &#xD55C;&#xB2E4;.</p>
+<h3 id="&#xAE30;&#xC6B8;&#xAE30;">&#xAE30;&#xC6B8;&#xAE30;</h3>
+<p>&#xC6B0;&#xB9AC;&#xB294; &#xD568;&#xC218;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC00;&#xB294; &#xC785;&#xB825;&#xC774; &#xB2EC;&#xB77C;&#xC84C;&#xC744; &#xB54C; &#xCD9C;&#xB825;&#xC774; &#xC5B4;&#xB5BB;&#xAC8C; &#xBCC0;&#xD558;&#xB294;&#xC9C0;&#xB97C; &#xC54C;&#xC544;&#xC57C; &#xD55C;&#xB2E4;. &#xC774; &#xC815;&#xBCF4;&#xB97C; <strong>&#xAE30;&#xC6B8;&#xAE30;(slope)</strong> &#xD639;&#xC740; <strong>&#xBBFC;&#xAC10;&#xB3C4;(secsitivity)</strong> &#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xC608;&#xB85C; &#xC785;&#xB825;&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC774; &#x1D465;&#xC5D0;&#xC11C; <script type="math/tex; ">𝑥_2</script>&#xB85C; &#xB2EC;&#xB77C;&#xC84C;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xC790;. &#xCD9C;&#xB825;&#xBCC0;&#xC218;&#xB294; &#x1D453;(&#x1D465;)&#xC774;&#xB77C;&#xB294; &#xAC12;&#xC5D0;&#xC11C; <script type="math/tex; ">𝑓(𝑥_2)</script>&#xB77C;&#xB294; &#xAC12;&#xC73C;&#xB85C; &#xB2EC;&#xB77C;&#xC9C8; &#xAC83;&#xC774;&#xB2E4;. &#xC774;&#xB97C; &#xBE44;&#xC728;&#xB85C; &#xB098;&#xD0C0;&#xB0B4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. &#xC5EC;&#xAE30;&#xC5D0;&#xC11C; <script type="math/tex; ">𝑑𝑥=𝑥_2−𝑥</script>&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\dfrac{\text{y의 변화량}}{\text{x의 변화량}} = \dfrac{f(x_2) - f(x)}{x_2 - x} = \dfrac{f(x + dx) - f(x)}{dx}
+</script></p>
+<p>&#xC774;&#xB7EC;&#xD55C; &#xBCC0;&#xD654;&#xC728;&#xC740; <script type="math/tex; ">x_2</script> &#xB97C; <script type="math/tex; ">x_1</script> &#xC5D0;&#xC11C; &#xC5BC;&#xB9C8;&#xB098; &#xBA40;&#xB9AC; &#xB5A8;&#xC5B4;&#xC838; &#xC788;&#xB294;&#xAC00; &#xC989; <script type="math/tex; ">dx</script> &#xC758; &#xAC12;&#xC5D0; &#xB530;&#xB77C; &#xB2EC;&#xB77C;&#xC9C4;&#xB2E4;. &#xC774;&#xB97C; &#xD574;&#xACB0;&#xD558;&#xAE30; &#xC704;&#xD574; <strong>&#xAE30;&#xC6B8;&#xAE30;(slope)</strong> &#xB77C;&#xB294; &#xAC1C;&#xB150;&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. &#xAE30;&#xC6B8;&#xAE30;&#xB294; <script type="math/tex; ">dx</script> &#xAC12;&#xC774; 0&#xC73C;&#xB85C; &#xADFC;&#xC811;&#xD560; &#xB54C;&#xC758; &#xBCC0;&#xD654;&#xC728;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;</p>
+<p><script type="math/tex; mode=display">
+\text{기울기} = \lim_{dx\rightarrow 0} \dfrac{f(x + dx) - f(x)}{dx}
+</script></p>
+<p>&#xD568;&#xC218;&#xC758; &#xADF8;&#xB798;&#xD504;&#xB294; &#xBD80;&#xB4DC;&#xB7EC;&#xC6B4; &#xACE1;&#xC120;(curve)&#xC758; &#xD615;&#xD0DC;&#xB85C; &#xB098;&#xD0C0;&#xB098;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xB2E4;. &#xC774; &#xACE1;&#xC120;&#xC5D0; &#xB300;&#xD574; &#xD55C; &#xC810;&#xB9CC; &#xACF5;&#xD1B5;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xB294; <strong>&#xC811;&#xC120;(tangent)</strong>&#xC744; &#xADF8;&#xB9B4; &#xC218; &#xC788;&#xB294;&#xB370; &#xC774; &#xC811;&#xC120;&#xC774; &#xC218;&#xD3C9;&#xC120;&#xACFC; &#xC774;&#xB8E8;&#xB294; <strong>&#xAE30;&#xC6B8;&#xAE30;&#xB294; &#xC811;&#xC120;&#xC774; &#x1D465;&#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xC774;&#xB3D9;&#xD55C; &#xAC70;&#xB9AC;&#xC640; &#x1D466; &#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xC774;&#xB3D9;&#xD55C; &#xAC70;&#xB9AC;&#xC758; &#xBE44;&#xC728;</strong>&#xC744; &#xB9D0;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{기울기} =  \dfrac{\text{접선이 </script>y<script type="math/tex; "> 방향으로 이동한 거리}}{\text{접선이 </script>x<script type="math/tex; "> 방향으로 이동한 거리}}
+</script></p>
+<p><img src="../../../resource/img/image-20190417192619830.png" alt="image-20190417192619830"></p>
+<p>&#xC704;&#xC758; &#xADF8;&#xB798;&#xD504;&#xC5D0;&#xC11C; &#xC5D0;&#xC11C; &#x1D465;=0&#xACFC; &#x1D465;=1&#xC5D0;&#xC11C;&#xC758; &#xAE30;&#xC6B8;&#xAE30;&#xB294; &#xAC01;&#xAC01; 1, &#x2212;2&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+x=0\text{에서의 기울기} =  \dfrac{1}{1} = 1 \\ x=1\text{에서의 기울기} =  \dfrac{-2}{1} = -2
+</script></p>
+<h3 id="&#xC218;&#xCE58;&#xBBF8;&#xBD84;">&#xC218;&#xCE58;&#xBBF8;&#xBD84;</h3>
+<p>scipy.misc &#xD328;&#xD0A4;&#xC9C0;&#xC758; <code>derivative</code>  &#xBA85;&#xB839;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC218;&#xCE58;&#xC801;&#xC73C;&#xB85C; &#xB300;&#xB825;&#xC801;&#xC778; &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xACC4;&#xC0B0;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC778;&#xC218;&#xB85C;&#xB294; &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAD6C;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xD568;&#xC218; <code>f</code> , &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAD6C;&#xD560; &#xC704;&#xCE58; <code>x</code> , &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAD6C;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC774;&#xB3D9;&#xD560; &#xAC70;&#xB9AC; <code>dx</code> &#xB97C; &#xBC1B;&#xB294;&#xB2E4;. </p>
+<p>&#xC218;&#xCE58;&#xBBF8;&#xBD84;(numerical differentiation) : &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAD6C;&#xD558;&#xB294; &#xBC29;&#xBC95; (&#xB300;&#xB7B5;&#xC801;&#xC778; &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAD6C;&#xD560; &#xBFD0;&#xC774;&#xB2E4;)</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> scipy.misc <span class="hljs-keyword">import</span> derivative
+derivative(f, <span class="hljs-number">0</span>, dx=<span class="hljs-number">1e-6</span>)
+derivative(f, <span class="hljs-number">1</span>, dx=<span class="hljs-number">1e-6</span>)
+</code></pre>
+<h3 id="&#xBBF8;&#xBD84;">&#xBBF8;&#xBD84;</h3>
+<p><strong>&#xBBF8;&#xBD84;(differentiation)</strong>&#xC740; &#xC5B4;&#xB5A4; &#xD568;&#xC218;&#xB85C;&#xBD80;&#xD130; &#xADF8; &#xD568;&#xC218;&#xC640; &#xC5F0;&#xAD00;&#xC131;&#xC774; &#xC788;&#xB294; &#xC0C8;&#xB85C;&#xC6B4; &#xD568;&#xC218;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xB0B4;&#xB294; &#xC791;&#xC5C5;&#xC774;&#xB2E4;. </p>
+<p><strong>&#xB3C4;&#xD568;&#xC218;(derivative)</strong> &#xB294; &#xBBF8;&#xBD84;&#xC73C;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xD568;&#xC218;&#xB97C; &#xC6D0;&#xB798; &#xD568;&#xC218;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. <strong>&#xBBF8;&#xBD84;&#xC744; &#xD1B5;&#xD574; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xB3C4;&#xD568;&#xC218;&#xB294; &#xAC19;&#xC740; &#xC785;&#xB825;&#xC5D0; &#xB300;&#xD574; &#xC6D0;&#xB798; &#xD568;&#xC218;&#xC758; &#xAE30;&#xC6B8;&#xAE30;(slope)&#xB97C; &#xCD9C;&#xB825;&#xD55C;&#xB2E4;</strong>. &#xB3C4;&#xD568;&#xC218;&#xB294; &#xC6D0;&#xB798; &#xD568;&#xC218;&#xC5D0; &#xD504;&#xB77C;&#xC784;(prime) &#xAE30;&#xD638;(<script type="math/tex; ">'</script>)&#xB97C; &#xBD99;&#xC774;&#xAC70;&#xB098; &#xC6D0;&#xB798; &#xD568;&#xC218;&#xC758; &#xC55E;&#xC5D0; <script type="math/tex; ">\dfrac{d}{dx}</script>&#xB97C; &#xBD99;&#xC5EC;&#xC11C; &#xD45C;&#xC2DC;&#xD55C;&#xB2E4;. &#xBD84;&#xC218;&#xCC98;&#xB7FC; &#xD45C;&#xAE30;&#xD558;&#xAE30;&#xB3C4; &#xD558;&#xB294;&#xB370; <strong>&#xBD84;&#xBAA8;&#xC758; &#xC704;&#xCE58;&#xC5D0;&#xB294; &#xBBF8;&#xBD84;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xBCC0;&#xC218;</strong>&#xAC00; &#xC624;&#xACE0; <strong>&#xBD84;&#xC790;&#xC758; &#xC704;&#xCE58;&#xC5D0;&#xB294; &#xBBF8;&#xBD84;&#xD558;&#xB294; &#xD568;&#xC218; &#xC790;&#xCCB4;&#xC758; &#xAE30;&#xD638;</strong>&#xB098; &#xD639;&#xC740; <strong>&#xD568;&#xC218; &#xACC4;&#xC0B0;&#xC758; &#xACB0;&#xACFC;&#xB85C; &#xC5BB;&#xC5B4;&#xC9C0;&#xB294; &#xCD9C;&#xB825; &#xBCC0;&#xC218;</strong>&#xB97C; &#xB123;&#xB294;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#x1D466;=&#x1D453;(&#x1D465;)&#xB77C;&#xB294; &#xD568;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD558;&#xC5EC; &#xAD6C;&#xD55C; &#xB3C4;&#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xD45C;&#xAE30;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xB3C4;&#xD568;&#xC218;&#xC758; &#xD45C;&#xAE30;&#xB294; &#xBD84;&#xC218;&#xC640; &#xBE44;&#xC2B7;&#xD558;&#xC9C0;&#xB9CC; &#xBD84;&#xC218;&#xC758; &#xAE30;&#xD638;&#xB9CC; &#xBE4C;&#xB824;&#xC628; &#xAC83;&#xC77C; &#xBFD0; &#xBD84;&#xC218;&#xAC00; &#xC544;&#xB2C8;&#xB77C;&#xB294; &#xC810;&#xC5D0; &#xC8FC;&#xC758;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+f' = \dfrac{d}{dx}(f) = \dfrac{d}{dx}f = \dfrac{df}{dx}  = \dfrac{d}{dx}(y) = \dfrac{d}{dx}y = \dfrac{dy}{dx}
+</script></p>
+<p>&#xC704;&#xC758; &#xC2DD;&#xC5D0;&#xC11C; <script type="math/tex; ">f'</script>&#xB294; &quot;f &#xD504;&#xB77C;&#xC784;(prime)&quot;&#xC774;&#xB77C;&#xACE0; &#xC77D;&#xACE0; <script type="math/tex; ">\dfrac{df}{dx}</script>&#xB294; &quot;df &#xC624;&#xBC84;(over) dx&quot;&#xB77C;&#xACE0; &#xC77D;&#xB294;&#xB2E4;. &#xC704;&#xCE58; &#x1D465;&#xC5D0;&#xC11C; &#xB3C4;&#xD568;&#xC218;&#xC758; &#xAC12; <script type="math/tex; ">f'(x)</script>&#xC740; &#xADF8; &#xC704;&#xCE58;&#xC5D0;&#xC11C;&#xC758; &#xD568;&#xC218;&#xC758; &#xAE30;&#xC6B8;&#xAE30;&#xC640; &#xAC19;&#xC73C;&#xBBC0;&#xB85C; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xC4F8; &#xC218; &#xC788;&#xB2E4;.
+<script type="math/tex; mode=display">
+f'(x) = f(x)\text{의 기울기}
+</script></p>
+<h3 id="&#xBBF8;&#xBD84;&#xAC00;&#xB2A5;">&#xBBF8;&#xBD84;&#xAC00;&#xB2A5;</h3>
+<p>&#xD568;&#xC218;&#xC5D0; &#xB530;&#xB77C;&#xC11C;&#xB294; &#xC5B4;&#xB5A4; &#xC810;&#xC5D0;&#xC11C;&#xB294; &#xAE30;&#xC6B8;&#xAE30; &#xAC12;&#xC744; &#xC815;&#xC758;&#xD558;&#xAE30; &#xC5B4;&#xB824;&#xC6B8; &#xC218;&#xAC00; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; <script type="math/tex; ">x = 0</script> &#xC778; &#xC704;&#xCE58;&#xC5D0;&#xC11C; &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC5C6;&#xB2E4;. &#xC774;&#xB7F0; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; <script type="math/tex; ">x = 0</script> &#xC5D0;&#xC11C; &#xBBF8;&#xBD84; &#xBD88;&#xAC00;&#xB2A5;(not differentiable) &#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xBC18;&#xB300;&#xB85C; &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA74; &#xBBF8;&#xBD84; &#xAC00;&#xB2A5;(differentiabel)&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC608;&#xB4E4; &#xB4E4;&#xC5B4; ReLU &#xD568;&#xC218;&#xB294; &#x1D465;<0 인="" 구간에서는="" 기울기가="" 0이고="" 𝑥="">0&#xC778; &#xAD6C;&#xAC04;&#xC5D0;&#xC11C;&#xB294; &#xAE30;&#xC6B8;&#xAE30;&#xAC00; 1&#xC774;&#xC9C0;&#xB9CC; &#x1D465;=0 &#xC778; &#xC704;&#xCE58;&#xC5D0;&#xC11C;&#xB294; &#xC811;&#xC120;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xC11C; &#xBBF8;&#xBD84;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</0></p>
+<p><img src="../../../Users/jisuho/Library/Application Support/typora-user-images/image-20190417202728164.png" alt="image-20190417202728164"></p>
+<h3 id="&#xBBF8;&#xBD84;&#xACF5;&#xC2DD;">&#xBBF8;&#xBD84;&#xACF5;&#xC2DD;</h3>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xBBF8;&#xBD84;&#xACF5;&#xC2DD;</li>
+<li>&#xC120;&#xD615;&#xC870;&#xD569;&#xBC95;&#xCE59;</li>
+<li>&#xACF1;&#xC148;&#xBC95;&#xCE59;</li>
+<li>&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;</li>
+</ul>
+<p>&#xC120;&#xD615;&#xC870;&#xD569;&#xBC95;&#xCE59;
+1) &#xAE30;&#xBCF8; &#xBBF8;&#xBD84;&#xACF5;&#xC2DD;</p>
+<ul>
+<li>&#xC0C1;&#xC218; : &#xC0C1;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD558;&#xBA74; 0&#xC774; &#xB41C;&#xB2E4;.  <script type="math/tex; "> \dfrac{d}{dx}(c) = 0 </script></li>
+<li>&#xAC70;&#xB4ED;&#xC81C;&#xACF1; : n&#xC774; &#xC790;&#xC5F0;&#xC218;&#xC774;&#xAC70;&#xB098; &#xC74C;&#xC758; &#xC815;&#xC218;&#xC77C; &#xB54C; &#xC131;&#xB9BD;, n = 0 &#xC77C; &#xB54C;&#xB294; &#xC131;&#xB9BD;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;. <script type="math/tex; "> \dfrac{d}{dx}(x^n) = n x^{n-1} </script></li>
+<li>&#xB85C;&#xADF8; : &#xB85C;&#xADF8;&#xD568;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD558;&#xBA74; <script type="math/tex; ">x^{-1}</script> &#xC774; &#xB41C;&#xB2E4;.  <script type="math/tex; ">\dfrac{d}{dx}(\log x) = \dfrac{1}{x}</script></li>
+<li>&#xC9C0;&#xC218; : &#xBC11;&#xC774; &#xC624;&#xC77C;&#xB7EC; &#xC218;&#xC778; &#xC9C0;&#xC218;&#xD568;&#xC218;&#xB294; &#xBBF8;&#xBD84;&#xD574;&#xB3C4; &#xBCC0;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.  <script type="math/tex; ">\dfrac{d}{dx}(e^x) = e^x</script></li>
+</ul>
+<p>2) &#xC120;&#xD615;&#xC870;&#xD569;&#xBC95;&#xCE59; </p>
+<p>&#xC5B4;&#xB5A4; &#xD568;&#xC218;&#xC5D0; &#xC0C1;&#xC218;&#xB97C; &#xACF1;&#xD55C; &#xD568;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD55C; &#xACB0;&#xACFC;&#xB294; &#xC6D0;&#xB798; &#xD568;&#xC218;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xC5D0; &#xADF8; &#xC0C1;&#xC218;&#xB97C; &#xACF1;&#xD55C; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;.
+<script type="math/tex; mode=display">
+\dfrac{d}{dx}(cf) = c \cdot \dfrac{df}{dx}
+</script></p>
+<p>&#xC5B4;&#xB5A4; &#xB450; &#xD568;&#xC218;&#xB97C; &#xB354;&#xD55C; &#xD568;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD55C; &#xACB0;&#xACFC;&#xB294; &#xC6D0;&#xB798; &#xD568;&#xC218;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xB354;&#xD55C; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;.
+<script type="math/tex; mode=display">
+\dfrac{d}{dx}\left(f_1 + f_2\right) = \dfrac{df_1}{dx} +  \dfrac{df_2}{dx}
+</script></p>
+<p>&#xC704;&#xC758; &#xACB0;&#xACFC;&#xB97C; &#xD569;&#xCE58;&#xBA74; &#xC5B4;&#xB5A4; &#xD568;&#xC218;&#xC5D0; &#xAC01;&#xAC01; &#xC0C1;&#xC218;&#xB97C; &#xACF1;&#xD55C; &#xD6C4; &#xB354;&#xD55C; &#xC120;&#xD615;&#xC870;&#xD569;(linear combination)&#xC740; &#xAC01; &#xD568;&#xC218;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC120;&#xD615;&#xC870;&#xD569;&#xD55C; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;.
+<script type="math/tex; mode=display">
+\dfrac{d}{dx}\left(c_1 f_1 + c_2 f_2 \right) = c_1 \dfrac{df_1}{dx} + c_2 \dfrac{df_2}{dx}
+</script></p>
+<p>3) &#xACF1;&#xC148;&#xBC95;&#xCE59;</p>
+<p>&#xC5B4;&#xB5A4; &#xD568;&#xC218;&#xC758; &#xD615;&#xD0DC;&#xAC00; &#xB450; &#xAC1C;&#xC758; &#xD568;&#xC218;&#xB97C; &#xACF1;&#xD55C; &#xAC83;&#xACFC; &#xAC19;&#xC744; &#xB54C;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAC01; &#xAC1C;&#xBCC4; &#xD568;&#xC218;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC6D0;&#xB798;&#xC758; &#xD568;&#xC218;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xAD6C;&#xD55C;&#xB2E4;. &#xC774;&#xB97C; &#xACF1;&#xC148;&#xBC95;&#xCE59;&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.
+<script type="math/tex; mode=display">
+\dfrac{d}{dx}\left( f  \cdot g \right) = f \cdot  \dfrac{dg}{dx} + \dfrac{df}{dx} \cdot g
+</script></p>
+<p>4) &#xC5F0;&#xC1C4;&#xBC95;&#xCE59;</p>
+<p><strong>&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;(chain rule)</strong>&#xC740; &#xBBF8;&#xBD84;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xD568;&#xC218;&#xC758; &#xC785;&#xB825; &#xBCC0;&#xC218;&#xAC00; &#xB2E4;&#xB978; &#xD568;&#xC218;&#xC758; &#xCD9C;&#xB825; &#xBCC0;&#xC218;&#xC778; &#xACBD;&#xC6B0; &#xC801;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+f(x) = h(g(x))
+</script></p>
+<p><script type="math/tex; mode=display">
+\dfrac{df}{dx} = \dfrac{dh}{dg} \cdot \dfrac{dg}{dx}
+</script></p>
+<p><strong>&#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC;&#xBD84;&#xD3EC;(Gaussian normal distribution)</strong> &#xC758; <strong>&#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;(probability density function)</strong>&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xD615;&#xD0DC;&#xB77C;&#xACE0; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.   <script type="math/tex; ">\sigma^2, \mu</script> &#xB294; &#xC0C1;&#xC218;&#xC774;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+f = \exp \dfrac{(x-\mu)^2}{\sigma^2}
+</script></p>
+<p>&#xC704; &#xD568;&#xC218;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC6B0;&#xC120; &#xC704;&#xC758; &#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC138; &#xAC1C;&#xC758; &#xD568;&#xC218;&#xC758; &#xC870;&#xD569;&#xC73C;&#xB85C; &#xC0DD;&#xAC01;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC5EC;&#xAE30;&#xC5D0;&#xC11C; &#x1D466;, &#x1D467; &#xB77C;&#xB294; &#xC911;&#xAC04; &#xBCC0;&#xC218;&#xB97C; &#xC784;&#xC2DC;&#xB85C; &#xC815;&#xC758;&#xD558;&#xC600;&#xB2E4;.  <script type="math/tex; ">f = \exp(z) \;,\;\;\;\; z = \dfrac{y^2}{\sigma^2}   \;,\;\;\;\;   y = x-\mu</script></p>
+<p>&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. </p>
+<p>&#x200B;<script type="math/tex; "> \dfrac{df}{dx} = \dfrac{df}{dz} \cdot \dfrac{dz}{dy} \cdot \dfrac{dy}{dx} </script></p>
+<p>&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;&#xC5D0; &#xC0AC;&#xC6A9;&#xB41C; &#xAC01;&#xAC01;&#xC758; &#xB3C4;&#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. &#xC774; &#xB54C; &#xC784;&#xC2DC;&#xB85C; &#xC0AC;&#xC6A9;&#xB41C; &#xC911;&#xAC04; &#xBCC0;&#xC218;&#xB294; &#xC5C6;&#xC564;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\dfrac{df}{dz} = \exp(z) = \exp \dfrac{(x-\mu)^2}{\sigma^2} \\
+\dfrac{dz}{dy} =  \dfrac{2y}{\sigma^2} = \dfrac{2(x-\mu)}{\sigma^2} \\
+\dfrac{dy}{dx} =  1
+</script></p>
+<p>&#xC774;  &#xACB0;&#xACFC;&#xB97C; &#xC5F0;&#xC1C4;&#xBC95;&#xCE59;&#xC5D0; &#xB530;&#xB77C; &#xACF1;&#xD558;&#xBA74; &#xCD5C;&#xC885;&#xC801;&#xC778; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\dfrac{df}{dx} =  \dfrac{2(x-\mu)}{\sigma^2} \exp \dfrac{(x-\mu)^2}{\sigma^2}
+</script></p>
+<p>&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;&#xC758; &#xC608; : &#xB85C;&#xADF8;&#xD568;&#xC218;&#xC758; &#xBBF8;&#xBD84;</p>
+<p><script type="math/tex; mode=display">
+\dfrac{d}{dx} \log f(x) = \dfrac{f'(x)}{f(x)}
+</script></p>
+<h3 id="2&#xCC28;-&#xB3C4;&#xD568;&#xC218;">2&#xCC28; &#xB3C4;&#xD568;&#xC218;</h3>
+<p>&#xB3C4;&#xD568;&#xC218;&#xB97C; &#xD55C;&#xBC88; &#xB354; &#xBBF8;&#xBD84;&#xD558;&#xC5EC; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xD568;&#xC218;&#xB97C; <strong>2&#xCC28; &#xB3C4;&#xD568;&#xC218;(second derivative)</strong> &#xB77C;&#xACE0; &#xD55C;&#xB2E4;. 
+<script type="math/tex; mode=display">
+f'' = \dfrac{d^2}{dx^2}(f) = \dfrac{d^2}{dx^2}f = \dfrac{d^2f}{dx^2}  = \dfrac{d^2}{dx^2}(y) = \dfrac{d^2}{dx^2}y = \dfrac{d^2y}{dx^2}
+</script></p>
+<p>2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB294; <strong>&#xB3C4;&#xD568;&#xC218;&#xC758; &#xAE30;&#xC6B8;&#xAE30;</strong> &#xB97C; &#xB098;&#xD0C0;&#xB0B8;&#xB2E4;. &#xC989; &#xB3C4;&#xD568;&#xC218; &#xAC12;&#xC774; &#xC99D;&#xAC00;&#xD558;&#xBA74; 2&#xCC28; &#xB3C4;&#xD568;&#xC218; &#xAC12;&#xC740; &#xC591;&#xC218;&#xC774;&#xACE0;, &#xB3C4;&#xD568;&#xC218; &#xAC12;&#xC774; &#xAC10;&#xC18C;&#xD558;&#xBA74; 2&#xCC28; &#xB3C4;&#xD568;&#xC218; &#xAC12;&#xC740; &#xC74C;&#xC218;&#xC774;&#xB2E4;.  2&#xCC28; &#xB3C4;&#xD568;&#xC218; &#xAC12;&#xC774; &#xC591;&#xC218;&#xC778; &#xACBD;&#xC6B0;&#xB97C; &#xBCFC;&#xB85D;(convex)&#xD558;&#xB2E4; &#xD558;&#xBA70; 2&#xCC28; &#xB3C4;&#xD568;&#xC218; &#xAC12;&#xC774; &#xC74C;&#xC218;&#xC778; &#xACBD;&#xC6B0;&#xB97C; &#xC624;&#xBAA9;(concave) &#xD558;&#xB2E4;&#xACE0; &#xD55C;&#xB2E4;. &#xC774; &#xB54C; &#xBCFC;&#xB85D;&#xACFC; &#xC624;&#xBAA9;&#xC740; &#xC544;&#xB798;&#xC5D0;&#xC11C; &#xBC14;&#xB77C;&#xBCF8; &#xAD00;&#xC810;&#xC774;&#xB2E4;. 2&#xCC28; &#xB3C4;&#xD568;&#xC218; &#xAC12;&#xC744; <strong>&#xBCFC;&#xB85D;&#xB3C4;(convexity)</strong> &#xB77C;&#xACE0;&#xB3C4; &#xBD80;&#xB978;&#xB2E4;. </p>
+<p><img src="../../../source/img/image-20190423101317731.png" alt="image-20190423101317731"></p>
+<h3 id="&#xD3B8;&#xBBF8;&#xBD84;">&#xD3B8;&#xBBF8;&#xBD84;</h3>
+<p>&#xB9CC;&#xC57D; &#xD568;&#xC218;&#xAC00; &#xB450; &#xAC1C; &#xC774;&#xC0C1;&#xC758; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xB294; &#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xC778; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xBBF8;&#xBD84; &#xC989;, &#xAE30;&#xC6B8;&#xAE30;&#xB294; &#xD558;&#xB098;&#xC758; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC774;&#xB97C; <strong>&#xD3B8;&#xBBF8;&#xBD84;(partial differentiation)</strong> &#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. 
+<script type="math/tex; mode=display">
+f_x(x,y) = \dfrac{\partial f}{\partial x} \\
+f_y(x,y) = \dfrac{\partial f}{\partial y}
+</script></p>
+<p>&#xD3B8;&#xBBF8;&#xBD84;&#xC744; &#xD558;&#xB294; &#xBC29;&#xBC95;&#xC740; &#xBCC0;&#xC218;&#xAC00; &#xD558;&#xB098;&#xC778; &#xD568;&#xC218;&#xC758; &#xBBF8;&#xBD84;&#xACFC; &#xAC19;&#xB2E4;. &#xC5B4;&#xB5A4; &#xD558;&#xB098;&#xC758; &#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xD574; &#xBBF8;&#xBD84;&#xD560; &#xB54C;&#xB294; &#xB2E4;&#xB978; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xB97C; &#xC0C1;&#xC218;&#xB85C; &#xC0DD;&#xAC01;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<p>&#xD3B8;&#xBBF8;&#xBD84;&#xC758; &#xC608;</p>
+<p><script type="math/tex; mode=display">
+f(x,y) = x^2 + 4xy + 4y^2 \\
+f_x(x,y) = \dfrac{\partial f}{\partial x} = 2x + 4y \\
+f_y(x,y) = \dfrac{\partial f}{\partial y} = 4x + 8y
+</script></p>
+<h3 id="&#xB2E4;&#xBCC0;&#xC218;-&#xD568;&#xC218;&#xC758;-&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;">&#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xC758; &#xC5F0;&#xC1C4;&#xBC95;&#xCE59;</h3>
+<p>&#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xC758; &#xBBF8;&#xBD84;&#xC744; &#xAD6C;&#xD560; &#xB54C;&#xB3C4; &#xD568;&#xC218;&#xAC00; &#xC5F0;&#xACB0;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBA74; <strong>&#xC5F0;&#xC1C4;&#xBC95;&#xCE59;</strong>&#xC774; &#xC801;&#xC6A9;&#xB41C;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xBCC0;&#xC218; &#x1D465;&#xB97C; &#xC785;&#xB825;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xB294; &#xD568;&#xC218;&#xAC00; <script type="math/tex; ">𝑓_1,𝑓_2,…,𝑓_𝑁</script>&#xACFC; &#xAC19;&#xC774; &#x1D441;&#xAC1C;&#xAC00; &#xC788;&#xACE0; &#xAC01;&#xAC01;&#xC758; &#xCD9C;&#xB825;&#xC744; <script type="math/tex; ">𝑦_1,𝑦_2,…,𝑦_𝑁</script>&#xC774;&#xB77C;&#xACE0; &#xD558;&#xC790;.</p>
+<p><script type="math/tex; mode=display">
+\begin{align}
+y_1 &= f_1(x) \\
+y_2 &= f_2(x) \\
+ & \vdots \\
+y_N &= f_N(x) 
+\end{align}
+</script></p>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xC774; <script type="math/tex; ">𝑦_1,𝑦_2,…,𝑦_𝑁</script>&#xAC12;&#xC5D0; &#xC758;&#xC874;&#xD558;&#xB294; &#xB2E4;&#xB978; &#xD568;&#xC218; &#x1D454;&#xAC00; &#xC788;&#xB2E4;&#xACE0; &#xD558;&#xC790;. &#x1D454;&#xC758; &#xCD9C;&#xB825;&#xC740; &#x1D467;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+z = g(y_1, y_2, \ldots, y_N)
+</script></p>
+<p>&#xC774; &#xB54C; &#xBCC0;&#xC218; <script type="math/tex; ">x</script> &#xAC12;&#xC758; &#xBCC0;&#xD654;&#xC5D0; &#xB530;&#xB978; <script type="math/tex; ">z</script> &#xAC12;&#xC758; &#xBCC0;&#xD654;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xACC4;&#xC0B0;&#xD55C;&#xB2E4;</p>
+<p><script type="math/tex; mode=display">
+\begin{align}
+\dfrac{dz}{dx} 
+&= \dfrac{\partial z}{\partial y_1}\dfrac{dy_1}{dx} + 
+   \dfrac{\partial z}{\partial y_2}\dfrac{dy_2}{dx} + \cdots
+ + \dfrac{\partial z}{\partial y_N}\dfrac{dy_N}{dx}   
+\end{align}
+</script></p>
+<p>&#xC774;&#xBC88;&#xC5D0;&#xB294; &#xD568;&#xC218; <script type="math/tex; ">f_1, f_2, \ldots, f_N</script> &#xAC00; <script type="math/tex; ">x_1, x_2, \ldots, x_M</script> &#xC744; &#xC785;&#xB825;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xB294; &#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xB77C;&#xACE0; &#xD558;&#xC790;. </p>
+<p><script type="math/tex; mode=display">
+\begin{align}
+y_1 &= f_1(x_1, x_2, \ldots, x_M) \\
+y_2 &= f_2(x_1, x_2, \ldots, x_M) \\
+ & \vdots \\
+y_N &= f_N(x_1, x_2, \ldots, x_M) 
+\end{align}
+</script></p>
+<p>&#xC774; &#xB54C;&#xC758; &#xBCC0;&#xC218; <script type="math/tex; ">x_1</script> &#xAC12;&#xC758; &#xBCC0;&#xD654;&#xC5D0; &#xB530;&#xB978; <script type="math/tex; ">z</script> &#xAC12;&#xC758; &#xBCC0;&#xD654;&#xB3C4; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xACC4;&#xC0B0;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\begin{align}
+\dfrac{\partial z}{\partial x_1} 
+&= \dfrac{\partial z}{\partial y_1}\dfrac{\partial y_1}{\partial x_1} + 
+   \dfrac{\partial z}{\partial y_2}\dfrac{\partial y_2}{\partial x_1} + \cdots
+ + \dfrac{\partial z}{\partial y_N}\dfrac{\partial y_N}{\partial x_1}   
+\end{align}
+</script></p>
+<h3 id="2&#xCC28;-&#xD3B8;&#xBBF8;&#xBD84;">2&#xCC28; &#xD3B8;&#xBBF8;&#xBD84;</h3>
+<p>&#xD3B8;&#xBBF8;&#xBD84;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB3C4; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xD3B8;&#xBBF8;&#xBD84;&#xC758; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xAD6C;&#xD560; &#xB54C;&#xB294; &#xAC01;&#xAC01;&#xC758; &#xBBF8;&#xBD84;&#xC5D0; &#xC4F0;&#xC774;&#xB294; &#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xB97C; &#xC790;&#xC720;&#xB86D;&#xAC8C; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xCCAB;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xACFC; &#xB450;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xC5D0;&#xC11C; &#xBAA8;&#xB450; <script type="math/tex; ">x</script> &#xC5D0; &#xB300;&#xD574; &#xBBF8;&#xBD84;&#xD558;&#xC5EC; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+f_{xx}(x,y) = \dfrac{\partial^2 f}{\partial x^2} = 2
+</script></p>
+<p>&#xCCAB;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xACFC; &#xB450;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xC5D0;&#xC11C; &#xBAA8;&#xB450; &#x1D466;&#xC5D0; &#xB300;&#xD574; &#xBBF8;&#xBD84;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+f_{yy}(x,y) = \dfrac{\partial^2 f}{\partial y^2} = 8
+</script></p>
+<p>&#xCCAB;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xC5D0;&#xC11C;&#xB294; &#x1D465;&#xC5D0; &#xB300;&#xD574; &#xBBF8;&#xBD84;&#xD558;&#xACE0; &#xB450;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xC5D0;&#xC11C;&#xB294; &#x1D466;&#xC5D0; &#xB300;&#xD574; &#xBBF8;&#xBD84;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+f_{xy}(x,y) = \dfrac{\partial^2 f}{\partial y \partial x} = 4
+</script></p>
+<p>&#xCCAB;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xC5D0;&#xC11C;&#xB294; &#x1D466;&#xC5D0; &#xB300;&#xD574; &#xBBF8;&#xBD84;&#xD558;&#xACE0; &#xB450;&#xBC88;&#xC9F8; &#xBBF8;&#xBD84;&#xC5D0;&#xC11C;&#xB294; &#x1D465;&#xC5D0; &#xB300;&#xD574; &#xBBF8;&#xBD84;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+f_{yx}(x,y) = \dfrac{\partial^2 f}{\partial x \partial y} = 4
+</script></p>
+<p>&#xC704; &#xACB0;&#xACFC;&#xC5D0;&#xC11C; &#x1D465;&#xB85C; &#xBA3C;&#xC800; &#xBBF8;&#xBD84;&#xD558;&#xACE0; &#xB098;&#xC911;&#xC5D0; &#x1D466;&#xB85C; &#xBBF8;&#xBD84;&#xD55C; 2&#xCC28; &#xB3C4;&#xD568;&#xC218; &#x1D453;&#x1D465;&#x1D466;&#xB294; &#x1D466;&#xB85C; &#xBA3C;&#xC800; &#xBBF8;&#xBD84;&#xD558;&#xACE0; &#xB098;&#xC911;&#xC5D0; &#x1D465;&#xB85C; &#xBBF8;&#xBD84;&#xD55C; 2&#xCC28; &#xB3C4;&#xD568;&#xC218; &#x1D453;&#x1D466;&#x1D465;&#xC640; &#xAC19;&#xB2E4;. &#xB9CC;&#xC57D; &#xD568;&#xC218;&#xAC00; &#xC5F0;&#xC18D;&#xC774;&#xACE0; &#xBBF8;&#xBD84;&#xAC00;&#xB2A5;&#xD558;&#xBA74; &#xBBF8;&#xBD84;&#xC758; &#xC21C;&#xC11C;&#xB294; &#xC0C1;&#xAD00;&#xC5C6;&#xB2E4;. &#xC774;&#xB97C; <strong>&#xC288;&#xC640;&#xB974;&#xCE20; &#xC815;&#xB9AC;(Schwarz&apos;s theorem)</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<h3 id="&#xD14C;&#xC77C;&#xB7EC;-&#xC804;&#xAC1C;">&#xD14C;&#xC77C;&#xB7EC; &#xC804;&#xAC1C;</h3>
+<p><strong>&#xD568;&#xC218;&#xC758; &#xAE30;&#xC6B8;&#xAE30;(1&#xCC28; &#xBBF8;&#xBD84;&#xAC12;)&#xB97C; &#xC54C;&#xACE0; &#xC788;&#xB2E4;&#xBA74; &#xD568;&#xC218;&#xC758; &#xBAA8;&#xC591;&#xC744; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xADFC;&#xC0AC;&#xD654;&#xD560; &#xC218; &#xC788;&#xB2E4;. </strong> &#xC774;&#xB97C; <strong>&#xD14C;&#xC77C;&#xB7EC; &#xC804;&#xAC1C;(Talor expansion)</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. <script type="math/tex; ">𝑥_0</script>&#xB294; &#xD568;&#xC218;&#xAC12;&#xACFC; &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAD6C;&#xD558;&#xB294; &#x1D465; &#xC704;&#xCE58;&#xC774;&#xBA70; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xB9C8;&#xC74C;&#xB300;&#xB85C; &#xC124;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>(<script type="math/tex; ">x_0</script>, <script type="math/tex; ">f(</script>x_0<script type="math/tex; ">))을 지나는 직선 
+
+</script>f(x)<script type="math/tex; "> 는 곡선이고 변수 이다.
+
+</script>f(<script type="math/tex; ">x_0</script>)&#xC740; &#xC9C1;&#xC120;&#xC774;&#xACE0; &#xC22B;&#xC790;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; ">\dfrac{df(x_0)}{dx}</script> &#xB294; <script type="math/tex; ">x_0</script> &#xC5D0;&#xC11C;&#xC758; &#xAE30;&#xC6B8;&#xAE30;&#xC774;&#xACE0; &#xC22B;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; ">x - x_0</script> &#xC5D0;&#xC11C; <script type="math/tex; ">x</script> &#xB294; &#xBB38;&#xC790;&#xC774;&#xB2E4;. </p>
+<p>&#xC704;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xD569;&#xCE58;&#xBA74; &#xC9C1;&#xC120;&#xC758; &#xBC29;&#xC815;&#xC2DD;&#xC774;&#xB2E4; </p>
+<p>&#xC608;) 2 + 3(x - 1) : (1, 2)&#xB97C; &#xC9C0;&#xB098;&#xB294; &#xC9C1;&#xC120;&#xC774;&#xB2E4;. 
+<script type="math/tex; mode=display">
+f(x) \approx f(x_0) + \dfrac{df(x_0)}{dx}(x - x_0)
+</script></p>
+<p>&#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xC758; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xD14C;&#xC77C;&#xB7EC;&#xC804;&#xAC1C;&#xB97C; &#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; ">\dfrac{\partial f(x_0, y_0)}{\partial x}</script> &#xB294; &#xB3C4;&#xD568;&#xC218;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; ">(x - x_0)</script> &#xB294; &#xC774;&#xB3D9;&#xD55C; &#xC704;&#xCE58;&#xC774;&#xB2E4;.
+<script type="math/tex; mode=display">
+f(x, y) \approx f(x_0, y_0) 
++ \dfrac{\partial f(x_0, y_0)}{\partial x}(x - x_0)
++ \dfrac{\partial f(x_0, y_0)}{\partial y}(y - y_0)
+</script></p>
+<h3 id="sympy">SymPy</h3>
+<p>SymPy&#xB294; <strong>&#xC2EC;&#xBCFC;&#xB9AD; &#xC5F0;&#xC0B0;(symbolic operation)</strong> &#xC744; &#xC9C0;&#xC6D0;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xD30C;&#xC774;&#xC36C; &#xD328;&#xD0A4;&#xC9C0;&#xC774;&#xB2E4;. </p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sympy
+
+<span class="hljs-comment"># Juypter &#xB178;&#xD2B8;&#xBD81;&#xC5D0;&#xC11C; &#xC218;&#xD559;&#xC2DD;&#xC758; LaTeX &#xD45C;&#xD604;&#xC744; &#xC704;&#xD574; &#xD544;&#xC694;&#xD568;</span>
+sympy.init_printing(use_latex=<span class="hljs-string">&apos;mathjax&apos;</span>)
+</code></pre>
+<p>&#xC2EC;&#xBCFC;&#xB9AD; &#xC5F0;&#xC0B0;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; <strong>&#xC2EC;&#xBCFC;&#xB9AD; &#xBCC0;&#xC218;(symbolic variable)</strong>&#xB294; &#xC77C;&#xBC18; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBCC0;&#xC218;&#xC640; &#xB2E4;&#xB974;&#xB2E4;. &#xC77C;&#xBC18; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBCC0;&#xC218;&#xB294; &#xC774;&#xBBF8; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; &#xC50C;&#xC5EC;&#xC788;&#xB294; &#xC5B4;&#xB5A4; &#xC22B;&#xC790;&#xB97C; &#xAE30;&#xD638;&#xB85C; &#xC4F4; &#xAC83;&#xC5D0; &#xC9C0;&#xB098;&#xC9C0; &#xC54A;&#xC9C0;&#xB9CC; &#xC2EC;&#xBCFC;&#xB9AD; &#xBCC0;&#xC218;&#xB294; &#xC544;&#xBB34;&#xB7F0; &#xC22B;&#xC790;&#xB3C4; &#xB300;&#xC785;&#xC774; &#xB418;&#xC5B4; &#xC788;&#xC9C0; &#xC54A;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#x1D465;2&#xC758; &#xBBF8;&#xBD84; &#xC5F0;&#xC0B0;&#xC744; &#xC218;&#xD589;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC6B0;&#xC120; SymPy&#xC758; <code>symbols</code> &#xBA85;&#xB839;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#x1D465;x&#xB77C;&#xB294; &#xAE30;&#xD638;&#xAC00; &#xB2E8;&#xC21C;&#xD55C; &#xC22B;&#xC790;&#xB098; &#xBCA1;&#xD130; &#xBCC0;&#xC218;&#xAC00; &#xC544;&#xB2CC; &#xC2EC;&#xBCFC;(symbol)&#xC784;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;. &#xC774;&#xB807;&#xAC8C; &#xC815;&#xC758;&#xB41C; &#xC2EC;&#xBCFC; &#xBCC0;&#xC218;&#xB294; <code>Symbol</code> &#xD074;&#xB798;&#xC2A4; &#xC790;&#xB8CC;&#xD615;&#xC774; &#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-python">x = sympy.symbols(<span class="hljs-string">&apos;x&apos;</span>)
+x
+</code></pre>
+<p>&#xC218;&#xD559; &#xD568;&#xC218;&#xB294; SymPy &#xC804;&#xC6A9; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python">f = x * sympy.exp(x)
+f
+</code></pre>
+<p>&#xD568;&#xC218;&#xAC00; &#xC815;&#xC758;&#xB418;&#xBA74; <code>diff</code> &#xD568;&#xC218;&#xB85C; &#xBBF8;&#xBD84;&#xC744; &#xD560; &#xC218; &#xC788;&#xB2E4;. &#xB610;&#xD55C; <code>simplify</code> &#xD568;&#xC218;&#xB97C; &#xC368;&#xC11C; &#xC18C;&#xC778;&#xC218;&#xBD84;&#xD574; &#xB4F1;&#xC744; &#xD1B5;&#xD55C; &#xC218;&#xC2DD; &#xC815;&#xB9AC;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<pre><code class="lang-python">sympy.diff(f)
+sympy.simplify(sympy.diff(f))
+</code></pre>
+<p>&#xD3B8;&#xBBF8;&#xBD84;&#xC744; &#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC5B4;&#xB5A4; &#xBCC0;&#xC218;&#xB85C; &#xBBF8;&#xBD84;&#xD558;&#xB294;&#xC9C0;&#xB97C; <code>diff</code> &#xD568;&#xC218;&#xC5D0; &#xBA85;&#xC2DC;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. <code>symbols</code> &#xBA85;&#xB839;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xC778;&#xC218;&#xB85C; &#xC8FC;&#xB294; &#xBB38;&#xC790;&#xC5F4;&#xC5D0; &#xC5EC;&#xB7EC;&#xAC1C;&#xC758; &#xC2EC;&#xBCFC; &#xBCC0;&#xC218;&#xB97C; &#xB3D9;&#xC2DC;&#xC5D0; &#xB123;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python">x, y = sympy.symbols(<span class="hljs-string">&apos;x y&apos;</span>)
+f = x ** <span class="hljs-number">2</span> + <span class="hljs-number">4</span> * x * y + <span class="hljs-number">4</span> * y ** <span class="hljs-number">2</span>
+f
+</code></pre>
+<pre><code class="lang-python">sympy.diff(f, x)
+</code></pre>
+<pre><code class="lang-python">sympy.diff(sympy.diff(f, x),y)
+
+sympy.diff(f, x, y)
+</code></pre>
+<p>&#xC0C1;&#xC218; &#xC2EC;&#xBCFC;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xB294; &#xD568;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD558;&#xB294; &#xACBD;&#xC6B0;, SymPy&#xB294; &#xC5B4;&#xB5A4; &#xC2EC;&#xBCFC;&#xC774; &#xC0C1;&#xC218;&#xC774;&#xACE0; &#xC5B4;&#xB5A4; &#xC2EC;&#xBCFC;&#xC774; &#xBCC0;&#xC218;&#xC778;&#xC9C0; &#xC54C; &#xC218; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xD3B8;&#xBBF8;&#xBD84;&#xC778; &#xAC83;&#xCC98;&#xB7FC; &#xC785;&#xB825; &#xBCC0;&#xC218;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python">x, mu, sigma = sympy.symbols(<span class="hljs-string">&apos;x mu sigma&apos;</span>)
+f = sympy.exp((x - mu) ** <span class="hljs-number">2</span> / sigma ** <span class="hljs-number">2</span>)
+f
+</code></pre>
+<pre><code class="lang-python">sympy.diff(f, x)
+sympy.simplify(sympy.diff(f, x))
+</code></pre>
+<p>&#xC774;&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xAD6C;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python">sympy.diff(f, x, x)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0401function.html" class="navigation navigation-prev " aria-label="Previous page: 함수">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mle.html" class="navigation navigation-next " aria-label="Next page: 최대가능도와 모수추정">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"함수 미분","level":"1.2.1.11","depth":3,"next":{"title":"최대가능도와 모수추정","level":"1.2.1.12","depth":3,"path":"posts/datascience/basicmath/mle.md","ref":"posts/datascience/basicmath/mle.md","articles":[]},"previous":{"title":"함수","level":"1.2.1.10","depth":3,"path":"posts/datascience/basicmath/0401function.md","ref":"posts/datascience/basicmath/0401function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/basicmath/0402function-decomposition.md","mtime":"2020-04-05T17:20:47.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-05T17:22:02.347Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
