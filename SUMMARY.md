@@ -13,6 +13,7 @@
         - [고윳값 분해](posts/datascience/basicmath/0303eigenvalue-decomposition.md)
         - [특이값 분해](posts/datascience/basicmath/0304svd.md)
         - [PCA](posts/datascience/basicmath/0305pca.md)
+        - [함수]((posts/datascience/basicmath/0401function.md))
         - [최대가능도와 모수추정](posts/datascience/basicmath/mle.md)
     - [Regression & Time-series Analysis](posts/datascience/regressionandtimeseries/README.md)
         - [Analysis Intro](posts/datascience/regressionandtimeseries/dataintro.md)
