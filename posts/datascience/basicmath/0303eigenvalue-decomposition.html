@@ -948,27 +948,15 @@ A^{-1} = (V\Lambda V^{-1})^{-1} = V \Lambda^{-1} V^{-1}
 <p>  <script type="math/tex; mode=display">
   w = X^{-1} y
   </script></p>
-<p>&#xC758;&#xC0AC;&#xC5ED;&#xD589;&#xB82C;(pseudo inverse)
-<script type="math/tex; ">𝐴^𝑇𝐴</script>&#xAC00; &#xD56D;&#xC0C1; &#xC815;&#xBC29; &#xD589;&#xB82C;&#xC774; &#xB41C;&#xB2E4;&#xB294; &#xC810;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC;
-    {% math %}
-    Ax \approx b
-    {% endmath %}</p>
-<pre><code>{% math %}
-A^TAx = A^Tb
-{% endmath %}
-
-{% math %}
-(A^TA)^{-1}(A^TA)x = (A^TA)^{-1}A^Tb
-{% endmath %}
-
-{% math %}
-x = (A^TA)^{-1}A^T b
-{% endmath %}
-
-{% math %}
-x = ((A^TA)^{-1}A^T) 
-{% endmath %}
-</code></pre><p>&#xD589;&#xB82C; <script type="math/tex; ">(𝐴^𝑇𝐴)^{−1}𝐴^𝑇</script>&#xB97C; &#xD589;&#xB82C; &#x1D434;&#xC758; <strong>&#xC758;&#xC0AC;&#xC5ED;&#xD589;&#xB82C;(pseudo inverse)</strong>&#xC774;&#xB77C;&#xACE0; &#xD558;&#xBA70; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#x1D434;+ &#xB85C; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p>&#xC758;&#xC0AC;&#xC5ED;&#xD589;&#xB82C;(pseudo inverse)&#xC740; <script type="math/tex; ">𝐴^𝑇𝐴</script>&#xAC00; &#xD56D;&#xC0C1; &#xC815;&#xBC29; &#xD589;&#xB82C;&#xC774; &#xB41C;&#xB2E4;&#xB294; &#xC810;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC;
+<script type="math/tex; mode=display">
+Ax \approx b \\
+A^TAx = A^Tb \\
+(A^TA)^{-1}(A^TA)x = (A^TA)^{-1}A^Tb \\
+x = (A^TA)^{-1}A^T b \\
+x = ((A^TA)^{-1}A^T) \\
+</script></p>
+<p>&#xD589;&#xB82C; <script type="math/tex; ">(𝐴^𝑇𝐴)^{−1}𝐴^𝑇</script>&#xB97C; &#xD589;&#xB82C; &#x1D434;&#xC758; <strong>&#xC758;&#xC0AC;&#xC5ED;&#xD589;&#xB82C;(pseudo inverse)</strong>&#xC774;&#xB77C;&#xACE0; &#xD558;&#xBA70; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#x1D434;+ &#xB85C; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
 A^{+} = (A^TA)^{-1}A^T 
 </script></p>
@@ -1033,9 +1021,6 @@ v^T A v^{\ast} = \lambda^{\ast} v^T v^{\ast} \tag{2.7.15}
   &#xB9CC;&#xC57D; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xC11C;&#xB85C; &#xB2E4;&#xB974;&#xBA74;(<script type="math/tex; ">𝜆_𝑖≠𝜆_𝑗</script>) &#xB450; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xC9C1;&#xAD50;&#xD55C;&#xB2E4;.</p>
 <p>  &#xB9CC;&#xC57D; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xAC19;&#xB2E4;&#xBA74;(<script type="math/tex; ">𝜆_𝑖=𝜆_𝑗</script>) <script type="math/tex; ">𝑣_𝑖</script>&#xC640; <script type="math/tex; ">𝑣_𝑗</script>&#xB294; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xAC19;&#xC740; &#xB450; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC774;&#xACE0; &#xC774; &#xB450; &#xBCA1;&#xD130;&#xC758; &#xC120;&#xD615;&#xC870;&#xD569; <script type="math/tex; ">𝑐_1𝑣_𝑖+𝑐_2𝑣_𝑗</script>&#xB3C4; <script type="math/tex; ">𝜆_𝑖</script>&#xC758; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xB41C;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; <script type="math/tex; ">𝑣_𝑖,𝑣_𝑗</script>&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4; &#xBCA1;&#xD130;&#xACF5;&#xAC04;&#xB0B4;&#xC5D0;&#xC11C; &#xC9C1;&#xAD50;&#xD558;&#xB294; &#xACE0;&#xC720;&#xBCA1;&#xD130; &#xB450;&#xAC1C;&#xB97C; &#xD56D;&#xC0C1; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
 <p>  &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xD06C;&#xAE30; 1&#xC774; &#xB418;&#xB3C4;&#xB85D; &#xC815;&#xADDC;&#xD654;&#xB41C; &#xC0C1;&#xD0DC;&#xB77C;&#xBA74; &#xACE0;&#xC720;&#xBCA1;&#xD130; &#xD589;&#xB82C; &#x1D449;&#xB294; &#xC815;&#xADDC;&#xC9C1;&#xAD50;(orthonormal) &#xD589;&#xB82C;&#xC774;&#xBBC0;&#xB85C; <strong>&#xC804;&#xCE58;&#xD589;&#xB82C;&#xC774; &#xC5ED;&#xD589;&#xB82C;</strong>&#xC774;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC740; &#xD56D;&#xC0C1; &#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
-<ul>
-<li><strong>2.5 &#xC120;&#xD615;&#xB300;&#xC218;&#xC640; &#xD574;&#xC11D;&#xAE30;&#xD558;&#xC758; &#xAE30;&#xCD08;&#xC5D0;&#xC11C; &#xC5F0;&#xC2B5;&#xBB38;&#xC81C; 2.5.5 &#xBB38;&#xC81C; &#xD480;&#xC774; &#xB2E4;&#xC2DC; &#xBCF4;&#xAE30;</strong></li>
-</ul>
 <p><script type="math/tex; mode=display">
 V^T V = V V^T = I
 </script></p>
@@ -1219,7 +1204,7 @@ v^T(X^TX)v = (Xv)^T(Xv) = u^Tu > 0
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"고윳값 분해","level":"1.2.1.7","depth":3,"next":{"title":"최대가능도와 모수추정","level":"1.2.1.8","depth":3,"path":"posts/datascience/basicmath/mle.md","ref":"posts/datascience/basicmath/mle.md","articles":[]},"previous":{"title":"좌표변환","level":"1.2.1.6","depth":3,"path":"posts/datascience/basicmath/0302coordinate-transform.md","ref":"posts/datascience/basicmath/0302coordinate-transform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/basicmath/0303eigenvalue-decomposition.md","mtime":"2020-04-05T16:12:07.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-05T16:12:45.282Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"고윳값 분해","level":"1.2.1.7","depth":3,"next":{"title":"최대가능도와 모수추정","level":"1.2.1.8","depth":3,"path":"posts/datascience/basicmath/mle.md","ref":"posts/datascience/basicmath/mle.md","articles":[]},"previous":{"title":"좌표변환","level":"1.2.1.6","depth":3,"path":"posts/datascience/basicmath/0302coordinate-transform.md","ref":"posts/datascience/basicmath/0302coordinate-transform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/basicmath/0303eigenvalue-decomposition.md","mtime":"2020-04-05T16:23:04.674Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-05T16:23:41.123Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
