@@ -10,6 +10,7 @@
         - [선형연립방정식과 역행렬](posts/datascience/basicmath/0204system-of-linear-equations.md)
         - [선형대수와 해석기하의 기초](posts/datascience/basicmath/0301linear-algebra.md)
         - [좌표변환](posts/datascience/basicmath/0302coordinate-transform.md)
+        - [고윳값 분해](posts/datascience/basicmath/0303eigenvalue-decomposition.md)
         - [최대가능도와 모수추정](posts/datascience/basicmath/mle.md)
     - [Regression & Time-series Analysis](posts/datascience/regressionandtimeseries/README.md)
         - [Analysis Intro](posts/datascience/regressionandtimeseries/dataintro.md)
