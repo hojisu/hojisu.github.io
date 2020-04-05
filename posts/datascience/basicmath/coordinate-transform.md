@@ -392,14 +392,17 @@ $$
 
 원래의 기저벡터가 아닌 새로운 기저벡터가 있다고 하자. 이 새로운 기저벡터들의 기존 기저벡터에 대한 좌표를 열벡터로 보고 이를 행렬로 묶은 행렬 𝐴를 생각하자.
 
-예를 들어, 기존의 기저벡터가 $${𝑒_1,𝑒_2}$$ 이고 새로운 기저벡터 {$$g_1, g_2$$}간에 다음과 같은 관계가 성립한다면,
+예를 들어, 기존의 기저벡터가 $${𝑒_1, 𝑒_2}$$ 이고 새로운 기저벡터 $${g_1, g_2}$$ 간에 다음과 같은 관계가 성립한다면,
+
 $$
 \begin{eqnarray}
 g_1 &=&  \dfrac{1}{\sqrt{2}} e_1 + \dfrac{1}{\sqrt{2}} e_2 \\
 g_2 &=& -\dfrac{1}{\sqrt{2}} e_1 + \dfrac{1}{\sqrt{2}} e_2
 \end{eqnarray}
 $$
+
 $$𝑒_1$$에 대한 $$𝑔_1$$의 좌표 벡터는 다음처럼 열벡터로 나타낼 수 있다.
+
 $$
 g_{1e} = 
 \begin{bmatrix} 
@@ -410,7 +413,9 @@ g_{2e} =
 -\dfrac{1}{\sqrt{2}} \\ \dfrac{1}{\sqrt{2}} 
 \end{bmatrix}
 $$
+
 두 좌표벡터들을 합쳐서 행렬로 표시하면 다음과 같다.
+
 $$
 \begin{bmatrix} g_1 & g_2 \end{bmatrix}= \begin{bmatrix} e_1 & e_2 \end{bmatrix} \begin{bmatrix} g_{1e} & g_{2e} \end{bmatrix}= \begin{bmatrix} e_1 & e_2 \end{bmatrix} A
 $$
@@ -432,6 +437,7 @@ $$
 2차원의 경우를 예로 들어보자. 벡터 𝑥의 기저벡터 $${𝑒_1,𝑒_2}$$에 대한 좌표 $$𝑥_𝑒$$를 새로운 기저벡터 $${𝑔_1,𝑔_2}$$에 대한 좌표 $$𝑥_𝑔$$로 변환하고자 한다.
 
 새로운 기저벡터에 대한 좌표 값이 가리키는 실제 위치는 원래의 벡터가 가리키는 실제 위치와 같아야 되므로
+
 $$
 x = x_{e1}e_1 + x_{e2}e_2 = x_{g1} g_1 + x_{g2} g_2  
 $$
@@ -443,11 +449,14 @@ x
 $$
 
 이 식에
+
 $$
 \begin{bmatrix} g_1 & g_2 \end{bmatrix}
 = \begin{bmatrix} e_1 & e_2 \end{bmatrix} A
 $$
+
 를 대입하면
+
 $$
 x 
 = \begin{bmatrix} e_1 & e_2 \end{bmatrix} x_e 
@@ -465,15 +474,20 @@ $$
 이 때 𝐴의 역행렬 𝑇=$$𝐴^{−1}$$을 **변환행렬(transform matrix)**이라고 한다.
 
 예를 들어 벡터 𝑥의 표준기저벡터에 대한 좌표가 다음과 같다고 하자.
+
 $$
 x = 2 e_1 + 2 e_2= \begin{bmatrix}2 \\ 2\end{bmatrix} = x_e
 $$
+
 표준기저벡터에 대한 새로운 기저벡터의 좌표가 다음과 같다면
+
 $$
 g_{1e} = \begin{bmatrix} \dfrac{1}{\sqrt{2}} \\ \dfrac{1}{\sqrt{2}} \end{bmatrix} ,\;\;
 g_{2e} = \begin{bmatrix} -\dfrac{1}{\sqrt{2}} \\ \dfrac{1}{\sqrt{2}} \end{bmatrix}
 $$
+
 새로운 기저벡터에 대한 벡터 𝑎의 좌표는 위의 공식을 이용하여 다음처럼 계산할 수 있다.
+
 $$
 x_g = A^{-1}x_e = 
 \begin{bmatrix} 
