@@ -4,7 +4,8 @@
 
 - [Data Science](posts/datascience/README.md)
     - [Basic Math](posts/datascience/basicmath/README.md)
-        - [Data & Matrix](posts/datascience/basicmath/data-and-matrix.md)
+        - [Data & Matrix](posts/datascience/basicmath/2.1data-and-matrix.md)
+        - [Data & Matrix Calculation](posts/datascience/basicmath/2.2vector-and-matirx-calculation.md)
         - [MLE](posts/datascience/basicmath/mle.md)
         - [Coordinate Transform](posts/datascience/basicmath/coordinate-transform.md)
     - [Regression & Time-series Analysis](posts/datascience/regressionandtimeseries/README.md)
