@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>회귀분석 & 시계열 분석 · GitBook</title>
+        <title>데이터 분석 기초 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="dataintro.html" />
     
-    
-    <link rel="prev" href="../" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -522,7 +520,7 @@
                 <a href="../">
             
                     
-                    Datascience
+                    데이터 사이언스
             
                 </a>
             
@@ -531,7 +529,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="./">
+        <li class="chapter " data-level="1.3.1" data-path="./">
             
                 <a href="./">
             
@@ -545,7 +543,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1.1" data-path="dataintro.html">
+        <li class="chapter active" data-level="1.3.1.1" data-path="dataintro.html">
             
                 <a href="dataintro.html">
             
@@ -598,7 +596,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >회귀분석 & 시계열 분석</a>
+        <a href="../../.." >데이터 분석 기초</a>
     </h1>
 </div>
 
@@ -613,7 +611,59 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC;-&#xC2DC;&#xACC4;&#xC5F4;-&#xBD84;&#xC11D;">&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC; &#xC2DC;&#xACC4;&#xC5F4; &#xBD84;&#xC11D;</h1>
+                                <h1 id="&#xB370;&#xC774;&#xD130;-&#xBD84;&#xC11D;&#xC758;-&#xC18C;&#xAC1C;">&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC758; &#xC18C;&#xAC1C;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#xB370;&#xC774;&#xD130;-&#xBD84;&#xC11D;">&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;</a></li>
+<li><a href="#&#xC608;&#xCE21;">&#xC608;&#xCE21;</a></li>
+<li><a href="#&#xC785;&#xB825;&#xB370;&#xC774;&#xD130;&#xC640;-&#xCD9C;&#xB825;&#xB370;&#xC774;&#xD130;">&#xC785;&#xB825;&#xB370;&#xC774;&#xD130;&#xC640; &#xCD9C;&#xB825;&#xB370;&#xC774;&#xD130;</a></li>
+<li><a href="#&#xADDC;&#xCE59;&#xAE30;&#xBC18;-&#xBC29;&#xBC95;&#xACFC;-&#xD559;&#xC2B5;&#xAE30;&#xBC18;-&#xBC29;&#xBC95;">&#xADDC;&#xCE59;&#xAE30;&#xBC18; &#xBC29;&#xBC95;&#xACFC; &#xD559;&#xC2B5;&#xAE30;&#xBC18; &#xBC29;&#xBC95;</a></li>
+<li><a href="#&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;">&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;</a></li>
+<li><a href="#&#xC774;&#xBBF8;&#xC9C0;&#xB137;">&#xC774;&#xBBF8;&#xC9C0;&#xB137;</a></li>
+<li><a href="#&#xC804;&#xCC98;&#xB9AC;&#xC640;-&#xC778;&#xCF54;&#xB529;">&#xC804;&#xCC98;&#xB9AC;&#xC640; &#xC778;&#xCF54;&#xB529;</a></li>
+<li><a href="#&#xC785;&#xB825;&#xCC28;&#xC6D0;">&#xC785;&#xB825;&#xCC28;&#xC6D0;</a></li>
+<li><a href="#&#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xAC12;">&#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xAC12;</a></li>
+<li><a href="#&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC;-&#xBD84;&#xB958;">&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC; &#xBD84;&#xB958;</a></li>
+<li><a href="#&#xBE44;&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;">&#xBE44;&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;</a></li>
+<li><a href="#&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;">&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="&#xB370;&#xC774;&#xD130;-&#xBD84;&#xC11D;">&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;</h3>
+<p>&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC740; &#xB370;&#xC774;&#xD130; &#xAC04;&#xC758; &#xAD00;&#xACC4;&#xB97C; &#xD30C;&#xC545;&#xD558;&#xAC70;&#xB098; &#xD30C;&#xC545;&#xB41C; &#xAD00;&#xACC4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC6B0;&#xB9AC;&#xAC00; &#xC6D0;&#xD558;&#xB294; &#xC0C8;&#xB85C;&#xC6B4; (&#xCD9C;&#xB825;) &#xB370;&#xC774;&#xD130;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xB0B4;&#xB294; &#xACFC;&#xC815;&#xC774;&#xB2E4;. &#xBD84;&#xC11D; &#xBAA9;&#xC801;&#xC5D0; &#xB530;&#xB77C; &#xC608;&#xCE21;(prediction), &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;(clustering), &#xBAA8;&#xC0AC;(approximation) &#xB4F1; &#xB2E4;&#xC591;&#xD55C; &#xBB38;&#xC81C;&#xAC00; &#xC788;&#xB2E4;.</p>
+<h3 id="&#xC608;&#xCE21;">&#xC608;&#xCE21;</h3>
+<p>&#xC608;&#xCE21;(prediction)&#xC740; &#xC22B;&#xC790;, &#xBB38;&#xC11C;, &#xC774;&#xBBF8;&#xC9C0;, &#xC74C;&#xC131;, &#xC601;&#xC0C1; &#xB4F1;&#xC758; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xC785;&#xB825; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC8FC;&#xBA74; &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC758; &#xACB0;&#xACFC;&#xB85C; &#xB2E4;&#xB978; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xBD84;&#xC11D; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. </p>
+<h3 id="&#xC785;&#xB825;&#xB370;&#xC774;&#xD130;&#xC640;-&#xCD9C;&#xB825;&#xB370;&#xC774;&#xD130;">&#xC785;&#xB825;&#xB370;&#xC774;&#xD130;&#xC640; &#xCD9C;&#xB825;&#xB370;&#xC774;&#xD130;</h3>
+<p>&#xC785;&#xB825;&#xB370;&#xC774;&#xD130;(input data)&#xB294; &#xBD84;&#xC11D;&#xC758; &#xAE30;&#xBC18;&#xC774; &#xB418;&#xB294; &#xB370;&#xC774;&#xD130;&#xB85C; &#xBCF4;&#xD1B5; &#xC54C;&#xD30C;&#xBCB3; X&#xB85C; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;. &#xC120;&#xD615;&#xD68C;&#xADC0;&#xC5D0;&#xC11C;&#xB294; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;(indepentent variable), &#xBD84;&#xB958;&#xC5D0;&#xC11C;&#xB294; &#xD2B9;&#xC9D5;(feature), &#xBA38;&#xC2E0;&#xB7EC;&#xB2DD;&#xC5D0;&#xC11C;&#xB294; &#xC124;&#xBA85;&#xBCC0;&#xC218;(explanatory variable) &#xB4F1;&#xC758; &#xC6A9;&#xC5B4;&#xB97C; &#xC4F0;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;.</p>
+<p>&#xCD9C;&#xB825;&#xB370;&#xC774;&#xD130;(output data)&#xB294; &#xCD94;&#xC815;&#xD558;&#xAC70;&#xB098; &#xC608;&#xCE21;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xBAA9;&#xC801; &#xB370;&#xC774;&#xD130;&#xB85C; &#xBCF4;&#xD1B5; &#xC54C;&#xD30C;&#xBCB3; Y&#xB85C; &#xD45C;&#xAE30;. &#xC120;&#xD615;&#xD68C;&#xADC0;&#xC5D0;&#xC11C;&#xB294; &#xC885;&#xC18D;&#xBCC0;&#xC218;(dependent variable), &#xC885;&#xC18D;&#xBCC0;&#xC218;&#xAC00; &#xB4A4;&#xC5D0;&#xC11C; &#xC124;&#xBA85;&#xD560; &#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xAC12;&#xC774;&#xBA74; &#xB77C;&#xBCA8;(label) &#xB610;&#xB294; &#xD074;&#xB798;&#xC2A4;(class) &#xB77C;&#xACE0; &#xD558;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;.</p>
+<h3 id="&#xADDC;&#xCE59;&#xAE30;&#xBC18;-&#xBC29;&#xBC95;&#xACFC;-&#xD559;&#xC2B5;&#xAE30;&#xBC18;-&#xBC29;&#xBC95;">&#xADDC;&#xCE59;&#xAE30;&#xBC18; &#xBC29;&#xBC95;&#xACFC; &#xD559;&#xC2B5;&#xAE30;&#xBC18; &#xBC29;&#xBC95;</h3>
+<p>&#xADDC;&#xCE59;&#xAE30;&#xBC18;(rule-based)&#xB294; &#xC5B4;&#xB5A4; &#xC785;&#xB825;&#xC774; &#xB4E4;&#xC5B4;&#xC624;&#xBA74; &#xC5B4;&#xB5A4; &#xCD9C;&#xB825;&#xC774; &#xB098;&#xC624;&#xB294;&#xC9C0;&#xB97C; &#xACB0;&#xC815;&#xD558;&#xB294; &#xADDC;&#xCE59;&#xC774;&#xB098; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC744; &#xC0AC;&#xB78C;&#xC774; &#xBBF8;&#xB9AC; &#xB9CC;&#xB4E4;&#xC5B4; &#xB193;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<p>&#xD559;&#xC2B5;&#xAE30;&#xBC18;(traing-based), &#xB370;&#xC774;&#xD130;&#xAE30;&#xBC18;(data-based)&#xC740; &#xB300;&#xB7C9;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xBCF4;&#xC5EC;&#xC90C;&#xC73C;&#xB85C;&#xC368; &#xC2A4;&#xC2A4;&#xB85C; &#xADDC;&#xCE59;&#xC744; &#xB9CC;&#xB4E4;&#xAC8C; &#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. </p>
+<h3 id="&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;">&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;</h3>
+<p>&#xD559;&#xC2B5;&#xC6A9; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;(training data set)&#xC740; &#xC785;&#xB825;&#xAC12;&#xACFC; &#xBAA9;&#xD46F;&#xAC12;(&#xC815;&#xB2F5;)&#xC744; &#xC30D;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xB294; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xC758; &#xC9D1;&#xD569;&#xC774;&#xB2E4;. &#xD559;&#xC2B5;&#xC2DC;&#xD0A4;&#xACE0;&#xC790; &#xD558;&#xB294; &#xC608;&#xCE21; &#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xCD5C;&#xC885;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xAE30;&#xB97C; &#xBC14;&#xB77C;&#xB294; &#xBAA8;&#xC2B5;&#xC744; &#xD45C;&#xD604;&#xD55C; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC774;&#xB77C;&#xACE0; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;(supervised learning)&#xC740; &#xCD9C;&#xB825; &#xB370;&#xC774;&#xD130;(&#xBAA9;&#xD45C;)&#xAC12;&#xC744; &#xBD99;&#xC774;&#xB294; &#xC791;&#xC5C5;&#xC740; &#xB2F9;&#xC5F0;&#xD788; &#xC0AC;&#xB78C;&#xC774; &#xC218;&#xB3D9;&#xC73C;&#xB85C; &#xD574;&#xC57C; &#xD55C;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC774;&#xB7EC;&#xD55C; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<p>&#xBAA9;&#xD46F;&#xAC12;(target)&#xC740; &#xD559;&#xC2B5;&#xC6A9; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC5D0; &#xBD99;&#xC5B4;&#xC788;&#xB294; &#xCD9C;&#xB825; &#xB370;&#xC774;&#xD130;&#xC774;&#xB2E4;.</p>
+<p>&#xB808;&#xC774;&#xBE14;&#xB9C1;(labelling)&#xC740; &#xC785;&#xB825;&#xB370;&#xC774;&#xD130;&#xB9CC; &#xC788;&#xACE0; &#xC774;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; &#xBAA9;&#xD46F;&#xAC12;&#xC774; &#xC5C6;&#xB2E4;&#xBA74; &#xAC01; &#xC785;&#xB825;&#xB370;&#xC774;&#xD130;&#xC5D0; &#xB300;&#xD574; &#xC0AC;&#xB78C;&#xC774; &#xC6D0;&#xD558;&#xB294; &#xBAA9;&#xD45C;&#xAC12;&#xC744; &#xBD99;&#xC5EC;&#xC8FC;&#xB294; &#xC791;&#xC5C5;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xC774;&#xBBF8;&#xC9C0;&#xB137;">&#xC774;&#xBBF8;&#xC9C0;&#xB137;</h3>
+<p>&#xC774;&#xBBF8;&#xC9C0;&#xB137;(ImageNet)&#xC740; &#xD398;&#xC774;&#xD398;&#xC774; &#xB9AC;(Fei-Fei Li) &#xAD50;&#xC218;&#xAC00; &#xC774;&#xB044;&#xB294; &#xC778;&#xACF5;&#xC9C0;&#xB2A5; &#xD300;&#xC774; &#xB9CC;&#xB4E4;&#xC5B4; 2009&#xB144;&#xC5D0; &#xACF5;&#xAC1C;&#xD55C; &#xD559;&#xC2B5;&#xC6A9; &#xB370;&#xC774;&#xD130;&#xC14B;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xC804;&#xCC98;&#xB9AC;&#xC640;-&#xC778;&#xCF54;&#xB529;">&#xC804;&#xCC98;&#xB9AC;&#xC640; &#xC778;&#xCF54;&#xB529;</h3>
+<p>&#xBB38;&#xC11C;&#xB098; &#xC774;&#xBBF8;&#xC9C0;&#xC640; &#xAC19;&#xC740; &#xD604;&#xC2E4;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCEF4;&#xD4E8;&#xD130;&#xAC00; &#xCC98;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xB294; &#xC22B;&#xC790;&#xB370;&#xC774;&#xD130;&#xB85C; &#xBC14;&#xAFB8;&#xB294; &#xACFC;&#xC815;&#xC774;&#xB2E4;.</p>
+<p>&#xC804;&#xCC98;&#xB9AC;(preprocessing)&#xB294; &#xC804;&#xCCB4; &#xC785;&#xB825; &#xC815;&#xBCF4; &#xC911; &#xC2E4;&#xC81C;&#xB85C; &#xCD9C;&#xB825; &#xB370;&#xC774;&#xD130;&#xC758; &#xACB0;&#xC815;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE60;&#xB9CC;&#xD55C; &#xD575;&#xC2EC; &#xC815;&#xBCF4;&#xB97C; &#xC120;&#xD0DD;&#xD558;&#xAC70;&#xB098; &#xBCF5;&#xC218;&#xC758; &#xC785;&#xB825; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC870;&#xD569;&#xD558;&#xC5EC; &#xC0C8;&#xB85C;&#xC6B4; &#xC785;&#xB825; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xB3C4; &#xC804;&#xCC98;&#xB9AC;&#xC758; &#xC911;&#xC694;&#xD55C; &#xC5ED;&#xD560;&#xC774;&#xB2E4;. </p>
+<p>&#xC778;&#xCF54;&#xB529;(encoding)</p>
+<h3 id="&#xC785;&#xB825;&#xCC28;&#xC6D0;">&#xC785;&#xB825;&#xCC28;&#xC6D0;</h3>
+<p>&#xC785;&#xB825;&#xCC28;&#xC6D0;(input dimension)&#xC740; &#xC785;&#xB825;&#xC758; &#xAC1C;&#xC218;, &#xC989; &#xC22B;&#xC790; &#xBCA1;&#xD130;&#xC758; &#xD06C;&#xAE30;&#xC774;&#xB2E4;.</p>
+<p>BOW(Bag of Words)&#xC740; &#xBB38;&#xC11C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xACE0;&#xC815;&#xB41C; &#xD06C;&#xAE30;&#xC758; &#xC22B;&#xC790; &#xBCA1;&#xD130;&#xB85C; &#xBC14;&#xAFB8;&#xB294; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC624;&#xB85C;&#xC9C0; &#xD2B9;&#xC815;&#xD55C; &#xB2E8;&#xC5B4;&#xAC00; &#xBB38;&#xC11C;&#xC5D0; &#xBA87; &#xBC88; &#xB098;&#xC654;&#xB294;&#xC9C0;&#xB9CC; &#xC138;&#xC5B4; &#xADF8; &#xBE48;&#xB3C4;&#xB97C; &#xBCA1;&#xD130;&#xB85C; &#xD45C;&#xC2DC;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xAC12;">&#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xAC12;</h3>
+<p>&#xCE74;&#xD14C;&#xACE0;&#xB9AC;(category)&#xAC12; &#xB610;&#xB294; &#xBC94;&#xC8FC;&#xD615; &#xAC12;&#xC740; &#xAE30;&#xD638;&#xB85C; &#xD45C;&#xC2DC;&#xB41C; &#xBE44;&#xC5F0;&#xC18D;&#xC801;&#xB370;&#xC774;&#xD130;&#xC774;&#xB2E4;.  &#xB450; &#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC788;&#xC744; &#xB54C; &#xC774;&#xB4E4;&#xC758; &#xD06C;&#xAE30;&#xB098; &#xAC00;&#xCE58;, &#xD639;&#xC740; &#xC21C;&#xC11C;&#xB97C; &#xBE44;&#xAD50;&#xD560; &#xC218; &#xC788;&#xB294;&#xAC00; &#xC5C6;&#xB294;&#xAC00;&#xC774;&#xB2E4;.</p>
+<p>&#xD074;&#xB798;&#xC2A4;(class)&#xB294; &#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xAC12;&#xC740; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xACBD;&#xC6B0;&#xC758; &#xC218;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC;-&#xBD84;&#xB958;">&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC; &#xBD84;&#xB958;</h3>
+<p>&#xD68C;&#xADC0;&#xBD84;&#xC11D;(regression analysis)&#xC740; &#xCD9C;&#xB825;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xAC12;&#xC774; &#xC22B;&#xC790;&#xC778; &#xACBD;&#xC6B0;&#xC774;&#xB2E4;.</p>
+<p>&#xBD84;&#xB958;(classfication)&#xB294; &#xCD9C;&#xB825;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xAC12;&#xC774; &#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xAC12;&#xC778; &#xACBD;&#xC6B0;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xBE44;&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;">&#xBE44;&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;</h3>
+<p>&#xBE44;&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;(unsupervised learning)&#xC740; &#xC785;&#xB825;/&#xCD9C;&#xB825;&#xC774; &#xAD6C;&#xBD84;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xB2E8;&#xC21C;&#xD55C; &quot;&#xB370;&#xC774;&#xD130;&#xB4E4;&#xC758; &#xAD00;&#xACC4;&quot;&#xC5D0;&#xC11C; &#xD2B9;&#xC815;&#xD55C; &#xADDC;&#xCE59;&#xC744; &#xCC3E;&#xC544;&#xB0B4;&#xB294; &#xAC83;, &#xC785;&#xB825;/&#xCD9C;&#xB825; &#xB370;&#xC774;&#xD130;&#xB97C; &#xAD6C;&#xBD84;&#xC9D3;&#xC9C0; &#xC54A;&#xACE0; &#xB2E8;&#xC21C;&#xD788; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC785;&#xB825;&#xD558;&#xBA74; &#xC774; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xAC04;&#xC758; &#xADDC;&#xCE59;&#xC744; &#xCC3E;&#xC544;&#xB0B4;&#xAC70;&#xB098; &#xBBF8;&#xB9AC; &#xC9C0;&#xC815;&#xD55C; &#xADDC;&#xCE59;(&#xBAA8;&#xD615;)&#xC5D0; &#xB9DE;&#xB294; &#xB370;&#xC774;&#xD130;&#xC778;&#xC9C0;&#xB97C; &#xAD6C;&#xBD84;&#xD574; &#xB0B8;&#xB2E4;.</p>
+<h3 id="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;">&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;</h3>
+<p>&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;(clustering)&#xC740; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xC744; &#xC720;&#xC0AC;&#xD55C; &#xB370;&#xC774;&#xD130;&#xAE4C;&#xC9C0; &#xAC19;&#xC740; &#xADF8;&#xB8F9;&#xC73C;&#xB85C; &#xBAA8;&#xC73C;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -641,14 +691,10 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Datascience">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 회귀분석 & 시계열 분석">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="dataintro.html" class="navigation navigation-next " aria-label="Next page: 데이터 분석 기초">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -657,7 +703,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"회귀분석 & 시계열 분석","level":"1.3.1","depth":2,"next":{"title":"데이터 분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regressionandtimeseries/dataintro.md","ref":"posts/datascience/regressionandtimeseries/dataintro.md","articles":[]},"previous":{"title":"Datascience","level":"1.3","depth":1,"path":"posts/datascience/README.md","ref":"posts/datascience/README.md","articles":[{"title":"회귀분석 & 시계열 분석","level":"1.3.1","depth":2,"path":"posts/datascience/regressionandtimeseries/README.md","ref":"posts/datascience/regressionandtimeseries/README.md","articles":[{"title":"데이터 분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regressionandtimeseries/dataintro.md","ref":"posts/datascience/regressionandtimeseries/dataintro.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/regressionandtimeseries/README.md","mtime":"2020-04-05T11:31:13.826Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T05:56:07.640Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"데이터 분석 기초","level":"1.3.1.1","depth":3,"previous":{"title":"회귀분석 & 시계열 분석","level":"1.3.1","depth":2,"path":"posts/datascience/regression/README.md","ref":"posts/datascience/regression/README.md","articles":[{"title":"데이터 분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regression/dataintro.md","ref":"posts/datascience/regression/dataintro.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/regression/dataintro.md","mtime":"2020-04-05T11:31:13.826Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T06:00:30.745Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
