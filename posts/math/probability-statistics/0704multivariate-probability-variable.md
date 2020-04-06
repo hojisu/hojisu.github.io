@@ -99,7 +99,7 @@ $$
 $$
 p_{X \mid Y}(x \mid y) = \dfrac{p_{XY}(x, y)}{p_{Y}(y)}
 $$
-![image-20190528130630639](/Users/jisuho/Library/Application Support/typora-user-images/image-20190528130630639.png)
+![image-20190528130630639](../../../resource/img/image-20190528130630639.png)
 
 ### 독립과 상관
 
