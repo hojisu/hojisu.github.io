@@ -32,5 +32,5 @@
         - [기댓값](posts/math/probability-statistics/0702expectation.md)
         - [최대가능도와 모수추정](posts/math/probability-statistics/mle.md)
 - [데이터 사이언스](posts/datascience/README.md)    
-    - [회귀분석 & 시계열 분석](posts/datascience/regression/README.md)
-        - [데이터 분석 기초](posts/datascience/regression/dataintro.md)
+    - [회귀분석](posts/datascience/regression/README.md)
+        - [데이터분석 기초](posts/datascience/regression/dataintro.md)
