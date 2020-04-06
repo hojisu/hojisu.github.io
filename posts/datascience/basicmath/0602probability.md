@@ -20,7 +20,7 @@ ___________________
 
 **사건(event)**은  **표본공간 Ω의 부분집합**이다. 전체 표본공간 중에서 우리가 관심을 가지고 있는 일부 표본의 집합을 뜻한다. 보통 𝐴,𝐵,𝐶,⋯ 식으로 대문자 알파벳으로 표기한다.
 
-![image-20190514000344437](/Users/jisuho/Library/Application Support/typora-user-images/image-20190514000344437.png)
+![image-20190514000344437](../../../resource/img/image-20190514000344437.png)
 
 ### 확률
 
@@ -31,7 +31,7 @@ $$
 
 확률이라는 함수의 입력값의 집합 즉, 정의역(domain)은 표본공간의 모든 사건(부분집합)의 집합이다. **모든 각각의 사건(부분집합)에 어떤 숫자를 할당(assign, allocate)하는 함수가 확률**이다. 보통 대문자 알파벳 𝑃 로 나타낸다. 확률 𝑃는 함수이고 𝑃(𝐴)는 𝐴라는 사건(부분집합)에 할당된 숫자를 뜻한다.
 
-#### **콜모고로프의 공리(Kolmogorov's axioms)**
+#### 콜모고로프의 공리(Kolmogorov's axioms)
 
 (1) 모든 사건에 대해 확률은 실수이고 0 또는 양수이다.
 $$
@@ -45,7 +45,7 @@ $$
 $$
 A \cap B = \emptyset \;\;\; \rightarrow \;\;\; P(A \cup B) = P(A) + P(B)
 $$
-![image-20190514000645693](/Users/jisuho/Library/Application Support/typora-user-images/image-20190514000645693.png)
+![image-20190514000645693](../../../resource/img/image-20190514000645693.png)
 
 ### 확률은 표본이 아닌 사건을 입력으로 가지는 함수
 
