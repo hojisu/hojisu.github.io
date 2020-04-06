@@ -30,6 +30,7 @@
         - [베이즈 정리](posts/math/probability-statistics/0606baysian-rule.md)
         - [확률적데이터와 확률변수](posts/math/probability-statistics/0701probabilistic-data-descriptive.md)
         - [기댓값](posts/math/probability-statistics/0702expectation.md)
+        - [분산 & 표준편차](posts/math/probability-statistics/0703variance.md)
         - [최대가능도와 모수추정](posts/math/probability-statistics/mle.md)
 - [데이터 사이언스](posts/datascience/README.md)    
     - [회귀분석](posts/datascience/regression/README.md)
