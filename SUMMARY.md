@@ -20,7 +20,7 @@
         - [행렬의 미분](posts/math/calculus/0404matrix-differentiation.md)
     - [최적화](posts/math/optimization/README.md)
         - [최적화 기초](posts/math/optimization/0501optimization.md)
-        - [제한조건이 있는 최적화 문제](posts/math/optimization0502constrained-optimization.md)
+        - [제한조건이 있는 최적화 문제](posts/math/optimization/0502constrained-optimization.md)
         - [LP문제 & QP문제](posts/math/optimization/0503lp-qp-problem.md)
     - [확률과 통계](posts/math/probability-statistics/README.md)
         - [확률의 수학적 정의와 의미](posts/math/probability-statistics/0602probability.md)
