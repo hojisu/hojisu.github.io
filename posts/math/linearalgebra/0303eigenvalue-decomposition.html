@@ -1,0 +1,1536 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>고윳값 분해 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0304svd.html" />
+    
+    
+    <link rel="prev" href="0302coordinate-transform.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../datascience/math/README.md">
+            
+                <span>
+            
+                    
+                    수학
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    선형대수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="0201data-and-matrix.html">
+            
+                <a href="0201data-and-matrix.html">
+            
+                    
+                    데이터와 행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="0202vector-and-matrix-calculation.html">
+            
+                <a href="0202vector-and-matrix-calculation.html">
+            
+                    
+                    벡터와 행렬의 연산
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="0203matrix-character.html">
+            
+                <a href="0203matrix-character.html">
+            
+                    
+                    행렬의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="0204system-of-linear-equations.html">
+            
+                <a href="0204system-of-linear-equations.html">
+            
+                    
+                    선형연립방정식과 역행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="0301linear-algebra.html">
+            
+                <a href="0301linear-algebra.html">
+            
+                    
+                    선형대수와 해석기하의 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="0302coordinate-transform.html">
+            
+                <a href="0302coordinate-transform.html">
+            
+                    
+                    좌표변환
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.7" data-path="0303eigenvalue-decomposition.html">
+            
+                <a href="0303eigenvalue-decomposition.html">
+            
+                    
+                    고윳값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="0304svd.html">
+            
+                <a href="0304svd.html">
+            
+                    
+                    특이값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="0305pca.html">
+            
+                <a href="0305pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../calculus/">
+            
+                <a href="../calculus/">
+            
+                    
+                    미적분
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../calculus/0401function.html">
+            
+                <a href="../calculus/0401function.html">
+            
+                    
+                    함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../calculus/0402function-differentiation.html">
+            
+                <a href="../calculus/0402function-differentiation.html">
+            
+                    
+                    함수 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../calculus/0403integral.html">
+            
+                <a href="../calculus/0403integral.html">
+            
+                    
+                    적분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../calculus/0404matrix-differentiation.html">
+            
+                <a href="../calculus/0404matrix-differentiation.html">
+            
+                    
+                    행렬의 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../optimization/">
+            
+                <a href="../optimization/">
+            
+                    
+                    최적화
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../optimization/0501optimization.html">
+            
+                <a href="../optimization/0501optimization.html">
+            
+                    
+                    최적화 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../optimization0502constrained-optimization.md">
+            
+                <span>
+            
+                    
+                    제한조건이 있는 최적화 문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../optimization/0503lp-qp-problem.html">
+            
+                <a href="../optimization/0503lp-qp-problem.html">
+            
+                    
+                    LP문제 & QP문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../probability-statistics/">
+            
+                <a href="../probability-statistics/">
+            
+                    
+                    확률과 통계
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../probability-statistics/0602probability.html">
+            
+                <a href="../probability-statistics/0602probability.html">
+            
+                    
+                    확률의 수학적 정의와 의미
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../probability-statistics/0603probability-character.html">
+            
+                <a href="../probability-statistics/0603probability-character.html">
+            
+                    
+                    확률의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../probability-statistics/0604probability-distribution-function.html">
+            
+                <a href="../probability-statistics/0604probability-distribution-function.html">
+            
+                    
+                    확률분포함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../probability-statistics/0605joint-conditional-probability.html">
+            
+                <a href="../probability-statistics/0605joint-conditional-probability.html">
+            
+                    
+                    결합확률과 조건부확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../probability-statistics/0606baysian-rule.html">
+            
+                <a href="../probability-statistics/0606baysian-rule.html">
+            
+                    
+                    베이즈 정리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                <a href="../probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                    
+                    확률적데이터와 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../probability-statistics/0702expectation.html">
+            
+                <a href="../probability-statistics/0702expectation.html">
+            
+                    
+                    기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../probability-statistics/mle.html">
+            
+                <a href="../probability-statistics/mle.html">
+            
+                    
+                    최대가능도와 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../datascience/">
+            
+                <a href="../../datascience/">
+            
+                    
+                    Datascience
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../datascience/regressionandtimeseries/">
+            
+                <a href="../../datascience/regressionandtimeseries/">
+            
+                    
+                    회귀분석 & 시계열 분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../datascience/regressionandtimeseries/dataintro.html">
+            
+                <a href="../../datascience/regressionandtimeseries/dataintro.html">
+            
+                    
+                    데이터 분석 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >고윳값 분해</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xACE0;&#xC733;&#xAC12;-&#xBD84;&#xD574;">&#xACE0;&#xC733;&#xAC12; &#xBD84;&#xD574;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xACE0;&#xC720;&#xBCA1;&#xD130;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;</a></li>
+<li><a href="#&#xD2B9;&#xC131;&#xBC29;&#xC815;&#xC2DD;">&#xD2B9;&#xC131;&#xBC29;&#xC815;&#xC2DD;</a></li>
+<li><a href="#&#xACE0;&#xC733;&#xAC12;&#xC758;-&#xAC2F;&#xC218;">&#xACE0;&#xC733;&#xAC12;&#xC758; &#xAC2F;&#xC218;</a></li>
+<li><a href="#&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xB300;&#xAC01;&#xD569;&#xD589;&#xB82C;&#xC2DD;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xB300;&#xAC01;&#xD569;/&#xD589;&#xB82C;&#xC2DD;</a></li>
+<li><a href="#&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758;-&#xACC4;&#xC0B0;">&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758; &#xACC4;&#xC0B0;</a></li>
+<li><a href="#numpy&#xB97C;-&#xC0AC;&#xC6A9;&#xD55C;-&#xACE0;&#xC720;&#xBD84;&#xD574;">Numpy&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; &#xACE0;&#xC720;&#xBD84;&#xD574;</a></li>
+<li><a href="#&#xB300;&#xAC01;&#xD654;">&#xB300;&#xAC01;&#xD654;</a><ul>
+<li><a href="#&#xC815;&#xBC29;&#xD589;&#xB82C;">&#xC815;&#xBC29;&#xD589;&#xB82C;</a></li>
+</ul>
+</li>
+<li><a href="#&#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;">&#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;</a></li>
+<li><a href="#&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xC5ED;&#xD589;&#xB82C;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xC5ED;&#xD589;&#xB82C;</a></li>
+<li><a href="#&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758;-&#xACE0;&#xC720;&#xBD84;&#xD574;">&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC720;&#xBD84;&#xD574;</a><ul>
+<li><a href="#&#xC120;&#xD615;&#xC5F0;&#xB9BD;&#xBC29;&#xC815;&#xC2DD;&#xACFC;-&#xC120;&#xD615;-&#xC608;&#xCE21;&#xBAA8;&#xD615;">&#xC120;&#xD615;&#xC5F0;&#xB9BD;&#xBC29;&#xC815;&#xC2DD;&#xACFC; &#xC120;&#xD615; &#xC608;&#xCE21;&#xBAA8;&#xD615;</a></li>
+</ul>
+</li>
+<li><a href="#&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC744;-&#xB7AD;&#xD06C;-1-&#xD589;&#xB82C;&#xC758;-&#xD569;&#xC73C;&#xB85C;-&#xBD84;&#xD574;">&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC744; &#xB7AD;&#xD06C;-1 &#xD589;&#xB82C;&#xC758; &#xD569;&#xC73C;&#xB85C; &#xBD84;&#xD574;</a></li>
+<li><a href="#&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758;-&#xAC04;&#xB7B5;&#xD654;">&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xAC04;&#xB7B5;&#xD654;</a><ul>
+<li><a href="#&#xB300;&#xCE6D;&#xD589;&#xB82C;">&#xB300;&#xCE6D;&#xD589;&#xB82C;</a></li>
+</ul>
+</li>
+<li><a href="#&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;">&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;</a><ul>
+<li><a href="#&#xC774;&#xCC28;&#xD615;&#xC2DD;quadratic-form">&#xC774;&#xCC28;&#xD615;&#xC2DD;(Quadratic Form)</a></li>
+</ul>
+</li>
+<li><a href="#&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xC591;&#xC758;-&#xC815;&#xBD80;&#xD638;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;</a></li>
+<li><a href="#&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC758;-&#xC5ED;&#xD589;&#xB82C;">&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;</a><ul>
+<li><a href="#&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;-1">&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;</a></li>
+<li><a href="#&#xC591;&#xC758;-&#xC815;&#xBD80;&#xD638;pd---&#xC774;-&#xB54C;&#xB9CC;-&#xB370;&#xC774;&#xD130;-&#xBD84;&#xC11D;&#xD560;-&#xC218;-&#xC788;&#xB2E4;">&#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(PD) - &#xC774; &#xB54C;&#xB9CC; &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xD560; &#xC218; &#xC788;&#xB2E4;.</a></li>
+</ul>
+</li>
+<li><a href="#&#xACE0;&#xC720;&#xBD84;&#xD574;&#xC758;-&#xC131;&#xC9C8;">&#xACE0;&#xC720;&#xBD84;&#xD574;&#xC758; &#xC131;&#xC9C8;</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="summary">Summary</h3>
+<ul>
+<li>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xC120;&#xD615;&#xBCC0;&#xD658;&#xC744; &#xD574;&#xB3C4; &#xBC29;&#xD5A5;&#xC740; &#xC548;&#xBC14;&#xB00C;&#xACE0; &#xD06C;&#xAE30;&#xB9CC; &#xBC14;&#xB00C;&#xB294; &#xBCA1;&#xD130;</li>
+<li>&#xACE0;&#xC720;&#xAC12;&#xC740; &#xADF8; &#xD06C;&#xAE30;&#xC758; &#xBC30;&#xC218;</li>
+<li><strong>&#xC5B4;&#xB5A4; &#xC815;&#xBC29;&#xD589;&#xB82C; A&#xB294; &#xC784;&#xC758;&#xC758; &#xBCA1;&#xD130; x&#xC5D0; &#xACF1;&#xD574;&#xC838;&#xC11C; x&#xC758; &#xC704;&#xCE58;&#xB098; &#xBC29;&#xD5A5;&#xC744; &#xBCC0;&#xD658;&#xC2DC;&#xD0A4;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD55C;&#xB2E4;. &#xADF8;&#xB7F0;&#xB370; &#xC218;&#xB9CE;&#xC740; &#xBCA1;&#xD130;&#xB4E4; &#xC911; &#xC5B4;&#xB5A4; &#xD2B9;&#xC815; &#xBCA1;&#xD130;&#xB4E4;&#xC740; A&#xC5D0; &#xACF1;&#xD574;&#xC838;&#xC11C; &#xADF8; &#xC704;&#xCE58;&#xB098; &#xBC29;&#xD5A5;&#xC774; &#xBC14;&#xB00C;&#xC5B4;&#xB3C4; &#xC6D0;&#xB798; &#xC790;&#xAE30; &#xC790;&#xC2E0;&#xACFC; &#xB3D9;&#xC77C;&#xD55C;, &#xD639;&#xC740; &#xD3C9;&#xD589;&#xD55C; &#xBC29;&#xD5A5;&#xC744; &#xAC16;&#xB294;&#xB2E4;. &#xC774;&#xB7EC;&#xD55C; &#xBCA1;&#xD130;&#xB4E4;&#xC744; &#xACE0;&#xC720;&#xBCA1;&#xD130;(eigenvectors)&#xB77C; &#xD55C;&#xB2E4;. &#xC774;&#xB54C; &#xBCC0;&#xD658; &#xC804;&#xC758; x&#xC640; A&#xC5D0; &#xACF1;&#xD574;&#xC838;&#xC11C; &#xBCC0;&#xD658;&#xB41C; x&#xC758; &#xD06C;&#xAE30;&#xB294; &#xB2E4;&#xB97C; &#xC218; &#xC788;&#xC73C;&#xBA70;, &#xADF8; &#xD06C;&#xAE30;&#xB294; &#xD2B9;&#xC815; &#xC0C1;&#xC218;&#xB97C; &#xACF1;&#xD55C; &#xB9CC;&#xD07C;&#xC758; &#xCC28;&#xC774;&#xAC00; &#xC874;&#xC7AC;&#xD560; &#xBFD0;&#xC774;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; &#xD06C;&#xAE30;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xD2B9;&#xC815; &#xC0C1;&#xC218;&#xB294; &#xB78C;&#xB2E4;(&#x3BB;</strong>, <strong>lambda)&#xB85C; &#xD45C;&#xD604;&#xB418;&#xC5C8;&#xC73C;&#xBA70;, &#xB78C;&#xB2E4;&#xAC00; &#xBC14;&#xB85C; &#xACE0;&#xC720;&#xAC12;(eigenvalue)&#xC774;&#xB2E4;</strong>. </li>
+<li>&#xC815;&#xB9AC;&#xD558;&#xC790;&#xBA74; &#xACE0;&#xC720;&#xBCA1;&#xD130;(eigenvector)&#xB77C;&#xB294; &#xAC83;&#xC740; &#xC5B4;&#xB5A4; &#xC120;&#xD615;&#xC2DC;&#xC2A4;&#xD15C; &#xBC29;&#xC815;&#xC2DD;(Linear system equation) A&#xC5D0; &#xC758;&#xD574; &#xBCC0;&#xD658;&#xB418;&#xB294; &#xC218; &#xB9CE;&#xC740; &#xBCA1;&#xD130;&#xB4E4; &#xC911;&#xC5D0; &#xACF1;&#xD558;&#xAE30; &#xC804;&#xACFC; &#xACF1;&#xD55C; &#xD6C4;&#xC758; &#xBCA1;&#xD130; &#xBC29;&#xD5A5;&#xC774; &#xB611;&#xAC19;&#xC740; &#xBCA1;&#xD130;&#xC774;&#xB2E4;. &#xC989; A&#xAC00; &#xC5B4;&#xB5A4; &#xC9D3;&#xC744; &#xD558;&#xB358;&#xAC04;&#xC5D0; &#xBC29;&#xD5A5;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xC9C0; &#xC54A;&#xB294; &#xBCA1;&#xD130;&#xB97C; &#xC758;&#xBBF8;&#xD55C;&#xB2E4;. &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xBC29;&#xD5A5;&#xC740; &#xBCC0;&#xD558;&#xC9C0; &#xC54A;&#xC9C0;&#xB9CC;, &#xC6D0;&#xB798;&#xC758; &#xBCA1;&#xD130;&#xC640; A&#xC5D0; &#xC758;&#xD574; &#xBCC0;&#xD658;&#xB41C; &#xBCA1;&#xD130;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xC5B4;&#xB5A4; &#xC0C1;&#xC218;&#xBC30; &#xB9CC;&#xD07C; &#xB2E4;&#xB974;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; &#xC0C1;&#xC218;&#xB294; &#xC2DD; (2)&#xC5D0;&#xC11C; &#xB78C;&#xB2E4;(lambda)&#xB97C; &#xC758;&#xBBF8;&#xD55C;&#xB2E4;. A&#xB294; &#xACE0;&#xC815;&#xB41C; &#xAC83;&#xC774;&#xACE0;, &#xB450; &#xAC1C;&#xC758; &#xBBF8;&#xC9C0;&#xC218;&#xAC00; <strong>x</strong>&#xC640; <strong>&#xB78C;&#xB2E4;</strong>(lambda)&#xC774;&#xB2E4;. &#xACB0;&#xAD6D; &#xC2DD; (2)&#xB97C; &#xB9CC;&#xC871;&#xC2DC;&#xD0A4;&#xB294; &#xBCA1;&#xD130; <strong>x</strong>&#xB4E4;&#xC774; &#xACE0;&#xC720;&#xBCA1;&#xD130;(eigenvector)&#xAC00; &#xB41C;&#xB2E4;. <strong>&#xACF1;&#xD574;&#xC9C0;&#xB294; &#xBAA8;&#xB4E0; &#xBCA1;&#xD130; x&#xB4E4;&#xC744; &#xBCC0;&#xD654;&#xC2DC;&#xD0A4;&#xC9C0;&#xB9CC;, &#xBCC0;&#xD558;&#xB294; &#xC640;&#xC911;&#xC5D0; &#xBCC0;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xC131;&#xBD84;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xAE30; &#xB9C8;&#xB828;&#xC774;&#xACE0;, &#xC120;&#xD615;&#xC2DC;&#xC2A4;&#xD15C; A&#xC758; &#xADF8; &#xBCC0;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xC131;&#xBD84;, &#xD639;&#xC740; &#xC18D;&#xC131;&#xC774; &#xACE0;&#xC720;&#xAC12;(eigenvalues)&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;(eigenvectors)&#xB77C;&#xB294; &#xD615;&#xD0DC;&#xB85C; &#xD45C;&#xD604;&#xB41C; &#xAC83;&#xC774;&#xB2E4;</strong>. </li>
+<li>&#xC784;&#xC758;&#xC758; &#xC2E4;&#xC218; &#xD589;&#xB82C; &#x1D44B;&#xC5D0; &#xB300;&#xD574; <script type="math/tex; ">𝑋^𝑇𝑋</script>(&#xC815;&#xBC29;&#xC774;&#xBA74;&#xC11C; &#xB300;&#xCE6D;&#xD589;&#xB82C;)&#xC778; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC744; <strong>&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;(covariance matrix)</strong>&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. </li>
+</ul>
+<hr>
+<h3 id="&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xACE0;&#xC720;&#xBCA1;&#xD130;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;</h3>
+<p>&#xC815;&#xBC29; &#xD589;&#xB82C; &#x1D434;&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC74C; &#xC2DD;&#xC744; &#xB9CC;&#xC871;&#xD558;&#xB294; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xC544;&#xB2CC; &#xBCA1;&#xD130; &#x1D463;, &#xC2E4;&#xC218; &#x1D706;&#xB97C; &#xCC3E;&#xC744; &#xC218; &#xC788;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xC790;.</p>
+<p><script type="math/tex; mode=display">
+Av = \lambda v
+</script></p>
+<p>&#xC774; &#xC2DD;&#xC740; &#xB2E4;&#xC74C; &#xCC98;&#xB7FC; &#xC4F8;&#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+Av - \lambda v = (A - \lambda I) v = 0
+</script></p>
+<p>&#xC704; &#xC2DD;&#xC744; &#xB9CC;&#xC871;&#xD558;&#xB294; &#xC2E4;&#xC218; &#x1D706;&#xB97C; <strong>&#xACE0;&#xC733;&#xAC12;</strong>(eigenvalue), &#xBCA1;&#xD130; &#x1D463; &#xB97C; <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;</strong>(eigenvector)&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC5B4;&#xB5A4; <strong>&#xBCA1;&#xD130;&#xB97C; &#xD589;&#xB82C;&#xC5D0; &#xACF1;&#xD55C;</strong> &#xACB0;&#xACFC;&#xB85C; &#xB098;&#xD0C0;&#xB09C; <strong>&#xBCA1;&#xD130;</strong>&#xAC00; <strong>&#xC6D0;&#xB798;&#xC758; &#xBCA1;&#xD130;&#xC640; &#xAC19;&#xC740; &#xBC29;&#xD5A5;&#xC744; &#xD5A5;&#xD558;&#xACE0; &#xC788;&#xB2E4;</strong>&#xBA74; &#xC774;&#xB97C; <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xB2E4;&#xB9CC; <strong>&#xD06C;&#xAE30;&#xB098; &#xBC29;&#xD5A5;&#xC740; &#xC6D0;&#xB798;&#xC758; &#xBCA1;&#xD130;&#xC640; &#xB2EC;&#xB77C;&#xC9C8; &#xC218;&#xAC00; &#xC788;&#xB294;&#xB370;</strong> <strong>&#xB2EC;&#xB77C;&#xC9C4; &#xD06C;&#xAE30;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xBE44;&#xC728;</strong>&#xC744; <strong>&#xACE0;&#xC733;&#xAC12;</strong>&#xC774;&#xB77C;&#xACE0; &#xBD80;&#xB978;&#xB2E4;.</p>
+<p>&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xCC3E;&#xB294; &#xC791;&#xC5C5;&#xC744; <strong>&#xACE0;&#xC720;&#xBD84;&#xD574;(eigen-decomposition)</strong> &#xB610;&#xB294; <strong>&#xACE0;&#xC733;&#xAC12; &#xBD84;&#xD574;(eigenvalue decomposition)</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC608;&#xC2DC;)</p>
+<p><script type="math/tex; mode=display">
+A=
+\begin{bmatrix}
+1 & -2 \\
+2 & -3
+\end{bmatrix}
+</script></p>
+<p>&#xB2E4;&#xC74C; &#xC2A4;&#xCE7C;&#xB77C; &#xAC12;(&#x1D706;)&#xACFC; &#xBCA1;&#xD130;(&#x1D463;)&#xB294; &#xAC01;&#xAC01; &#xACE0;&#xC733;&#xAC12;, &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xB41C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\lambda = -1,\;\; v=
+\begin{bmatrix}
+1  \\
+1
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+Av = 
+\begin{bmatrix}
+1 & -2 \\
+2 & -3
+\end{bmatrix}
+\begin{bmatrix}
+1  \\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1 \\
+-1
+\end{bmatrix}
+=
+(-1)
+\begin{bmatrix}
+1 \\
+1 
+\end{bmatrix}
+=
+\lambda v
+</script></p>
+<p>&#xC5B4;&#xB5A4; <strong>&#xBCA1;&#xD130; &#x1D463;&#xAC00; &#xACE0;&#xC720;&#xBCA1;&#xD130;</strong>&#xAC00; &#xB418;&#xBA74; &#xC774; <strong>&#xBCA1;&#xD130;&#xC5D0; &#xC2E4;&#xC218;&#xB97C; &#xACF1;&#xD55C; &#xBCA1;&#xD130; &#x1D450;&#x1D463;</strong>, &#xC989; <strong>&#x1D463;&#xC640; &#xBC29;&#xD5A5;&#xC774; &#xAC19;&#xC740; &#xBCA1;&#xD130;</strong>&#xB294; <strong>&#xBAA8;&#xB450; &#xACE0;&#xC720;&#xBCA1;&#xD130;</strong>&#xAC00; &#xB41C;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xD589;&#xB82C; &#x1D434;&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC74C; &#xBCA1;&#xD130;&#xB294; &#xBAA8;&#xB450; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+v=
+c
+\begin{bmatrix}
+1  \\
+1
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+Av = 
+\begin{bmatrix}
+1 & -2 \\
+2 & -3
+\end{bmatrix}
+\left(
+c
+\begin{bmatrix}
+1  \\
+1
+\end{bmatrix}
+\right)
+=
+c
+\begin{bmatrix}
+-1 \\
+-1
+\end{bmatrix}
+=
+(-1)c
+\begin{bmatrix}
+1 \\
+1 
+\end{bmatrix}
+=
+\lambda (cv)
+</script></p>
+<p>&#xBCF4;&#xD1B5; <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xD45C;&#xC2DC;</strong>&#xD560; &#xB54C;&#xB294; <strong>&#xAE38;&#xC774;&#xAC00; 1&#xC778; &#xB2E8;&#xC704;&#xBCA1;&#xD130;</strong>&#xAC00; &#xB418;&#xB3C4;&#xB85D; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; <strong>&#xC815;&#xADDC;&#xD654;(normalization)</strong>&#xB97C; &#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\dfrac{v}{\|v\|}
+</script></p>
+<p>&#xC704; &#xD589;&#xB82C; &#x1D434;&#xC758; &#xACE0;&#xC720;&#xAC12;-&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xBCF4;&#xD1B5; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\lambda = -1
+</script></p>
+<p><script type="math/tex; mode=display">
+v=
+\begin{bmatrix}
+\dfrac{\sqrt{2}}{2}  \\
+\dfrac{\sqrt{2}}{2} 
+\end{bmatrix}
+\approx
+\begin{bmatrix}
+0.7071 \\
+0.7071
+\end{bmatrix}
+</script></p>
+<h3 id="&#xD2B9;&#xC131;&#xBC29;&#xC815;&#xC2DD;">&#xD2B9;&#xC131;&#xBC29;&#xC815;&#xC2DD;</h3>
+<p>&#xD589;&#xB82C;&#xB9CC; &#xC8FC;&#xC5B4;&#xC84C;&#xC744; &#xB54C; &#xACE0;&#xC733;&#xAC12;-&#xACE0;&#xC720;&#xBCA1;&#xD130; &#xAD6C;&#xD558;&#xB294; &#xBC29;&#xBC95;</p>
+<p>&#xD589;&#xB82C; &#x1D434;&#xC758; &#xACE0;&#xC720;&#xAC12;&#xC740; &#x1D434;&#x2212;&#x1D706;&#x1D43C;&#xC758; &#xD589;&#xB82C;&#xC2DD;&#xC774; 0&#xC774; &#xB418;&#xB3C4;&#xB85D; &#xD558;&#xB294; <strong>&#xD2B9;&#xC131;&#xBC29;&#xC815;&#xC2DD;(characteristic equation)</strong>&#xC758; &#xD574;&#xB97C; &#xAD6C;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\det \left( A - \lambda I \right) = 0
+</script></p>
+<p>&#xC774; &#xC870;&#xAC74;&#xC740; <strong>&#xD589;&#xB82C; &#x1D434;&#x2212;&#x1D706;&#x1D43C;&#xAC00; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;</strong>&#xB294; &#xB73B;&#xC774;&#xB2E4;. &#xB9CC;&#xC57D; &#x1D434;&#x2212;&#x1D706;&#x1D43C;&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74; &#xC544;&#xB798;&#xC758; &#xC2DD;&#xC5D0;&#xC11C; &#xACE0;&#xC733;&#xAC12; &#xC870;&#xAC74;&#xC744; &#xB9CC;&#xC871;&#xD558;&#xB294; &#xBCA1;&#xD130;&#xAC00; &#xD56D;&#xC0C1; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+Av - \lambda v = (A - \lambda I) v = 0  
+</script></p>
+<p><script type="math/tex; mode=display">
+(A - \lambda I)^{-1}(A - \lambda I)v = 0 \;\; \rightarrow \;\; v = 0
+</script></p>
+<p>&#xC608;&#xC2DC; 1) &#xD574;&#xAC00; 1&#xAC1C;(&#xC0AC;&#xC2E4;&#xC740; &#xC911;&#xADFC;&#xC73C;&#xB85C; &#xD574;&#xAC00; 2&#xAC1C;) -&gt; &#xACE0;&#xC733;&#xAC12;&#xC740; -1(&#xC911;&#xADFC;&#xC73C;&#xB85C; -1, -1)</p>
+<p><script type="math/tex; mode=display">
+A=
+\begin{bmatrix}
+1 & -2 \\
+2 & -3
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+\det \left( A - \lambda I \right) 
+&=&
+\det 
+\left(
+\begin{bmatrix}
+1 & -2 \\
+2 & -3
+\end{bmatrix}
+-
+\begin{bmatrix}
+\lambda & 0 \\
+0 & \lambda
+\end{bmatrix}
+\right) 
+\\
+&=&
+\det 
+\begin{bmatrix}
+1 - \lambda & -2 \\
+2 & -3 -\lambda
+\end{bmatrix}
+\\
+&=& (1 - \lambda)(-3 -\lambda) + 4 \\
+&=& \lambda^2 + 2\lambda + 1 = 0
+\end{eqnarray}
+</script></p>
+<p>&#xC778;&#xC218;&#xBD84;&#xD574;&#xB97C; &#xD558;&#xC5EC; &#xC774;&#xCC28;&#xBC29;&#xC815;&#xC2DD;&#xC778; &#xD2B9;&#xC131;&#xBC29;&#xC815;&#xC2DD;&#xC744; &#xD480;&#xBA74;</p>
+<p><script type="math/tex; mode=display">
+\lambda^2 + 2\lambda + 1 = (\lambda + 1)^2 = 0
+</script></p>
+<p>&#xC5D0;&#xC11C; &#xACE0;&#xC733;&#xAC12;&#xC740; -1&#xC774;&#xB2E4;. (&#xC911;&#xADFC;(&#xD574;&#xAC00; &#xB450;&#xAC1C;)&#xC774;&#xB2E4;. -1, -1 )</p>
+<p>&#xC6D0;&#xB798; &#xC774;&#xCC28;&#xBC29;&#xC815;&#xC2DD;&#xC740; &#xCD5C;&#xB300; 2&#xAC1C;&#xC758; &#xD574;&#xB97C; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xC774; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xD558;&#xB098;&#xC758; &#xD574;&#xB9CC; &#xC874;&#xC7AC;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC774;&#xB7EC;&#xD55C; &#xD574;&#xB97C; <strong>&#xC911;&#xBCF5;&#xACE0;&#xC733;&#xAC12;(repeated eigenvalue)</strong>&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC608;&#xC2DC; 2) &#xD574;&#xAC00; 2&#xAC1C; -&gt; &#xACE0;&#xC733;&#xAC12; 4, -1</p>
+<p><script type="math/tex; mode=display">
+B=
+\begin{bmatrix}
+2 & 3 \\
+2 & 1
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+\det \left( B - \lambda I \right) 
+&=&
+\det 
+\left(
+\begin{bmatrix}
+2 & 3 \\
+2 & 1
+\end{bmatrix}
+-
+\begin{bmatrix}
+\lambda & 0 \\
+0 & \lambda
+\end{bmatrix}
+\right) 
+\\
+&=&
+\det 
+\begin{bmatrix}
+2 - \lambda & 3 \\
+2 & 1 -\lambda
+\end{bmatrix}
+\\
+&=& (2 - \lambda)(1 -\lambda) -6 \\
+&=& \lambda^2 - 3\lambda -4 = 0
+\end{eqnarray}
+</script></p>
+<p><script type="math/tex; mode=display">
+\lambda^2 - 3\lambda -4= (\lambda -4)(\lambda +1) = 0
+</script></p>
+<p>&#xC608;&#xC2DC; 3) &#xD574;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xACBD;&#xC6B0; : &#xACE0;&#xC733;&#xAC12;&#xC774; &#xC5C6;&#xB294; &#xD589;&#xB82C;</p>
+<p><script type="math/tex; mode=display">
+C =
+\begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+\det \left( C - \lambda I \right) 
+&=&
+\det 
+\left(
+\begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix}
+-
+\begin{bmatrix}
+\lambda & 0 \\
+0 & \lambda
+\end{bmatrix}
+\right) 
+\\
+&=& \lambda^2 +1 \\
+&=& 0
+\end{eqnarray}
+</script></p>
+<p>&#xC774; &#xD2B9;&#xC131;&#xBC29;&#xC815;&#xC2DD;&#xC758; <strong>&#xC2E4;&#xC218;&#xD574;&#xB294; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</strong>&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xD589;&#xB82C; &#x1D436;&#xB294; <strong>&#xC2E4;&#xC218;&#xC778; &#xACE0;&#xC720;&#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</strong></p>
+<p>&#xB9CC;&#xC57D; &#xACE0;&#xC720;&#xAC12;-&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; <strong>&#xBCF5;&#xC18C;&#xC218;(complex number)&#xAC00; &#xB418;&#xC5B4;&#xB3C4; &#xAD1C;&#xCC2E;</strong>&#xB2E4;&#xBA74; <strong>&#xD589;&#xB82C; &#x1D436;&#xB294; 2&#xAC1C;&#xC758; &#xACE0;&#xC733;&#xAC12;</strong>&#xC744; &#xAC00;&#xC9C4;&#xB2E4;&#xACE0; &#xD560; &#xC218; &#xC788;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+\lambda = i, \;\; \lambda = -i,  \;\; i = 허수, \;\; i^2 = -1
+</script></p>
+<h3 id="&#xACE0;&#xC733;&#xAC12;&#xC758;-&#xAC2F;&#xC218;">&#xACE0;&#xC733;&#xAC12;&#xC758; &#xAC2F;&#xC218;</h3>
+<p>&#x1D441;&#xCC28;&#xBC29;&#xC815;&#xC2DD;&#xC774; &#xD56D;&#xC0C1; &#x1D441;&#xAC1C;&#xC758; &#xBCF5;&#xC18C;&#xC218; &#xD574;&#xB97C; &#xAC00;&#xC9C4;&#xB2E4;&#xB294; &#xC0AC;&#xC2E4;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#x1D441;&#xCC28;&#xC6D0; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC758; &#xAC2F;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC74C;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC911;&#xBCF5;&#xB41C; &#xACE0;&#xC720;&#xAC12;&#xC744; &#xD558;&#xB098;&#xB85C; &#xC0DD;&#xAC01;&#xD558;&#xACE0; &#xC2E4;&#xC218; &#xACE0;&#xC733;&#xAC12;&#xB9CC; &#xACE0;&#xB824;&#xD55C;&#xB2E4;&#xBA74; &#x1D441;&#xCC28;&#xC6D0; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC740; 0&#xAC1C;&#xBD80;&#xD130; &#x1D441;&#xAC1C;&#xAE4C;&#xC9C0; &#xC788;&#xC744; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><strong>&#xC911;&#xBCF5;&#xB41C; &#xACE0;&#xC733;&#xAC12;&#xC744; &#xAC01;&#xAC01; &#xBCC4;&#xAC1C;&#xB85C; &#xC0DD;&#xAC01;&#xD558;&#xACE0; &#xBCF5;&#xC18C;&#xC218;&#xC778; &#xACE0;&#xC733;&#xAC12;&#xB3C4; &#xACE0;&#xB824;&#xD55C;&#xB2E4;&#xBA74; &#x1D441;&#xCC28;&#xC6D0; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC740; &#xD56D;&#xC0C1; &#x1D441;&#xAC1C;&#xC774;&#xB2E4;.</strong></p>
+<h3 id="&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xB300;&#xAC01;&#xD569;&#xD589;&#xB82C;&#xC2DD;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xB300;&#xAC01;&#xD569;/&#xD589;&#xB82C;&#xC2DD;</h3>
+<p>&#xB300;&#xAC01;&#xD569;(trace) : &#xC815;&#xBC29; &#xD589;&#xB82C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xC815;&#xC758;&#xB418;&#xBA70; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xB300;&#xAC01; &#xC6D0;&#xC18C;&#xC758; &#xD569;&#xC73C;&#xB85C; &#xACC4;&#xC0B0;&#xB41C;&#xB2E4;.
+<script type="math/tex; mode=display">
+\operatorname{tr}(A) = a_{11} + a_{22} + \dots + a_{NN}=\sum_{i=1}^{N} a_{ii}
+</script>
+&#xD589;&#xB82C;&#xC2DD;(determinant) : &#xD06C;&#xAE30;&#xAC00; 2x2&#xC778; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC758; &#xD589;&#xB82C;&#xC2DD;&#xC758; &#xAC12; &#xACF5;&#xC2DD;
+<script type="math/tex; mode=display">
+\det \left( \begin{bmatrix}a&b\\c&d\end{bmatrix} \right) = ad-bc
+</script>
+&#xC608;&#xC2DC;) &#xD589;&#xB82C; A&#xC5D0; &#xB300;&#xD55C; &#xB300;&#xAC01;&#xD569;&#xACFC; &#xD589;&#xB82C;&#xC2DD;
+<script type="math/tex; mode=display">
+A=
+\begin{bmatrix}
+1 & -2 \\
+2 & -3
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+\text{tr}(A) = 1 + (-3) = -2
+</script></p>
+<p><script type="math/tex; mode=display">
+\text{det}(A) = 1 \cdot (-3) - 2 \cdot (-2) = 1
+</script></p>
+<p>&#x200B;        &#xACE0;&#xC733;&#xAC12;&#xC73C;&#xB85C; &#xACC4;&#xC0B0; &#x1D706;1=&#x2212;1, &#x1D706;2=&#x2212;1 (&#xC911;&#xBCF5;&#xB41C; &#xACE0;&#xC733;&#xAC12;)
+<script type="math/tex; mode=display">
+\lambda_1 + \lambda_2 = -2 = \text{tr}(A)
+</script></p>
+<p><script type="math/tex; mode=display">
+\lambda_1 \times \lambda_2 = 1 = \text{det}(A)
+</script></p>
+<p>&#xC774; &#xAD00;&#xACC4;&#xB294; &#xBAA8;&#xB4E0; &#xD589;&#xB82C;&#xC5D0; &#xB300;&#xD574; &#xC131;&#xB9BD;&#xD55C;&#xB2E4;.</p>
+<p>&#xC5B4;&#xB5A4; &#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC774; <script type="math/tex; ">𝜆_1,𝜆_2,⋯,𝜆_𝑁</script>&#xC774;&#xB77C;&#xACE0; &#xD558;&#xBA74; <strong>&#xBAA8;&#xB4E0; &#xACE0;&#xC733;&#xAC12;&#xC758; &#xACF1;&#xC740; &#xD589;&#xB82C;&#xC2DD;&#xC758; &#xAC12;</strong>&#xACFC; &#xAC19;&#xACE0; <strong>&#xBAA8;&#xB4E0; &#xACE0;&#xC733;&#xAC12;&#xC758; &#xD569;&#xC740; &#xB300;&#xAC01;&#xD569;(trace)&#xC758; &#xAC12;</strong>&#xACFC; &#xAC19;&#xB2E4;.
+<script type="math/tex; mode=display">
+\det(A)=\prod_{i=1}^N \lambda_i
+</script></p>
+<p><script type="math/tex; mode=display">
+\text{tr}(A) =\sum_{i=1}^N \lambda_i
+</script></p>
+<h3 id="&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758;-&#xACC4;&#xC0B0;">&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758; &#xACC4;&#xC0B0;</h3>
+<p>&#xACE0;&#xC733;&#xAC12;&#xC744; &#xC54C;&#xBA74; &#xB2E4;&#xC74C; &#xC5F0;&#xB9BD; &#xBC29;&#xC815;&#xC2DD;&#xC744; &#xD480;&#xC5B4; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;.
+<script type="math/tex; mode=display">
+(A - \lambda I)v = 0
+</script>
+&#xC608;&#xC2DC;) &#xD589;&#xB82C; A , &#x1D706; = -1
+<script type="math/tex; mode=display">
+A=
+\begin{bmatrix}
+1 & -2 \\
+2 & -3
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+\begin{bmatrix}
+1+1 & -2 \\
+2 & -3+1
+\end{bmatrix}
+\begin{bmatrix}
+v_1 \\ v_2
+\end{bmatrix}
+= 0
+</script></p>
+<p><script type="math/tex; mode=display">
+\begin{bmatrix}
+2 & -2 \\
+2 & -2
+\end{bmatrix}
+\begin{bmatrix}
+v_1 \\ v_2
+\end{bmatrix}
+= 0
+</script></p>
+<p><script type="math/tex; mode=display">
+2v_1 - 2v_2 = 0
+</script></p>
+<p><script type="math/tex; mode=display">
+v_1 = v_2
+</script></p>
+<p>&#xC704;&#xC5D0; &#xC2DD;&#xC744; &#xB9CC;&#xC871;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xBCA1;&#xD130;&#xAC00; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC784;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xC989;
+<script type="math/tex; mode=display">
+\begin{bmatrix} 1 \\ 1 \end{bmatrix}
+</script>
+&#xB610;&#xB294; &#xB2E8;&#xC704;&#xBCA1;&#xD130;
+<script type="math/tex; mode=display">
+\begin{bmatrix} \dfrac{\sqrt{2}}{2} \\ \dfrac{\sqrt{2}}{2} \end{bmatrix}
+</script>
+&#xAC00; &#xC720;&#xC77C;&#xD55C; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC774;&#xB2E4;. &#xC911;&#xBCF5;&#xB41C;(repeated) &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB77C;&#xACE0;&#xB3C4; &#xD55C;&#xB2E4;.</p>
+<p>&#xACE0;&#xC733;&#xAC12;&#xC774; &#xC911;&#xBCF5;&#xB418;&#xC5C8;&#xB2E4;&#xACE0; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB3C4; &#xD56D;&#xC0C1; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xAC83;&#xC740; &#xC544;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xD56D;&#xB4F1;&#xD589;&#xB82C; &#x1D43C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC740; 1&#xB85C; &#xC911;&#xBCF5;&#xB41C; &#xACE0;&#xC733;&#xAC12;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\det(I - \lambda I)
+=
+\det( \left(
+\begin{bmatrix}
+1-\lambda & 0 \\
+0 & 1-\lambda
+\end{bmatrix}
+\right)
+=(\lambda - 1)^2 = 0
+</script></p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xC774; &#xAC12;&#xC744; &#xC544;&#xB798;&#xC758; &#xC2DD;&#xC5D0; &#xB300;&#xC785;&#xD558;&#xBA74;</p>
+<p><script type="math/tex; mode=display">
+Av - \lambda v = (A - \lambda I) v = 0 
+</script></p>
+<p><script type="math/tex; mode=display">
+\begin{bmatrix}
+0 & 0 \\
+0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+v_1 \\ v_2
+\end{bmatrix}
+= 0
+</script></p>
+<p>&#xC73C;&#xB85C; &#xC784;&#xC758;&#xC758; 2&#xCC28;&#xC6D0; &#xBCA1;&#xD130;&#xB294; &#xBAA8;&#xB450; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xB41C;&#xB2E4;. &#xC989;</p>
+<p><script type="math/tex; mode=display">
+\begin{bmatrix} 1 \\ 0 \end{bmatrix}, \;\;
+\begin{bmatrix} 0 \\ 1 \end{bmatrix}
+</script>
+&#xB458;&#xB2E4; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC774;&#xB2E4;.</p>
+<ul>
+<li><p>&#xC911;&#xBCF5;&#xB41C; &#xACE0;&#xC733;&#xAC12; &#x1D706;&#xC5D0; &#xB300;&#xD574; &#xC11C;&#xB85C; &#xB2E4;&#xB978; &#xACE0;&#xC720;&#xBCA1;&#xD130; &#x1D463;1, &#x1D463;2&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xC774; &#xB450; &#xBCA1;&#xD130;&#xC758; &#xC120;&#xD615;&#xC870;&#xD569;&#xB3C4; &#xACE0;&#xC733;&#xAC12; &#x1D706;&#xC5D0; &#xB300;&#xD55C; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC784;&#xC744; &#xC99D;&#xBA85;&#xD558;&#xB77C;.
+<script type="math/tex; mode=display">
+  c_1v_1 + c_2v_2
+  </script></p>
+<p><script type="math/tex; mode=display">
+  Av_1 = \lambda c_1 \\Av_2 = \lambda c_2 \\ c_1Av_1 = \lambda v_1c_1 \\ c_2Av_2 = \lambda v_2c_2 
+  \\
+  c_1Av_1 + c_2Av_2 = \lambda v_1c_1 + \lambda v_2c_2 \\
+  A(c_1v_1+c_2v_2) = \lambda (v_1c_1 + v_2c_2)
+  \\
+  c_1v_1 + c_2v_2
+  </script></p>
+</li>
+</ul>
+<h3 id="numpy&#xB97C;-&#xC0AC;&#xC6A9;&#xD55C;-&#xACE0;&#xC720;&#xBD84;&#xD574;">Numpy&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; &#xACE0;&#xC720;&#xBD84;&#xD574;</h3>
+<p>numpy.linalg &#xC11C;&#xBE0C;&#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xC11C;&#xB294; &#xACE0;&#xC733;&#xAC12;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB294; <code>eig</code> &#xBA85;&#xB839;&#xC744; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;. <strong>&#xACE0;&#xC733;&#xAC12;&#xC740; &#xBCA1;&#xD130;&#xC758; &#xD615;&#xD0DC;</strong>&#xB85C;, <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xACE0;&#xC720;&#xBCA1;&#xD130; &#xD589;&#xB82C;&#xC758; &#xD615;&#xD0DC;&#xB85C; &#xBB36;&#xC5EC;&#xC11C;</strong> &#xB098;&#xC624;&#xACE0; <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xD06C;&#xAE30;&#xAC00; 1&#xC778; &#xB2E8;&#xC704;&#xBCA1;&#xD130;</strong>&#xB85C; &#xC815;&#xADDC;&#xD654;&#xAC00; &#xB418;&#xC5B4;&#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python">A = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">-2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">-3</span>]])
+w1, V1 = np.linalg.eig(A)
+
+w1 
+<span class="hljs-comment">#&#xACB0;&#xACFC; </span>
+<span class="hljs-comment"># array([-0.99999998, -1.00000002])</span>
+V1
+<span class="hljs-comment">#&#xACB0;&#xACFC;</span>
+<span class="hljs-comment"># array([[0.70710678, 0.70710678],</span>
+<span class="hljs-comment">#        [0.70710678, 0.70710678]])</span>
+</code></pre>
+<pre><code class="lang-python">B = np.array([[<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">1</span>]])
+w2, V2 = np.linalg.eig(B)
+
+w2
+<span class="hljs-comment">#&#xACB0;&#xACFC;</span>
+<span class="hljs-comment"># array([ 4., -1.])</span>
+
+v1
+<span class="hljs-comment">#&#xACB0;&#xACFC;</span>
+<span class="hljs-comment"># array([[ 0.83205029, -0.70710678],</span>
+<span class="hljs-comment">#       [ 0.5547002 ,  0.70710678]])</span>
+</code></pre>
+<p>B&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12; 4&#xC758; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; 0.83205029, 0.5547002 &#xC774;&#xB2E4;. <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758; &#xC9DD;&#xC740; &#xC5F4;&#xBCA1;&#xD130;</strong>&#xB85C; &#xBD10;&#xC57C;&#xB41C;&#xB2E4;.</p>
+<p>&#xC608;&#xC2DC;) &#xC2E4;&#xC218;&#xC778; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xD589;&#xB82C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; &#xBCF5;&#xC18C;&#xC218;&#xC778; &#xACE0;&#xC733;&#xAC12;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xACC4;&#xC0B0;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+C =
+\begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix}
+</script></p>
+<pre><code class="lang-python">C = np.array([[<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>]])
+W3, V3 = np.linalg.eig(C)
+
+W3
+<span class="hljs-comment"># &#xACB0;&#xACFC; array([0.+1.j, 0.-1.j]) </span>
+<span class="hljs-comment"># j&#xB294; &#xD5C8;&#xC218;</span>
+
+V3
+<span class="hljs-comment"># &#xACB0;&#xACFC; array([[0.70710678+0.j        , 0.70710678-0.j        ],</span>
+<span class="hljs-comment">#           [0.        -0.70710678j, 0.        +0.70710678j]])</span>
+<span class="hljs-comment"># &#xBCF5;&#xC18C;&#xC218;&#xB85C; &#xB098;&#xD0C0;&#xB0A8;</span>
+</code></pre>
+<h3 id="&#xB300;&#xAC01;&#xD654;">&#xB300;&#xAC01;&#xD654;</h3>
+<p>&#x1D441; &#xCC28;&#xC6D0;&#xC758; &#xC815;&#xBC29; &#xD589;&#xB82C; &#x1D434;&#xAC00; &#x1D441;&#xAC1C;&#xC758; &#xBCF5;&#xC18C;&#xC218; &#xACE0;&#xC733;&#xAC12;&#xACFC; &#xC774;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xAC00;&#xC9C4;&#xB2E4;&#xB294; &#xC131;&#xC9C8;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xD589;&#xB82C;&#xC744; <strong>&#xBD84;&#xD574;</strong>&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xD589;&#xB82C; &#x1D434;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xACFC; &#xC774;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; &#xB2E8;&#xC704;&#xBCA1;&#xD130;&#xC778; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xAC01;&#xAC01;
+<script type="math/tex; mode=display">
+\lambda_1, \lambda_2, \cdots, \lambda_N \;\;\; v_1, v_2, \cdots, v_N
+</script>
+&#xC774; &#xACE0;&#xC733;&#xAC12;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xBB36;&#xC5B4;&#xC11C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xD589;&#xB82C;, &#xACE0;&#xC733;&#xAC12;&#xD589;&#xB82C;&#xC744; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xD589;&#xB82C;</strong> &#x1D449;&#xC740; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; <strong>&#xC5F4;&#xBCA1;&#xD130;&#xB85C; &#xC606;&#xC73C;&#xB85C; &#xC313;&#xC544;&#xC11C; &#xB9CC;&#xB4E0; &#xD589;&#xB82C;</strong>&#xC774;&#xB2E4;.
+<script type="math/tex; mode=display">
+V = \left[ v_1 \cdots v_N \right], \;\;\; V \in \mathbf{R}^{N \times N}
+</script>
+<strong>&#xACE0;&#xC733;&#xAC12;&#xD589;&#xB82C;</strong> &#x39B;&#xC740; <strong>&#xACE0;&#xC733;&#xAC12;&#xC744; &#xB300;&#xAC01;&#xC131;&#xBD84;</strong>&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xB294; <strong>&#xB300;&#xAC01;&#xD589;&#xB82C;</strong>&#xC774;&#xB2E4;.
+<script type="math/tex; mode=display">
+\Lambda =
+\begin{bmatrix}
+\lambda_{1} & 0 & \cdots & 0 \\
+0 & \lambda_{2} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_{N} \\
+\end{bmatrix}
+, \;\;\; \Lambda \in \mathbf{R}^{N \times N}
+</script></p>
+<p><strong>&#xD589;&#xB82C;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xD589;&#xB82C;&#xC758; &#xACF1;&#xC740; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xD589;&#xB82C;&#xACFC; &#xACE0;&#xC733;&#xAC12;&#xD589;&#xB82C;&#xC758; &#xACF1;&#xACFC; &#xAC19;&#xB2E4;</strong>.</p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+AV 
+&=& A \left[ v_1 \cdots v_N \right] \\
+&=& \left[ A v_1 \cdots A v_N \right] \\
+&=& \left[ \lambda_1 v_1 \cdots \lambda_N v_N \right] \\
+&=& \left[ v_1 \cdots v_N \right] 
+\begin{bmatrix}
+\lambda_{1} & 0 & \cdots & 0 \\
+0 & \lambda_{2} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_{N} \\
+\end{bmatrix}
+\\
+&=& V\Lambda
+\end{eqnarray}
+</script></p>
+<p><script type="math/tex; mode=display">
+AV = V\Lambda
+</script></p>
+<p>&#xB9CC;&#xC57D; <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xD589;&#xB82C; &#x1D449;&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74;</strong> &#xD589;&#xB82C;&#xC744; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; <strong>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xD589;&#xB82C;&#xACFC; &#xACE0;&#xC733;&#xAC12;&#xD589;&#xB82C;&#xC758; &#xACF1;&#xC73C;&#xB85C; &#xD45C;&#xD604;&#xD560; &#xC218; &#xC788;&#xB2E4;.</strong> &#xC774;&#xB97C; &#xD589;&#xB82C;&#xC758; <strong>&#xB300;&#xAC01;&#xD654;(diagonalization)</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+A = V \Lambda V^{-1} 
+</script></p>
+<p>&#xC608;&#xC2DC;) &#xD589;&#xB82C; B&#xB97C; &#xB300;&#xAC01;&#xD654; &#xD55C;&#xB2E4;&#xBA74;
+<script type="math/tex; mode=display">
+V = 
+\begin{bmatrix}
+\dfrac{3}{\sqrt{13}} & -\dfrac{1}{\sqrt{2}} \\
+\dfrac{2}{\sqrt{13}} &  \dfrac{1}{\sqrt{2}}
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+\Lambda = 
+\begin{bmatrix}
+4 & 0 \\
+0 & -1
+\end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+V^{-1} =  \dfrac{1}{5} \begin{bmatrix} \sqrt{13} & \sqrt{13} \\ -2\sqrt{2} & 3\sqrt{2} \end{bmatrix}
+</script></p>
+<p><script type="math/tex; mode=display">
+B=
+\begin{bmatrix}
+2 & 3 \\
+2 & 1
+\end{bmatrix}
+= 
+V\Lambda V^{-1} 
+= \dfrac{1}{5}
+\begin{bmatrix}
+\dfrac{3}{\sqrt{13}} & -\dfrac{1}{\sqrt{2}} \\
+\dfrac{2}{\sqrt{13}} &  \dfrac{1}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix}
+4 & 0 \\
+0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+\sqrt{13} & \sqrt{13} \\
+-2\sqrt{2} & 3\sqrt{2}
+\end{bmatrix}
+</script></p>
+<p>NumPy&#xB97C; &#xC774;&#xC6A9;</p>
+<pre><code class="lang-python">  B = np.array([[<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">1</span>]])
+  w2, V2 = np.linalg.eig(B)
+  V2
+</code></pre>
+<pre><code class="lang-python">  V2_inv = np.linalg.inv(V2)
+  V2_inv
+</code></pre>
+<pre><code class="lang-python">  V2 @ np.diag(w2) @ V2_inv
+</code></pre>
+<h4 id="&#xC815;&#xBC29;&#xD589;&#xB82C;">&#xC815;&#xBC29;&#xD589;&#xB82C;</h4>
+<ul>
+<li>&#xC815;&#xBC29;&#xD589;&#xB82C; <script type="math/tex; ">A \in \mathbf{R}^{N \times N} </script></li>
+<li><script type="math/tex; ">\lambda</script>&#xB294; &#xBCF5;&#xC18C;&#xC218; </li>
+<li><script type="math/tex; ">\lambda</script>&#xB294;  N&#xAC1C; </li>
+<li><script type="math/tex; ">AV = V \Lambda </script> </li>
+<li><script type="math/tex; ">\det(A)=\prod_{i=1}^N \lambda_i </script></li>
+<li><script type="math/tex; ">\text{tr}(A) =\sum_{i=1}^N \lambda_i</script></li>
+</ul>
+<p>&#xC544;&#xB798;&#xC758; &#xD589;&#xB82C;&#xC740; &#xC120;&#xD615;&#xC885;&#xC18D;&#xC774;&#xBBC0;&#xB85C; &#xB300;&#xAC01;&#xD654;&#xAC00; &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\begin{bmatrix}
+1 & 1 \\
+0 & 1
+\end{bmatrix}
+</script></p>
+<h3 id="&#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;">&#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;</h3>
+<p><strong>&#xD589;&#xB82C;&#xC774; &#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xD558;&#xB824;&#xBA74; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xC120;&#xD615;&#xB3C5;&#xB9BD;&#xC774;&#xC5B4;&#xC57C;&#xD55C;&#xB2E4;.</strong></p>
+<p>&#xD589;&#xB82C;&#xC744; &#xB300;&#xAC01;&#xD654;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA74; <strong>&#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;(diagonalizable) &#xD589;&#xB82C;</strong>&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xC55E;&#xC11C; &#xC774;&#xC57C;&#xAE30;&#xD588;&#xB4EF;&#xC774; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC778; &#xC5F4;&#xBCA1;&#xD130;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4; &#xD589;&#xB82C;&#xC5D0; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xC774;&#xB77C;&#xACE0; &#xD588;&#xB2E4;. &#xADF8;&#xB7F0;&#xB370; &#xC55E;&#xC808;&#xC5D0;&#xC11C; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD560; &#xC870;&#xAC74;&#xC740; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC758; &#xC5F4;&#xBCA1;&#xD130; &#xC989;, &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB4E4;&#xC774; &#xC120;&#xD615;&#xB3C5;&#xB9BD;&#xC778; &#xACBD;&#xC6B0;&#xC774;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xD589;&#xB82C;&#xC774; &#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xD558;&#xB824;&#xBA74; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xC120;&#xD615;&#xB3C5;&#xB9BD;&#xC774;&#xC5B4;&#xC57C;&#xD55C;&#xB2E4;.</p>
+<h3 id="&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xC5ED;&#xD589;&#xB82C;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xC5ED;&#xD589;&#xB82C;</h3>
+<p><strong>&#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xD55C; &#xD589;&#xB82C;&#xC5D0; 0&#xC778; &#xACE0;&#xC720;&#xAC12;&#xC774; &#xC5C6;&#xC73C;&#xBA74; &#xD56D;&#xC0C1; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.</strong></p>
+<p>&#xD589;&#xB82C; &#x1D434;&#xAC00; &#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xD45C;&#xD604;&#xD560; &#xC218; &#xC788;&#xB2E4;.
+<script type="math/tex; mode=display">
+A = V\Lambda V^{-1}
+</script>
+&#xC774; &#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC740; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xACC4;&#xC0B0;&#xD55C;&#xB2E4;.
+<script type="math/tex; mode=display">
+A^{-1} = (V\Lambda V^{-1})^{-1} = V \Lambda^{-1} V^{-1} 
+</script>
+<strong>&#xB300;&#xAC01;&#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;</strong>&#xC740; &#xAC01; <strong>&#xB300;&#xAC01;&#xC131;&#xBD84;&#xC758; &#xC5ED;&#xC218;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4; &#xB300;&#xAC01;&#xD589;&#xB82C;</strong>&#xC774;&#xBBC0;&#xB85C; 0&#xC778; &#xACE0;&#xC720;&#xAC12;&#xC774; &#xC5C6;&#xC73C;&#xBA74; &#xD56D;&#xC0C1; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.</p>
+<h3 id="&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758;-&#xACE0;&#xC720;&#xBD84;&#xD574;">&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC720;&#xBD84;&#xD574;</h3>
+<hr>
+<h4 id="&#xC120;&#xD615;&#xC5F0;&#xB9BD;&#xBC29;&#xC815;&#xC2DD;&#xACFC;-&#xC120;&#xD615;-&#xC608;&#xCE21;&#xBAA8;&#xD615;">&#xC120;&#xD615;&#xC5F0;&#xB9BD;&#xBC29;&#xC815;&#xC2DD;&#xACFC; &#xC120;&#xD615; &#xC608;&#xCE21;&#xBAA8;&#xD615;</h4>
+<p>&#xAC00;&#xC911;&#xCE58;&#xBCA1;&#xD130; &#x1D464;&#xB97C; &#xCC3E;&#xB294; &#xAC83;&#xC740; &#xACC4;&#xC218;&#xD589;&#xB82C;&#xC774; &#x1D44B;, &#xBBF8;&#xC9C0;&#xC218;&#xBCA1;&#xD130;&#xAC00; &#x1D464;, &#xC0C1;&#xC218;&#xBCA1;&#xD130;&#xAC00; &#x1D466;&#xC778; &#xC120;&#xD615; &#xC5F0;&#xB9BD;&#xBC29;&#xC815;&#xC2DD;&#xC758; &#xB2F5;&#xC744; &#xCC3E;&#xB294; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xB9CC;&#xC57D; &#xACC4;&#xC218;&#xD589;&#xB82C;, &#xC5EC;&#xAE30;&#xC5D0;&#xC11C;&#xB294; &#xD2B9;&#xC9D5;&#xD589;&#xB82C; &#x1D44B;&#xC758; &#xC5ED;&#xD589;&#xB82C; <script type="math/tex; ">𝑋^{-1}</script>&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xAC00;&#xC911;&#xCE58;&#xBCA1;&#xD130;&#xB97C; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>  <script type="math/tex; mode=display">
+  Xw = y
+  </script></p>
+<p>  <script type="math/tex; mode=display">
+  w = X^{-1} y
+  </script></p>
+<p>&#xC758;&#xC0AC;&#xC5ED;&#xD589;&#xB82C;(pseudo inverse)&#xC740; <script type="math/tex; ">𝐴^𝑇𝐴</script>&#xAC00; &#xD56D;&#xC0C1; &#xC815;&#xBC29; &#xD589;&#xB82C;&#xC774; &#xB41C;&#xB2E4;&#xB294; &#xC810;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC;
+<script type="math/tex; mode=display">
+Ax \approx b \\
+A^TAx = A^Tb \\
+(A^TA)^{-1}(A^TA)x = (A^TA)^{-1}A^Tb \\
+x = (A^TA)^{-1}A^T b \\
+x = ((A^TA)^{-1}A^T) \\
+</script></p>
+<p>&#xD589;&#xB82C; <script type="math/tex; ">(𝐴^𝑇𝐴)^{−1}𝐴^𝑇</script>&#xB97C; &#xD589;&#xB82C; &#x1D434;&#xC758; <strong>&#xC758;&#xC0AC;&#xC5ED;&#xD589;&#xB82C;(pseudo inverse)</strong>&#xC774;&#xB77C;&#xACE0; &#xD558;&#xBA70; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#x1D434;+ &#xB85C; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+A^{+} = (A^TA)^{-1}A^T 
+</script></p>
+<p><script type="math/tex; mode=display">
+x = A^+ b
+</script></p>
+<hr>
+<p><strong>&#xD589;&#xB82C; &#x1D434;&#xAC00; &#xC2E4;&#xC218;&#xC778; &#xB300;&#xCE6D;&#xD589;&#xB82C;</strong>&#xC774;&#xBA74; <strong>&#xACE0;&#xC720;&#xAC12;&#xC774; &#xC2E4;&#xC218;&#xC774;&#xACE0; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xC9C1;&#xAD50;(orthogonal)&#xD55C;&#xB2E4;.</strong></p>
+<p>&#x200B;&#xC6B0;&#xB9AC;&#xB294; &#xC2E4;&#xC218;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4; &#xD589;&#xB82C;&#xB9CC;&#xC744; &#xB2E4;&#xB8F0; &#xAC83;&#xC774;&#xBBC0;&#xB85C; &#xC55E;&#xC73C;&#xB85C;&#xB294; &#xB530;&#xB85C; &#xC5B8;&#xAE09;&#xD558;&#xC9C0; &#xC54A;&#xB354;&#xB77C;&#xB3C4; &#xD56D;&#xC0C1; &#xD589;&#xB82C;&#xC758; &#xC6D0;&#xC18C;&#xAC00;  &#xC2E4;&#xC218;&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;. &#xC774; &#xB54C; &#xC99D;&#xBA85;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p>&#xD589;&#xB82C; &#x1D434;&#xC758; &#xACE0;&#xC720;&#xAC12;&#xACFC; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758; &#xAD00;&#xACC4;</p>
+<p><script type="math/tex; mode=display">
+Av = \lambda v
+\tag{2.7.1}
+</script></p>
+<p>&#x200B;      &#xC758; &#xC591;&#xBCC0;&#xC5D0; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758; &#xCF24;&#xB808; &#xBCF5;&#xC18C;&#xC218;(complex conjugate) <script type="math/tex; ">𝑣^∗</script>&#xB97C; &#xACF1;&#xD558;&#xBA74;,
+<script type="math/tex; mode=display">
+(v^{\ast})^T Av = \lambda (v^{\ast})^T v \tag{2.7.12}
+</script>
+&#x200B;     &#xC774; &#xB418;&#xACE0; &#xC6D0;&#xB798;&#xC758; &#xC2DD;(2.7.1)&#xC744; &#xCF24;&#xB808; &#xBCF5;&#xC18C;&#xC218;&#xB85C; &#xB9CC;&#xB4E4;&#xBA74;
+<script type="math/tex; mode=display">
+(Av)^{\ast} = (\lambda v)^{\ast}
+\tag{2.7.13}
+</script>
+&#x200B;     &#xADF8;&#xB9AC;&#xACE0; &#x1D434;&#xAC00; &#xC2E4;&#xC218;&#xC778; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC774;&#xB77C;&#xB294; &#xC810;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74;
+<script type="math/tex; mode=display">
+A^{\ast}v^{\ast} = Av^{\ast} = \lambda^{\ast} v^{\ast} \tag{2.7.14}
+</script>
+&#x200B;     &#xC774; &#xC2DD;&#xC758; &#xC55E;&#xC5D0; <script type="math/tex; ">𝑣^𝑇</script>&#xB97C; &#xACF1;&#xD558;&#xBA74;
+<script type="math/tex; mode=display">
+v^T A v^{\ast} = \lambda^{\ast} v^T v^{\ast} \tag{2.7.15}
+</script>
+&#x200B;     &#xADF8;&#xB7F0;&#xB370; <script type="math/tex; ">(𝑣∗)^𝑇𝐴𝑣</script>&#xAC00; &#xC2A4;&#xCE7C;&#xB77C;&#xC774;&#xBBC0;&#xB85C;
+<script type="math/tex; mode=display">
+(v^{\ast})^T Av = ((v^{\ast})^T Av)^T = v^T A^T v^{\ast} = v^T A v^{\ast}
+</script>
+&#x200B;     &#xAC00; &#xC131;&#xB9BD;&#xD558;&#xC5EC; &#xC2DD;(2.7.12)&#xC640; &#xC2DD;(2.7.15)&#xC758; &#xC88C;&#xBCC0;&#xC774; &#xAC19;&#xB2E4;.</p>
+<p>&#x200B;     &#xB530;&#xB77C;&#xC11C; &#xC6B0;&#xBCC0;&#xB3C4; &#xAC19;&#xC544;&#xC57C; &#xD55C;&#xB2E4;.
+<script type="math/tex; mode=display">
+\lambda (v^{\ast})^T v = \lambda^{\ast} v^T v^{\ast} \tag{2.7.16}
+</script>
+&#x200B;    &#xADF8;&#xB7F0;&#xB370; <script type="math/tex; ">(𝑣∗)^𝑇𝑣</script>&#xB3C4; &#xC2A4;&#xCE7C;&#xB77C;&#xC774;&#xBBC0;&#xB85C;
+<script type="math/tex; mode=display">
+(v^{\ast})^T v = ((v^{\ast})^T v)^T = v^T v^{\ast}
+\tag{2.7.17}
+</script>
+&#x200B;    &#xC2DD;(2.7.16)&#xC640; &#xC2DD;(2.7.17)&#xC5D0;&#xC11C;
+<script type="math/tex; mode=display">
+\lambda^{\ast} = \lambda
+</script>
+&#x200B;&#xC774;&#xB2E4;. &#xC989;, &#xACE0;&#xC720;&#xAC12;&#xC740; &#xC2E4;&#xC218;&#xC774;&#xB2E4;.</p>
+<p>&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xC9C1;&#xAD50;&#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC99D;&#xBA85;&#xD55C;&#xB2E4;. &#xB450; &#xACE0;&#xC733;&#xAC12; <script type="math/tex; ">𝜆_𝑖, 𝜆_𝑗</script>&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; &#xACE0;&#xC720;&#xBCA1;&#xD130; <script type="math/tex; ">𝑣_𝑖, 𝑣_𝑗</script>&#xB97C; &#xC0DD;&#xAC01;&#xD558;&#xC790;.</p>
+<p>  <script type="math/tex; mode=display">
+  \begin{eqnarray}
+  \lambda_i v_i^T v_j 
+  &=& (v_i^T A) v_j \\
+  &=& v_i^T (A v_j )\\
+  &=& v_i^T (\lambda_j v_j) \\
+  &=& \lambda_j v_i^T v_j \\
+  (\lambda_i - \lambda_j) v_i^T v_j &=& 0
+  \end{eqnarray}
+  </script>
+  &#xB9CC;&#xC57D; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xC11C;&#xB85C; &#xB2E4;&#xB974;&#xBA74;(<script type="math/tex; ">𝜆_𝑖≠𝜆_𝑗</script>) &#xB450; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB294; &#xC9C1;&#xAD50;&#xD55C;&#xB2E4;.</p>
+<p>  &#xB9CC;&#xC57D; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xAC19;&#xB2E4;&#xBA74;(<script type="math/tex; ">𝜆_𝑖=𝜆_𝑗</script>) <script type="math/tex; ">𝑣_𝑖</script>&#xC640; <script type="math/tex; ">𝑣_𝑗</script>&#xB294; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xAC19;&#xC740; &#xB450; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC774;&#xACE0; &#xC774; &#xB450; &#xBCA1;&#xD130;&#xC758; &#xC120;&#xD615;&#xC870;&#xD569; <script type="math/tex; ">𝑐_1𝑣_𝑖+𝑐_2𝑣_𝑗</script>&#xB3C4; <script type="math/tex; ">𝜆_𝑖</script>&#xC758; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xB41C;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; <script type="math/tex; ">𝑣_𝑖,𝑣_𝑗</script>&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4; &#xBCA1;&#xD130;&#xACF5;&#xAC04;&#xB0B4;&#xC5D0;&#xC11C; &#xC9C1;&#xAD50;&#xD558;&#xB294; &#xACE0;&#xC720;&#xBCA1;&#xD130; &#xB450;&#xAC1C;&#xB97C; &#xD56D;&#xC0C1; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>  &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xD06C;&#xAE30; 1&#xC774; &#xB418;&#xB3C4;&#xB85D; &#xC815;&#xADDC;&#xD654;&#xB41C; &#xC0C1;&#xD0DC;&#xB77C;&#xBA74; &#xACE0;&#xC720;&#xBCA1;&#xD130; &#xD589;&#xB82C; &#x1D449;&#xB294; &#xC815;&#xADDC;&#xC9C1;&#xAD50;(orthonormal) &#xD589;&#xB82C;&#xC774;&#xBBC0;&#xB85C; <strong>&#xC804;&#xCE58;&#xD589;&#xB82C;&#xC774; &#xC5ED;&#xD589;&#xB82C;</strong>&#xC774;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC740; &#xD56D;&#xC0C1; &#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+V^T V = V V^T = I
+</script></p>
+<p><script type="math/tex; mode=display">
+V^{-1} = V^T
+</script></p>
+<p><strong>&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC740; &#xD56D;&#xC0C1; &#xB300;&#xAC01;&#xD654;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</strong></p>
+<h3 id="&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC744;-&#xB7AD;&#xD06C;-1-&#xD589;&#xB82C;&#xC758;-&#xD569;&#xC73C;&#xB85C;-&#xBD84;&#xD574;">&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC744; &#xB7AD;&#xD06C;-1 &#xD589;&#xB82C;&#xC758; &#xD569;&#xC73C;&#xB85C; &#xBD84;&#xD574;</h3>
+<p>&#x1D441;&#xCC28;&#xC6D0; &#xB300;&#xCE6D;&#xD589;&#xB82C; &#x1D434;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#x1D441;&#xAC1C;&#xC758; &#xB7AD;&#xD06C;-1 &#xD589;&#xB82C; <script type="math/tex; ">𝐴_𝑖=𝑣_𝑖𝑣^𝑇</script> &#xC758; &#xD569;&#xC73C;&#xB85C; &#xD45C;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB2E4;.
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+A 
+&=& V\Lambda V^T \\
+&=& 
+\begin{bmatrix}
+v_1 & v_2 & \cdots & v_N
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_{1} & 0 & \cdots & 0 \\
+0 & \lambda_{2} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_{N} \\
+\end{bmatrix}
+\begin{bmatrix}
+v_1^T \\ v_2^T \\ \vdots \\ v_N^T
+\end{bmatrix} \\
+&=&
+\begin{bmatrix}
+\lambda_{1}v_1 & \lambda_{2}v_2 & \cdots & \lambda_{N}v_N
+\end{bmatrix}
+\begin{bmatrix}
+v_1^T \\ v_2^T \\ \vdots \\ v_N^T
+\end{bmatrix} \\
+\end{eqnarray}
+</script>
+&#xB530;&#xB77C;&#xC11C; &#x1D441;&#xCC28;&#xC6D0; &#xB300;&#xCE6D;&#xD589;&#xB82C; &#x1D434;&#xB294;
+<script type="math/tex; mode=display">
+A = \sum_{i=1}^{N} {\lambda_i} v_i v_i^T  = \sum_{i=1}^{N} {\lambda_i} A_i = \lambda_1 A_1 + \cdots + \lambda_N A_N
+</script>
+<strong>&#xB9CC;&#xC57D; 0&#xC778; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xC5C6;&#xB2E4;&#xBA74;</strong> &#xC5ED;&#xD589;&#xB82C;&#xB3C4; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#x1D441;&#xAC1C;&#xC758; &#xB7AD;&#xD06C;-1 &#xD589;&#xB82C; <script type="math/tex; ">𝐴_𝑖=𝑣_𝑖𝑣^𝑇_𝑖</script> &#xC758; &#xD569;&#xC73C;&#xB85C; &#xD45C;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB2E4;.
+<script type="math/tex; mode=display">
+A^{-1} =
+V \Lambda^{-1} V^T = \sum_{i=1}^{N} \dfrac{1}{\lambda_i} v_i v_i^T 
+= \dfrac{1}{\lambda_1} A_1 + \cdots + \dfrac{1}{\lambda_N} A_N
+</script></p>
+<h3 id="&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758;-&#xAC04;&#xB7B5;&#xD654;">&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xAC04;&#xB7B5;&#xD654;</h3>
+<p>&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC744; &#xB7AD;&#xD06C;-1 &#xD589;&#xB82C;&#xC758; &#xD569;&#xC73C;&#xB85C; &#xBD84;&#xD574;&#xD560; &#xB54C; &#xAC01; &#xB7AD;&#xD06C;-1 &#xD589;&#xB82C; <script type="math/tex; ">𝐴_𝑖</script>&#xB294; &#xBAA8;&#xB450; &#xB2E8;&#xC704;&#xBCA1;&#xD130;&#xC778; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xD589;&#xB82C;&#xC774;&#xBBC0;&#xB85C; &#xD589;&#xB82C;&#xC758; &#xB188;&#xC774; 1&#xC774;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xACE0;&#xC720;&#xAC12;&#xC740; &#xC544;&#xC8FC; &#xD070; &#xAC12;&#xBD80;&#xD130; &#xC791;&#xC740; &#xAC12;&#xAE4C;&#xC9C0; &#xB2E4;&#xC591;&#xD558;&#xAC8C; &#xB098;&#xD0C0;&#xB0A0; &#xC218; &#xC788;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; <strong>&#xACE0;&#xC720;&#xAC12;&#xC774; &#xC791;&#xC740; &#xD56D;&#xC744; &#xBA87; &#xAC1C; &#xC0DD;&#xB7B5;</strong>&#xD574;&#xB3C4; <strong>&#xC6D0;&#xB798;&#xC758; &#xD589;&#xB82C;&#xACFC; &#xD070; &#xCC28;&#xC774;&#xAC00; &#xB098;&#xC9C0; &#xC54A;</strong>&#xC744; &#xC218; &#xC788;&#xB2E4;.
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+A 
+&=&  \lambda_1 A_1 + \cdots + \lambda_{N} A_{N} \;\; ( \lambda_1 > \cdots > \lambda_N )\\
+&\approx& \lambda_1 A_1 + \cdots + \lambda_{M} A_{M} \;\; ( N > M )
+\end{eqnarray}
+</script></p>
+<h4 id="&#xB300;&#xCE6D;&#xD589;&#xB82C;">&#xB300;&#xCE6D;&#xD589;&#xB82C;</h4>
+<ul>
+<li>&#xB300;&#xCE6D;&#xD589;&#xB82C; <script type="math/tex; ">\; A = A^T </script></li>
+<li><script type="math/tex; ">\lambda</script>&#xB294;  &#xC2E4;&#xC218; </li>
+<li><script type="math/tex; ">V^T</script> = <script type="math/tex; ">V^{-1}</script> </li>
+<li><script type="math/tex; ">A = VAV^T</script></li>
+<li><script type="math/tex; ">A = \sum_{i=1}^{N} {\lambda_i} v_i v_i^T </script></li>
+<li>&#xC74C;&#xC218;&#xC778; &#xACE0;&#xC720;&#xAC12; <script type="math/tex; "> \lambda_i < 0 </script>&#xD3EC;&#xD568;</li>
+</ul>
+<h3 id="&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;">&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;</h3>
+<p>&#xC784;&#xC758;&#xC758; &#xC2E4;&#xC218; &#xD589;&#xB82C; &#x1D44B;&#xC5D0; &#xB300;&#xD574; <script type="math/tex; ">𝑋^𝑇𝑋</script>(&#xC815;&#xBC29;&#xC774;&#xBA74;&#xC11C; &#xB300;&#xCE6D;&#xD589;&#xB82C;)&#xC778; &#xC815;&#xBC29;&#xD589;&#xB82C;&#xC744; <strong>&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;(covariance matrix)</strong>&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC758; &#xC758;&#xBBF8;&#xB294; &#xD655;&#xB960; &#xBD84;&#xD3EC;&#xC5D0;&#xC11C; &#xB354; &#xC790;&#xC138;&#xD558;&#xAC8C; &#xACF5;&#xBD80;&#xD558;&#xAC8C; &#xB420; &#xAC83;&#xC774;&#xBA70; &#xC77C;&#xB2E8; &#xC5EC;&#xAE30;&#xC5D0;&#xC11C;&#xB294; &#xC704;&#xC640; &#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xACC4;&#xC0B0;&#xB418;&#xB294; &#xD589;&#xB82C;&#xC744; &#xAC00;&#xB9AC;&#xD0A4;&#xB294; &#xBA85;&#xCE6D;&#xC774;&#xB77C;&#xB294; &#xAC83;&#xB9CC; &#xC54C;&#xBA74; &#xCDA9;&#xBD84;&#xD558;&#xB2E4;.</p>
+<p><strong>&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC740; &#xC591;&#xC758; &#xC900;&#xC815;&#xBD80;&#xD638;(positive semidefinite)</strong>&#xC774;&#xB2E4;. &#xC989; &#xC74C;&#xC218;&#xC778; &#xACE0;&#xC733;&#xAC12;&#xC740; &#xC5C6;&#xB2E4;.</p>
+<p>&#xC784;&#xC758;&#xC758; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xC544;&#xB2CC; &#xBCA1;&#xD130; &#x1D465;&#xC5D0; &#xB300;&#xD574;
+<script type="math/tex; mode=display">
+x^T(X^TX)x = (Xx)^T(Xx) = u^Tu \geq 0
+</script></p>
+<p><script type="math/tex; mode=display">
+x^T(X^TX)x = (Xx)^T(Xx)\;\;-> 이차형식이다. (X^TX)에 x^T, x를 곱한 형태
+</script></p>
+<h4 id="&#xC774;&#xCC28;&#xD615;&#xC2DD;quadratic-form">&#xC774;&#xCC28;&#xD615;&#xC2DD;(Quadratic Form)</h4>
+<p><script type="math/tex; mode=display">
+w^T(X^TX)w
+</script></p>
+<p>&#xBAA8;&#xB4E0; &#xBCA1;&#xD130; &#x1D465;&#xC5D0; &#xB300;&#xD574; &#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC5D0; &#xB300;&#xD55C; &#xC774;&#xCC28;&#xD615;&#xC2DD;&#xC740; &#xC5B4;&#xB5A4; &#xBCA1;&#xD130;&#xC758; &#xC81C;&#xACF1;&#xD569;&#xC774; &#xB41C;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; 0&#xBCF4;&#xB2E4; &#xAC19;&#xAC70;&#xB098; &#xD06C;&#xB2E4;.</p>
+<p>&#xADF8;&#xB7F0;&#xB370; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xD45C;&#xC2DC;&#xB418;&#xACE0; (A&#xB294; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xC774;&#xCC28;&#xD615;&#xC2DD;&#xC774;&#xB2E4;)
+<script type="math/tex; mode=display">
+A = \sum_{i=1}^{N} {\lambda_i} v_i v_i^T
+</script>
+ <script type="math/tex; ">𝑥=𝑣_𝑗</script>&#xC77C; &#xB54C;
+<script type="math/tex; mode=display">
+v_j^TAv_j = \sum_{i=1}^{N} {\lambda_i} v_j^Tv_i v_i^Tv_j = \lambda_j \geq 0 \\
+v_1^T\lambda _1v_1v_1^Tv_1 = \lambda _1v_1^Tv_1v_1^Tv_1 = \lambda _(v_1^Tv_1)^2 \\
+v_2^T\lambda _2v_2v_2^Tv_2 = \lambda _2v_2^Tv_2v_2^Tv_2 = \lambda _(v_2^Tv_2)^2 \\
+\lambda _(v_1^Tv_1)^2 >= 0 \; (0\;또는\;항상\;양수이다)\\
+\lambda _(v_2^Tv_2)^2 >= 0 \; (0\;또는\;항상\;양수이다)\\
+\lambda_i >= 0 \;는\;x^TAx>=0 이다. 반대로도 성립. 양의준정부호이다.
+</script>
+&#xC774;&#xBBC0;&#xB85C; 0 &#xB610;&#xB294; &#xC591;&#xC218;&#xC778; &#xACE0;&#xC733;&#xAC12;&#xB9CC; &#xAC00;&#xC9C4;&#xB2E4;. (&#xC74C;&#xC218;&#xC778; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xAC00; &#xC5C6;&#xB2E4;. &#xC591;&#xC758; &#xC900;&#xC815;&#xBD80;&#xD638;) </p>
+<h3 id="&#xACE0;&#xC733;&#xAC12;&#xACFC;-&#xC591;&#xC758;-&#xC815;&#xBD80;&#xD638;">&#xACE0;&#xC733;&#xAC12;&#xACFC; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;</h3>
+<p>&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACBD;&#xC6B0;&#xC5D0; &#xB2E4;&#xC74C; &#xC131;&#xC9C8;&#xC774; &#xC131;&#xB9BD;&#xD55C;&#xB2E4;. (&#xC704;&#xC5D0; &#xC99D;&#xBA85; &#xCC38;&#xACE0;)</p>
+<p><strong>&#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xBAA8;&#xB450; &#xC591;&#xC218;&#xC774;&#xBA74; &#xADF8; &#xD589;&#xB82C;&#xC740; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(positive definite)&#xC774;&#xB2E4;.</strong></p>
+<p><strong>&#xC5ED;&#xC73C;&#xB85C; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(positive definite)&#xC778; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC740; &#xD56D;&#xC0C1; &#xC591;&#xC218;&#xC774;&#xB2E4;.</strong></p>
+<p>&#xC6B0;&#xC120; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xBAA8;&#xB450; &#xC591;&#xC218;&#xC774;&#xBA74; &#xADF8; &#xD589;&#xB82C;&#xC740; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(positive definite)&#xAC00; &#xB428;&#xC744; &#xC99D;&#xBA85;&#xD558;&#xC790;. &#xC77C;&#xB2E8; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xACE0;&#xC720;&#xBD84;&#xD574;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xD589;&#xB82C; <script type="math/tex; ">𝐴_𝑖=𝑣_𝑖𝑣^𝑇</script>&#xB294; &#xC591;&#xC758; &#xC900;&#xC815;&#xBD80;&#xD638;(positive semidefinite)&#xC784;&#xC744; &#xC99D;&#xBA85;&#xD560; &#xC218; &#xC788;&#xB2E4;.
+<script type="math/tex; mode=display">
+x^T A_i x = x^T v_iv_i^T x = (x^T v_i)(x^T v_i)^T = (x^T v_i)(x^T v_i) = \vert x^T v_i \vert ^2 \geq 0
+</script>
+&#xC774; &#xC2DD;&#xC5D0;&#xC11C; &#x1D465;&#xAC00; <script type="math/tex; ">𝑣_𝑖</script>&#xC640; &#xC218;&#xC9C1;(orthogonal)&#xC778; &#xACBD;&#xC6B0;&#xC5D0;&#xB9CC; 0&#xC774; &#xB41C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xC5EC;&#xAE30;&#xC5D0; &#xC591;&#xC218;&#xC778; &#xACE0;&#xC733;&#xAC12;&#xC744; &#xACF1;&#xD55C; &#xD589;&#xB82C; <script type="math/tex; ">𝜆_𝑖𝐴_𝑖</script>&#xB3C4; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xC591;&#xC758; &#xC900;&#xC815;&#xBD80;&#xD638;(positive semidefinite)&#xC774;&#xB2E4;. &#xC774;&#xB7EC;&#xD55C; &#xD589;&#xB82C; <script type="math/tex; ">𝜆_𝑖𝐴_𝑖</script>&#xB97C; &#xBAA8;&#xB450; &#xB354;&#xD55C; &#xD589;&#xB82C; <script type="math/tex; ">𝜆_1𝐴_1+⋯+𝜆_𝑁𝐴_𝑁</script>&#xC740; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(positive definite)&#xC774;&#xB2E4;.
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+A 
+&=& \lambda_1 A_1 + \cdots + \lambda_N A_N \\
+&=& \vert x^T v_1\vert ^2 + \cdots + \vert x^T v_N\vert ^2 > 0 \\
+\end{eqnarray}
+</script>
+&#xC65C;&#xB098;&#xD558;&#xBA74; &#xC774; &#xAC12;&#xC774; 0&#xC774;&#xB824;&#xBA74; &#xBAA8;&#xB4E0; <script type="math/tex; ">𝑥^𝑇𝑣_𝑖</script>&#xAC00; 0, &#xB2E4;&#xC2DC; &#xB9D0;&#xD574; &#x1D465;&#xC640; &#xBAA8;&#xB4E0; <script type="math/tex; ">𝑣_𝑖</script>&#xAC00; &#xC9C1;&#xAD50;&#xD574;&#xC57C; &#xD558;&#xB294;&#xB370; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xC758; &#xC9D1;&#xD569;&#xC740; &#x1D441; &#xCC28;&#xC6D0;&#xC5D0;&#xC11C; &#xAE30;&#xC800;&#xBCA1;&#xD130;&#xB97C; &#xC774;&#xB8E8;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB3D9;&#xC2DC;&#xC5D0; &#xBAA8;&#xB4E0; &#xAE30;&#xC800;&#xBCA1;&#xD130;&#xC640; &#xC218;&#xC9C1;&#xC778; &#xBCA1;&#xD130;&#xB294; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;. (&#xC5F0;&#xC2B5;&#xBB38;&#xC81C; 2.6.7 &#xCC38;&#xACE0;)</p>
+<p>&#xC5ED;&#xC73C;&#xB85C; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(positive definite)&#xC778; &#xB300;&#xCE6D;&#xD589;&#xB82C;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC740; &#xD56D;&#xC0C1; &#xC591;&#xC218;&#xC774;&#xB2E4;. &#xB9CC;&#xC57D; 0&#xC774;&#xB098; &#xC74C;&#xC218;&#xC778; &#xACE0;&#xC733;&#xAC12; &#x1D706;&#x2264;0&#xAC00; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xC774;&#xCC28; &#xD615;&#xC2DD;&#xC774; &#xC591;&#xC218;&#xAC00; &#xC544;&#xB2D0; &#xC218; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.
+<script type="math/tex; mode=display">
+v_i^T A v_i = v_i^T \lambda_i v_i = \lambda_i v_i^T v_i \leq 0
+</script></p>
+<h3 id="&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC758;-&#xC5ED;&#xD589;&#xB82C;">&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;</h3>
+<p><strong>&#xD589;&#xB82C; &#x1D44B;&#xAC00; &#xD480;&#xB7AD;&#xD06C;&#xC774;&#xBA74; &#xC774; &#xD589;&#xB82C;&#xC758; &#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C; <script type="math/tex; ">𝑋^𝑇𝑋</script>&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.</strong></p>
+<p>&#xC815;&#xBC29;&#xD589;&#xB82C;&#xC774; &#xC544;&#xB2CC; &#xD589;&#xB82C; X&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;. &#xD589;&#xB82C;X&#xC758; &#xC5F4;&#xBCA1;&#xD130;&#xAC00; &#xBAA8;&#xB450; &#xB3C5;&#xB9BD;&#xC774;&#xBA74; full rank&#xC774;&#xB2E4;.
+&#xC815;&#xBC29;&#xD589;&#xB82C;&#xAC00; full rank&#xC774;&#xBA74;  A &lt;=&gt; <script type="math/tex; ">A^{-1}</script> &#xC774; &#xC131;&#xB9BD;&#xD55C;&#xB2E4;.</p>
+<p>&#xD589;&#xB82C; &#x1D44B;&#xAC00; &#xD480;&#xB7AD;&#xD06C;&#xC774;&#xBA74; &#x1D44B;&#xC758; &#xC5F4;&#xBCA1;&#xD130;&#xAC00; <strong>&#xAE30;&#xC800;&#xBCA1;&#xD130;</strong>(&#xBCA1;&#xD130; N&#xAC1C;&#xAC00; &#xC11C;&#xB85C; &#xC120;&#xD615;&#xB3C5;&#xB9BD;&#xC774;&#xACE0;, &#xC774; &#xBCA1;&#xD130;&#xB4E4;&#xC744; &#xC120;&#xD615;&#xC870;&#xD569;&#xD558;&#xC5EC; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C0;&#xB294; &#xBAA8;&#xB4E0; &#xBCA1;&#xD130;&#xC758; &#xC9D1;&#xD569;&#xC744; &#xBCA1;&#xD130;&#xACF5;&#xAC04;&#xC774;&#xACE0; &#xADF8; &#xBCA1;&#xD130;&#xB4E4;&#xC744; &#xBCA1;&#xD130;&#xACF5;&#xAC04;&#xC758; &#xAE30;&#xC800;&#xBCA1;&#xD130;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.)&#xB97C; &#xC774;&#xB8E8;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xC544;&#xB2CC; &#xBAA8;&#xB4E0; &#xBCA1;&#xD130; &#x1D463;&#xC5D0; &#xB300;&#xD574; &#x1D44B;&#x1D463;=&#x1D462;&#xB294; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xB420; &#xC218; &#xC5C6;&#xB2E4;. (&#xB9CC;&#xC57D; &#xC601;&#xBCA1;&#xD130; &#x1D462;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xC544;&#xB2CC; &#x1D463;&#xAC00; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74; &#xC11C;&#xB85C; &#xB3C5;&#xB9BD;&#xC774; &#xC544;&#xB2C8;&#xB2E4;.) &#xADF8;&#xB7EC;&#xBA74; &#x1D44B;^&#x1D447;&#x1D44B;&#xC758; &#xC774;&#xCC28;&#xD615;&#xC2DD;&#xC740; &#xD56D;&#xC0C1; &#xC591;&#xC218;&#xAC00; &#xB41C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+v^T(X^TX)v = (Xv)^T(Xv) = u^Tu > 0
+</script>
+&#xB530;&#xB77C;&#xC11C; &#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC740; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;&#xC774;&#xACE0; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.</p>
+<h4 id="&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;">&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;</h4>
+<p>&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C; <script type="math/tex; "> A = X^TX </script>&#xC774;&#xB2E4;. 
+&#xBAA8;&#xB4E0; &#xACE0;&#xC720;&#xAC12;&#xC774; 0  &#xB610;&#xB294; &#xC591;&#xC218; <script type="math/tex; ">\lambda_i >= 0</script> (&#xC591;&#xC758;&#xC900;&#xC815;&#xBD80;&#xD638;&#xC774;&#xB2E4;)&#xC774;&#xB2E4;. </p>
+<h2 id="&#xC591;&#xC758;-&#xC815;&#xBD80;&#xD638;pd---&#xC774;-&#xB54C;&#xB9CC;-&#xB370;&#xC774;&#xD130;-&#xBD84;&#xC11D;&#xD560;-&#xC218;-&#xC788;&#xB2E4;">&#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(PD) - &#xC774; &#xB54C;&#xB9CC; &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xD560; &#xC218; &#xC788;&#xB2E4;.</h2>
+<p>X&#xAC00; &#xD480;&#xB7AD;&#xD06C; 
+&#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC; 
+&#xBAA8;&#xB4E0; &#xACE0;&#xC720;&#xAC12;&#xC774; &#xC591;&#xC218; <script type="math/tex; ">\lambda_i > 0</script> (PD)</p>
+<h3 id="&#xACE0;&#xC720;&#xBD84;&#xD574;&#xC758;-&#xC131;&#xC9C8;">&#xACE0;&#xC720;&#xBD84;&#xD574;&#xC758; &#xC131;&#xC9C8;</h3>
+<p>&#x1D441;&#xCC28;&#xC6D0; &#xC815;&#xBC29;&#xD589;&#xB82C; &#x1D434;&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC74C; &#xC131;&#xC9C8;&#xC774; &#xC131;&#xB9BD;&#xD55C;&#xB2E4;.</p>
+<ol>
+<li>&#xD589;&#xB82C; &#x1D434;&#xB294; &#x1D441;&#xAC1C;&#xC758; &#xACE0;&#xC733;&#xAC12;-&#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xAC00;&#xC9C4;&#xB2E4;. (&#xBCF5;&#xC18C;&#xC218;&#xC778; &#xACBD;&#xC6B0;&#xC640; &#xC911;&#xBCF5;&#xC778; &#xACBD;&#xC6B0;&#xB97C; &#xD3EC;&#xD568;)</li>
+<li>&#xD589;&#xB82C;&#xC758; <strong>&#xB300;&#xAC01;&#xD569;&#xC740; &#xBAA8;&#xB4E0; &#xACE0;&#xC733;&#xAC12;&#xC758; &#xD569;</strong>&#xACFC; &#xAC19;&#xB2E4;.</li>
+<li>&#xD589;&#xB82C;&#xC758; <strong>&#xD589;&#xB82C;&#xC2DD;&#xC740; &#xBAA8;&#xB4E0; &#xACE0;&#xC733;&#xAC12;&#xC758; &#xACF1;</strong>&#xACFC; &#xAC19;&#xB2E4;.</li>
+<li>&#xD589;&#xB82C; &#x1D434;&#xAC00; <strong>&#xB300;&#xCE6D;&#xD589;&#xB82C;</strong>&#xC774;&#xBA74; &#x1D441;&#xAC1C;&#xC758; <strong>&#xC2E4;&#xC218; &#xACE0;&#xC733;&#xAC12;</strong>&#xC744; &#xAC00;&#xC9C0;&#xBA70; &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB4E4;&#xC774; &#xC11C;&#xB85C; <strong>&#xC218;&#xC9C1;(orthogonal)</strong>&#xC774;&#xB2E4;.</li>
+<li>&#xD589;&#xB82C; &#x1D434;&#xAC00; <strong>&#xB300;&#xCE6D;&#xD589;&#xB82C;</strong>&#xC774;&#xACE0; &#xACE0;&#xC733;&#xAC12;&#xC774; &#xBAA8;&#xB450; <strong>&#xC591;&#xC218;</strong>&#xC774;&#xBA74; <strong>&#xC591;&#xC758; &#xC815;&#xBD80;&#xD638;(positive-definite)&#xC774;&#xACE0; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;</strong>. &#xC5ED;&#xB3C4; &#xC131;&#xB9BD;&#xD55C;&#xB2E4;.</li>
+<li>&#xD589;&#xB82C; &#x1D434;&#xAC00; &#xC5B4;&#xB5A4; &#xD589;&#xB82C; &#x1D44B;&#xC758; <strong>&#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C; <script type="math/tex; ">𝑋^𝑇𝑋</script></strong>&#xC774;&#xBA74; <strong>0 &#xB610;&#xB294; &#xC591;&#xC758; &#xACE0;&#xC733;&#xAC12;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;</strong>.</li>
+<li>&#xD589;&#xB82C; &#x1D44B;&#xAC00; <strong>&#xD480;&#xB7AD;&#xD06C;&#xC774;&#xBA74; &#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C; <script type="math/tex; ">𝑋^𝑇𝑋</script>&#xC740; &#xC5ED;&#xD589;&#xB82C;&#xC774; &#xC874;&#xC7AC;</strong>&#xD55C;&#xB2E4;.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0302coordinate-transform.html" class="navigation navigation-prev " aria-label="Previous page: 좌표변환">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0304svd.html" class="navigation navigation-next " aria-label="Next page: 특이값 분해">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"고윳값 분해","level":"1.2.1.7","depth":3,"next":{"title":"특이값 분해","level":"1.2.1.8","depth":3,"path":"posts/math/linearalgebra/0304svd.md","ref":"posts/math/linearalgebra/0304svd.md","articles":[]},"previous":{"title":"좌표변환","level":"1.2.1.6","depth":3,"path":"posts/math/linearalgebra/0302coordinate-transform.md","ref":"posts/math/linearalgebra/0302coordinate-transform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/linearalgebra/0303eigenvalue-decomposition.md","mtime":"2020-04-05T17:29:53.812Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T05:50:56.313Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
