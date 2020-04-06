@@ -1,0 +1,699 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>최적화 기초 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mle.html" />
+    
+    
+    <link rel="prev" href="0404matrix-differentiation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Data Science
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Basic Math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="0201data-and-matrix.html">
+            
+                <a href="0201data-and-matrix.html">
+            
+                    
+                    데이터와 행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="0202vector-and-matrix-calculation.html">
+            
+                <a href="0202vector-and-matrix-calculation.html">
+            
+                    
+                    벡터와 행렬의 연산
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="0203matrix-character.html">
+            
+                <a href="0203matrix-character.html">
+            
+                    
+                    행렬의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="0204system-of-linear-equations.html">
+            
+                <a href="0204system-of-linear-equations.html">
+            
+                    
+                    선형연립방정식과 역행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="0301linear-algebra.html">
+            
+                <a href="0301linear-algebra.html">
+            
+                    
+                    선형대수와 해석기하의 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="0302coordinate-transform.html">
+            
+                <a href="0302coordinate-transform.html">
+            
+                    
+                    좌표변환
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="0303eigenvalue-decomposition.html">
+            
+                <a href="0303eigenvalue-decomposition.html">
+            
+                    
+                    고윳값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="0304svd.html">
+            
+                <a href="0304svd.html">
+            
+                    
+                    특이값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="0305pca.html">
+            
+                <a href="0305pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.10" data-path="0401function.html">
+            
+                <a href="0401function.html">
+            
+                    
+                    함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.11" data-path="0402function-differentiation.html">
+            
+                <a href="0402function-differentiation.html">
+            
+                    
+                    함수 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.12" data-path="0403integral.html">
+            
+                <a href="0403integral.html">
+            
+                    
+                    적분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.13" data-path="0404matrix-differentiation.html">
+            
+                <a href="0404matrix-differentiation.html">
+            
+                    
+                    행렬의 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.14" data-path="0501optimization.html">
+            
+                <a href="0501optimization.html">
+            
+                    
+                    최적화 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.15" data-path="mle.html">
+            
+                <a href="mle.html">
+            
+                    
+                    최대가능도와 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../regressionandtimeseries/">
+            
+                <a href="../regressionandtimeseries/">
+            
+                    
+                    Regression & Time-series Analysis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../regressionandtimeseries/dataintro.html">
+            
+                <a href="../regressionandtimeseries/dataintro.html">
+            
+                    
+                    Analysis Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../computerscience/">
+            
+                <a href="../../computerscience/">
+            
+                    
+                    Computer Science
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >최적화 기초</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xCD5C;&#xC801;&#xD654;-&#xAE30;&#xCD08;">&#xCD5C;&#xC801;&#xD654; &#xAE30;&#xCD08;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#&#xCD5C;&#xC801;&#xD654;-&#xBB38;&#xC81C;">&#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;</a></li>
+<li><a href="#&#xADF8;&#xB9AC;&#xB4DC;-&#xC11C;&#xCE58;&#xC640;-&#xC218;&#xCE58;&#xC801;-&#xCD5C;&#xC801;&#xD654;">&#xADF8;&#xB9AC;&#xB4DC; &#xC11C;&#xCE58;&#xC640; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654;</a></li>
+<li><a href="#&#xAE30;&#xC6B8;&#xAE30;-&#xD544;&#xC694;&#xC870;&#xAC74;">&#xAE30;&#xC6B8;&#xAE30; &#xD544;&#xC694;&#xC870;&#xAC74;</a></li>
+<li><a href="#&#xCD5C;&#xAE09;&#xAC15;&#xD558;&#xBC95;sgd">&#xCD5C;&#xAE09;&#xAC15;&#xD558;&#xBC95;(SGD)</a></li>
+<li><a href="#normal-equation">Normal Equation</a></li>
+<li><a href="#2&#xCC28;-&#xB3C4;&#xD568;&#xC218;&#xB97C;-&#xC0AC;&#xC6A9;&#xD55C;-newton-&#xBC29;&#xBC95;">2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; Newton &#xBC29;&#xBC95;</a></li>
+<li><a href="#quasinewton-&#xBC29;&#xBC95;">Quasi_Newton &#xBC29;&#xBC95;</a></li>
+<li><a href="#scipy&#xB97C;-&#xC774;&#xC6A9;&#xD55C;-&#xCD5C;&#xC801;&#xD654;">SciPy&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xCD5C;&#xC801;&#xD654;</a></li>
+<li><a href="#&#xC804;&#xC5ED;-&#xCD5C;&#xC801;&#xD654;-&#xBB38;&#xC81C;">&#xC804;&#xC5ED; &#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;</a></li>
+<li><a href="#&#xCEE8;&#xBCA1;&#xC2A4;-&#xBB38;&#xC81C;">&#xCEE8;&#xBCA1;&#xC2A4; &#xBB38;&#xC81C;</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="summary">Summary</h3>
+<ul>
+<li>&#xADF8;&#xB9AC;&#xB4DC;&#xC11C;&#xCE58;(grid search)&#xB294; &#xAC00;&#xB2A5;&#xD55C; x&#xC758; &#xAC12;&#xC744; &#xC5EC;&#xB7EC;&#xAC1C; &#xB123;&#xC5B4;&#xBCF4;&#xACE0; &#xADF8; &#xC911; &#xAC00;&#xC7A5; &#xC791;&#xC740; &#xAC12;&#xC744; &#xC120;&#xD0DD;</li>
+<li>&#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC774;&#xACE0; 2&#xCC28;&#xB3C4;&#xD568;&#xC218;&#xAC00; &#xC591;&#xC218;&#xC774;&#xBA74; &#xCD5C;&#xC18C;&#xC810;&#xC774;&#xB2E4;. &#xBC18;&#xB300;&#xB85C; &#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC774;&#xACE0; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xAC00; &#xC74C;&#xC218;&#xC774;&#xBA74; &#xCD5C;&#xB300;&#xC810;&#xC774; &#xB41C;&#xB2E4;</li>
+<li>&#xC218;&#xCE58;&#xC801;&#xCD5C;&#xC801;&#xD654;(numerical optimization)&#xC740; &#xBC18;&#xBCF5;&#xC801;&#xC2DC;&#xD589;&#xCC29;&#xC624;(trial and error)&#xC744; &#xD1B5;&#xD574; &#xD568;&#xC218; &#xC704;&#xCE58;&#xAC00; &#xCD5C;&#xC801;&#xC810;&#xC774; &#xB420; &#xB54C;&#xAE4C;&#xC9C0; &#xAC00;&#xB2A5;&#xD55C; &#xD55C; &#xC801;&#xC740; &#xD69F;&#xC218;&#xB9CC;&#xD07C; x&#xC704;&#xCE58;&#xB97C; &#xC62E;&#xAE30;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</li>
+<li>SGD(Steepest Gradient Descent)&#xB294; &#xD604;&#xC7AC; &#xC704;&#xCE58;&#xC5D0;&#xC11C; &#xAE30;&#xC6B8;&#xAE30; &#xAC12;&#xB9CC;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xB2E4;&#xC74C; &#xC704;&#xCE58;&#xB97C;  &#xACB0;&#xC815;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. &#xC774; &#xB54C; &#xC704;&#xCE58;&#xB97C; &#xC62E;&#xAE30;&#xB97C; &#xAC70;&#xB9AC;&#xB97C; &#xACB0;&#xC815;&#xD558;&#xB294;  &#xBE44;&#xB840;&#xC0C1;&#xC218;&#xB97C; &#xC2A4;&#xD15D;&#xC0AC;&#xC774;&#xC988;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. </li>
+<li>Newton &#xBC29;&#xBC95;&#xC740; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xAC00; 2&#xCC28; &#xD568;&#xC218;&#xB77C;&#xB294; &#xAC00;&#xC815;&#xD558;&#xC5D0; &#xD55C;&#xBC88;&#xC5D0; &#xCD5C;&#xC801;&#xC810;&#xC744; &#xCC3E;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xC5D0; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC744; &#xACF1;&#xD574;&#xC11C; &#xBC29;&#xD5A5;&#xACFC; &#xAC70;&#xB9AC;&#xAC00; &#xBCC0;&#xD615;&#xB41C; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. </li>
+<li>&#xB9CC;&#xC57D; &#xCD5C;&#xC801;&#xD654;&#xD558;&#xB824;&#xB294; &#xD568;&#xC218;&#xAC00; &#xBCF5;&#xC218;&#xC758; &#xAD6D;&#xC18C; &#xCD5C;&#xC800;&#xC810;(local minima)&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC804;&#xC5ED; &#xCD5C;&#xC800;&#xC810;(global minimum)&#xC5D0; &#xB3C4;&#xB2EC;&#xD55C;&#xB2E4;&#xB294; &#xBCF4;&#xC7A5;&#xC774; &#xC5C6;&#xB2E4;.</li>
+<li>&#xBAA9;&#xC801;&#xD568;&#xC218;&#xC758; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xC758; &#xAC12;&#xC774; &#xD56D;&#xC0C1; 0 &#xC774;&#xC0C1;&#xC774; &#xB418;&#xB294; &#xC601;&#xC5ED;&#xC5D0;&#xC11C;&#xB9CC; &#xC815;&#xC758;&#xB41C; &#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;&#xB97C; &#xCEE8;&#xBCA1;&#xC2A4;(convex) &#xBB38;&#xC81C;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xCEE8;&#xBCA1;&#xC2A4; &#xBB38;&#xC81C;&#xC5D0;&#xB294; &#xD56D;&#xC0C1; &#xC804;&#xC5ED; &#xCD5C;&#xC800;&#xC810;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;. </li>
+</ul>
+<hr>
+<h3 id="&#xCD5C;&#xC801;&#xD654;-&#xBB38;&#xC81C;">&#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;</h3>
+<p>&#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;&#xB294; &#xD568;&#xC218; <script type="math/tex; ">f</script> &#xC758; &#xAC12;&#xC744; &#xCD5C;&#xB300;&#xD654; &#xD639;&#xC740; &#xCD5C;&#xC18C;&#xD654;&#xD558;&#xB294; &#xBCC0;&#xC218; <script type="math/tex; ">x</script> &#xC758; &#xAC12; <script type="math/tex; ">x^*</script> &#xB97C; &#xCC3E;&#xB294; &#xAC83;&#xC774;&#xB2E4;. 
+<script type="math/tex; mode=display">
+x^{\ast} = \arg \max_x f(x) \;\;(\text{최대화의 경우}) \\x^{\ast} = \arg \min_x f(x) \;\;(\text{최소화의 경우})
+</script></p>
+<p>&#xC774; &#xAC12; <script type="math/tex; ">x^*</script> &#xB97C; &#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;&#xC758; &#xD574;(solution)&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. </p>
+<p>&#xCD5C;&#xB300;&#xD654; &#xBB38;&#xC81C;&#xB294; <script type="math/tex; ">f(x)</script> &#xB97C; <script type="math/tex; ">-f(x)</script> &#xB85C; &#xBC14;&#xAFB8;&#xBA74; &#xD480; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xBCF4;&#xD1B5; &#xCD5C;&#xC18C;&#xD654;&#xC758; &#xACBD;&#xC6B0;&#xB9CC; &#xACE0;&#xB824;&#xD55C;&#xB2E4;. </p>
+<p>&#xCD5C;&#xC18C;&#xD654; &#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xD568;&#xC218; <script type="math/tex; ">f(x)</script> &#xB97C; <strong>&#xBAA9;&#xC801;&#xD568;&#xC218;(objective function), &#xBE44;&#xC6A9;&#xD568;&#xC218;(cost function) &#xB610;&#xB294; &#xC190;&#xC2E4;&#xD568;&#xC218;(loss function)</strong> &#xB4F1;&#xC73C;&#xB85C; &#xBD80;&#xB978;&#xB2E4;. &#xAE30;&#xD638;&#xB294; &#xAC01;&#xAC01; <script type="math/tex; ">J, C, L</script> &#xB85C; &#xD45C;&#xAE30;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xB2E4;.</p>
+<h3 id="&#xADF8;&#xB9AC;&#xB4DC;-&#xC11C;&#xCE58;&#xC640;-&#xC218;&#xCE58;&#xC801;-&#xCD5C;&#xC801;&#xD654;">&#xADF8;&#xB9AC;&#xB4DC; &#xC11C;&#xCE58;&#xC640; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654;</h3>
+<p>&#xBAA9;&#xC801;&#xD568;&#xC218;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC7A5; &#xC791;&#xAC8C; &#xD558;&#xB294; &#x1D465; &#xC704;&#xCE58;&#xB97C; &#xCC3E;&#xB294; &#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;&#xB97C; &#xD478;&#xB294; &#xAC00;&#xC7A5; &#xAC04;&#xB2E8;&#xD55C; &#xBC29;&#xBC95;&#xC740; &#xAC00;&#xB2A5;&#xD55C; &#x1D465;&#xC758; &#xAC12;&#xC744; &#xC5EC;&#xB7EC;&#xAC1C; &#xB123;&#xC5B4; &#xBCF4;&#xACE0; &#xADF8; &#xC911; &#xAC00;&#xC7A5; &#xC791;&#xC740; &#xAC12;&#xC744; &#xC120;&#xD0DD;&#xD558;&#xB294; <strong>&#xADF8;&#xB9AC;&#xB4DC; &#xC11C;&#xCE58;(grid search)</strong> &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<p>&#xD568;&#xC218; <script type="math/tex; ">𝑓_1(𝑥)</script>&#xC758; &#xADF8;&#xB798;&#xD504;&#xB97C; &#xADF8;&#xB824; &#xCD5C;&#xC800;&#xC810;&#xC744; &#xCC3E;&#xC740; &#xBC29;&#xBC95;&#xB3C4; &#xADF8;&#xB9AC;&#xB4DC; &#xC11C;&#xCE58; &#xBC29;&#xBC95;&#xC758; &#xC77C;&#xC885;&#xC774;&#xB2E4;. &#xADF8;&#xB9AC;&#xB4DC; &#xC11C;&#xCE58;&#xB294; &#xAC00;&#xC7A5; &#xAC04;&#xB2E8;&#xD55C; &#xBC29;&#xBC95;&#xC774;&#xC9C0;&#xB9CC; &#xB9CE;&#xC740; &#x1D465; &#xC704;&#xCE58;&#xC5D0; &#xB300;&#xD574; &#xBAA9;&#xC801;&#xD568;&#xC218; &#xAC12;&#xC744; &#xACC4;&#xC0B0;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xC608;&#xCE21; &#xBAA8;&#xD615;&#xC744; &#xB9CC;&#xB4E4; &#xB54C; &#xBAA9;&#xC801;&#xD568;&#xC218; &#xAC12;, &#xC989; &#xC608;&#xCE21; &#xC624;&#xCC28;&#xB97C; &#xAD6C;&#xD558;&#xB824;&#xBA74; &#xBAA8;&#xB4E0; &#xD2B8;&#xB808;&#xC774;&#xB2DD; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC5D0; &#xB300;&#xD574; &#xC608;&#xCE21; &#xAC12;&#xACFC; &#xD0C0;&#xAC9F; &#xAC12;&#xC758; &#xCC28;&#xC774;&#xB97C; &#xAD6C;&#xD574;&#xC57C; &#xD558;&#xBBC0;&#xB85C; &#xC0C1;&#xB2F9;&#xD788; &#xB9CE;&#xC740; &#xACC4;&#xC0B0;&#xB7C9;&#xC744; &#xC694;&#xAD6C;&#xD55C;&#xB2E4;.&#xB530;&#xB77C;&#xC11C; &#xADF8;&#xB9AC;&#xB4DC; &#xC11C;&#xCE58;&#xBCF4;&#xB2E4; &#xBAA9;&#xC801;&#xD568;&#xC218; &#xACC4;&#xC0B0;&#xC744; &#xC801;&#xAC8C; &#xD560; &#xC218; &#xC788;&#xB294; &#xBC29;&#xBC95;&#xC774; &#xD544;&#xC694;&#xD558;&#xB2E4;.</p>
+<p>&#xBC18;&#xBCF5;&#xC801; &#xC2DC;&#xD589; &#xCC29;&#xC624;(trial and error)&#xC5D0; &#xC758;&#xD574; &#xCD5C;&#xC801;&#xD654; &#xD544;&#xC694;&#xC870;&#xAC74;&#xC744; &#xB9CC;&#xC871;&#xD558;&#xB294; &#xAC12; <script type="math/tex; ">𝑥^∗</script>&#xB97C; &#xCC3E;&#xB294; &#xBC29;&#xBC95;&#xC744; <strong>&#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654;(numerical optimization)</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654; &#xBC29;&#xBC95;&#xC740; &#xD568;&#xC218; &#xC704;&#xCE58;&#xAC00; &#xCD5C;&#xC801;&#xC810;&#xC774; &#xB420; &#xB54C;&#xAE4C;&#xC9C0; &#xAC00;&#xB2A5;&#xD55C; &#xD55C; &#xC801;&#xC740; &#xD69F;&#xC218;&#xB9CC;&#xD07C; &#x1D465;&#xC704;&#xCE58;&#xB97C; &#xC62E;&#xAE30;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654; &#xBC29;&#xBC95;&#xC740; &#xB2E4;&#xC74C; &#xB450; &#xAC00;&#xC9C0; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC744; &#xC694;&#xAD6C;&#xD55C;&#xB2E4;.<ul>
+<li>&#xD604;&#xC7AC; &#xC704;&#xCE58; <script type="math/tex; ">𝑥_𝑘</script>&#xAC00; &#xCD5C;&#xC801;&#xC810;&#xC778;&#xC9C0; &#xD310;&#xB2E8;&#xD558;&#xB294; &#xC54C;&#xACE0;&#xB9AC;&#xC998;</li>
+<li>&#xC5B4;&#xB5A4; &#xC704;&#xCE58; <script type="math/tex; ">𝑥_𝑘</script>&#xB97C; &#xC2DC;&#xB3C4;&#xD55C; &#xB4A4;, &#xB2E4;&#xC74C; &#xBC88;&#xC5D0; &#xC2DC;&#xB3C4;&#xD560; &#xC704;&#xCE58; <script type="math/tex; ">𝑥_{𝑘+1}</script>&#xC744; &#xCC3E;&#xB294; &#xC54C;&#xACE0;&#xB9AC;&#xC998;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#xAE30;&#xC6B8;&#xAE30;-&#xD544;&#xC694;&#xC870;&#xAC74;">&#xAE30;&#xC6B8;&#xAE30; &#xD544;&#xC694;&#xC870;&#xAC74;</h3>
+<p>&#xC5B4;&#xB5A4; &#xB3C5;&#xB9BD; &#xBCC0;&#xC218; &#xAC12; <script type="math/tex; ">𝑥^∗</script> &#xAC00; &#xCD5C;&#xC18C;&#xC810;&#xC774; &#xB418;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC77C;&#xB2E8; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAC12; <script type="math/tex; ">𝑥^∗</script>&#xC5D0;&#xC11C; &#xD568;&#xC218;&#xC758; &#xAE30;&#xC6B8;&#xAE30;(slope), &#xB3C4;&#xD568;&#xC218; <script type="math/tex; ">\dfrac{df}{dx}</script> &#xC758; &#xAC12;&#xC774; 0&#xC774;&#xB77C;&#xB294; &#xC870;&#xAC74;&#xC744; &#xB9CC;&#xC871;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. &#xC774;&#xB97C; <strong>&#xAE30;&#xC6B8;&#xAE30; &#xD544;&#xC694;&#xC870;&#xAC74;</strong>&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xB2E8;&#xC77C; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xD55C; &#xD568;&#xC218;&#xC778; &#xACBD;&#xC6B0;, <strong>&#xBBF8;&#xBD84;&#xAC12;&#xC774; 0</strong>  ,   <script type="math/tex; "> \dfrac{df(x)}{dx} = 0</script> </li>
+<li>&#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xC778; &#xACBD;&#xC6B0; <strong>&#xBAA8;&#xB4E0; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xD55C; &#xD3B8;&#xBBF8;&#xBD84;&#xAC12;&#xC774; 0</strong> </li>
+</ul>
+<p><script type="math/tex; mode=display">
+\dfrac{\partial f(x_1, x_2, \cdots , x_N)}{\partial x_2} = 0 \\ 
+\dfrac{\partial f(x_1, x_2, \cdots , x_N)}{\partial x_2} = 0 \\
+. \\
+. \\ 
+. \\ 
+\dfrac{\partial f(x_1, x_2, \cdots , x_N)}{\partial x_N} = 0
+</script></p>
+<p>&#xC989; <script type="math/tex; ">\nabla f = 0</script> &#xC774; &#xB54C; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8;(gradient) &#xBCA1;&#xD130; <script type="math/tex; ">\nabla f = 0</script> &#xB97C; <script type="math/tex; ">g</script> &#xB77C;&#xB294; &#xAE30;&#xD638;&#xB85C; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xB098;&#xD0C0;&#xB0B4;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;. <script type="math/tex; ">g = 0</script> </p>
+<p>&#xC774; &#xC870;&#xAC74;&#xC744; &#xD544;&#xC694;&#xC870;&#xAC74;&#xC774;&#xB77C;&#xACE0; &#xD558;&#xB294; &#xC774;&#xC720;&#xB294; &#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC774;&#xB77C;&#xACE0; &#xBC18;&#xB4DC;&#xC2DC; &#xCD5C;&#xC18C;&#xC810;&#xC774; &#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC9C0;&#xB9CC;, &#xBAA8;&#xB4E0; &#xCD5C;&#xC18C;&#xC810;&#xC740; &#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;. <strong>&#xC77C;&#xBC18;&#xC801;&#xC778; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC5D0;&#xC11C;&#xB294; &#xAE30;&#xC6B8;&#xAE30; &#xD544;&#xC694;&#xC870;&#xAC74;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xCD5C;&#xC801;&#xC810;&#xC5D0; &#xB3C4;&#xB2EC;&#xD558;&#xC600;&#xB294;&#xC9C0; &#xD310;&#xB2E8;&#xD55C;&#xB2E4;</strong>.</p>
+<p>&#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC774;&#xC5B4;&#xB3C4; &#xCD5C;&#xC18C;&#xC810;&#xC774; &#xC544;&#xB2C8;&#xB77C; &#xCD5C;&#xACE0;&#xC810;&#xC77C; &#xC218;&#xB3C4; &#xC788;&#xB2E4;. <strong>&#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC778; &#xC704;&#xCE58;&#xAC00; &#xCD5C;&#xC18C;&#xC810;&#xC784;&#xC744; &#xD655;&#xC778;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xC758; &#xBD80;&#xD638;&#xB3C4; &#xACC4;&#xC0B0;</strong>&#xD574;&#xC57C; &#xD55C;&#xB2E4;. &#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC774;&#xACE0; 2&#xCC28;&#xB3C4;&#xD568;&#xC218;&#xAC00; &#xC591;&#xC218;&#xC774;&#xBA74; &#xCD5C;&#xC18C;&#xC810;&#xC774;&#xB2E4;. &#xBC18;&#xB300;&#xB85C; &#xAE30;&#xC6B8;&#xAE30;&#xAC00; 0&#xC774;&#xACE0; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xAC00; &#xC74C;&#xC218;&#xC774;&#xBA74; &#xCD5C;&#xB300;&#xC810;&#xC774; &#xB41C;&#xB2E4;.</p>
+<h3 id="&#xCD5C;&#xAE09;&#xAC15;&#xD558;&#xBC95;sgd">&#xCD5C;&#xAE09;&#xAC15;&#xD558;&#xBC95;(SGD)</h3>
+<p><strong>&#xCD5C;&#xAE09;&#xAC15;&#xD558;&#xBC95;(SGD; Steepest Gradient Descent) &#xBC29;&#xBC95;</strong> &#xC740; &#xB2E8;&#xC21C;&#xD788; &#xD604;&#xC7AC; &#xC704;&#xCE58; <script type="math/tex; ">x_k</script> &#xC5D0;&#xC11C;&#xC758; &#xAE30;&#xC6B8;&#xAE30; &#xAC12; <script type="math/tex; ">g(x_k)</script> &#xB9CC;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xB2E4;&#xC74C;&#xBC88; &#xC704;&#xCE58; <script type="math/tex; ">x_{k+1}</script> &#xB97C; &#xACB0;&#xC815;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. 
+<script type="math/tex; mode=display">
+x_{k+1} = x_{k} - \mu \nabla f(x_k) = x_{k} - \mu g(x_k)
+</script></p>
+<p>&#xB9CC;&#xC57D; &#xD604;&#xC7AC; &#xC704;&#xCE58; <script type="math/tex; ">𝑥_𝑘</script>&#xC5D0;&#xC11C; &#xAE30;&#xC6B8;&#xAE30;&#xAC00; &#xC74C;&#xC218;&#xC774;&#xBA74; &#xC989; &#xACE1;&#xBA74;&#xC774; &#xC544;&#xB798;&#xB85C; &#xD5A5;&#xD558;&#xBA74; <script type="math/tex; ">𝑔(𝑥_𝑘)<0</script>&#xC774;&#xBBC0;&#xB85C; &#xC55E;&#xC73C;&#xB85C; &#xC9C4;&#xD589;&#xD558;&#xACE0; &#xD604;&#xC7AC; &#xC704;&#xCE58; <script type="math/tex; ">𝑥_𝑘</script>&#xC5D0;&#xC11C; &#xAE30;&#xC6B8;&#xAE30;&#xAC00; &#xC591;&#xC218;&#xC774;&#xBA74; <script type="math/tex; ">𝑔(𝑥𝑘)>0</script> &#xC774;&#xBBC0;&#xB85C; &#xB4A4;&#xB85C; &#xC9C4;&#xD589;&#xD558;&#xAC8C; &#xB418;&#xC5B4; &#xC810;&#xC810; &#xB0AE;&#xC740; &#xC704;&#xCE58;&#xB85C; &#xC62E;&#xACA8;&#xAC04;&#xB2E4;.</p>
+<p><script type="math/tex; ">𝑥_𝑘</script> &#xAC00; &#xC77C;&#xB2E8; &#xCD5C;&#xC801; &#xC810;&#xC5D0; &#xB3C4;&#xB2EC;&#xD558;&#xC600;&#xC744; &#xB54C;&#xB294; <script type="math/tex; ">𝑔(𝑥_𝑘)=0</script> &#xC774; &#xB418;&#xBBC0;&#xB85C; &#xB354; &#xC774;&#xC0C1; &#xC704;&#xCE58;&#xB97C; &#xC62E;&#xAE30;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<p>&#xC774; &#xB54C; &#xC704;&#xCE58;&#xB97C; &#xC62E;&#xAE30;&#xB294; &#xAC70;&#xB9AC;&#xB97C; &#xACB0;&#xC815;&#xD558;&#xB294; &#xBE44;&#xB840;&#xC0C1;&#xC218; &#x1D707;&#xB97C; <strong>&#xC2A4;&#xD15D; &#xC0AC;&#xC774;&#xC988;(step size)</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC608;&#xB85C; 1&#xCC28;&#xC6D0; &#xBAA9;&#xC801;&#xD568;&#xC218;(<script type="math/tex; ">f(x) = (x - 2)^2 + 2</script>)&#xB97C; &#xCD5C;&#xAE09;&#xAC15;&#xD558;&#xBC95;&#xC73C;&#xB85C; &#xCD5C;&#xC801;&#xD654;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. &#xC6B0;&#xC120; &#xC0AC;&#xB78C;&#xC774; &#xC9C1;&#xC811; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD558;&#xC5EC; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xD30C;&#xC774;&#xC36C;&#xC73C;&#xB85C; &#xAD6C;&#xD604;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. </p>
+<pre><code class="lang-python">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f1d</span><span class="hljs-params">(x)</span>:</span>
+      <span class="hljs-string">&quot;&quot;&quot;derivative of f1(x)&quot;&quot;&quot;</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (x - <span class="hljs-number">2.0</span>)
+</code></pre>
+<ul>
+<li>x = 0 &#xC5D0;&#xC11C; &#xC2DC;&#xC791;&#xD558;&#xC5EC; SGD&#xB85C; &#xCD5C;&#xC801;&#xC810;&#xC744; &#xCC3E;&#xC544;&#xB098;&#xAC00;&#xB294; &#xACFC;&#xC815;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;. </li>
+<li>SGD&#xC5D0;&#xC11C;&#xB294; &#xC2A4;&#xD15D;&#xC0AC;&#xC774;&#xC988;&#xC758; &#xD06C;&#xAE30;&#xB97C; &#xC801;&#xC808;&#xD788; &#xC870;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC911;&#xC694;&#xD558;&#xB2E4;.</li>
+</ul>
+<p><img src="../../../resource/img/image-20190424212246056.png" alt="image-20190424212246056"></p>
+<p><img src="../../../resource/img/image-20190424212406608.png" alt="image-20190424212406608"></p>
+<p>2&#xCC28;&#xC6D0; Rosenbrock &#xD568;&#xC218;&#xC5D0; &#xB300;&#xD574; SGD&#xB97C; &#xC801;&#xC6A9;&#xD574;&#xBCF4;&#xC790;. &#xBAA9;&#xC801;&#xD568;&#xC218;&#xB97C; &#xBBF8;&#xBD84;&#xD558;&#xC5EC; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xAD6C;&#xD55C; &#xB2E4;&#xC74C; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xB97C; &#xD30C;&#xC774;&#xC36C; &#xD568;&#xC218;&#xB85C; &#xAD6C;&#xD604;&#xD558;&#xC600;&#xB2E4;.  <script type="math/tex; ">f(x, y) = (1 − x )^2 + 100(y − x^2)^2</script> </p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f2g</span><span class="hljs-params">(x, y)</span>:</span>
+<span class="hljs-string">&quot;&quot;&quot;gradient of f2(x, y)&quot;&quot;&quot;</span>
+<span class="hljs-keyword">return</span> np.array((<span class="hljs-number">2.0</span> * (x - <span class="hljs-number">1</span>) - <span class="hljs-number">400.0</span> * x * (y - x**<span class="hljs-number">2</span>), <span class="hljs-number">200.0</span> * (y - x**<span class="hljs-number">2</span>)))
+</code></pre>
+<p>&#xB2E4;&#xC74C; &#xADF8;&#xB9BC;&#xC5D0; <script type="math/tex; ">𝑥=−1,𝑦−1</script>&#xC5D0;&#xC11C; &#xC2DC;&#xC791;&#xD558;&#xC5EC; SGD&#xB85C; &#xCD5C;&#xC801;&#xC810;&#xC744; &#xCC3E;&#xC544;&#xB098;&#xAC00;&#xB294; &#xACFC;&#xC815;&#xC744; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130; &#xD654;&#xC0B4;&#xD45C;&#xC640; &#xD568;&#xAED8; &#xBCF4;&#xC600;&#xB2E4;.</p>
+<p><img src="../../../resource/img/image-20190424212732670.png" alt="image-20190424212732670"></p>
+<p>&#xB2E4;&#xC74C; &#xADF8;&#xB9BC;&#xC5D0;&#xC11C; &#xBCFC; &#xC218; &#xC788;&#xB4EF;&#xC774; SGD &#xBC29;&#xBC95;&#xC740; &#xACE1;&#xBA74;&#xC758; &#xBAA8;&#xC591;&#xC774; <strong>&#xACC4;&#xACE1;(valley)</strong>&#xACFC; &#xAC19;&#xC774; &#xC0DD;&#xAE34; &#xACBD;&#xC6B0;, &#xC989; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xAC00; &#xCD5C;&#xC800;&#xC810;&#xC744; &#xAC00;&#xB9AC;&#xD0A4;&#xACE0; &#xC788;&#xC9C0; &#xC54A;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; <strong>&#xC9C4;&#xB3D9;(oscillation) &#xD604;&#xC0C1;</strong>&#xC774; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xC218;&#xB834;&#xD558;&#xB294;&#xB370; &#xC2DC;&#xAC04;&#xC774; &#xC624;&#xB798; &#xAC78;&#xB9B4; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><img src="../../../resource/img/image-20190424212811549.png" alt="image-20190424212811549"></p>
+<p>&#xC774;&#xB7EC;&#xD55C; &#xC9C4;&#xB3D9; &#xD604;&#xC0C1;&#xC744; &#xC5C6;&#xC568; &#xC218; &#xC788;&#xB294; &#xBC29;&#xBC95;&#xC73C;&#xB85C;&#xB294; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;, &#xC989; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB098; &#xBAA8;&#xBA58;&#xD140; &#xBC29;&#xBC95;(momentum)&#xC774; &#xC788;&#xB2E4;. &#xC77C;&#xBC18;&#xC801;&#xC778; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xAE30; &#xC5B4;&#xB824;&#xC6B4; &#xC778;&#xACF5;&#xC2E0;&#xACBD;&#xB9DD; &#xB4F1;&#xC5D0;&#xC11C;&#xB294; &#xBAA8;&#xBA58;&#xD140; &#xBC29;&#xBC95;&#xC744; &#xC120;&#xD638;&#xD55C;&#xB2E4;.</p>
+<h3 id="normal-equation">Normal Equation</h3>
+<p>Gradient Descent&#xB294; &#xACBD;&#xC0AC;&#xBA74;&#xC744; &#xD558;&#xAC15;&#xD558;&#xBA74;&#xC11C; &#xCD5C;&#xC800;&#xC810;&#xC744; &#xCC3E;&#xB294; &#xBC29;&#xC2DD;&#xC774;&#xAE30;&#xC5D0; &#xD55C;&#xAC78;&#xC74C;&#xC529; &#xB0B4;&#xB824;&#xC624;&#xBA74;&#xC11C; &#xC5EC;&#xB7EC;&#xBC88;&#xC744; &#xC218;&#xD589;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.</p>
+<p>Normal Equationd&#xC740; &#xBC18;&#xBCF5;&#xC5C6;&#xC774; <script type="math/tex; ">\theta</script> &#xB97C; &#xBC14;&#xB85C; &#xAD6C;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. &#xBC18;&#xBCF5;&#xC774; &#xC5C6;&#xAE30;&#xC5D0; &#xADF8;&#xB9CC;&#xD07C; &#xBE60;&#xB974;&#xACE0; <script type="math/tex; ">\alpha</script> &#xB97C; &#xCC3E;&#xC744; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\theta = (X^TX)^{-1}X^Ty
+</script></p>
+<h3 id="2&#xCC28;-&#xB3C4;&#xD568;&#xC218;&#xB97C;-&#xC0AC;&#xC6A9;&#xD55C;-newton-&#xBC29;&#xBC95;">2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; Newton &#xBC29;&#xBC95;</h3>
+<p><strong>Newton &#xBC29;&#xBC95;</strong> &#xC740; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xAC00; 2&#xCC28; &#xD568;&#xC218;&#xB77C;&#xB294; &#xAC00;&#xC815;&#xD558;&#xC5D0; &#xD55C;&#xBC88;&#xC5D0; &#xCD5C;&#xC800;&#xC810;&#xC744; &#xCC3E;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<p>&#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xC5D0; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC744; &#xACF1;&#xD574;&#xC11C; &#xBC29;&#xD5A5;&#xACFC; &#xAC70;&#xB9AC;&#xAC00; &#xBCC0;&#xD615;&#xB41C; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+{x}_{n+1} = {x}_n - [{H}f({x}_n)]^{-1} \nabla f({x}_n)
+</script></p>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xB2E4;&#xC74C; &#xB2E8;&#xBCC0;&#xC218; 2&#xCC28; &#xD568;&#xC218; <script type="math/tex; ">f(x) = a(x-x_0)^2 + c = ax^2 -2ax_0x + x_0^2+c</script>  &#xB294; <script type="math/tex; ">x = x_0</script> &#xC5D0;&#xC11C; &#xCD5C;&#xC18C;&#xAC12;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;. </p>
+<p>&#xB2E8;&#xBCC0;&#xC218;&#xD568;&#xC218; Newton &#xBC29;&#xBC95;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. &#xC989; &#xCD5C;&#xC801;&#xC758; &#xC2A4;&#xD15D;&#xC0AC;&#xC774;&#xC988;&#xAC00; <script type="math/tex; ">\frac{1}{f''(x_n)}</script>&#xC774;&#xB77C;&#xB294; &#xAC83;&#xC744; &#xBCF4;&#xC5EC;&#xC900;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+{x}_{n+1} = {x}_n - \dfrac{f'(x_n)}{f''(x_n)}
+</script></p>
+<p><script type="math/tex; ">{f'(x_n)}</script> &#xB294; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8;&#xBCA1;&#xD130;, <script type="math/tex; ">{f''(x_n)}</script> &#xB294; &#xD5E4;&#xC2DC;&#xC548;&#xD589;&#xB82C;</p>
+<p>2&#xCC28; &#xD568;&#xC218;&#xC5D0; &#xB300;&#xD574; &#xB3C4;&#xD568;&#xC218;&#xC640; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+f'(x) = 2ax - 2ax_0 \\
+f''(x) = 2a
+</script>
+Newton &#xBC29;&#xBC95;&#xC5D0; &#xC801;&#xC6A9;&#xD558;&#xBA74; &#xC5B4;&#xB5A4; &#xC810; <script type="math/tex; ">x_n</script> &#xC5D0;&#xC11C; &#xC2DC;&#xC791;&#xD574;&#xB3C4; &#xBC14;&#xB85C; &#xCD5C;&#xC800;&#xC810;&#xC73C;&#xB85C; &#xC774;&#xB3D9;&#xD55C;&#xB2E4;. 
+<script type="math/tex; mode=display">
+{x}_{n+1} = {x}_n - \dfrac{2ax_n - 2ax_0}{2a} = x_n - (x_n - x_0) = x_0
+</script></p>
+<h3 id="quasinewton-&#xBC29;&#xBC95;">Quasi_Newton &#xBC29;&#xBC95;</h3>
+<p>Newton &#xBC29;&#xBC95;&#xC740; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xAC00; 2&#xCC28; &#xD568;&#xC218;&#xC640; &#xBE44;&#xC2B7;&#xD55C; &#xBAA8;&#xC591;&#xC744; &#xAC00;&#xC9C4; &#xACBD;&#xC6B0;&#xC5D0; &#xBE60;&#xB974;&#xAC8C; &#xC218;&#xB834;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xB294; &#xC7A5;&#xC810;&#xC774; &#xC788;&#xC9C0;&#xB9CC; 2&#xCC28;&#xB3C4;&#xD568;&#xC218;&#xC778; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xB78C;&#xC774; &#xBBF8;&#xB9AC; &#xAD6C;&#xD604;&#xD574; &#xC8FC;&#xC5B4;&#xC57C; &#xD558;&#xACE0; &#xD568;&#xC218;&#xC758; &#xBAA8;&#xC591;&#xC5D0; &#xB530;&#xB77C;&#xC11C;&#xB294; &#xC798; &#xC218;&#xB834;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xB2E4;. <strong>Quasi-Newton &#xBC29;&#xBC95;</strong>&#xC5D0;&#xC11C;&#xB294; &#xC0AC;&#xB78C;&#xC774; &#xAD6C;&#xD55C; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xB300;&#xC2E0; &#xD604;&#xC7AC; &#xC2DC;&#xB3C4;&#xD558;&#xACE0; &#xC788;&#xB294; <script type="math/tex; ">𝑥_𝑛</script> &#xC8FC;&#xBCC0;&#xC758; &#xBA87;&#xBA87; &#xC810;&#xC5D0;&#xC11C; &#xD568;&#xC218;&#xC758; &#xAC12;&#xC744; &#xAD6C;&#xD558;&#xACE0; &#xC774;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xC758; &#xADFC;&#xC0AC;&#xAC12; &#xD639;&#xC740; &#xC774;&#xC5D0; &#xC0C1;&#xC751;&#xD558;&#xB294; &#xC815;&#xBCF4;&#xB97C; &#xC218;&#xCE58;&#xC801;&#xC73C;&#xB85C; &#xACC4;&#xC0B0;&#xD55C;&#xB2E4;. &#xC2E4;&#xC81C;&#xB85C;&#xB294; BFGS(Broyden&#x2013;Fletcher&#x2013;Goldfarb&#x2013;Shanno) &#xBC29;&#xBC95;&#xC774; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<p>CG(conjugated gradient) &#xBC29;&#xBC95;&#xC740; Quasi-Newton &#xBC29;&#xBC95;&#xCC98;&#xB7FC; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C;&#xC744; &#xD544;&#xC694;&#xB85C; &#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xBCC0;&#xD615;&#xB41C; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xB97C; &#xBC14;&#xB85C; &#xACC4;&#xC0B0;&#xD55C;&#xB2E4;.</p>
+<h3 id="scipy&#xB97C;-&#xC774;&#xC6A9;&#xD55C;-&#xCD5C;&#xC801;&#xD654;">SciPy&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xCD5C;&#xC801;&#xD654;</h3>
+<p>SciPy&#xC758; optimize &#xC11C;&#xBE0C; &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xCD5C;&#xC801;&#xD654; &#xBA85;&#xB839; <code>minimize</code>&#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;. &#xC138;&#xBD80;&#xC801;&#xC778; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC740; <code>method</code> &#xC778;&#xC218;&#xB85C; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xB514;&#xD3F4;&#xD2B8; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC740; &#xC55E;&#xC5D0;&#xC11C; &#xC124;&#xBA85;&#xD55C; BFGS &#xBC29;&#xBC95;&#xC774;&#xB2E4;. <code>minimize</code> &#xBA85;&#xB839;&#xC740; &#xCD5C;&#xC801;&#xD654;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xD568;&#xC218;&#xC640; &#xCD5C;&#xC801;&#xD654;&#xB97C; &#xC2DC;&#xC791;&#xD560; &#xCD08;&#xAE30;&#xAC12;&#xC744; &#xC778;&#xC218;&#xB85C; &#xBC1B;&#xB294;&#xB2E4;. &#xBCF4;&#xB2E4; &#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; SciPy &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xC870;&#xD55C;&#xB2E4;. </p>
+<pre><code class="lang-python">result = minimize(func, x0, jac=jac)
+</code></pre>
+<p><code>func</code>: &#xBAA9;&#xC801;&#xD568;&#xC218;</p>
+<p><code>x0</code>: &#xCD08;&#xAE30;&#xAC12; &#xBCA1;&#xD130;</p>
+<p><code>jac</code>: (&#xC635;&#xC158;) &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xD568;&#xC218;</p>
+<p><code>minimize</code> &#xBA85;&#xB839;&#xC758; &#xACB0;&#xACFC;&#xB294; <code>OptimizeResult</code> &#xD074;&#xB798;&#xC2A4; &#xAC1D;&#xCCB4;&#xB85C; &#xB2E4;&#xC74C; &#xC18D;&#xC131;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;.</p>
+<ul>
+<li><code>x</code>: &#xCD5C;&#xC801;&#xD654; &#xD574;</li>
+<li><code>success</code>: &#xCD5C;&#xC801;&#xD654;&#xC5D0; &#xC131;&#xACF5;&#xD558;&#xBA74; <code>True</code>&#xB97C; &#xBC18;&#xD658;</li>
+<li><code>status</code>: &#xC885;&#xB8CC; &#xC0C1;&#xD0DC;. &#xCD5C;&#xC801;&#xD654;&#xC5D0; &#xC131;&#xACF5;&#xD558;&#xBA74; 0&#xC744; &#xBC18;&#xD658;</li>
+<li><code>message</code>: &#xBA54;&#xC138;&#xC9C0; &#xBB38;&#xC790;&#xC5F4;</li>
+<li><code>fun</code>: x &#xC704;&#xCE58;&#xC5D0;&#xC11C;&#xC758; &#xD568;&#xC218;&#xC758; &#xAC12;</li>
+<li><code>jac</code>: x &#xC704;&#xCE58;&#xC5D0;&#xC11C;&#xC758; &#xC790;&#xCF54;&#xBE44;&#xC548;(&#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8;) &#xBCA1;&#xD130;&#xC758; &#xAC12;</li>
+<li><code>hess_inv</code>: x &#xC704;&#xCE58;&#xC5D0;&#xC11C;&#xC758; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C;&#xC758; &#xC5ED;&#xD589;&#xB82C;&#xC758; &#xAC12;</li>
+<li><code>nfev</code>: &#xBAA9;&#xC801;&#xD568;&#xC218; &#xD638;&#xCD9C; &#xD69F;&#xC218;</li>
+<li><code>njev</code>: &#xC790;&#xCF54;&#xBE44;&#xC548; &#xACC4;&#xC0B0; &#xD69F;&#xC218;</li>
+<li><code>nhev</code>: &#xD5E4;&#xC2DC;&#xC548; &#xACC4;&#xC0B0; &#xD69F;&#xC218;</li>
+<li><code>nit</code>: x &#xC774;&#xB3D9; &#xD69F;&#xC218;</li>
+<li>&#xD568;&#xC218; &#xD638;&#xCD9C; &#xACC4;&#xC0B0;&#xB7C9;&#xC744; &#xC904;&#xC774;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC0AC;&#xB78C;&#xC774; &#xC9C1;&#xC811; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130; &#xAC12;&#xC744; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; <code>jac</code> &#xC778;&#xC218;&#xB85C; &#xB123;&#xC5B4;&#xC8FC;&#xBA74; &#xB41C;&#xB2E4;.</li>
+<li>&#xB2E4;&#xBCC0;&#xC218; &#xD568;&#xC218;&#xB97C; &#xCD5C;&#xC801;&#xD654;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xAC00; &#xBCA1;&#xD130; &#xC778;&#xC218;&#xB97C; &#xAC00;&#xC838;&#xC57C; &#xD55C;&#xB2E4;.</li>
+</ul>
+<h3 id="&#xC804;&#xC5ED;-&#xCD5C;&#xC801;&#xD654;-&#xBB38;&#xC81C;">&#xC804;&#xC5ED; &#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;</h3>
+<p>&#xB9CC;&#xC57D; &#xCD5C;&#xC801;&#xD654;&#xD558;&#xB824;&#xB294; &#xD568;&#xC218;&#xAC00; <strong>&#xBCF5;&#xC218;&#xC758; &#xAD6D;&#xC18C; &#xCD5C;&#xC800;&#xC810;(local minima)&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC804;&#xC5ED; &#xCD5C;&#xC800;&#xC810;(global minimum)&#xC5D0; &#xB3C4;&#xB2EC;&#xD55C;&#xB2E4;&#xB294; &#xBCF4;&#xC7A5;&#xC774; &#xC5C6;&#xB2E4;</strong>. &#xACB0;&#xACFC;&#xB294; &#xCD08;&#xAE30; &#xCD94;&#xC815;&#xAC12; &#xBC0F; &#xC54C;&#xACE0;&#xB9AC;&#xC998;, &#xD30C;&#xB77C;&#xBBF8;&#xD130; &#xB4F1;&#xC5D0; &#xC758;&#xC874;&#xD55C;&#xB2E4;.</p>
+<p><img src="../../../resource/img/image-20190424214710002.png" alt="image-20190424214710002"></p>
+<p><img src="../../../resource/img/image-20190424214724099.png" alt="image-20190424214724099"></p>
+<h3 id="&#xCEE8;&#xBCA1;&#xC2A4;-&#xBB38;&#xC81C;">&#xCEE8;&#xBCA1;&#xC2A4; &#xBB38;&#xC81C;</h3>
+<p>&#xBAA9;&#xC801;&#xD568;&#xC218;&#xC758; 2&#xCC28; &#xB3C4;&#xD568;&#xC218;&#xC758; &#xAC12;&#xC774; &#xD56D;&#xC0C1; 0 &#xC774;&#xC0C1;&#xC774; &#xB418;&#xB294; &#xC601;&#xC5ED;&#xC5D0;&#xC11C;&#xB9CC; &#xC815;&#xC758;&#xB41C; &#xCD5C;&#xC801;&#xD654; &#xBB38;&#xC81C;&#xB97C; <strong>&#xCEE8;&#xBCA1;&#xC2A4;(convex) &#xBB38;&#xC81C;</strong>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\dfrac{\partial^2 f}{\partial x^2} \geq 0
+</script></p>
+<p>&#xB2E4;&#xBCC0;&#xC218; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xC758; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC8FC;&#xC5B4;&#xC9C4; &#xC601;&#xC5ED;&#xC5D0;&#xC11C; &#xD5E4;&#xC2DC;&#xC548; &#xD589;&#xB82C;&#xC774; &#xD56D;&#xC0C1; &#xC591;&#xC758; &#xC900;&#xC815;&#xBD80;&#xD638;(positive semidefinite)&#xC774;&#xB77C;&#xB294; &#xC870;&#xAC74;&#xC774; &#xB41C;&#xB2E4;.
+<script type="math/tex; mode=display">
+x^THx \geq 0 \;\;\text{for all } x
+</script></p>
+<p><strong>convex &#xBB38;&#xC81C;&#xC5D0;&#xC11C;&#xB294; &#xC720;&#xC77C;&#xD55C; &#xC804;&#xC5ED; &#xCD5C;&#xC800;&#xC810;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0404matrix-differentiation.html" class="navigation navigation-prev " aria-label="Previous page: 행렬의 미분">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mle.html" class="navigation navigation-next " aria-label="Next page: 최대가능도와 모수추정">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"최적화 기초","level":"1.2.1.14","depth":3,"next":{"title":"최대가능도와 모수추정","level":"1.2.1.15","depth":3,"path":"posts/datascience/basicmath/mle.md","ref":"posts/datascience/basicmath/mle.md","articles":[]},"previous":{"title":"행렬의 미분","level":"1.2.1.13","depth":3,"path":"posts/datascience/basicmath/0404matrix-differentiation.md","ref":"posts/datascience/basicmath/0404matrix-differentiation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/basicmath/0501optimization.md","mtime":"2020-04-06T04:10:43.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T04:11:47.510Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
