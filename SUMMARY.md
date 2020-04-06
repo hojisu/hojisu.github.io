@@ -25,6 +25,7 @@
         - [확률의 성질](posts/datascience/basicmath/0603probability-character.md)
         - [확률분포함수](posts/datascience/basicmath/0604probability-distribution-function.md)
         - [결합확률과 조건부확률](posts/datascience/basicmath/0605joint-conditional-probability.md)
+        - [베이즈 정리](posts/datascience/basicmath/0606baysian-rule.md)
         - [최대가능도와 모수추정](posts/datascience/basicmath/mle.md)
     - [회귀분석 & 시계열 분석](posts/datascience/regressionandtimeseries/README.md)
         - [데이터 분석 기초](posts/datascience/regressionandtimeseries/dataintro.md)
