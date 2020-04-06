@@ -15,6 +15,7 @@
         - [PCA](posts/datascience/basicmath/0305pca.md)
         - [함수](posts/datascience/basicmath/0401function.md)
         - [함수 미분](posts/datascience/basicmath/0402function-decomposition.md)
+        - [적분](posts/datascience/basicmath/0403integral.md)
         - [최대가능도와 모수추정](posts/datascience/basicmath/mle.md)
     - [Regression & Time-series Analysis](posts/datascience/regressionandtimeseries/README.md)
         - [Analysis Intro](posts/datascience/regressionandtimeseries/dataintro.md)
