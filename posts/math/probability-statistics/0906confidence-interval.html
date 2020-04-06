@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>확률과 통계 · GitBook</title>
+        <title>신뢰구간 추정 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="0602probability.html" />
+    <link rel="next" href="../../datascience/" />
     
     
-    <link rel="prev" href="../optimization/0503lp-qp-problem.html" />
+    <link rel="prev" href="0905scipy-estimation.html" />
     
 
     </head>
@@ -389,7 +389,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="./">
+        <li class="chapter " data-level="1.2.4" data-path="./">
             
                 <a href="./">
             
@@ -702,7 +702,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.24" data-path="0906confidence-interval.html">
+        <li class="chapter active" data-level="1.2.4.24" data-path="0906confidence-interval.html">
             
                 <a href="0906confidence-interval.html">
             
@@ -806,7 +806,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >확률과 통계</a>
+        <a href="../../.." >신뢰구간 추정</a>
     </h1>
 </div>
 
@@ -821,7 +821,102 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xD655;&#xB960;&#xACFC;-&#xD1B5;&#xACC4;">&#xD655;&#xB960;&#xACFC; &#xD1B5;&#xACC4;</h1>
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;-confidence-interval">&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; Confidence interval</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#xC810;&#xCD94;&#xC815;point-estimation-&#xAD6C;&#xAC04;-&#xCD94;&#xC815;interval-estimation">&#xC810;&#xCD94;&#xC815;(point estimation), &#xAD6C;&#xAC04; &#xCD94;&#xC815;(interval estimation)</a></li>
+<li><a href="#&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;-confidence-interval">&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; confidence interval</a><ul>
+<li><a href="#&#xBAA8;&#xBD84;&#xC0B0;-sigma2-&#xC744;-&#xC54C;-&#xB54C;-&#xBAA8;&#xD3C9;&#xADE0;&#xC758;-&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;-&#xCD94;&#xC815;">&#xBAA8;&#xBD84;&#xC0B0; <script type="math/tex; ">\sigma^2</script> &#xC744; &#xC54C; &#xB54C; &#xBAA8;&#xD3C9;&#xADE0;&#xC758; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; &#xCD94;&#xC815;</a></li>
+<li><a href="#&#xBAA8;&#xBD84;&#xC0B0;&#xC744;-&#xBAA8;&#xB97C;-&#xB54C;-&#xBAA8;&#xD3C9;&#xADE0;&#xC758;-&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;-&#xCD94;&#xC815;">&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xBAA8;&#xB97C; &#xB54C; &#xBAA8;&#xD3C9;&#xADE0;&#xC758; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; &#xCD94;&#xC815;</a></li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="&#xC810;&#xCD94;&#xC815;point-estimation-&#xAD6C;&#xAC04;-&#xCD94;&#xC815;interval-estimation">&#xC810;&#xCD94;&#xC815;(point estimation), &#xAD6C;&#xAC04; &#xCD94;&#xC815;(interval estimation)</h3>
+<p>&#xCD94;&#xC815;&#xC5D0;&#xB294; &#xC810;&#xCD94;&#xC815;(point estimation)&#xACFC; &#xAD6C;&#xAC04; &#xCD94;&#xC815;(interval estimation) &#xC774; &#xC788;&#xB2E4;. </p>
+<p>&#xC810;&#xCD94;&#xC815;(point estimation)&#xC740; &#xBAA8;&#xC218;&#xAC00; &#xC5BC;&#xB9C8;&#xC77C; &#xAC83;&#xC774;&#xB77C;&#xACE0; &#xD558;&#xB098;&#xC758; &#xC218;&#xCE58;&#xB97C; &#xCD94;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; &#xBAA8;&#xC218;&#xB294; &#xBAA8;&#xD3C9;&#xADE0;, &#xBAA8;&#xBD84;&#xC0B0;, &#xBAA8;&#xD45C;&#xC900;&#xD3B8;&#xCC28;, &#xBAA8;&#xBE44;&#xC728; &#xB4F1; &#xBAA8;&#xC9D1;&#xB2E8;&#xC758; &#xD2B9;&#xC131;&#xC5D0; &#xAD00;&#xD55C; &#xC218;&#xCE58;&#xB4E4;&#xC744; &#xC758;&#xBBF8;&#xD55C;&#xB2E4;. </p>
+<p>&#xAD6C;&#xAC04;&#xCD94;&#xC815;(interval estimation)&#xC740; &#xBAA8;&#xC218;&#xAC00; &#xC5B4;&#xB290; &#xAC12; a &#xC640; &#xC5B4;&#xB290; &#xAC12; b &#xC0AC;&#xC774;, &#xC989; &#xC5B4;&#xB5A4; &#xAD6C;&#xAC04; &#xB0B4;&#xC5D0; &#xBA87; %&#xC758; &#xD655;&#xB960;&#xB85C; &#xC874;&#xC7AC;&#xD560; &#xAC83;&#xC774;&#xB77C;&#xACE0; &#xCD94;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;. </p>
+<h3 id="&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;-confidence-interval">&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; confidence interval</h3>
+<p>&#xAD6C;&#xAC04; &#xB0B4;&#xC758; &#xD655;&#xB960;&#xC744; &#xC2E0;&#xB8B0;&#xC218;&#xC900;(cofidence level) &#xB610;&#xB294; &#xC2E0;&#xB8B0;&#xB3C4;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;(cofidence interval)&#xC740; &#xAD6C;&#xAC04; &#xB0B4;&#xC5D0; &#xC2E4;&#xC81C; &#xBAA8;&#xC218;&#xAC00; &#xC874;&#xC7AC;&#xD560; &#xAC83;&#xC73C;&#xB85C; &#xC608;&#xCE21;&#xB418;&#xB294; &#xAD6C;&#xAC04;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+a \leq \mu \leq b
+</script></p>
+<p>&#xBAA8;&#xC218;&#xAC00; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; &#xC548;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xC744; &#xD655;&#xB960;&#xC744; &#xBCF4;&#xD1B5; <script type="math/tex; ">\alpha</script> &#xB85C; &#xD45C;&#xD604;&#xD55C;&#xB2E4;. </p>
+<p>&#xBAA8;&#xC218;&#xAC00; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;&#xC5D0; &#xD3EC;&#xD568;&#xB420; &#xD655;&#xB960;, &#xC989; &#xC2E0;&#xB8B0;&#xC218;&#xC900;&#xC740; <script type="math/tex; ">1-\alpha</script> &#xC774;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+P(a \leq \mu \leq b) = 1 - \alpha
+</script></p>
+<p>&#xB9CC;&#xC57D; &#xC2E0;&#xB8B0;&#xC218;&#xC900; <script type="math/tex; ">1-\alpha</script> &#xC774; 0.95 &#xC989;, 95% &#xC774;&#xBA74; <script type="math/tex; ">\alpha=0.05</script> &#xC774;&#xB2E4;. </p>
+<p><img src="../../../resource/img/image-20200305163343302.png" alt="image-20200305163343302"></p>
+<p>&#xBAA8;&#xC218;&#xAC00; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;&#xC5D0; &#xC18D;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xD655;&#xB960;&#xC774; &#xC591;&#xCABD; &#xAF2C;&#xB9AC;&#xBD80;&#xBD84;&#xC5D0; &#xAC01;&#xAC01; <script type="math/tex; ">\dfrac {\alpha}{2}</script> &#xB9CC;&#xD07C;&#xC529; &#xC788;&#xB2E4;.</p>
+<p>&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;&#xC744; &#xCD94;&#xC815;&#xD560; &#xB54C;&#xB294; &#xC0C1;&#xD669;&#xC5D0; &#xB530;&#xB77C; &#xB2E4;&#xB978; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C;&#xD55C;&#xB2E4;. </p>
+<ul>
+<li>&#xB9CC;&#xC57D; &#xBAA8;&#xBD84;&#xC0B0; <script type="math/tex; ">\sigma^2</script> &#xC744; &#xC54C;&#xACE0; &#xC788;&#xB2E4;&#xBA74;, &#xD45C;&#xBCF8;&#xC758; &#xD06C;&#xAE30;&#xC640; &#xAD00;&#xACC4;&#xC5C6;&#xC774; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. (&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xC544;&#xB294; &#xACBD;&#xC6B0;&#xB294; &#xB4DC;&#xBB3C;&#xB2E4;)</li>
+<li>&#xB9CC;&#xC57D; &#xBAA8;&#xBD84;&#xC0B0; <script type="math/tex; ">\sigma^2</script> &#xC744; &#xBAA8;&#xB97C;&#xB54C;, &#xD45C;&#xBCF8;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xCDA9;&#xBD84;&#xD788; &#xD06C;&#xBA74; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xB97C;, &#xD45C;&#xBCF8;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xC791;&#xC73C;&#xBA74; t&#xBD84;&#xD3EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. </li>
+<li>t&#xBD84;&#xD3EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xBAA8;&#xC9D1;&#xB2E8;&#xC774; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xB97C; &#xB530;&#xB77C;&#xC57C;&#xD55C;&#xB2E4;&#xB294; &#xD55C;&#xACC4;&#xAC00; &#xC788;&#xB2E4;. </li>
+</ul>
+<p><img src="../../../resource/img/image-20200305164342039.png" alt="image-20200305164342039"></p>
+<h4 id="&#xBAA8;&#xBD84;&#xC0B0;-sigma2-&#xC744;-&#xC54C;-&#xB54C;-&#xBAA8;&#xD3C9;&#xADE0;&#xC758;-&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;-&#xCD94;&#xC815;">&#xBAA8;&#xBD84;&#xC0B0; <script type="math/tex; ">\sigma^2</script> &#xC744; &#xC54C; &#xB54C; &#xBAA8;&#xD3C9;&#xADE0;&#xC758; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; &#xCD94;&#xC815;</h4>
+<p>&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xC548;&#xB2E4;&#xB294; &#xAC83;&#xC740; &#xBAA8;&#xD45C;&#xC900;&#xD3B8;&#xCC28;&#xB97C; &#xC548;&#xB2E4;&#xB294; &#xAC83;&#xACFC; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB2E4;.</p>
+<p>&#xBAA8;&#xD3C9;&#xADE0; <script type="math/tex; ">\mu</script> , &#xBAA8;&#xBD84;&#xC0B0; <script type="math/tex; ">\sigma^2</script>, &#xBAA8;&#xD45C;&#xC900;&#xD3B8;&#xCC28;&#xB97C; <script type="math/tex; ">\sigma</script> &#xD560; &#xB54C;, &#xD06C;&#xAE30;&#xAC00; n&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xD45C;&#xBCF8;&#xD3C9;&#xADE0; <script type="math/tex; ">\bar X</script> &#xC744; &#xD45C;&#xC900;&#xD654;&#xD558;&#xBA74; <script type="math/tex; ">z</script> &#xD1B5;&#xACC4;&#xB7C9;&#xC774; &#xB41C;&#xB2E4;.</p>
+<ul>
+<li>&#xC774;&#xC720; ; &#xD45C;&#xBCF8;&#xD3C9;&#xADE0;&#xC740; &#xC815;&#xADDC;&#xBD84;&#xD3EC; <script type="math/tex; ">N(\mu, \dfrac {\sigma^2}{n})</script> &#xC744; &#xB530;&#xB974;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</li>
+</ul>
+<p><script type="math/tex; mode=display">
+Z = \dfrac {\bar X - \mu} {\dfrac {\sigma} {\sqrt n}}
+</script></p>
+<p>&#xB9CC;&#xC57D; 95%&#xC758; &#xC2E0;&#xB8B0;&#xC218;&#xC900;&#xC73C;&#xB85C; &#xBAA8;&#xD3C9;&#xADE0;&#xC774; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; &#xB0B4;&#xC5D0; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xACE0; &#xD558;&#xBA74;, &#xD45C;&#xC900;&#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC5D0; &#xC758;&#xD574; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC4F8; &#xC218;&#xC788;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+P(-1.96 \leq Z \leq 1.96) = 0.95
+</script></p>
+<p>&#xC774; &#xB9D0;&#xC740; a&#xAC00; -1.96, b&#xAC00; 1.96 &#xC774;&#xB77C;&#xB294; &#xAC83;&#xC774;&#xB2E4;. &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xC2E0;&#xB8B0;&#xC218;&#xC900;&#xC774; <script type="math/tex; ">1-\alpha</script> &#xC77C;&#xB54C;&#xB3C4; &#xADF8;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; a&#xC640; b&#xC758; &#xAC12;&#xC774; &#xC874;&#xC7AC;&#xD560; &#xAC83;&#xC774;&#xB2E4;. a&#xC640; b&#xB97C; &#xAC01;&#xAC01; <script type="math/tex; ">-z_{\alpha/2}, z_{\alpha/2}</script> &#xB77C;&#xACE0; &#xD55C;&#xB2E4;. <script type="math/tex; ">z_{\alpha/2}</script> &#xB294; &#xD45C;&#xC900;&#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC758; &#xC624;&#xB978;&#xCABD; &#xAF2C;&#xB9AC; <script type="math/tex; ">\alpha/2</script> &#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBA74;&#xC801;&#xC744; &#xAC00;&#xC9C0;&#xB294; z &#xAC12;&#xC744; &#xC758;&#xBBF8;&#xD55C;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2}) = 1 - \alpha
+</script></p>
+<p><img src="../../../resource/img/image-20200305165455589.png" alt="image-20200305165455589"></p>
+<p>&#xB530;&#xB77C;&#xC11C;, &#xC2E0;&#xB8B0;&#xC218;&#xC900; <script type="math/tex; ">1-\alpha</script> &#xC778; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC720;&#xB3C4;&#xD574;&#xB0BC; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2}) = 1 - \alpha \\
+P(-z_{\alpha/2} \leq \dfrac {\bar X - \mu} {\dfrac {\sigma} {\sqrt n}} \leq z_{\alpha/2}) = 1 - \alpha \\
+P(-z_{\alpha/2} \dfrac {\sigma} {\sqrt n} \leq \bar X - \mu \leq z_{\alpha/2} \dfrac {\sigma} {\sqrt n} ) = 1 - \alpha \\
+P(-\bar X -z_{\alpha/2} \dfrac {\sigma} {\sqrt n} \leq  - \mu \leq -\bar X + z_{\alpha/2} \dfrac {\sigma} {\sqrt n} ) = 1 - \alpha \\
+P(\bar X -z_{\alpha/2} \dfrac {\sigma} {\sqrt n} \leq   \mu \leq \bar X + z_{\alpha/2} \dfrac {\sigma} {\sqrt n} ) = 1 - \alpha \\
+</script></p>
+<p><script type="math/tex; mode=display">
+모평균의 신뢰구간 \\
+P(\bar X -z_{\alpha/2} \dfrac {\sigma} {\sqrt n} \leq   \mu \leq \bar X + z_{\alpha/2} \dfrac {\sigma} {\sqrt n} )
+</script></p>
+<p><script type="math/tex; ">\alpha</script> &#xC5D0; &#xB530;&#xB978; <script type="math/tex; ">z_{\alpha/2}</script> &#xC758; &#xAC12;&#xC740; &#xD45C;&#xC900;&#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xD45C;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xBA74; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>95% &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;&#xBCF4;&#xB2E4; 99% &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;&#xC774; &#xC880; &#xB354; &#xB113;&#xB2E4;.</p>
+<h4 id="&#xBAA8;&#xBD84;&#xC0B0;&#xC744;-&#xBAA8;&#xB97C;-&#xB54C;-&#xBAA8;&#xD3C9;&#xADE0;&#xC758;-&#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;-&#xCD94;&#xC815;">&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xBAA8;&#xB97C; &#xB54C; &#xBAA8;&#xD3C9;&#xADE0;&#xC758; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; &#xCD94;&#xC815;</h4>
+<p>&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xBAA8;&#xB97C; &#xB54C;&#xB294; t&#xBD84;&#xD3EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. </p>
+<p>t&#xBD84;&#xD3EC;&#xB97C; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC640; &#xC0C1;&#xB2F9;&#xD788; &#xBE44;&#xC2B7;&#xD55C;&#xB370; &#xC911;&#xC2EC;&#xBD80;&#xB294; &#xB0AE;&#xC544;&#xC9C0;&#xACE0; &#xC591;&#xCABD; &#xAF2C;&#xB9AC;&#xB294; &#xC880; &#xB354; &#xB192;&#xC740; &#xC885; &#xD615;&#xD0DC;&#xC774;&#xB2E4;. &#xC790;&#xC720;&#xB3C4;&#xAC00; &#xC791;&#xC744; &#xC218;&#xB85D; &#xAF2C;&#xB9AC;&#xBD80;&#xBD84;&#xC774; &#xB192;&#xC544;&#xC9C0;&#xACE0; &#xC790;&#xC720;&#xB3C4;&#xAC00; &#xB192;&#xC744;&#xC218;&#xB85D; &#xD45C;&#xC900;&#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC5D0; &#xAC00;&#xAE4C;&#xC6CC;&#xC9C4;&#xB2E4;. &#xC774; &#xC790;&#xC720;&#xB3C4;&#xB294; &#xD45C;&#xBCF8;&#xC758; &#xD06C;&#xAE30;&#xC5D0; &#xB530;&#xB77C; &#xACB0;&#xC815;&#xB41C;&#xB2E4;. (&#xC790;&#xC720;&#xB3C4; = n - 1)</p>
+<p><img src="../../../resource/img/image-20200305170154088.png" alt="image-20200305170154088"></p>
+<p>&#xBAA8;&#xBD84;&#xC0B0;, &#xC989; &#xBAA8;&#xD45C;&#xC900;&#xD3B8;&#xCC28;&#xB97C; &#xBAA8;&#xB974;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBAA8;&#xD45C;&#xC900;&#xD3B8;&#xCC28; <script type="math/tex; ">\sigma</script> &#xB300;&#xC2E0;&#xC5D0; &#xD45C;&#xBCF8;&#xD45C;&#xC900;&#xD3B8;&#xCC28; <script type="math/tex; ">s</script> &#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+t = \dfrac {\bar X - \mu}  {\dfrac {s}{\sqrt n}} 
+</script></p>
+<p>&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xBAA8;&#xB97C; &#xB54C; &#xBAA8;&#xD3C9;&#xADE0;&#xC758; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBC14;&#xB010;&#xB2E4;. </p>
+<ul>
+<li><p>&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xBAA8;&#xB97C; &#xB54C; &#xBAA8;&#xD3C9;&#xADE0;&#xC758; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; ( n &lt; 30 ), <script type="math/tex; ">t_{\alpha/2}</script> &#xC740; t&#xBD84;&#xD3EC;&#xD45C;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xBA74; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+  \bar X -t_{\alpha/2} \dfrac {\sigma} {\sqrt n} \leq   \mu \leq \bar X + t_{\alpha/2} \dfrac {\sigma} {\sqrt n}
+  </script></p>
+</li>
+<li><p>&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xBAA8;&#xB974;&#xB354;&#xB77C;&#xB3C4; &#xD45C;&#xBCF8;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xCDA9;&#xBD84;&#xD788; &#xD06C;&#xB2E4;&#xBA74;(<script type="math/tex; ">n \geq 30 </script>) &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xD45C;&#xBCF8;&#xC758; &#xD06C;&#xAE30;&#xAC00; 30&#xC774;&#xC0C1;&#xC774;&#xBA74; t&#xBD84;&#xD3EC;&#xB294; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC640; &#xBE44;&#xC2B7;&#xD574;&#xC9C0;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;(&#xD45C;&#xBCF8;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xCEE4;&#xC9C8;&#xC218;&#xB85D; &#xB354; &#xBE44;&#xC2B7;&#xD574;&#xC9C4;&#xB2E4;.). &#xC774;&#xB54C;&#xB294; <script type="math/tex; ">z</script> &#xBCC0;&#xB7C9;&#xC5D0;&#xC11C; &#xBAA8;&#xD45C;&#xC900;&#xD3B8;&#xCC28; &#xC790;&#xB9AC;&#xC5D0; &#xD45C;&#xBCF8;&#xD45C;&#xC900;&#xD3B8;&#xCC28;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. </p>
+<ul>
+<li>&#xBAA8;&#xBD84;&#xC0B0;&#xC744; &#xBAA8;&#xB97C; &#xB54C; &#xBAA8;&#xD3C9;&#xADE0;&#xC758; &#xC2E0;&#xB8B0;&#xAD6C;&#xAC04; (<script type="math/tex; ">n \geq 30</script>) </li>
+</ul>
+<p><script type="math/tex; mode=display">
+  \bar X -z_{\alpha/2} \dfrac {\sigma} {\sqrt n} \leq   \mu \leq \bar X + z_{\alpha/2} \dfrac {\sigma} {\sqrt n}
+  </script></p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -849,12 +944,12 @@
 
             
                 
-                <a href="../optimization/0503lp-qp-problem.html" class="navigation navigation-prev " aria-label="Previous page: LP문제 & QP문제">
+                <a href="0905scipy-estimation.html" class="navigation navigation-prev " aria-label="Previous page: Scipy를 사용한 검정">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="0602probability.html" class="navigation navigation-next " aria-label="Next page: 확률의 수학적 정의와 의미">
+                <a href="../../datascience/" class="navigation navigation-next " aria-label="Next page: 데이터 사이언스">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -865,7 +960,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"확률과 통계","level":"1.2.4","depth":2,"next":{"title":"확률의 수학적 정의와 의미","level":"1.2.4.1","depth":3,"path":"posts/math/probability-statistics/0602probability.md","ref":"posts/math/probability-statistics/0602probability.md","articles":[]},"previous":{"title":"LP문제 & QP문제","level":"1.2.3.3","depth":3,"path":"posts/math/optimization/0503lp-qp-problem.md","ref":"posts/math/optimization/0503lp-qp-problem.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/README.md","mtime":"2020-04-06T05:41:44.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T14:35:50.256Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"신뢰구간 추정","level":"1.2.4.24","depth":3,"next":{"title":"데이터 사이언스","level":"1.3","depth":1,"path":"posts/datascience/README.md","ref":"posts/datascience/README.md","articles":[{"title":"회귀분석","level":"1.3.1","depth":2,"path":"posts/datascience/regression/README.md","ref":"posts/datascience/regression/README.md","articles":[{"title":"데이터분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regression/dataintro.md","ref":"posts/datascience/regression/dataintro.md","articles":[]}]}]},"previous":{"title":"Scipy를 사용한 검정","level":"1.2.4.23","depth":3,"path":"posts/math/probability-statistics/0905scipy-estimation.md","ref":"posts/math/probability-statistics/0905scipy-estimation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0906confidence-interval.md","mtime":"2020-04-06T14:34:43.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T14:35:50.256Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
