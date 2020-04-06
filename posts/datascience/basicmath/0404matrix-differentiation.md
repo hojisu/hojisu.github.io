@@ -1,3 +1,5 @@
+<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
 # 행렬의 미분
 
 ### Summary
