@@ -32,6 +32,7 @@
         - [기댓값](posts/math/probability-statistics/0702expectation.md)
         - [분산 & 표준편차](posts/math/probability-statistics/0703variance.md)
         - [다변수 확률변수](posts/math/probability-statistics/0704multivariate-probability-variable.md)
+        - [공분산과 상관계수](posts/math/probability-statistics/0705covariance-correlation.md)
         - [최대가능도와 모수추정](posts/math/probability-statistics/mle.md)
 - [데이터 사이언스](posts/datascience/README.md)    
     - [회귀분석](posts/datascience/regression/README.md)
