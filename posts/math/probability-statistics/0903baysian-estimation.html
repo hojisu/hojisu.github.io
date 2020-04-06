@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>조건부 기댓값 · GitBook</title>
+        <title>베이지안 모수추정 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="0801scipy-distribution.html" />
+    <link rel="next" href="../../datascience/" />
     
     
-    <link rel="prev" href="0705covariance-correlation.html" />
+    <link rel="prev" href="0902mle.html" />
     
 
     </head>
@@ -533,7 +533,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4.11" data-path="0706conditional-expectation.html">
+        <li class="chapter " data-level="1.2.4.11" data-path="0706conditional-expectation.html">
             
                 <a href="0706conditional-expectation.html">
             
@@ -663,7 +663,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.21" data-path="0903baysian-estimation.html">
+        <li class="chapter active" data-level="1.2.4.21" data-path="0903baysian-estimation.html">
             
                 <a href="0903baysian-estimation.html">
             
@@ -767,7 +767,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >조건부 기댓값</a>
+        <a href="../../.." >베이지안 모수추정</a>
     </h1>
 </div>
 
@@ -784,16 +784,16 @@
                                 
                                 <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
 
-<h1 id="&#xC870;&#xAC74;&#xBD80;-&#xAE30;&#xB313;&#xAC12;conditional-expectation&#xACFC;-&#xC608;&#xCE21;-&#xBB38;&#xC81C;">&#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12;(Conditional expectation)&#xACFC; &#xC608;&#xCE21; &#xBB38;&#xC81C;</h1>
+<h1 id="&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xCD94;&#xC815;">&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;</h1>
 <!-- toc --><div id="toc" class="toc">
 
 <ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#&#xC608;&#xCE21;&#xBB38;&#xC81C;">&#xC608;&#xCE21;&#xBB38;&#xC81C;</a></li>
-<li><a href="#&#xC804;&#xCCB4;-&#xAE30;&#xB313;&#xAC12;&#xC758;-&#xBC95;&#xCE59;">&#xC804;&#xCCB4; &#xAE30;&#xB313;&#xAC12;&#xC758; &#xBC95;&#xCE59;</a></li>
-<li><a href="#&#xC870;&#xAC74;&#xBD80;-&#xBD84;&#xC0B0;">&#xC870;&#xAC74;&#xBD80; &#xBD84;&#xC0B0;</a></li>
-<li><a href="#&#xC804;&#xCCB4;-&#xBD84;&#xC0B0;&#xC758;-&#xBC95;&#xCE59;">&#xC804;&#xCCB4; &#xBD84;&#xC0B0;&#xC758; &#xBC95;&#xCE59;</a><ul>
-<li><a href="#bias-variance-trade-off-&#xD3B8;&#xD5A5;-&#xBD84;&#xC0B0;&#xC0C1;&#xCDA9;-&#xBC95;&#xCE59;">Bias-Variance Trade off &#xD3B8;&#xD5A5;-&#xBD84;&#xC0B0;&#xC0C1;&#xCDA9; &#xBC95;&#xCE59;</a></li>
+<li><a href="#&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;&#xC758;-&#xAE30;&#xBCF8;-&#xC6D0;&#xB9AC;">&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815;&#xC758; &#xAE30;&#xBCF8; &#xC6D0;&#xB9AC;</a></li>
+<li><a href="#&#xBAA8;&#xC218;&#xC758;-&#xBD84;&#xD3EC;-&#xBC29;&#xBC95;">&#xBAA8;&#xC218;&#xC758; &#xBD84;&#xD3EC; &#xBC29;&#xBC95;</a><ul>
+<li><a href="#&#xBCA0;&#xB974;&#xB204;&#xC774;-&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758;-&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;&#xCD94;&#xC815;">&#xBCA0;&#xB974;&#xB204;&#xC774; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218;&#xCD94;&#xC815;</a></li>
+<li><a href="#&#xCE74;&#xD14C;&#xACE0;&#xB9AC;-&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758;-&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;&#xCD94;&#xC815;">&#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218;&#xCD94;&#xC815;</a></li>
+<li><a href="#&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC758;-&#xAE30;&#xB313;&#xAC12;-&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;&#xCD94;&#xC815;">&#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xAE30;&#xB313;&#xAC12; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218;&#xCD94;&#xC815;</a></li>
 </ul>
 </li>
 </ul>
@@ -801,66 +801,109 @@
 </div><!-- tocstop -->
 <h3 id="summary">Summary</h3>
 <ul>
-<li>&#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12;&#xC740; &#xC870;&#xAC74;&#xC774; &#xB418;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC5D0; &#xB530;&#xB77C;&#xC11C; &#xBD84;&#xD3EC;&#xAC00; &#xB2EC;&#xB77C;&#xC9C0;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC774;&#xB2E4;.</li>
-<li>Bias-Variance Trade off(&#xD3B8;&#xD5A5;-&#xBD84;&#xC0B0;&#xC0C1;&#xCDA9; &#xBC95;&#xCE59;)&#xC740; &#xC804;&#xCCB4; &#xBD84;&#xC0B0;&#xC758; &#xBC95;&#xCE59;&#xC5D0;&#xC11C; &#xC608;&#xCE21; &#xC624;&#xCC28;&#xC758; &#xD06C;&#xAE30;(bias)&#xC640; &#xC608;&#xCE21;&#xAC12;&#xC758; &#xBCC0;&#xB3D9;(variance)&#xC758; &#xD569;&#xC774; &#xC77C;&#xC815;&#xD558;&#xBBC0;&#xB85C; &#xC608;&#xCE21; &#xC624;&#xCC28;(bias)&#xB97C; &#xC904;&#xBA74; variance(&#xBD84;&#xC0B0;)&#xAC00; &#xCEE4;&#xC9C0;&#xACE0; &#xBAA8;&#xD615;&#xC774; &#xBCF5;&#xC7A1;&#xD574;&#xC9C0;&#xBA70; &#xACFC;&#xCD5C;&#xC801;&#xD654;&#xAC00; &#xB41C;&#xB2E4;. &#xBAA8;&#xD615;&#xC758; &#xACFC;&#xCD5C;&#xC801;&#xD654;&#xB97C; &#xB9C9;&#xAE30;&#xC704;&#xD574;  variance&#xB97C; &#xC791;&#xAC8C;&#xD558;&#xBA74; &#xC608;&#xCE21; &#xC624;&#xCC28;(bias)&#xAC00; &#xC99D;&#xAC00;&#xD558;&#xACE0; &#xB2E8;&#xC21C;&#xD558;&#xAC8C; &#xBAA8;&#xB378;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xC5B8;&#xB354;&#xD53C;&#xD305; &#xB41C;&#xB2E4;.  </li>
+<li>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815;(Bayseian parameter estimation)&#xC740; &#xBAA8;&#xC218;&#xAC12;&#xC774; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xAC00;&#xB2A5;&#xC131;&#xC744; &#xBD84;&#xD3EC;&#xB85C; &#xACC4;&#xC0B0;&#xD558;&#xB294; &#xC791;&#xC5C5;&#xB2C8;&#xB2E4;. &#xBAA8;&#xC218;&#xB3C4; &#xD558;&#xB098;&#xC758; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xB77C;&#xACE0; &#xC0DD;&#xAC01;&#xD55C;&#xB2E4;. &#xC7A5;&#xC810;&#xC740; &#xC21C;&#xCC28;&#xC801;&#xC778; &#xACC4;&#xC0B0;&#xC774; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xBAA8;&#xC218;&#xC801;&#xBC29;&#xBC95;&#xC740; &#xBAA8;&#xC218;&#xC758; &#xBD84;&#xD3EC;&#xB97C; &#xB2E4;&#xB978; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xBAA8;&#xD615;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. &#xBAA8;&#xC218;&#xC758; &#xBD84;&#xD3EC;&#xC640; &#xB3D9;&#xC77C;&#xD55C; &#xBD84;&#xD3EC;&#xB97C; &#xAC00;&#xC9C0;&#xB294; &#xC2E4;&#xC81C; &#xC22B;&#xC790; &#xC9D1;&#xD569;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xD788;&#xC2A4;&#xD1A0;&#xADF8;&#xB7A8;&#xC774;&#xB098; &#xD45C;&#xBCF8;&#xAE30;&#xC220;&#xD1B5;&#xACC4;&#xAC12;&#xC73C;&#xB85C; &#xBD84;&#xD3EC;&#xB97C; &#xD45C;&#xD604;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. </li>
 </ul>
 <hr>
-<p>&#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">Y</script> &#xC758; &#xAE30;&#xB313;&#xAC12;&#xC744; &#xAD6C;&#xD560; &#xB54C; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218; <script type="math/tex; ">f_{Y\vert X}(y|x)</script> &#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xAC00;&#xC911;&#xCE58;&#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xBA74; <strong>&#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12;(conditional expectation) or &#xC870;&#xAC74;&#xBD80; &#xD3C9;&#xADE0;(conditional mean)</strong> &#xC774; &#xB41C;&#xB2E4;.</p>
+<h3 id="&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;&#xC758;-&#xAE30;&#xBCF8;-&#xC6D0;&#xB9AC;">&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815;&#xC758; &#xAE30;&#xBCF8; &#xC6D0;&#xB9AC;</h3>
+<p>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815; &#xBC29;&#xBC95;&#xC5D0;&#xC11C;&#xB294; &#xBAA8;&#xC218;&#xB3C4; &#xD655;&#xB960;&#xC801;&#xC778; &#xAC12;&#xC73C;&#xB85C; &#xD45C;&#xD604;&#xD55C;&#xB2E4;. </p>
+<p><strong>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815; &#xBC29;&#xBC95;</strong> &#xC740; &#xC8FC;&#xC5B4;&#xC9C4; &#xB370;&#xC774;&#xD130; <script type="math/tex; ">{x_1, ... , x_N}</script> &#xB97C; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xBAA8;&#xC218; <script type="math/tex; ">\mu</script> &#xC758; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xBD84;&#xD3EC; <script type="math/tex; ">p(\mu \vert x_{1},\ldots,x_{N})</script> &#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xB294; &#xC791;&#xC5C5;&#xC774;&#xB2E4;. &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xB97C; &#xAD6C;&#xD558;&#xBBC0;&#xB85C; &#xBCA0;&#xC774;&#xC988; &#xC815;&#xB9AC;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
-\text{E}_Y[Y \vert X] 
-= \int_{y=-\infty}^{y=\infty} y \, f_{Y \vert X}(y|x) dy
+p(\mu \mid x_{1},\ldots,x_{N}) = \dfrac{p(x_{1},\ldots,x_{N} \mid \mu) \cdot p(\mu)}{p(x_{1},\ldots,x_{N})} \propto p(x_{1},\ldots,x_{N}  \mid \mu )  \cdot p(\mu)
 </script></p>
-<p>&#xB610;&#xB294;</p>
+<ul>
+<li><script type="math/tex; ">p(\mu)</script> &#xB294; <strong>&#xBAA8;&#xC218;&#xC758; &#xC0AC;&#xC804;(Prior)&#xBD84;&#xD3EC;</strong> &#xC774;&#xB2E4;. &#xBAA8;&#xC218;&#xC758; &#xBD84;&#xD3EC;&#xC5D0; &#xB300;&#xD574; &#xC544;&#xBB34;&#xB7F0; &#xC9C0;&#xC2DD;&#xC774; &#xC5C6;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xADE0;&#xC77C;(uniform)&#xBD84;&#xD3EC; Beta(1,1)&#xB098; 0&#xC744; &#xC911;&#xC2EC;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xB294; &#xC815;&#xADDC;&#xBD84;&#xD3EC; <script type="math/tex; ">\mathcal{N}(0,\sigma_0^2)</script> &#xB4F1;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;. </li>
+<li><script type="math/tex; ">p(\mu \mid x_{1},\ldots,x_{N})</script> &#xB294; <strong>&#xBAA8;&#xC218;&#xC758; &#xC0AC;&#xD6C4;(Posterior)&#xBD84;&#xD3EC;</strong> &#xC774;&#xB2E4;. &#xC218;&#xD559;&#xC801;&#xC73C;&#xB85C;&#xB294; &#xB370;&#xC774;&#xD130; <script type="math/tex; ">x_{1},\ldots,x_{N}</script> &#xAC00; &#xC8FC;&#xC5B4;&#xC9C4; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C;&#xC758; <script type="math/tex; ">\mu</script> &#xC5D0; &#xB300;&#xD55C; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xC774;&#xB2E4;. &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815; &#xC791;&#xC5C5;&#xC744; &#xD1B5;&#xD574; &#xAD6C;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xAC83;</li>
+<li><script type="math/tex; ">p(x_{1},\ldots,x_{N} \mid \mu)</script> &#xB294; <strong>&#xAC00;&#xB2A5;&#xB3C4;(likelihood) &#xD568;&#xC218;</strong> &#xC774;&#xB2E4;. </li>
+</ul>
+<h3 id="&#xBAA8;&#xC218;&#xC758;-&#xBD84;&#xD3EC;-&#xBC29;&#xBC95;">&#xBAA8;&#xC218;&#xC758; &#xBD84;&#xD3EC; &#xBC29;&#xBC95;</h3>
+<p>(1) &#xBAA8;&#xC218;&#xC801;(parametric) &#xBC29;&#xBC95;</p>
+<ul>
+<li>&#xBAA8;&#xC218;&#xC758; &#xBD84;&#xD3EC;&#xB97C; &#xB2E4;&#xB978; &#xD655;&#xB960; &#xBD84;&#xD3EC; &#xBAA8;&#xD615;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xB098;&#xD0C0;&#xB0B8;&#xB2E4;. &#xC774;&#xB807;&#xAC8C; &#xD558;&#xB824;&#xBA74; &#xBAA8;&#xC218;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xD568;&#xC218;&#xC758; &#xBAA8;&#xC218;&#xB97C; &#xB2E4;&#xC2DC; &#xACC4;&#xC0B0;&#xD574;&#xC57C; &#xD558;&#xB294;&#xB370; &#xC774;&#xB97C; <strong>&#xD558;&#xC774;&#xD37C;&#xBAA8;&#xC218;(hyper-parameter)</strong>&#xB77C;&#xACE0; &#xBD80;&#xB978;&#xB2E4;. &#xBAA8;&#xC218;&#xC801; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815;&#xC740; &#xACB0;&#xAD6D; &#xD558;&#xC774;&#xD37C;&#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC744; &#xACC4;&#xC0B0;&#xD558;&#xB294; &#xC791;&#xC5C5;&#xC774;&#xB2E4;.</li>
+</ul>
+<p>(2) &#xBE44;&#xBAA8;&#xC218;&#xC801;(non-parametric) &#xBC29;&#xBC95;</p>
+<ul>
+<li>&#xBAA8;&#xC218;&#xC758; &#xBD84;&#xD3EC;&#xC640; &#xB3D9;&#xC77C;&#xD55C; &#xBD84;&#xD3EC;&#xB97C; &#xAC00;&#xC9C0;&#xB294; &#xC2E4;&#xC81C; &#xC22B;&#xC790;&#xC758; &#xC9D1;&#xD569;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xD788;&#xC2A4;&#xD1A0;&#xADF8;&#xB7A8;&#xC774;&#xB098; &#xD45C;&#xBCF8; &#xAE30;&#xC220;&#xD1B5;&#xACC4;&#xAC12;&#xC73C;&#xB85C; &#xBD84;&#xD3EC;&#xB97C; &#xD45C;&#xD604;&#xD55C;&#xB2E4;. MCMC(Markov chain Monte Carlo)&#xC640; &#xAC19;&#xC740; &#xBAAC;&#xD14C;&#xCE74;&#xB97C;&#xB85C;(Monte Carlo) &#xBC29;&#xBC95;&#xC774; &#xBE44;&#xBAA8;&#xC218;&#xC801; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</li>
+</ul>
+<h4 id="&#xBCA0;&#xB974;&#xB204;&#xC774;-&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758;-&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;&#xCD94;&#xC815;">&#xBCA0;&#xB974;&#xB204;&#xC774; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218;&#xCD94;&#xC815;</h4>
+<p>&#xBCA0;&#xB974;&#xB204;&#xC774; &#xD655;&#xB960;&#xBCC4;&#xC218;&#xC758; &#xBAA8;&#xC218; <script type="math/tex; ">\mu</script> &#xB97C; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xBC95;&#xC73C;&#xB85C; &#xCD94;&#xC815;&#xD574;&#xBCF4;&#xC790;.</p>
+<p>&#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218;&#xB294; 0&#xBD80;&#xD130; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xBBC0;&#xB85C; &#xC0AC;&#xC804; &#xBD84;&#xD3EC;&#xB294; &#xD558;&#xC774;&#xD37C; &#xBAA8;&#xC218;&#xB97C; a=b=1&#xC778; &#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xC790;.</p>
 <p><script type="math/tex; mode=display">
-\text{E}[Y \vert X] 
-= \int y \, f(y|x) dy
+p(\mu) \propto \mu^{a−1}(1−\mu)^{b−1} \;\;\; (a=1, b=1)
 </script></p>
-<p>&#xC870;&#xAC74;&#xC774; &#xB418;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">X</script> &#xC758; &#xAC12; <script type="math/tex; ">x</script> &#xB294; &#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD558;&#xB294; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xC774;&#xB2E4;. <strong>&#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12;&#xC740; &#xC870;&#xAC74;&#xC774; &#xB418;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC5D0; &#xB530;&#xB77C;&#xC11C; &#xBD84;&#xD3EC;&#xAC00; &#xB2EC;&#xB77C;&#xC9C0;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218;</strong> &#xC774;&#xB2E4;. </p>
-<p><script type="math/tex; ">E[Y|X]</script> &#xB294; &#xC870;&#xAC74;&#xC774; &#xB418;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC744; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;(&#xC785;&#xB825;&#xBCC0;&#xC218;)&#xB85C; &#xAC00;&#xC9C0;&#xB294; <strong>&#xD568;&#xC218;</strong> &#xC774;&#xB2E4;.</p>
+<p>&#xB370;&#xC774;&#xD130;&#xB294; &#xBAA8;&#xB450; &#xB3C5;&#xB9BD;&#xC801;&#xC778; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xACF1;&#xC774;&#xBBC0;&#xB85C; &#xAC00;&#xB2A5;&#xB3C4; &#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
-\text{E}[Y \vert X=x] 
-= h(x) \\
-or \\
-\text{E}[Y \vert X] = h(X)
+p(x_{1},\ldots,x_{N} \mid \mu) = \prod_{i=1}^N  \mu^{x_i} (1 - \mu)^{1-x_i}
 </script></p>
-<p><script type="math/tex; ">ℎ(𝑥)</script>&#xB294; &#xC870;&#xAC74;&#xC774; &#xB418;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">𝑋</script>&#xC758; &#xAC12;&#xC744; &#xC785;&#xB825;&#xBC1B;&#xC544;&#xC11C; &#xACB0;&#xACFC;&#xAC00; &#xB418;&#xB294; &#xD655;&#xB960;&#xBCC0;&#xC218; <strong><script type="math/tex; ">𝑌</script>&#xC758; &#xAE30;&#xB313;&#xAC12;&#xC744; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xD568;&#xC218;</strong>&#xC774;&#xB2E4;. &#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12; <script type="math/tex; ">E[𝑌|𝑋]</script>&#xAC00; <script type="math/tex; ">𝑋</script>&#xC758; &#xD568;&#xC218;,&#xC989; &#xBCC0;&#xD658;(transform)&#xC774;&#xBBC0;&#xB85C; <strong>&#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12; <script type="math/tex; ">E[𝑌|𝑋]</script>&#xB3C4; &#xD655;&#xB960;&#xBCC0;&#xC218;</strong>&#xC774;&#xB2E4;.</p>
-<p>&#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">Y</script> &#xAC00; &#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">X</script> &#xC758; &#xAC12;&#xC744; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xB85C; &#xD558;&#xB294; &#xACB0;&#xC815;&#xB860;&#xC801; &#xD568;&#xC218;&#xAC12;&#xC774;&#xB77C;&#xBA74; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; <script type="math/tex; ">X</script> &#xC758; &#xAC12;&#xC744; &#xC5B4;&#xB5A4; &#xAC12; <script type="math/tex; ">x</script> &#xB85C; &#xC815;&#xD558;&#xB294; &#xC21C;&#xAC04; <script type="math/tex; ">Y</script> &#xC758; &#xAC12;&#xB3C4; &#xACB0;&#xC815;&#xB418;&#xC5B4; &#xBC84;&#xB9AC;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; <script type="math/tex; ">Y = g(X)</script> &#xB294; &#xB354;&#xC774;&#xC0C1; &#xD655;&#xB960;&#xC801;&#xC778; &#xAC12;&#xC774; &#xC544;&#xB2C8;&#xB77C; &#xC0C1;&#xC218;&#xAC00; &#xB418;&#xC5B4; &#xBC84;&#xB9B0;&#xB2E4;.</p>
+<p>&#xBCA0;&#xC774;&#xC988; &#xC815;&#xB9AC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC0AC;&#xD6C4;&#xBD84;&#xD3EC;&#xAC00; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xAC31;&#xC2E0;&#xB41C; &#xD558;&#xC774;&#xD37C;&#xBAA8;&#xC218; <script type="math/tex; ">a'</script>, <script type="math/tex; ">b'</script>&#xB97C; &#xAC00;&#xC9C0;&#xB294; &#xB610;&#xB2E4;&#xB978; &#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xAC00; &#xB41C;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
-\text{E}[Y \vert X] = \text{E}[g(X) \vert X] = g(X)
-</script>
-&#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">X, Y</script> &#xAC00; &#xACB0;&#xC815;&#xB860;&#xC801; &#xD568;&#xC218; &#xAD00;&#xACC4;&#xAC00; &#xC544;&#xB2D0; &#xB54C;&#xB3C4; &#xB2E4;&#xC74C; &#xB4F1;&#xC2DD;&#xC774; &#xC131;&#xB9BD;&#xD55C;&#xB2E4;.
-<script type="math/tex; mode=display">
-\text{E}[g(X) Y \vert X] = g(X) \text{E}[Y \vert X]
+\begin{aligned}
+p(\mu \mid x_{1},\ldots,x_{N})
+&\propto p(x_{1},\ldots,x_{N} \mid \mu)  p(\mu) \\
+&= \prod_{i=1}^N  \mu^{x_i} (1 - \mu)^{1-x_i} \cdot \mu^{a−1}(1−\mu)^{b−1}  \\
+&= \mu^{\sum_{i=1}^N x_i + a−1} (1 - \mu)^{\sum_{i=1}^N (1-x_i) + b−1 }   \\
+&= \mu^{N_1 + a−1} (1 - \mu)^{N_0 + b−1 }   \\
+&= \mu^{a'−1} (1 - \mu)^{b'−1 }   \\
+\end{aligned}
 </script></p>
-<h3 id="&#xC608;&#xCE21;&#xBB38;&#xC81C;">&#xC608;&#xCE21;&#xBB38;&#xC81C;</h3>
-<p>&#xB450; &#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">X, Y</script> &#xC5D0;&#xC11C; <script type="math/tex; ">X</script> &#xC758; &#xAC12;&#xC744; &#xC54C;&#xACE0; &#xC788;&#xC744; &#xB54C; <script type="math/tex; ">Y</script> &#xC758; &#xAC12;&#xC744; &#xC54C;&#xC544;&#xB0B4;&#xB294; &#xAC83;&#xC744; <strong>&#xC608;&#xCE21;(prediction)</strong> &#xBB38;&#xC81C;&#xC774;&#xB2E4;.</p>
-<p><script type="math/tex; ">Y</script> &#xAC00; &#xC5F0;&#xC18D;&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC774;&#xBA74; &#xD68C;&#xADC0;&#xBD84;&#xC11D;(regression analysis)</p>
-<p><script type="math/tex; ">Y</script> &#xAC00; &#xC774;&#xC0B0;&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC774;&#xBA74; &#xBD84;&#xB958;(classification) </p>
-<h3 id="&#xC804;&#xCCB4;-&#xAE30;&#xB313;&#xAC12;&#xC758;-&#xBC95;&#xCE59;">&#xC804;&#xCCB4; &#xAE30;&#xB313;&#xAC12;&#xC758; &#xBC95;&#xCE59;</h3>
-<p>&#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12;&#xC758; &#xAE30;&#xB313;&#xAC12;&#xC740; &#xC6D0;&#xB798; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCF4;&#xD1B5; &#xAE30;&#xB313;&#xAC12;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p>&#xCF24;&#xB808; &#xC0AC;&#xC804;&#xD655;&#xB960;&#xBD84;&#xD3EC;(conjugate prior)&#xB294; &#xC0AC;&#xC804;&#xBD84;&#xD3EC;&#xC640; &#xC0AC;&#xD6C4;&#xBD84;&#xD3EC;&#xAC00; &#xBAA8;&#xC218;&#xAC12;&#xB9CC; &#xB2E4;&#xB974;&#xACE0; &#xD568;&#xC218; &#xD615;&#xD0DC;&#xAC00; &#xAC19;&#xC740; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;&#xB85C; &#xD45C;&#xD604;&#xB420; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD574;&#xC8FC;&#xB294; &#xC0AC;&#xC804;&#xBD84;&#xD3EC;&#xC774;&#xB2E4;. </p>
+<p>&#xAC31;&#xC2E0;&#xB41C; &#xD558;&#xC774;&#xD37C; &#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
-\text{E}_X[\text{E}_Y[Y \vert X]] = \text{E}_Y[Y] \\
-or \\
-\text{E}[\text{E}[Y \vert X]] = \text{E}[Y]
+\begin{aligned}
+a' &= N_1 + a \\
+b' &= N_0 + b 
+\end{aligned}
 </script></p>
-<p><strong>&#xC804;&#xCCB4; &#xAE30;&#xB313;&#xAC12;&#xC758; &#xBC95;&#xCE59;(law of total expectation)</strong> &#xB610;&#xB294; <strong>&#xBC18;&#xBCF5; &#xAE30;&#xB313;&#xAC12;&#xC758; &#xBC95;&#xCE59;(law of iterated expectation)</strong> &#xC774;&#xB2E4;. </p>
-<h3 id="&#xC870;&#xAC74;&#xBD80;-&#xBD84;&#xC0B0;">&#xC870;&#xAC74;&#xBD80; &#xBD84;&#xC0B0;</h3>
+<p>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218; &#xCD94;&#xC815;&#xC758; &#xC7A5;&#xC810;&#xC740; <strong>&#xC21C;&#xCC28;&#xC801;(sequential)</strong> &#xACC4;&#xC0B0;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;&#xB294; &#xC810;&#xC774;&#xB2E4;. &#xBD88;&#xD655;&#xC2E4;&#xC131;&#xC744; &#xD45C;&#xD604;&#xD560; &#xC218; &#xC788;&#xB2E4;. </p>
+<h4 id="&#xCE74;&#xD14C;&#xACE0;&#xB9AC;-&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758;-&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;&#xCD94;&#xC815;">&#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218;&#xCD94;&#xC815;</h4>
+<p>&#xD074;&#xB798;&#xC2A4; &#xAC1C;&#xC218;&#xAC00; <script type="math/tex; ">K</script> &#xC778; &#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBAA8;&#xC218; <script type="math/tex; ">\mu</script> &#xBCA1;&#xD130;&#xB97C; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xBC95;&#xC73C;&#xB85C; &#xCD94;&#xC815;</p>
+<p>&#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBAA8;&#xC218;&#xC758; &#xAC01; &#xC6D0;&#xC18C;&#xB294; &#xBAA8;&#xB450; 0&#xBD80;&#xD130; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xBBC0;&#xB85C; &#xC0AC;&#xC804; &#xBD84;&#xD3EC;&#xB294; &#xD558;&#xC774;&#xD37C; &#xBAA8;&#xC218; <script type="math/tex; ">𝛼_𝑘=1</script>&#xC778; &#xB514;&#xB9AC;&#xD074;&#xB9AC; &#xBD84;&#xD3EC;&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
-\text{Var}_Y[Y \vert X] 
-= \text{E}_Y[(Y - \text{E}_Y[Y \vert X])^2 \vert X] 
-= \int (Y - \text{E}_Y[Y \vert X])^2 f_{Y \vert X}(y \vert x) dy
+p(\mu) \propto \prod_{k=1}^K \mu_k^{\alpha_k - 1} \;\;\; (\alpha_k = 1, \; \text{ for all } k)
 </script></p>
-<h3 id="&#xC804;&#xCCB4;-&#xBD84;&#xC0B0;&#xC758;-&#xBC95;&#xCE59;">&#xC804;&#xCCB4; &#xBD84;&#xC0B0;&#xC758; &#xBC95;&#xCE59;</h3>
-<p><strong>&#xC804;&#xCCB4; &#xBD84;&#xC0B0;&#xC758; &#xBC95;&#xCE59;(law of total variance)</strong>&#xC740; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBD84;&#xC0B0;&#xC740; &#xC870;&#xAC74;&#xBD80; &#xBD84;&#xC0B0;&#xC758; &#xAE30;&#xB313;&#xAC12;&#xACFC; &#xC870;&#xAC74;&#xBD80; &#xAE30;&#xB313;&#xAC12;&#xC758; &#xBD84;&#xC0B0;&#xC758; &#xD569;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p>&#xB370;&#xC774;&#xD130;&#xB294; &#xBAA8;&#xB450; &#xB3C5;&#xB9BD;&#xC801;&#xC778; &#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xBD84;&#xD3EC;&#xC758; &#xACF1;&#xC774;&#xBBC0;&#xB85C; &#xAC00;&#xB2A5;&#xB3C4; &#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xB2E4;&#xD56D; &#xBD84;&#xD3EC;&#xC774;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
-\begin{align}
-\text{Var}[Y] = \text{E}[\text{Var}[Y\vert X]] + \text{Var}[\text{E}[Y\vert X]]
-\end{align}
+p(x_{1},\ldots,x_{N} \mid \mu) = \prod_{i=1}^N  \prod_{k=1}^K \mu_k^{x_{i,k}}
 </script></p>
-<p><script type="math/tex; ">\text{E}[Y\vert X] = \hat{y}</script> &#xC774;&#xBA74; <script type="math/tex; ">\text{Var}[Y] = \text{E}[(\hat{y}-y)^2] + \text{Var}[\hat{y}]</script> &#xC774;&#xB2E4;.</p>
-<p>&#xC608;&#xCE21;&#xBB38;&#xC81C;&#xC758; &#xAD00;&#xC810;&#xC5D0;&#xC11C; &#xC870;&#xAC74;&#xBD80;&#xBD84;&#xC0B0;&#xC758; &#xAE30;&#xB313;&#xAC12; <script type="math/tex; ">E[(\hat{y} - y)^2] </script> &#xC740; &#xC608;&#xCE21; &#xC624;&#xCC28;(&#xD3B8;&#xD5A5;(bias)&#xC758; &#xD3C9;&#xADE0;&#xC801;&#xC778; &#xD06C;&#xAE30;)&#xC774;&#xB2E4;. &#xC870;&#xAC74;&#xBD80;&#xAE30;&#xB313;&#xAC12;&#xC758; &#xBD84;&#xC0B0; <script type="math/tex; ">Var[\hat{y}]</script> &#xC740; &#xC608;&#xCE21;&#xAC12;&#xC758; &#xBCC0;&#xB3D9; &#xD06C;&#xAE30;&#xB2E4;.  &#xC608;&#xCE21;&#xAC12;&#xC758; &#xBCC0;&#xB3D9; &#xD06C;&#xAE30;&#xAC00; &#xC99D;&#xAC00;&#xD558;&#xBA74; &#xC608;&#xCE21;&#xBAA8;&#xD615;&#xC774; &#xBCF5;&#xC7A1;&#xD558;&#xACE0; &#xBE44;&#xC120;&#xD615;&#xC801;&#xC774;&#xBA70; &#xB370;&#xC774;&#xD130;&#xC758; &#xACFC;&#xCD5C;&#xC801;&#xD654;&#xAC00; &#xB418;&#xAE30; &#xC27D;&#xB2E4;&#xB294; &#xC758;&#xBBF8;&#xC774;&#xB2E4;. </p>
-<h4 id="bias-variance-trade-off-&#xD3B8;&#xD5A5;-&#xBD84;&#xC0B0;&#xC0C1;&#xCDA9;-&#xBC95;&#xCE59;">Bias-Variance Trade off &#xD3B8;&#xD5A5;-&#xBD84;&#xC0B0;&#xC0C1;&#xCDA9; &#xBC95;&#xCE59;</h4>
-<p>&#xC804;&#xCCB4; &#xBD84;&#xC0B0;&#xC758; &#xBC95;&#xCE59;&#xC5D0;&#xC11C; &#xC608;&#xCE21; &#xC624;&#xCC28;&#xC758; &#xD06C;&#xAE30;(bias)&#xC640; &#xC608;&#xCE21;&#xAC12;&#xC758; &#xBCC0;&#xB3D9;(variance)&#xC758; &#xD569;&#xC774; &#xC77C;&#xC815;&#xD558;&#xBBC0;&#xB85C; &#xC608;&#xCE21; &#xC624;&#xCC28;(bias)&#xB97C; &#xC904;&#xBA74; variance(&#xBD84;&#xC0B0;)&#xAC00; &#xCEE4;&#xC9C0;&#xACE0; &#xBAA8;&#xD615;&#xC774; &#xBCF5;&#xC7A1;&#xD574;&#xC9C0;&#xBA70; &#xACFC;&#xCD5C;&#xC801;&#xD654;&#xAC00; &#xB41C;&#xB2E4;. &#xBAA8;&#xD615;&#xC758; &#xACFC;&#xCD5C;&#xC801;&#xD654;&#xB97C; &#xB9C9;&#xAE30;&#xC704;&#xD574; &#xB2E8;&#xC21C;&#xD558;&#xAC8C; variance&#xB97C; &#xC791;&#xAC8C;&#xD558;&#xBA74; &#xD558;&#xBA74; &#xC608;&#xCE21; &#xC624;&#xCC28;(bias)&#xAC00; &#xC99D;&#xAC00;&#xD558;&#xC5EC; &#xC5B8;&#xB354;&#xD53C;&#xD305; &#xB41C;&#xB2E4;.</p>
+<p>&#xBCA0;&#xC774;&#xC988; &#xC815;&#xB9AC;&#xB85C; &#xC0AC;&#xD6C4; &#xBD84;&#xD3EC;&#xB97C; &#xAD6C;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAC31;&#xC2E0;&#xB41C; &#xD558;&#xC774;&#xD37C; &#xBAA8;&#xC218;. <script type="math/tex; ">\alpha'_i</script>&#xB97C; &#xAC00;&#xC9C0;&#xB294; &#xB514;&#xB9AC;&#xD074;&#xB9AC; &#xBD84;&#xD3EC;&#xAC00; &#xB41C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+p(\mu \mid x_{1},\ldots,x_{N})
+&\propto p(x_{1},\ldots,x_{N} \mid \mu)  p(\mu) \\
+&= \prod_{i=1}^N  \prod_{k=1}^K \mu_k^{x_{i,k}} \cdot \prod_{k=1}^K \mu_k^{\alpha_k - 1}  \\
+&= \prod_{k=1}^K  \mu^{\sum_{i=1}^N x_{i,k} + \alpha_k − 1}   \\
+&= \prod_{k=1}^K  \mu^{N_k + \alpha_k −1}   \\
+&= \prod_{k=1}^K  \mu^{\alpha'_k −1}   \\
+\end{aligned}
+</script></p>
+<p>&#xC774; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xB514;&#xB9AC;&#xD074;&#xB9AC;&#xBD84;&#xD3EC;&#xB294; &#xCF24;&#xB808; &#xBD84;&#xD3EC;&#xC784;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xAC31;&#xC2E0;&#xB41C; &#xD558;&#xC774;&#xD37C; &#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\alpha'_k = N_k + \alpha_k
+</script></p>
+<h4 id="&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC758;-&#xAE30;&#xB313;&#xAC12;-&#xBCA0;&#xC774;&#xC9C0;&#xC548;-&#xBAA8;&#xC218;&#xCD94;&#xC815;">&#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xAE30;&#xB313;&#xAC12; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xC218;&#xCD94;&#xC815;</h4>
+<p>&#xC774;&#xBC88;&#xC5D0;&#xB294; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xAE30;&#xB313;&#xAC12; &#xBAA8;&#xC218;&#xB97C; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xCD94;&#xC815;&#xD55C;&#xB2E4;. &#xBD84;&#xC0B0; &#xBAA8;&#xC218; <script type="math/tex; ">𝜎^2</script>&#xC740; &#xC54C;&#xACE0; &#xC788;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;.</p>
+<p>&#xAE30;&#xB313;&#xAC12;&#xC740; <script type="math/tex; ">−∞</script>&#xBD80;&#xD130; <script type="math/tex; ">∞</script>&#xAE4C;&#xC9C0;&#xC758; &#xBAA8;&#xB4E0; &#xC218;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBAA8;&#xC218;&#xC758; &#xC0AC;&#xC804; &#xBD84;&#xD3EC;&#xB85C;&#xB294; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+p(\mu) = N(\mu_0, \sigma^2_0) = \dfrac{1}{\sqrt{2\pi\sigma_0^2}} \exp \left(-\dfrac{(\mu-\mu_0)^2}{2\sigma_0^2}\right)
+</script></p>
+<p>&#xB370;&#xC774;&#xD130;&#xB294; &#xBAA8;&#xB450; &#xB3C5;&#xB9BD;&#xC801;&#xC778; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xACF1;&#xC774;&#xBBC0;&#xB85C; &#xAC00;&#xB2A5;&#xB3C4; &#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+p(x_{1},\ldots,x_{N} \mid \mu) = \prod_{i=1}^N N(x_i \mid \mu )  = \prod_{i=1}^N  \dfrac{1}{\sqrt{2\pi\sigma^2}} \exp \left(-\dfrac{(x_i-\mu)^2}{2\sigma^2}\right) \\
+\begin{aligned}
+p(\mu \mid x_{1},\ldots,x_{N})  
+&\propto p(x_{1},\ldots,x_{N} \mid \mu) p(\mu) \\
+&\propto \exp \left(-\dfrac{(\mu-\mu'_0)^2}{2\sigma_0^{'2}}\right) \\
+\end{aligned}
+</script></p>
+<p>&#xBCA0;&#xC774;&#xC988; &#xC815;&#xB9AC;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC0AC;&#xD6C4; &#xBD84;&#xD3EC;&#xB97C; &#xAD6C;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAC31;&#xC2E0;&#xB41C; &#xD558;&#xC774;&#xD37C; &#xBAA8;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xB294; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xAC00; &#xB41C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+\mu'_0 &= \dfrac{\sigma^2}{N\sigma_0^2 + \sigma^2}\mu_0 + \dfrac{N\sigma_0^2}{N\sigma_0^2 + \sigma^2} \dfrac{\sum x_i}{N} \\
+\dfrac{1}{\sigma_0^{'2}} &= \dfrac{1}{\sigma_0^{2}} + \dfrac{N}{\sigma^{'2}}
+\end{aligned}
+</script></p>
+<p><script type="math/tex; ">\mu'_0</script> &#xC5D0;&#xC11C; N&#xC740; &#xC0C8;&#xB85C;&#xC6B4; &#xB370;&#xC774;&#xD130;&#xAC12;&#xC774;&#xB2E4;.  <script type="math/tex; ">\dfrac{\sigma^2}{N\sigma_0^2 + \sigma^2}</script>  &#xC640; <script type="math/tex; ">\dfrac{N\sigma_0^2}{N\sigma_0^2 + \sigma^2}</script> &#xC740; &#xAC00;&#xC911;&#xCE58; <script type="math/tex; ">w_1, w_2</script> &#xB85C; &#xBCFC; &#xC218; &#xC788;&#xB2E4;. &#xC0C8;&#xB85C; &#xB4E4;&#xC5B4;&#xC628; &#xB370;&#xC774;&#xD130;&#xC758; N&#xC758; &#xAC2F;&#xC218;&#xAC00; &#xCC98;&#xC74C; &#xB370;&#xC774;&#xD130;&#xBCF4;&#xB2E4; &#xAC2F;&#xC218;&#xAC00; &#xC801;&#xC744; &#xACBD;&#xC6B0; <script type="math/tex; ">w_1</script> &#xAC00;&#xC911;&#xCE58;&#xC5D0; &#xC2E0;&#xB8B0;&#xB3C4;&#xB97C; &#xB354; &#xC900;&#xB2E4;.</p>
+<p>&#xBD84;&#xC0B0;&#xC740; &#xC791;&#xC544;&#xC9C0;&#xBA74;&#xC11C; N(&#xB370;&#xC774;&#xD130; &#xAC2F;&#xC218;)&#xC5D0; &#xBE44;&#xB840;&#xD558;&#xBA74;&#xC11C; &#xC815;&#xBC00;&#xB3C4;&#xAC00; &#xC99D;&#xAC00;&#xD55C;&#xB2E4;. <script type="math/tex; ">{\sigma_0^{'2}}</script> &#xC740; &#xC61B;&#xB0A0; &#xC815;&#xBCF4;&#xC758; &#xBBFF;&#xC74C; &#xC815;&#xBCF4;&#xC774;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -888,12 +931,12 @@ or \\
 
             
                 
-                <a href="0705covariance-correlation.html" class="navigation navigation-prev " aria-label="Previous page: 공분산과 상관계수">
+                <a href="0902mle.html" class="navigation navigation-prev " aria-label="Previous page: 최대가능도와 모수추정">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="0801scipy-distribution.html" class="navigation navigation-next " aria-label="Next page: Scipy를 이용한 확률분포 분석">
+                <a href="../../datascience/" class="navigation navigation-next " aria-label="Next page: 데이터 사이언스">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -904,7 +947,7 @@ or \\
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"조건부 기댓값","level":"1.2.4.11","depth":3,"next":{"title":"Scipy를 이용한 확률분포 분석","level":"1.2.4.12","depth":3,"path":"posts/math/probability-statistics/0801scipy-distribution.md","ref":"posts/math/probability-statistics/0801scipy-distribution.md","articles":[]},"previous":{"title":"공분산과 상관계수","level":"1.2.4.10","depth":3,"path":"posts/math/probability-statistics/0705covariance-correlation.md","ref":"posts/math/probability-statistics/0705covariance-correlation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0706conditional-expectation.md","mtime":"2020-04-06T07:53:16.644Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T14:10:10.201Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"베이지안 모수추정","level":"1.2.4.21","depth":3,"next":{"title":"데이터 사이언스","level":"1.3","depth":1,"path":"posts/datascience/README.md","ref":"posts/datascience/README.md","articles":[{"title":"회귀분석","level":"1.3.1","depth":2,"path":"posts/datascience/regression/README.md","ref":"posts/datascience/regression/README.md","articles":[{"title":"데이터분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regression/dataintro.md","ref":"posts/datascience/regression/dataintro.md","articles":[]}]}]},"previous":{"title":"최대가능도와 모수추정","level":"1.2.4.20","depth":3,"path":"posts/math/probability-statistics/0902mle.md","ref":"posts/math/probability-statistics/0902mle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0903baysian-estimation.md","mtime":"2020-04-06T14:09:02.042Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T14:10:10.201Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

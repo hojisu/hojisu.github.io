@@ -43,6 +43,7 @@
         - [베타분포 & 감마분포 & 디리클레분포](posts/math/probability-statistics/0807beta-gamma-dirichlet.md)
         - [모수 추정](posts/math/probability-statistics/0901parameter-estimation.md)
         - [최대가능도와 모수추정](posts/math/probability-statistics/0902mle.md)
+        - [베이지안 모수추정](posts/math/probability-statistics/0903baysian-estimation.md)
 - [데이터 사이언스](posts/datascience/README.md)    
     - [회귀분석](posts/datascience/regression/README.md)
         - [데이터분석 기초](posts/datascience/regression/dataintro.md)
