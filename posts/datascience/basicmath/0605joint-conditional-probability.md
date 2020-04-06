@@ -108,17 +108,17 @@ $$
 
 - 예시
 
-![image-20190515200056304](/Users/jisuho/Library/Application Support/typora-user-images/image-20190515200056304.png)
+![image-20190515200056304](../../../resource/img/image-20190515200056304.png)
 
 **결합확률의 확률분포** 는 각 확률변수가 가질 수 있는 값의 조합으로 나타난다. 
 
 - 예시
 
-![image-20190515200204028](/Users/jisuho/Library/Application Support/typora-user-images/image-20190515200204028.png)
+![image-20190515200204028](../../../resource/img/image-20190515200204028.png)
 
 두 확률변수 $$X, Y$$ 가 가질 수 있는 모든 사건의 조합에 대해 독립이 성립하면 두 확률변수 $$X, Y$$ 가 **독립** 이라고 한다. **주변확률의 곱을 구해서 결합확률과 비교**해보면 확률변수 $$X, Y$$ 는 독립여부를 알 수 있다.
 
-![image-20190515200418757](/Users/jisuho/Library/Application Support/typora-user-images/image-20190515200418757.png)
+![image-20190515200418757](../../../resource/img/image-20190515200418757.png)
 
 ### pgmpy 패키지
 
