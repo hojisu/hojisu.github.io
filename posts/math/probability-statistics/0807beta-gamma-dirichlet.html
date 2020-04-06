@@ -1,0 +1,1002 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>베타분포 & 감마분포 & 디리클레분포 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mle.html" />
+    
+    
+    <link rel="prev" href="0806mvn.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    수학
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linearalgebra/">
+            
+                <a href="../linearalgebra/">
+            
+                    
+                    선형대수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../linearalgebra/0201data-and-matrix.html">
+            
+                <a href="../linearalgebra/0201data-and-matrix.html">
+            
+                    
+                    데이터와 행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                <a href="../linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                    
+                    벡터와 행렬의 연산
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../linearalgebra/0203matrix-character.html">
+            
+                <a href="../linearalgebra/0203matrix-character.html">
+            
+                    
+                    행렬의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../linearalgebra/0204system-of-linear-equations.html">
+            
+                <a href="../linearalgebra/0204system-of-linear-equations.html">
+            
+                    
+                    선형연립방정식과 역행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../linearalgebra/0301linear-algebra.html">
+            
+                <a href="../linearalgebra/0301linear-algebra.html">
+            
+                    
+                    선형대수와 해석기하의 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../linearalgebra/0302coordinate-transform.html">
+            
+                <a href="../linearalgebra/0302coordinate-transform.html">
+            
+                    
+                    좌표변환
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../linearalgebra/0303eigenvalue-decomposition.html">
+            
+                <a href="../linearalgebra/0303eigenvalue-decomposition.html">
+            
+                    
+                    고윳값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../linearalgebra/0304svd.html">
+            
+                <a href="../linearalgebra/0304svd.html">
+            
+                    
+                    특이값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../linearalgebra/0305pca.html">
+            
+                <a href="../linearalgebra/0305pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../calculus/">
+            
+                <a href="../calculus/">
+            
+                    
+                    미적분
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../calculus/0401function.html">
+            
+                <a href="../calculus/0401function.html">
+            
+                    
+                    함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../calculus/0402function-differentiation.html">
+            
+                <a href="../calculus/0402function-differentiation.html">
+            
+                    
+                    함수 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../calculus/0403integral.html">
+            
+                <a href="../calculus/0403integral.html">
+            
+                    
+                    적분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../calculus/0404matrix-differentiation.html">
+            
+                <a href="../calculus/0404matrix-differentiation.html">
+            
+                    
+                    행렬의 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../optimization/">
+            
+                <a href="../optimization/">
+            
+                    
+                    최적화
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../optimization/0501optimization.html">
+            
+                <a href="../optimization/0501optimization.html">
+            
+                    
+                    최적화 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../optimization/0502constrained-optimization.html">
+            
+                <a href="../optimization/0502constrained-optimization.html">
+            
+                    
+                    제한조건이 있는 최적화 문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../optimization/0503lp-qp-problem.html">
+            
+                <a href="../optimization/0503lp-qp-problem.html">
+            
+                    
+                    LP문제 & QP문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    확률과 통계
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="0602probability.html">
+            
+                <a href="0602probability.html">
+            
+                    
+                    확률의 수학적 정의와 의미
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="0603probability-character.html">
+            
+                <a href="0603probability-character.html">
+            
+                    
+                    확률의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="0604probability-distribution-function.html">
+            
+                <a href="0604probability-distribution-function.html">
+            
+                    
+                    확률분포함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="0605joint-conditional-probability.html">
+            
+                <a href="0605joint-conditional-probability.html">
+            
+                    
+                    결합확률과 조건부확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="0606baysian-rule.html">
+            
+                <a href="0606baysian-rule.html">
+            
+                    
+                    베이즈 정리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="0701probabilistic-data-descriptive.html">
+            
+                <a href="0701probabilistic-data-descriptive.html">
+            
+                    
+                    확률적데이터와 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="0702expectation.html">
+            
+                <a href="0702expectation.html">
+            
+                    
+                    기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="0703variance.html">
+            
+                <a href="0703variance.html">
+            
+                    
+                    분산 & 표준편차
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="0704multivariate-probability-variable.html">
+            
+                <a href="0704multivariate-probability-variable.html">
+            
+                    
+                    다변수 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="0705covariance-correlation.html">
+            
+                <a href="0705covariance-correlation.html">
+            
+                    
+                    공분산과 상관계수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="0706conditional-expectation.html">
+            
+                <a href="0706conditional-expectation.html">
+            
+                    
+                    조건부 기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="0801scipy-distribution.html">
+            
+                <a href="0801scipy-distribution.html">
+            
+                    
+                    Scipy를 이용한 확률분포 분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.13" data-path="0802bernoulli-binomial-distribution.html">
+            
+                <a href="0802bernoulli-binomial-distribution.html">
+            
+                    
+                    베르누이분포 & 이항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.14" data-path="0803categorical-multinomial-distribution.html">
+            
+                <a href="0803categorical-multinomial-distribution.html">
+            
+                    
+                    카테고리분포 & 다항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.15" data-path="0804normal-distribution.html">
+            
+                <a href="0804normal-distribution.html">
+            
+                    
+                    정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.16" data-path="0805t-chi-f-distribution.html">
+            
+                <a href="0805t-chi-f-distribution.html">
+            
+                    
+                    스튜던트 t분포 & 카이분포 & F분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.17" data-path="0806mvn.html">
+            
+                <a href="0806mvn.html">
+            
+                    
+                    다변수 가우시안 정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4.18" data-path="0807beta-gamma-dirichlet.html">
+            
+                <a href="0807beta-gamma-dirichlet.html">
+            
+                    
+                    베타분포 & 감마분포 & 디리클레분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.19" data-path="mle.html">
+            
+                <a href="mle.html">
+            
+                    
+                    최대가능도와 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../datascience/">
+            
+                <a href="../../datascience/">
+            
+                    
+                    데이터 사이언스
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../datascience/regression/">
+            
+                <a href="../../datascience/regression/">
+            
+                    
+                    회귀분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../datascience/regression/dataintro.html">
+            
+                <a href="../../datascience/regression/dataintro.html">
+            
+                    
+                    데이터분석 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >베타분포 & 감마분포 & 디리클레분포</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xBCA0;&#xD0C0;-&#xBD84;&#xD3EC;-&#xAC10;&#xB9C8;-&#xBD84;&#xD3EC;-&#xB514;&#xB9AC;&#xD074;&#xB808;&#xBD84;&#xD3EC;">&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;, &#xAC10;&#xB9C8; &#xBD84;&#xD3EC;, &#xB514;&#xB9AC;&#xD074;&#xB808;&#xBD84;&#xD3EC;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#&#xBCA0;&#xD0C0;-&#xBD84;&#xD3EC;beta-distribution">&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;(Beta distribution)</a></li>
+<li><a href="#&#xAC10;&#xB9C8;-&#xBD84;&#xD3EC;">&#xAC10;&#xB9C8; &#xBD84;&#xD3EC;</a></li>
+<li><a href="#&#xB514;&#xB9AC;&#xD074;&#xB808;-&#xBD84;&#xD3EC;">&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;</a></li>
+<li><a href="#&#xBCA0;&#xD0C0;-&#xBD84;&#xD3EC;&#xC640;-&#xB514;&#xB9AC;&#xD074;&#xB808;-&#xBD84;&#xD3EC;&#xC758;-&#xAD00;&#xACC4;">&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC640; &#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xC758; &#xAD00;&#xACC4;</a></li>
+<li><a href="#&#xB514;&#xB9AC;&#xD074;&#xB808;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xBA58;&#xD2B8;">&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xBA58;&#xD2B8;</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="summary">Summary</h3>
+<ul>
+<li>&#xBCA0;&#xD0C0;&#xBD84;&#xD3EC;, &#xAC10;&#xB9C8;&#xBD84;&#xD3EC;, &#xB514;&#xB9AC;&#xD074;&#xB808;&#xBD84;&#xD3EC;&#xB294; &#xBAA8;&#xC22B;&#xAC12;&#xC744; &#xC870;&#xC815;&#xD558;&#xC5EC; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC591;&#xC744; &#xB0B4;&#xAC00; &#xC6D0;&#xD558;&#xB294;&#xB300;&#xB85C; &#xC27D;&#xAC8C; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xB2E4;. </li>
+<li>&#xBAA8;&#xC22B;&#xAC12;&#xC740; &#xBD84;&#xD3EC; &#xBAA8;&#xC591;&#xC744; &#xC870;&#xC808;&#xD558;&#xB294; &#xC870;&#xC808;&#xAC12;</li>
+<li>&#xBCA0;&#xD0C0;&#xBD84;&#xD3EC;&#xB294;  0&#xBD80;&#xD130; 1&#xAE4C;&#xC9C0;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; <script type="math/tex; ">𝜇</script>&#xC758; &#xAC12;&#xC744; &#xCD94;&#xC815;&#xD55C; &#xACB0;&#xACFC;&#xB97C; &#xD45C;&#xD604;&#xD55C; &#xAC83;&#xC774;&#xB2E4;. &#xC790;&#xC5F0;&#xACC4;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xBD84;&#xD3EC;&#xBCF4;&#xB2E4;&#xB294; &#xBAA8;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xC5D0; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBD84;&#xD3EC;&#xC785;&#xB2C8;&#xB2E4;. &#xBAA8;&#xC218;&#xAC00; &#xD558;&#xB098;&#xC758; &#xAC12;&#xC774; &#xC544;&#xB2CC; &#xBD84;&#xD3EC;&#xB85C; &#xBB18;&#xC0AC;&#xB429;&#xB2C8;&#xB2E4;. </li>
+<li>&#xAC10;&#xB9C8; &#xBD84;&#xD3EC;(Gamma distribution)&#xB294; &#xBAA8;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xC5D0; &#xC0AC;&#xC6A9; &#xB41C;&#xB2E4;. 0&#xBD80;&#xD130; &#xBB34;&#xD55C;&#xB300;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xB294; &#xC591;&#xC218; &#xAC12;&#xC744; &#xCD94;&#xC815;&#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</li>
+<li>&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;(Dirichlet distribution)&#xB294; 0&#xACFC; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xB294; &#xB2E4;&#xBCC0;&#xC218;(multivariate) &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xD615;&#xC5D0; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</li>
+<li>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xC740; &#xBAA8;&#xC218;&#xAC00; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xAC12;&#xC5D0; &#xB300;&#xD574; &#xAC00;&#xB2A5;&#xC131;&#xC744; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xB85C; &#xB098;&#xD0C0;&#xB0B8; &#xAC83;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;.</li>
+<li>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xD655;&#xB960;&#xB860;&#xC758; &#xAD00;&#xC810; &#xC5D0;&#xC11C; &#xC5B4;&#xB5A4; &#xAC12;&#xC5D0; &#xB300;&#xD574; &#xD655;&#xC2E0; &#xD639;&#xC740; &#xC2E0;&#xB8B0;&#xC758; &#xC815;&#xB3C4;&#xB97C; &#xD45C;&#xD604;&#xD558;&#xB294;&#xB370; &#xC8FC;&#xB85C; &#xC0AC;&#xC6A9; </li>
+</ul>
+<hr>
+<h3 id="&#xBCA0;&#xD0C0;-&#xBD84;&#xD3EC;beta-distribution">&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;(Beta distribution)</h3>
+<p>&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xB294; a&#xC640; b&#xB77C;&#xB294; &#xB450; &#xAC1C;&#xC758; &#xBAA8;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xBA70; &#xD45C;&#xBCF8; &#xACF5;&#xAC04;&#xC740; 0&#xACFC; 1 &#xC0AC;&#xC774;&#xC758; &#xC2E4;&#xC218;&#xC774;&#xB2E4;. &#xC989; 0&#xACFC; 1 &#xC0AC;&#xC774;&#xC758; &#xD45C;&#xBCF8;&#xAC12;&#xB9CC; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{Beta}(x;a,b), \;\; 0 \leq x \leq 1
+</script></p>
+<p><strong>&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC758; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;</strong></p>
+<p><script type="math/tex; mode=display">
+\begin{align}
+\text{Beta}(x;a,b) 
+& = \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\, x^{a-1}(1-x)^{b-1} 
+\end{align}
+</script></p>
+<p><script type="math/tex; ">\Gamma(a)</script> &#xB294; &#xAC10;&#xB9C8; &#xD568;&#xC218;(Gamma funtion)&#xC774;&#xB77C;&#xB294; &#xD2B9;&#xC218; &#xD568;&#xC218;</p>
+<p><script type="math/tex; mode=display">
+\Gamma(a) = \int_0^\infty  x^{a-1} e^{-x}\, dx
+</script></p>
+<p><img src="../../../resource/img/image-20190528114911374.png" alt="image-20190528114911374"></p>
+<p><strong>&#xBAA8;&#xC218; <script type="math/tex; ">𝑎,𝑏</script></strong>&#xAC00; <strong>&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC591;&#xC744; &#xACB0;&#xC815;</strong>&#xD558;&#xB294; &#xD615;&#xC0C1; &#xC778;&#xC790;(shape factor)&#xB77C;&#xB294; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC758; &#xAE30;&#xB313;&#xAC12;, &#xCD5C;&#xBE48;&#xAC12;, &#xBD84;&#xC0B0;&#xC740; &#xAC01;&#xAC01; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p><strong>&#xAE30;&#xB313;&#xAC12;</strong> </p>
+<p><script type="math/tex; mode=display">
+E[x] = \dfrac{a}{a+b}
+</script></p>
+<p><strong>&#xCD5C;&#xBE48;&#xAC12;</strong> : &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xAC00; &#xAC00;&#xC7A5; &#xCEE4;&#xC9C0;&#xB294; &#xC704;&#xCE58;</p>
+<p><script type="math/tex; mode=display">
+\dfrac{a - 1}{a+b - 2}
+</script></p>
+<p><strong>&#xBD84;&#xC0B0;</strong> : &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xC758; &#xD3ED;</p>
+<p><script type="math/tex; mode=display">
+\text{Var}[x] = \dfrac{ab}{(a+b)^2(a+b+1)}
+</script></p>
+<p>&#xCD5C;&#xBE48;&#xAC12; &#xC218;&#xC2DD;&#xC744; &#xBCF4;&#xBA74; <script type="math/tex; ">𝑎=𝑏</script>&#xC77C; &#xB54C; <script type="math/tex; ">𝑥=0.5</script>&#xC5D0;&#xC11C; &#xAC00;&#xC7A5; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xAC00; &#xCEE4;&#xC9C0;&#xB294; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xB610;&#xD55C; &#xBD84;&#xC0B0; &#xC218;&#xC2DD;&#xC5D0;&#xC11C; &#xBD84;&#xBAA8;&#xAC00; 3&#xCC28;&#xC2DD;, &#xBD84;&#xC790;&#xAC00; 2&#xCC28;&#xC2DD;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; <script type="math/tex; ">𝑎,𝑏</script>&#xC758; &#xAC12;&#xC774; &#xCEE4;&#xC9C8; &#xC218;&#xB85D; &#xBD84;&#xC0B0; &#xC989;, &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xC758; &#xD3ED;&#xC774; &#xC791;&#xC544;&#xC9C4;&#xB2E4;.</p>
+<p>&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;(Beta distribution)&#xB294; &#xB2E4;&#xB978; &#xD655;&#xB960; &#xBD84;&#xD3EC;&#xC640; &#xB2EC;&#xB9AC; &#xC790;&#xC5F0;&#xACC4;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xB370;&#xC774;&#xD130;&#xC758; &#xBD84;&#xD3EC;&#xB97C; &#xBB18;&#xC0AC;&#xD558;&#xB294; &#xAC83; &#xBFD0; &#xC544;&#xB2C8;&#xB77C; <strong>&#xB2E4;&#xB978; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xD568;&#xC218;&#xC758; &#xBAA8;&#xC218;&#xB97C; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;(Bayesian estimation)&#xD55C; &#xACB0;&#xACFC;</strong>&#xB97C; &#xD45C;&#xD604;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;. <strong>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xC740; &#xBAA8;&#xC218;&#xAC00; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xAC12;&#xC5D0; &#xB300;&#xD574; &#xAC00;&#xB2A5;&#xC131;&#xC744; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xB85C; &#xB098;&#xD0C0;&#xB0B8; &#xAC83;</strong>&#xC744; &#xB9D0;&#xD55C;&#xB2E4;.</p>
+<p>&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xB294; 0&#xBD80;&#xD130; 1&#xAE4C;&#xC9C0;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; <script type="math/tex; ">𝜇</script>&#xC758; &#xAC12;&#xC744; &#xCD94;&#xC815;&#xD55C; &#xACB0;&#xACFC;&#xB97C; &#xD45C;&#xD604;&#xD55C; &#xAC83;&#xC774;&#xB2E4;.</p>
+<p>&#xC704; &#xADF8;&#xB9BC;&#xC774; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815; &#xACB0;&#xACFC;&#xB77C;&#xBA74; &#xAC01;&#xAC01;&#xC740; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; <script type="math/tex; ">𝜇</script>&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCD94;&#xC815;&#xD55C; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<ul>
+<li>(A): &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#x1D707;&#x3BC;&#xB97C; &#xCD94;&#xC815;&#xD560; &#xC218; &#xC5C6;&#xB2E4;. (&#xC815;&#xBCF4;&#xAC00; &#xC5C6;&#xC74C;)</li>
+<li>(B): &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#x1D707;&#x3BC;&#xAC12;&#xC774; 0.75&#xC77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xAC00;&#xC7A5; &#xD06C;&#xB2E4;. (&#xC815;&#xD655;&#xB3C4; &#xB0AE;&#xC74C;)</li>
+<li>(C): &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#x1D707;&#x3BC;&#xAC12;&#xC774; 0.70&#xC77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xAC00;&#xC7A5; &#xD06C;&#xB2E4;. (&#xC815;&#xD655;&#xB3C4; &#xC911;&#xAC04;)</li>
+<li>(D): &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#x1D707;&#x3BC;&#xC774; 0.725&#xC77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xAC00;&#xC7A5; &#xD06C;&#xB2E4;. (&#xC815;&#xD655;&#xB3C4; &#xB192;&#xC74C;)</li>
+</ul>
+<h3 id="&#xAC10;&#xB9C8;-&#xBD84;&#xD3EC;">&#xAC10;&#xB9C8; &#xBD84;&#xD3EC;</h3>
+<p>&#xAC10;&#xB9C8; &#xBD84;&#xD3EC;(Gamma distribution)&#xB294; &#xBAA8;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xC5D0; &#xC0AC;&#xC6A9; &#xB41C;&#xB2E4;. 0&#xBD80;&#xD130; &#xBB34;&#xD55C;&#xB300;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xB294; &#xC591;&#xC218; &#xAC12;&#xC744; &#xCD94;&#xC815;&#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<p>&#xAC10;&#xB9C8; &#xBD84;&#xD3EC;&#xC758; &#xD655;&#xB960; &#xBC00;&#xB3C4; &#xD568;&#xC218;</p>
+<p><script type="math/tex; mode=display">
+\text{Gam}(x;a,b) = \frac{1}{\Gamma(a)} b^a x^{a-1}e^{-bx}
+</script></p>
+<p>SciPy&#xC758; stats &#xC11C;&#xBE0C;&#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; <code>gamma</code> &#xD074;&#xB798;&#xC2A4;&#xB294; &#xBAA8;&#xC218; <script type="math/tex; ">𝑏=1</script>&#xB85C; &#xACE0;&#xC815;&#xB418;&#xC5B4; <script type="math/tex; ">𝑎</script> &#xAC12;&#xB9CC; &#xC124;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;. <script type="math/tex; ">𝑏</script>&#xB97C; &#xBC14;&#xAFB8;&#xB824;&#xBA74; <script type="math/tex; ">𝑥</script>&#xAC12; &#xC2A4;&#xCF00;&#xC77C;&#xACFC; &#xACC4;&#xC218;&#xB97C; &#xC218;&#xB3D9;&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD558;&#xC5EC;&#xC57C; &#xD55C;&#xB2E4;</p>
+<pre><code class="lang-python">xx = np.linspace(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>)
+plt.subplot(<span class="hljs-number">221</span>)
+plt.plot(xx, sp.stats.gamma(<span class="hljs-number">9</span>).pdf(xx))
+plt.ylim(<span class="hljs-number">0</span>, <span class="hljs-number">0.4</span>)
+plt.title(<span class="hljs-string">&quot;(A) a=9, b=1, mode=8&quot;</span>)
+plt.subplot(<span class="hljs-number">222</span>)
+plt.plot(xx, sp.stats.gamma(<span class="hljs-number">6</span>).pdf(xx))
+plt.ylim(<span class="hljs-number">0</span>, <span class="hljs-number">0.4</span>)
+plt.title(<span class="hljs-string">&quot;(B) a=6, b=1, mode=5&quot;</span>)
+plt.subplot(<span class="hljs-number">223</span>)
+plt.plot(xx, sp.stats.gamma(<span class="hljs-number">3</span>).pdf(xx))
+plt.ylim(<span class="hljs-number">0</span>, <span class="hljs-number">0.4</span>)
+plt.title(<span class="hljs-string">&quot;(C) a=3, b=1, mode=2&quot;</span>)
+plt.subplot(<span class="hljs-number">224</span>)
+plt.plot(xx, sp.stats.gamma(<span class="hljs-number">2</span>).pdf(xx))
+plt.ylim(<span class="hljs-number">0</span>, <span class="hljs-number">0.4</span>)
+plt.title(<span class="hljs-string">&quot;(D) a=2, b=1, mode=1&quot;</span>)
+plt.tight_layout()
+plt.show()
+</code></pre>
+<p><img src="../../../resource/img/image-20190528115910789.png" alt="image-20190528115910789"></p>
+<p>&#xC704; &#xADF8;&#xB9BC;&#xC774; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815; &#xACB0;&#xACFC;&#xB77C;&#xBA74; &#xAC01;&#xAC01;&#xC740; &#xBAA8;&#xC218;&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCD94;&#xC815;&#xD55C; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<ul>
+<li>A): &#xBAA8;&#xC218;&#xAC12;&#xC774; 8&#xC77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xAC00;&#xC7A5; &#xD06C;&#xB2E4;. (&#xC815;&#xD655;&#xB3C4; &#xC544;&#xC8FC; &#xB0AE;&#xC74C;)</li>
+<li>(B): &#xBAA8;&#xC218;&#xAC12;&#xC774; 5&#xC77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xAC00;&#xC7A5; &#xD06C;&#xB2E4;. (&#xC815;&#xD655;&#xB3C4; &#xB0AE;&#xC74C;)</li>
+<li>(C): &#xBAA8;&#xC218;&#xAC12;&#xC774; 2&#xC77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xAC00;&#xC7A5; &#xD06C;&#xB2E4;. (&#xC815;&#xD655;&#xB3C4; &#xB192;&#xC74C;)</li>
+<li>(D): &#xBAA8;&#xC218;&#xAC12;&#xC774; 1&#xC77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xAC00;&#xC7A5; &#xD06C;&#xB2E4;. (&#xC815;&#xD655;&#xB3C4; &#xC544;&#xC8FC; &#xB192;&#xC74C;)</li>
+</ul>
+<p>&#xAC10;&#xB9C8;&#xC758; &#xBD84;&#xD3EC;&#xC758; &#xAE30;&#xB313;&#xAC12;, &#xCD5C;&#xBE48;&#xAC12;, &#xBD84;&#xC0B0;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<p>&#xAE30;&#xB313;&#xAC12; <script type="math/tex; ">\text{E}[X] = \dfrac{a}{b}</script></p>
+<p>&#xCD5C;&#xBE48;&#xAC12; <script type="math/tex; ">\dfrac{a-1}{b}</script></p>
+<p>&#xBD84;&#xC0B0; <script type="math/tex; ">\text{Var}[X] = \dfrac{a}{b^2}</script></p>
+<h5 id="nnomal---nnomal---iinverseggamma-model-nnig-model">N(Nomal) - N(Nomal) - I(Inverse)G(Gamma) Model (=NNIG model)</h5>
+<p>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xC758; <script type="math/tex; ">\mu</script> &#xC640; <script type="math/tex; ">\sigma^2</script> &#xC5D0;&#xC11C; <script type="math/tex; ">\mu</script> &#xB294; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xB85C;  <script type="math/tex; ">\sigma^2</script> &#xB294; &#xAC10;&#xB9C8; &#xBD84;&#xD3EC;&#xB85C; &#xB098;&#xD0C0;&#xB0BC; &#xC218; &#xC788;&#xB2E4;.</p>
+<h3 id="&#xB514;&#xB9AC;&#xD074;&#xB808;-&#xBD84;&#xD3EC;">&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;</h3>
+<p>&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;(Dirichlet distribution)&#xB294; 0&#xACFC; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xB294; &#xB2E4;&#xBCC0;&#xC218;(multivariate) &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xBAA8;&#xD615;&#xC5D0; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<p>&#xB2E4;&#xBCC0;&#xC218; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xB4E4;&#xC758; &#xD569;&#xC774; 1&#xC774; &#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;&#xB294; &#xC81C;&#xD55C; &#xC870;&#xAC74;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+0 \leq x_i \leq 1, \;\;\; \sum_{i=1}^{K} x_i = 1
+</script></p>
+<p>&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xC758; &#xD655;&#xB960; &#xBC00;&#xB3C4; &#xD568;&#xC218;</p>
+<p><script type="math/tex; mode=display">
+\text{Dir}(x_1, x_2, \cdots, x_K; \alpha_1, \alpha_2, \cdots, \alpha_K) 
+= 
+\frac{1}{\mathrm{B}(\alpha_1, \alpha_2, \cdots, \alpha_K)} \prod_{i=1}^K x_i^{\alpha_i - 1}
+</script></p>
+<p><script type="math/tex; ">(\alpha_1, \alpha_2, \ldots, \alpha_K)</script> &#xB294; &#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#xBCA1;&#xD130;&#xC774;&#xACE0; <script type="math/tex; ">B(\alpha_1, \alpha_2, \ldots, \alpha_K)</script> &#xB294; &#xBCA0;&#xD0C0; &#xD568;&#xC218;&#xB77C;&#xB294; &#xD2B9;&#xC218; &#xD568;&#xC218;&#xC774;&#xB2E4;
+<script type="math/tex; mode=display">
+\mathrm{B}(\alpha_1, \alpha_2, \cdots, \alpha_K) = \frac{\prod_{i=1}^K \Gamma(\alpha_i)} {\Gamma\bigl(\sum_{i=1}^K \alpha_i\bigr)}
+</script></p>
+<h3 id="&#xBCA0;&#xD0C0;-&#xBD84;&#xD3EC;&#xC640;-&#xB514;&#xB9AC;&#xD074;&#xB808;-&#xBD84;&#xD3EC;&#xC758;-&#xAD00;&#xACC4;">&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC640; &#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xC758; &#xAD00;&#xACC4;</h3>
+<p>&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xB294; <script type="math/tex; ">K = 2</script> &#xC778; &#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xB77C;&#xACE0; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC989; <script type="math/tex; ">x_1 = x, x_2 = 1 - x, \alpha_1 = a, \alpha_2 = b</script> &#xB85C; &#xD558;&#xBA74;</p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+\text{Beta}(x;a,b) 
+&=& \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\, x^{a-1}(1-x)^{b-1} \\
+&=& \frac{\Gamma(\alpha_1+\alpha_2)}{\Gamma(\alpha_1)\Gamma(\alpha_2)}\,  x_1^{\alpha_1 - 1} x_2^{\alpha_2 - 1} \\
+&=& \frac{1}{\mathrm{B}(\alpha_1, \alpha_2)} \prod_{i=1}^2 x_i^{\alpha_i - 1}
+\end{eqnarray}
+</script></p>
+<h3 id="&#xB514;&#xB9AC;&#xD074;&#xB808;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xBA58;&#xD2B8;">&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xBA58;&#xD2B8;</h3>
+<p>&#xB514;&#xB9AC;&#xD074;&#xB808; &#xBD84;&#xD3EC;&#xC758; &#xAE30;&#xB313;&#xAC12;, &#xBAA8;&#xB4DC;, &#xBD84;&#xC0B0;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+\alpha=\sum\alpha_k
+</script></p>
+<p>&#xAE30;&#xB313;&#xAC12; <script type="math/tex; ">\text{E}[x_k] = \dfrac{\alpha_k}{\alpha}</script></p>
+<p>&#xBAA8;&#xB4DC; <script type="math/tex; ">\dfrac{\alpha_k - 1}{\alpha - K}</script></p>
+<p>&#xBD84;&#xC0B0; <script type="math/tex; ">\text{Var}[x_k] =\dfrac{\alpha_k(\alpha - \alpha_k)}{\alpha^2(\alpha + 1)}</script></p>
+<p>&#xAE30;&#xB313;&#xAC12; &#xACF5;&#xC2DD;&#xC744; &#xBCF4;&#xBA74; &#xBAA8;&#xC218;&#xC778; <script type="math/tex; ">(𝛼_1,𝛼_2,…,𝛼_𝐾)</script>&#xB294; <script type="math/tex; ">(𝑥_1,𝑥_2,…,𝑥_𝐾)</script>&#xC911; &#xC5B4;&#xB290; &#xC218;&#xAC00; &#xB354; &#xD06C;&#xAC8C; &#xB098;&#xC62C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xB192;&#xC740;&#xC9C0;&#xB97C; &#xACB0;&#xC815;&#xD558;&#xB294; &#xD615;&#xC0C1; &#xC778;&#xC790;(shape factor)&#xC784;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xBAA8;&#xB4E0; <script type="math/tex; ">𝛼_𝑖</script>&#xAC12;&#xC774; &#xB3D9;&#xC77C;&#xD558;&#xBA74; &#xBAA8;&#xB4E0; <script type="math/tex; ">𝑥_𝑖</script>&#xC758; &#xBD84;&#xD3EC;&#xAC00; &#xAC19;&#xC544;&#xC9C4;&#xB2E4;.</p>
+<p>&#xBD84;&#xC0B0; &#xACF5;&#xC2DD;&#xC744; &#xBCF4;&#xBA74; <script type="math/tex; ">(𝛼_1,𝛼_2,…,𝛼_𝐾)</script>&#xC758; &#xC808;&#xB300;&#xAC12;&#xC774; &#xD074;&#xC218;&#xB85D; &#xBD84;&#xC0B0;&#xC774; &#xC791;&#xC544;&#xC9C4;&#xB2E4;. &#xC989;, &#xB514;&#xB9AC;&#xD074;&#xB9AC; &#xBD84;&#xD3EC;&#xC758; &#xD45C;&#xBCF8;&#xAC12; <script type="math/tex; ">𝑥</script>&#xAC00; &#xC5B4;&#xB5A4; &#xD2B9;&#xC815;&#xD55C; &#xAC12; &#xC8FC;&#xBCC0;&#xC774; &#xB098;&#xC62C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xB192;&#xC544;&#xC9C4;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0806mvn.html" class="navigation navigation-prev " aria-label="Previous page: 다변수 가우시안 정규분포">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mle.html" class="navigation navigation-next " aria-label="Next page: 최대가능도와 모수추정">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"베타분포 & 감마분포 & 디리클레분포","level":"1.2.4.18","depth":3,"next":{"title":"최대가능도와 모수추정","level":"1.2.4.19","depth":3,"path":"posts/math/probability-statistics/mle.md","ref":"posts/math/probability-statistics/mle.md","articles":[]},"previous":{"title":"다변수 가우시안 정규분포","level":"1.2.4.17","depth":3,"path":"posts/math/probability-statistics/0806mvn.md","ref":"posts/math/probability-statistics/0806mvn.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0807beta-gamma-dirichlet.md","mtime":"2020-04-06T13:53:19.485Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T13:54:42.975Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
