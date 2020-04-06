@@ -44,6 +44,7 @@
         - [모수 추정](posts/math/probability-statistics/0901parameter-estimation.md)
         - [최대가능도와 모수추정](posts/math/probability-statistics/0902mle.md)
         - [베이지안 모수추정](posts/math/probability-statistics/0903baysian-estimation.md)
+        - [검정과 유의확률](posts/math/probability-statistics/0904test-pvalue.md)
 - [데이터 사이언스](posts/datascience/README.md)    
     - [회귀분석](posts/datascience/regression/README.md)
         - [데이터분석 기초](posts/datascience/regression/dataintro.md)
