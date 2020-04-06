@@ -23,6 +23,7 @@
         - [집합](posts/datascience/basicmath/0601set.md)
         - [확률의 수학적 정의와 의미](posts/datascience/basicmath/0602probability.md)
         - [확률의 성질](posts/datascience/basicmath/0603probability-character.md)
+        - [확률분포함수](posts/datascience/basicmath/0604probability-distribution.md)
         - [최대가능도와 모수추정](posts/datascience/basicmath/mle.md)
     - [회귀분석 & 시계열 분석](posts/datascience/regressionandtimeseries/README.md)
         - [데이터 분석 기초](posts/datascience/regressionandtimeseries/dataintro.md)
