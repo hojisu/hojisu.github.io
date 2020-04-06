@@ -141,7 +141,7 @@ f(x) = x^T A x \\
 \nabla f(x) = \frac{\partial {x}^{T}{A}{x}}{\partial {x}} = ({A} + {A}^{T}){x}
 $$
 
-#### 벡터를 스칼라로 미분하는 경우
+##### 벡터를 스칼라로 미분하는 경우
 
 벡터 $${f}(x) = \begin{bmatrix} f_1 \\ f_2 \\ \vdots\\ f_M \\ \end{bmatrix}$$  를 스칼라 $$x$$ 로 미분하는 경우에는 결과를 **행벡터** 로 표시한다. 
 $$
