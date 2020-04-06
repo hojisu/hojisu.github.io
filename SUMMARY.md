@@ -39,6 +39,7 @@
         - [카테고리분포 & 다항분포](posts/math/probability-statistics/0803categorical-multinomial-distribution.md)
         - [정규분포](posts/math/probability-statistics/0804normal-distribution.md)
         - [스튜던트 t분포 & 카이분포 & F분포](posts/math/probability-statistics/0805t-chi-f-distribution.md)
+        - [다변수 가우시안 정규분포](posts/math/probability-statistics/0806mvn.md)
         - [최대가능도와 모수추정](posts/math/probability-statistics/mle.md)
 - [데이터 사이언스](posts/datascience/README.md)    
     - [회귀분석](posts/datascience/regression/README.md)
