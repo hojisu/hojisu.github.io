@@ -19,6 +19,7 @@
         - [행렬의 미분](posts/datascience/basicmath/0404matrix-differentiation.md)
         - [최적화 기초](posts/datascience/basicmath/0501optimization.md)
         - [제한조건이 있는 최적화 문제](posts/datascience/basicmath/0502constrained-optimization.md)
+        - [LP문제 $ QP문제](posts/datascience/basicmath/0503lp-qp-problem.md)
         - [최대가능도와 모수추정](posts/datascience/basicmath/mle.md)
     - [회귀분석 & 시계열 분석](posts/datascience/regressionandtimeseries/README.md)
         - [데이터 분석 기초](posts/datascience/regressionandtimeseries/dataintro.md)
