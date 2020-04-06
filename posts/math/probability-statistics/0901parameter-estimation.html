@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>다변수 가우시안 정규분포 · GitBook</title>
+        <title>모수 추정 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="0807beta-gamma-dirichlet.html" />
+    <link rel="next" href="mle.html" />
     
     
-    <link rel="prev" href="0805t-chi-f-distribution.html" />
+    <link rel="prev" href="0807beta-gamma-dirichlet.html" />
     
 
     </head>
@@ -611,7 +611,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4.17" data-path="0806mvn.html">
+        <li class="chapter " data-level="1.2.4.17" data-path="0806mvn.html">
             
                 <a href="0806mvn.html">
             
@@ -637,7 +637,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.19" data-path="0901parameter-estimation.html">
+        <li class="chapter active" data-level="1.2.4.19" data-path="0901parameter-estimation.html">
             
                 <a href="0901parameter-estimation.html">
             
@@ -754,7 +754,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >다변수 가우시안 정규분포</a>
+        <a href="../../.." >모수 추정</a>
     </h1>
 </div>
 
@@ -771,64 +771,82 @@
                                 
                                 <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
 
-<h1 id="&#xB2E4;&#xBCC0;&#xC218;-&#xAC00;&#xC6B0;&#xC2DC;&#xC548;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;">&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;</h1>
+<h1 id="&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xC218; &#xCD94;&#xC815;</h1>
 <!-- toc --><div id="toc" class="toc">
 
 <ul>
-<li><a href="#sicpy-&#xC758;-&#xB2E4;&#xBCC0;&#xC218;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;-&#xBA85;&#xB839;">SicPy &#xC758; &#xB2E4;&#xBCC0;&#xC218; &#xC815;&#xADDC; &#xBD84;&#xD3EC; &#xBA85;&#xB839;</a></li>
-<li><a href="#&#xAC00;&#xC6B0;&#xC2DC;&#xC548;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC640;-&#xACE0;&#xC720;&#xAC12;-&#xBD84;&#xD574;">&#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC640; &#xACE0;&#xC720;&#xAC12; &#xBD84;&#xD574;</a></li>
-<li><a href="#&#xB2E4;&#xBCC0;&#xC218;-&#xAC00;&#xC6B0;&#xC2DC;&#xC548;-&#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC758;-&#xC870;&#xAC74;&#xBD80;-&#xD655;&#xB960;&#xBD84;&#xD3EC;">&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xBD84;&#xD3EC;</a></li>
-<li><a href="#&#xB2E4;&#xBCC0;&#xC218;-&#xAC00;&#xC6B0;&#xC2DC;&#xC548;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC758;-&#xC8FC;&#xBCC0;-&#xD655;&#xB960;&#xBD84;&#xD3EC;">&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xC8FC;&#xBCC0; &#xD655;&#xB960;&#xBD84;&#xD3EC;</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xC218; &#xCD94;&#xC815;</a></li>
+<li><a href="#&#xBAA8;&#xC218;-&#xCD94;&#xC815;-&#xBC29;&#xBC95;&#xB860;">&#xBAA8;&#xC218; &#xCD94;&#xC815; &#xBC29;&#xBC95;&#xB860;</a></li>
+<li><a href="#&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;</a><ul>
+<li><a href="#&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-&#xBCA0;&#xB974;&#xB204;&#xC774;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</a></li>
+<li><a href="#&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</a></li>
+<li><a href="#&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-&#xBCA0;&#xD0C0;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</a></li>
+</ul>
+</li>
 </ul>
 
 </div><!-- tocstop -->
-<p><script type="math/tex; ">𝐷</script>&#xCC28;&#xC6D0; &#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;(MVN: multivariate Gaussian normal distribution)&#xC758; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;&#xB294; &#xD3C9;&#xADE0; &#xBCA1;&#xD130; <script type="math/tex; ">𝜇</script> &#xC640; &#xACF5;&#xBD84;&#xC0B0; &#xD589;&#xB82C; <script type="math/tex; ">\Sigma</script> &#xB77C;&#xB294; &#xB450; &#xAC1C;&#xC758; &#xBAA8;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xBA70; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC218;&#xC2DD;&#xC73C;&#xB85C; &#xC815;&#xC758;&#xB41C;&#xB2E4;.</p>
-<p><script type="math/tex; mode=display">
-\mathcal{N}(x ; \mu, \Sigma) = \dfrac{1}{(2\pi)^{D/2} |\Sigma| ^{1/2}} \exp \left( -\dfrac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu) \right)
-</script></p>
+<h3 id="summary">Summary</h3>
 <ul>
-<li><script type="math/tex; ">x \in \mathbf{R}^D</script> : &#xD655;&#xB960; &#xBCC0;&#xC218; &#xBCA1;&#xD130;</li>
-<li><script type="math/tex; ">\mu \in \mathbf{R}^D</script> : &#xD3C9;&#xADE0; &#xBCA1;&#xD130;</li>
-<li><script type="math/tex; ">\Sigma \in \mathbf{R}^{D\times D}</script> : &#xACF5;&#xBD84;&#xC0B0; &#xD589;&#xB82C;</li>
-<li><script type="math/tex; ">\Sigma^{-1} = \Lambda \in \mathbf{R}^{D\times D}</script> : &#xC815;&#xBC00;&#xB3C4; &#xD589;&#xB82C;(precision matrix)</li>
+<li>&#xBAA8;&#xC218;(parameter) = shape factor&#xB294; &#xBD84;&#xD3EC;&#xC5D0;&#xC11C; &#xBAA8;&#xC591;&#xC744; &#xACB0;&#xC815;&#xD558;&#xB294; &#xC22B;&#xC790;&#xC774;&#xB2E4;.</li>
+<li>&#xBAA8;&#xC218; &#xCD94;&#xC815;(parameter estimation)&#xC740; &#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC73C;&#xB85C; &#xAC00;&#xC7A5; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xB192;&#xC740; &#xD558;&#xB098;&#xC758; &#xC22B;&#xC790;&#xB97C; &#xCC3E;&#xC544;&#xB0B4;&#xB294; &#xC791;&#xC5C5;&#xC774;&#xB2E4;. </li>
+<li>&#xBAA8;&#xC218;&#xCD94;&#xC815;&#xBC29;&#xBC95;&#xB860;&#xC5D0;&#xB294; &#xBAA8;&#xBA58;&#xD2B8;&#xBC29;&#xBC95;, &#xCD5C;&#xB300;&#xAC00;&#xB2A5;&#xB3C4; &#xCD94;&#xC815;, &#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;&#xC774; &#xC788;&#xB2E4;.</li>
+<li>&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;(MM: Method of Moment)&#xC740; &#xD45C;&#xBCF8;&#xC790;&#xB8CC;&#xC5D0; &#xB300;&#xD55C; &#xD45C;&#xBCF8; &#xBAA8;&#xBA58;&#xD2B8;&#xAC00; &#xD655;&#xB960; &#xBD84;&#xD3EC;&#xC758; &#xC774;&#xB860;&#xC801;&#xC778; &#xBAA8;&#xBA58;&#xD2B8;&#xC640; &#xAC19;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xACE0; &#xBAA8;&#xC218;&#xB97C; &#xAD6C;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</li>
 </ul>
-<p>&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC5D0;&#xC11C; &#xACF5;&#xBD84;&#xC0B0; &#xD589;&#xB82C;&#xC740; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC591;&#xC758; &#xC815;&#xBD80;&#xD638; &#xB300;&#xCE6D;&#xD589;&#xB82C;(positive definite symmetric matrix)&#xB9CC; &#xB2E4;&#xB8EC;&#xB2E4;.</p>
-<h3 id="sicpy-&#xC758;-&#xB2E4;&#xBCC0;&#xC218;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;-&#xBA85;&#xB839;">SicPy &#xC758; &#xB2E4;&#xBCC0;&#xC218; &#xC815;&#xADDC; &#xBD84;&#xD3EC; &#xBA85;&#xB839;</h3>
-<p>SciPy&#xC758; stats &#xC11C;&#xBE0C;&#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xB294; &#xB2E4;&#xBCC0;&#xC218; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xB97C; &#xC704;&#xD55C; <code>multivariate_normal</code> &#xBA85;&#xB839;&#xC774; &#xC788;&#xB2E4;. <code>mean</code> &#xC778;&#xC218;&#xB85C; &#xD3C9;&#xADE0; &#xBCA1;&#xD130;&#xB97C;, <code>cov</code> &#xC778;&#xC218;&#xB85C; &#xACF5;&#xBD84;&#xC0B0; &#xD589;&#xB82C;&#xC744; &#xBC1B;&#xB294;&#xB2E4;.</p>
-<h3 id="&#xAC00;&#xC6B0;&#xC2DC;&#xC548;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC640;-&#xACE0;&#xC720;&#xAC12;-&#xBD84;&#xD574;">&#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC640; &#xACE0;&#xC720;&#xAC12; &#xBD84;&#xD574;</h3>
-<p>&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C; <script type="math/tex; ">\Sigma</script> &#xC774; &#xB300;&#xAC01;&#xD654; &#xAC00;&#xB2A5;(diagonalizable)&#xC774;&#xBA74; &#xC815;&#xBC00;&#xB3C4;&#xD589;&#xB82C; <script type="math/tex; ">\Sigma^{-1}</script>&#xC740; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xBD84;&#xD574;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC774; &#xC2DD;&#xC5D0;&#xC11C; <script type="math/tex; ">\Lambda</script>&#xB294; &#xACE0;&#xC720;&#xAC12; &#xD589;&#xB82C;, <script type="math/tex; ">V</script>&#xB294; &#xACE0;&#xC720;&#xBCA1;&#xD130; &#xD589;&#xB82C;&#xC774;&#xB2E4;.</p>
-<p><script type="math/tex; mode=display">
-\Sigma^{-1} = V \Lambda^{-1} V^T
-</script></p>
-<p>&#xC704;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; <strong>&#xC88C;&#xD45C;&#xBCC0;&#xD658;</strong> &#xD560; &#xC218; &#xC788;&#xB2E4;.
-<script type="math/tex; mode=display">
-\begin{eqnarray}
-\mathcal{N}(x) 
-&\propto& \exp \left( -\dfrac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu) \right) \\
-&=& \exp \left( -\dfrac{1}{2} (x-\mu)^T V \Lambda^{-1} V^T (x-\mu) \right) \\
-&=& \exp \left( -\dfrac{1}{2} (V^T(x-\mu))^T  \Lambda^{-1} (V^T (x-\mu)) \right) \\
-&=& \exp \left( -\dfrac{1}{2} (V^{-1}(x-\mu))^T  \Lambda^{-1} (V^{-1} (x-\mu)) \right) \\
-&=& \exp \left( -\dfrac{1}{2} x'^T  \Lambda^{-1} x' \right) \\
-\end{eqnarray}
-</script></p>
-<p>&#xC989;, &#xACE0;&#xC720;&#xBCA1;&#xD130;&#xB97C; &#xAE30;&#xC800;&#xBCA1;&#xD130;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; <script type="math/tex; ">𝑥</script>&#xB97C; <script type="math/tex; ">x' = V^{-1}(x-\mu)</script> &#xB85C; &#xC88C;&#xD45C; &#xBCC0;&#xD658;&#xD558;&#xBA74;, &#xC88C;&#xD45C; &#xBCC0;&#xD658;&#xB41C; &#xC0C8;&#xB85C;&#xC6B4; &#xD655;&#xB960;&#xBCC0;&#xC218; <script type="math/tex; ">x'</script>&#xC758; &#xACF5;&#xBD84;&#xC0B0;&#xD589;&#xB82C;&#xC740; &#xB300;&#xAC01; &#xD589;&#xB82C;&#xC778; &#xACE0;&#xC733;&#xAC12; &#xD589;&#xB82C; <script type="math/tex; ">Λ</script>&#xAC00; &#xB41C;&#xB2E4;. &#xACF5;&#xBD84;&#xC0B0; &#xD589;&#xB82C;&#xC774; &#xB300;&#xAC01;&#xD589;&#xB82C;&#xC774;&#xBBC0;&#xB85C; &#xC88C;&#xD45C; &#xBCC0;&#xD658;&#xB41C; <script type="math/tex; ">x'</script>&#xC740; &#xC11C;&#xB85C; &#xB3C5;&#xB9BD;&#xC774;&#xB2E4;.</p>
-<p>&#xC120;&#xD615;&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xC5D0;&#xC11C; condition no &#xAC00; &#xD06C;&#xB2E4; -&gt; 1. &#xC0C1;&#xAD00;&#xAD00;&#xACC4;&#xAC00; &#xD06C;&#xB2E4; 2. &#xB2E8;&#xC704; &#xCC28;&#xC774;(scaling)</p>
-<h3 id="&#xB2E4;&#xBCC0;&#xC218;-&#xAC00;&#xC6B0;&#xC2DC;&#xC548;-&#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC758;-&#xC870;&#xAC74;&#xBD80;-&#xD655;&#xB960;&#xBD84;&#xD3EC;">&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xBD84;&#xD3EC;</h3>
-<p><strong>&#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC778; &#xD655;&#xB960;&#xBCC0;&#xC218; &#xBCA1;&#xD130; &#xC911; &#xC5B4;&#xB5A4; &#xC6D0;&#xC18C;&#xC758; &#xAC12;&#xC774; &#xC8FC;&#xC5B4;&#xC9C0;&#xBA74; &#xB2E4;&#xB978; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xB4E4;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xBD84;&#xD3EC;&#xB294; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;</strong>&#xAC00; &#xB41C;&#xB2E4;. &#xC989; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC790;&#xB978; &#xB2E8;&#xBA74;&#xC774; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xAC00; &#xB41C;&#xB2E4;.</p>
-<p><script type="math/tex; ">x_2</script> &#xAC00; &#xC5B4;&#xB5A4; &#xAC12;&#xC73C;&#xB85C; &#xC8FC;&#xC5B4;&#xC9C0;&#xBA74; <script type="math/tex; ">x_1</script> &#xC740; &#xC544;&#xB798;&#xC758; &#xAE30;&#xB313;&#xAC12;, &#xACF5;&#xBD84;&#xC0B0;&#xC744; &#xAC00;&#xC9C4; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xAC00; &#xB41C;&#xB2E4;. </p>
-<p>&#xAE30;&#xB313;&#xAC12; : <script type="math/tex; ">\mu'_1 = \mu_1 -\Lambda_{11}^{-1}\Lambda_{12}(x_2-\mu_2)</script></p>
-<p>&#xACF5;&#xBD84;&#xC0B0; : <script type="math/tex; ">\Sigma'_1 = \Lambda_{11}^{-1} = \Sigma_{11} − \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}</script></p>
-<h3 id="&#xB2E4;&#xBCC0;&#xC218;-&#xAC00;&#xC6B0;&#xC2DC;&#xC548;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC758;-&#xC8FC;&#xBCC0;-&#xD655;&#xB960;&#xBD84;&#xD3EC;">&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xC8FC;&#xBCC0; &#xD655;&#xB960;&#xBD84;&#xD3EC;</h3>
-<p><strong>&#xB2E4;&#xBCC0;&#xC218; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xC8FC;&#xBCC0; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xB3C4; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;</strong>&#xAC00; &#xB41C;&#xB2E4;. &#xC989; &#xACB0;&#xD569; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;&#xB97C; &#xC5B4;&#xB5A4; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC73C;&#xB85C; &#xC801;&#xBD84;&#xD558;&#xC5EC; &#xD2B9;&#xC815;&#xD55C; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xB9CC; &#xB0A8;&#xB3C4;&#xB85D; &#xD55C; &#xACB0;&#xACFC;&#xB3C4; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC774;&#xB2E4;.</p>
-<p><script type="math/tex; ">𝑋_1</script>&#xACFC; <script type="math/tex; ">𝑋_2</script>&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4; &#xACB0;&#xD569; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218; <script type="math/tex; ">𝑝(𝑥_1,𝑥_2)</script>&#xB97C; <script type="math/tex; ">𝑥_1</script>&#xB610;&#xB294; <script type="math/tex; ">𝑥_2</script>&#xB85C; &#xC801;&#xBD84;&#xD558;&#xBA74; &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xAC00; &#xB41C;&#xB2E4;.
-<script type="math/tex; mode=display">
-\int p(x_1, x_2) dx_2 = \mathcal{N}(x_1; \mu''_1, \sigma''^2_1)
-</script></p>
-<p>&#xC774; &#xB54C;. &#xAE30;&#xB313;&#xAC12;&#xACFC; &#xACF5;&#xBD84;&#xC0B0;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;</p>
+<hr>
+<h3 id="&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xC218; &#xCD94;&#xC815;</h3>
+<p>&#xBAA8;&#xC218; &#xCD94;&#xC815;(parameter estimation)&#xC740; &#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC73C;&#xB85C; &#xAC00;&#xC7A5; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xB192;&#xC740; &#xD558;&#xB098;&#xC758; &#xC22B;&#xC790;&#xB97C; &#xCC3E;&#xC544;&#xB0B4;&#xB294; &#xC791;&#xC5C5;&#xC774;&#xB2E4;. </p>
+<p>&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC740; &#xC6B0;&#xB9AC; &#xB208;&#xC5D0; &#xBCF4;&#xC5EC;&#xC9C0;&#xB294; &#xB370;&#xC774;&#xD130;(&#xD558;&#xB098;&#xC758; &#xC2E4;&#xD604;&#xCCB4;)&#xC758; &#xD45C;&#xBCF8;&#xC774; &#xC544;&#xB2C8;&#xB77C; &#xADF8; &#xB4A4;&#xC5D0;&#xC11C; &#xC774; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xB0B4;&#xACE0; &#xC788;&#xB294; <strong>&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBD84;&#xD3EC;</strong>&#xB97C; &#xC54C;&#xC544;&#xC57C; &#xD55C;&#xB2E4;. &#xB370;&#xC774;&#xD130;(&#xD45C;&#xBCF8;)&#xC73C;&#xB85C;&#xBD80;&#xD130; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBD84;&#xD3EC;&#xB97C; &#xC54C;&#xC544;&#xB0B4;&#xC57C; &#xD55C;&#xB2E4;. </p>
+<p>&#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBD84;&#xD3EC;&#xAC00; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;, &#xC774;&#xD56D; &#xBD84;&#xD3EC;, &#xAC00;&#xC6B0;&#xC2DC;&#xC548; &#xC815;&#xADDC; &#xBD84;&#xD3EC; &#xB4F1;&#xC758; &#xAE30;&#xBCF8; &#xBD84;&#xD3EC; &#xC911; &#xD558;&#xB098;&#xB77C;&#xACE0; &#xD560; &#xACBD;&#xC6B0;</p>
+<p>1)&#xD655;&#xB960;&#xBCC0;&#xC218;&#xAC00; &#xC5B4;&#xB5A4; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xB97C; &#xB530;&#xB974;&#xB294;&#xC9C0; &#xC54C;&#xC544;&#xB0B8;&#xB2E4;.</p>
+<p>2)&#xD655;&#xB960;&#xBCC0;&#xC218;(&#xD655;&#xB960;&#xBD84;&#xD3EC;)&#xC758; &#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC744; &#xAD6C;&#xD55C;&#xB2E4;.</p>
+<p>3)&#xD655;&#xB960;&#xBCC0;&#xC218;&#xAC00; &#xC5B4;&#xB5A4; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xB97C; &#xB530;&#xB974;&#xB294;&#xAC00;&#xB294; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xB294; &#xC6D0;&#xB9AC;&#xB97C; &#xC54C;&#xAC70;&#xB098; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xB370;&#xC774;&#xD130;&#xC758; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xD2B9;&#xC131;&#xC744; &#xC54C;&#xBA74; &#xCD94;&#xCE21;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
 <ul>
-<li>&#xAE30;&#xB313;&#xAC12;  : <script type="math/tex; ">\mu''_1 = \mu_1</script></li>
-<li>&#xACF5;&#xBD84;&#xC0B0;  :<script type="math/tex; "> \Sigma''_1 = \Sigma_{11}</script></li>
+<li>&#xB370;&#xC774;&#xD130;&#xB294; 0 &#xB610;&#xB294; 1&#xBFD0;&#xC774;&#xB2E4;.(&#xBCA0;&#xB974;&#xB204;&#xC774; &#xD655;&#xB960;&#xBCC0;&#xC218;)</li>
+<li>&#xB370;&#xC774;&#xD130;&#xB294; &#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xAC12;&#xC774;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.(&#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xD655;&#xB960;&#xBCC0;&#xC218;)</li>
+<li>&#xB370;&#xC774;&#xD130;&#xB294; 0&#xACFC; 1&#xC0AC;&#xC774;&#xC758; &#xC2E4;&#xC218; &#xAC12;&#xC774;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.(&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC; &#xD655;&#xB960;&#xBCC0;&#xC218;)</li>
+<li>&#xB370;&#xC774;&#xD130;&#xB294; &#xD56D;&#xC0C1; 0&#xB610;&#xB294; &#xC591;&#xC218;&#xC774;&#xC5B4;&#xC57C;&#xD55C;&#xB2E4;.(&#xAC10;&#xB9C8; &#xBD84;&#xD3EC; &#xD655;&#xB960;&#xBCC0;&#xC218; &#xB610;&#xB294; F-&#xBD84;&#xD3EC; &#xD655;&#xB960;&#xBCC0;&#xC218;)</li>
+<li>&#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xC640; &#xC2A4;&#xD29C;&#xB358;&#xD2B8;-t&#xBD84;&#xD3EC;&#xC640; &#xAC19;&#xC774; &#xAD6C;&#xBD84;&#xD788;&#xAC00; &#xD798;&#xB4E0; &#xACBD;&#xC6B0;&#xB294; &#xC815;&#xADDC;&#xC131; &#xAC80;&#xC815;(normality test)&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</li>
 </ul>
+<h3 id="&#xBAA8;&#xC218;-&#xCD94;&#xC815;-&#xBC29;&#xBC95;&#xB860;">&#xBAA8;&#xC218; &#xCD94;&#xC815; &#xBC29;&#xBC95;&#xB860;</h3>
+<ul>
+<li>&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;(method of moment)</li>
+<li>&#xCD5C;&#xB300; &#xAC00;&#xB2A5;&#xB3C4; &#xCD94;&#xC815;(maximum likelihood estimation)</li>
+<li>&#xBCA0;&#xC774;&#xC9C0;&#xC548; &#xCD94;&#xC815;(Bayesian estimation)</li>
+</ul>
+<h3 id="&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;</h3>
+<p>&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;(MM: Method of Moment)&#xC740; &#xD45C;&#xBCF8;&#xC790;&#xB8CC;&#xC5D0; &#xB300;&#xD55C; &#xD45C;&#xBCF8; &#xBAA8;&#xBA58;&#xD2B8;&#xAC00; &#xD655;&#xB960; &#xBD84;&#xD3EC;&#xC758; &#xC774;&#xB860;&#xC801;&#xC778; &#xBAA8;&#xBA58;&#xD2B8;&#xC640; &#xAC19;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xACE0; &#xBAA8;&#xC218;&#xB97C; &#xAD6C;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<p>1&#xCC28; &#xBAA8;&#xBA58;&#xD2B8;(&#xD3C9;&#xADE0;)&#xC5D0;&#xC11C; N&#xC740; &#xB370;&#xC774;&#xD130; &#xAC2F;&#xC218;, <script type="math/tex; ">x_i</script> &#xB294; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\mu = \text{E}[X] \triangleq \bar{x} = \dfrac{1}{N} \sum_{i=1}^N x_i
+</script></p>
+<p>2&#xCC28; &#xBAA8;&#xBA58;&#xD2B8;(&#xBD84;&#xC0B0;)</p>
+<p><script type="math/tex; mode=display">
+\sigma^2 = \text{E}[(X-\mu)^2] \triangleq \bar{s}^2 = \dfrac{1}{N-1} \sum_{i=1}^N (x_i - \bar{x})^2
+</script></p>
+<h4 id="&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-&#xBCA0;&#xB974;&#xB204;&#xC774;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</h4>
+<p><script type="math/tex; ">N_1</script> &#xC740; 1&#xC758; &#xAC2F;&#xC218;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{E}[X] = \mu \triangleq \bar{x} = \dfrac{1}{N} \sum_{i=1}^N x_i  = \dfrac{N_1}{N}
+</script></p>
+<h4 id="&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-&#xC815;&#xADDC;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</h4>
+<p>&#xC815;&#xADDC; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; <script type="math/tex; ">\mu, \sigma^2</script> &#xC774;&#xB2E4;. &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xB294; &#xBAA8;&#xC218;&#xAC00; &#xC544;&#xC608; &#xBAA8;&#xBA58;&#xD2B8;&#xB85C; &#xC815;&#xC758;&#xB418;&#xC5B4; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC544;&#xC8FC; &#xC27D;&#xAC8C; &#xBAA8;&#xC218;&#xB97C; &#xCD94;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{E}[X] = \mu \triangleq \bar{x} = \dfrac{1}{N} \sum_{i=1}^N x_i \\
+\text{E}[(X-\mu)^2] = \sigma^2 \triangleq s^2 = \dfrac{1}{N-1} \sum_{i=1}^N (x_i - \bar{x})^2
+</script></p>
+<h4 id="&#xBAA8;&#xBA58;&#xD2B8;-&#xBC29;&#xBC95;&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-&#xBCA0;&#xD0C0;-&#xBD84;&#xD3EC;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xBAA8;&#xBA58;&#xD2B8; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</h4>
+<p>&#xBCA0;&#xD0C0; &#xBD84;&#xD3EC;&#xC758; &#xBAA8;&#xC218; a , b&#xC774;&#xB2E4;. &#xBAA8;&#xC218;&#xC640; &#xBAA8;&#xBA58;&#xD2B8; &#xAC04;&#xC758; &#xAD00;&#xACC4;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xBE44;&#xC120;&#xD615; &#xC5F0;&#xB9BD; &#xBC29;&#xC815;&#xC2DD;&#xC744; &#xD480;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{E}[X] = \dfrac{a}{a+b} \triangleq \bar{x} \\
+\text{E}[(X-\mu)^2] = \dfrac{ab}{(a+b)^2(a+b+1)} \triangleq s^2
+</script></p>
+<p>&#xBE44;&#xC120;&#xD615; &#xC5F0;&#xB9BD;&#xBC29;&#xC815;&#xC2DD;&#xC744; &#xD480;&#xC5B4; &#xD574;&#xB97C; &#xAD6C;&#xD558;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+a = \bar{x} \left( \frac{\bar{x} (1 - \bar{x})}{s^2} - 1 \right) \\
+b = (1 - \bar{x}) \left( \frac{\bar{x} (1 - \bar{x})}{s^2} - 1 \right)
+</script></p>
 
                                 
                                 </section>
@@ -856,12 +874,12 @@
 
             
                 
-                <a href="0805t-chi-f-distribution.html" class="navigation navigation-prev " aria-label="Previous page: 스튜던트 t분포 & 카이분포 & F분포">
+                <a href="0807beta-gamma-dirichlet.html" class="navigation navigation-prev " aria-label="Previous page: 베타분포 & 감마분포 & 디리클레분포">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="0807beta-gamma-dirichlet.html" class="navigation navigation-next " aria-label="Next page: 베타분포 & 감마분포 & 디리클레분포">
+                <a href="mle.html" class="navigation navigation-next " aria-label="Next page: 최대가능도와 모수추정">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -872,7 +890,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"다변수 가우시안 정규분포","level":"1.2.4.17","depth":3,"next":{"title":"베타분포 & 감마분포 & 디리클레분포","level":"1.2.4.18","depth":3,"path":"posts/math/probability-statistics/0807beta-gamma-dirichlet.md","ref":"posts/math/probability-statistics/0807beta-gamma-dirichlet.md","articles":[]},"previous":{"title":"스튜던트 t분포 & 카이분포 & F분포","level":"1.2.4.16","depth":3,"path":"posts/math/probability-statistics/0805t-chi-f-distribution.md","ref":"posts/math/probability-statistics/0805t-chi-f-distribution.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0806mvn.md","mtime":"2020-04-06T13:48:08.929Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T13:59:10.526Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"모수 추정","level":"1.2.4.19","depth":3,"next":{"title":"최대가능도와 모수추정","level":"1.2.4.20","depth":3,"path":"posts/math/probability-statistics/mle.md","ref":"posts/math/probability-statistics/mle.md","articles":[]},"previous":{"title":"베타분포 & 감마분포 & 디리클레분포","level":"1.2.4.18","depth":3,"path":"posts/math/probability-statistics/0807beta-gamma-dirichlet.md","ref":"posts/math/probability-statistics/0807beta-gamma-dirichlet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0901parameter-estimation.md","mtime":"2020-04-06T13:58:22.620Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-06T13:59:10.526Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
