@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-- [수학](posts/datascience/math/README.md)
+- [수학](posts/math/README.md)
     - [선형대수](posts/math/linearalgebra/README.md)
         - [데이터와 행렬](posts/math/linearalgebra/0201data-and-matrix.md)
         - [벡터와 행렬의 연산](posts/math/linearalgebra/0202vector-and-matrix-calculation.md)
