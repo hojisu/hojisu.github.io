@@ -67,7 +67,7 @@ plt.ylabel("$$p(x)$$")
 plt.show()
 ~~~
 
-![image-20190522175924519](/Users/jisuho/Library/Application Support/typora-user-images/image-20190522175924519.png)
+![image-20190522175924519](../../../resource/img/image-20190522175924519.png)
 
 ### 누적분포함수 메서드 사용법
 
@@ -81,7 +81,7 @@ plt.ylabel("$$F(x)$$")
 plt.show()
 ~~~
 
-![image-20190522180004741](/Users/jisuho/Library/Application Support/typora-user-images/image-20190522180004741.png)
+![image-20190522180004741](../../../resource/img/image-20190522180004741.png)
 
 ### 무작위 표본 생성
 
