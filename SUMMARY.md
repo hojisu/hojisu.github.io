@@ -55,4 +55,5 @@
         - [회귀분석의 기하학](posts/datascience/regression/0202regression-geometry.md)
         - [부분 회귀](posts/datascience/regression/0203partial-regression.md)
         - [누락데이터 처리](posts/datascience/regression/0301missingdata.md)
-        - [스케일링](posts/datascience/regression/0304scale.md)
+        - [스케일링 & 조건수](posts/datascience/regression/0304scale.md)
+        - [풀랭크 & 축소랭크 방식](posts/datascience/regression/0305dummy-variable.md)

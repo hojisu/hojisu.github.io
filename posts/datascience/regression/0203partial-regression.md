@@ -54,7 +54,7 @@ plot_partregress_grid(result, fig)
 
 `fig`: `plt.figure` 객체
 
-## CCPR 플롯
+### CCPR 플롯
 
 CCPR(Component-Component plus Residual)은 특정한 하나의 변수의 영향을 살펴보기 위한 것이다.
 
