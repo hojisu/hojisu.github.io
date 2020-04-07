@@ -71,3 +71,4 @@
         - [정상확률과정 & 에르고딕성질](posts/datascience/timeseries/0602stationary-process.md)
         - [백색잡음 & 랜덤워크](posts/datascience/timeseries/0603whitenoise-randomwork.md)
         - [추세 & 계절성](posts/datascience/timeseries/0604trend-season.md)
+        - [일반선형확률과정 모형](posts/datascience/timeseries/0701general-linear-process.md)
