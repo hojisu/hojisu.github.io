@@ -1,3 +1,5 @@
+<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
 # 일반 선형확률과정 모형(general linear precess model)
 
 일반 선형확률과정 모형은 정상 확률 과정(stationary process)에서 가장 일반적으로 사용되는 모형이다. 시계열이 가우시안 백색 잡음의 현재 값과 과거 값들의 선형 조합으로 이루어져 있다고 가정한다.
