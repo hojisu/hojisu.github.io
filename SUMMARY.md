@@ -61,3 +61,4 @@
         - [레버리지와 아웃라이어](posts/datascience/regression/0402laverage-outlier.md)
         - [분산분석](posts/datascience/regression/0403anova.md)
         - [교차검증](posts/datascience/regression/0404crossvalidation.md)
+        - [회귀분석 모형의 진단](posts/datascience/regression/0404regression-diagnosis.md)
