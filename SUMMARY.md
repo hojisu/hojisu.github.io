@@ -68,3 +68,4 @@
         - [정규화](posts/datascience/regression/0504regularize.md)
     - [시계열 분석](posts/datascience/timeseries/README.md)
         - [시계열 자료와 확률과정](posts/datascience/timeseries/0601timeseries-stochastic-process.md)
+        - [정상확률과정 & 에르고딕성질](posts/datascience/timeseries/0602stationary-process.md)
