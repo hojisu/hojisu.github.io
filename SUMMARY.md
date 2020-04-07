@@ -60,3 +60,4 @@
         - [확률론적 선형회귀 모형](posts/datascience/regression/0401probability-linear-regression.md)
         - [레버리지와 아웃라이어](posts/datascience/regression/0402laverage-outlier.md)
         - [분산분석](posts/datascience/regression/0403anova.md)
+        - [교차검증](posts/datascience/regression/0404crossvalidation.md)
