@@ -62,3 +62,4 @@
         - [분산분석](posts/datascience/regression/0403anova.md)
         - [교차검증](posts/datascience/regression/0404crossvalidation.md)
         - [회귀분석 모형의 진단](posts/datascience/regression/0404regression-diagnosis.md)
+        - [비선형모형 변형방법](posts/datascience/regression/0501non-linear-model-trans.md)
