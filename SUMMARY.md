@@ -58,3 +58,4 @@
         - [스케일링 & 조건수](posts/datascience/regression/0304scale.md)
         - [풀랭크 & 축소랭크 방식](posts/datascience/regression/0305dummy-variable.md)
         - [확률론적 선형회귀 모형](posts/datascience/regression/0401probability-linear-regression.md)
+        - [레버리지와 아웃라이어](posts/datascience/regression/0402laverage-outlier.md)
