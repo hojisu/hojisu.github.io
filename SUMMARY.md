@@ -57,3 +57,4 @@
         - [누락데이터 처리](posts/datascience/regression/0301missingdata.md)
         - [스케일링 & 조건수](posts/datascience/regression/0304scale.md)
         - [풀랭크 & 축소랭크 방식](posts/datascience/regression/0305dummy-variable.md)
+        - [확률론적 선형회귀 모형](posts/datascience/regression/0401probability-linear-regression.md)
