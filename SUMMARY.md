@@ -66,3 +66,5 @@
         - [기저함수모형과 과최적화](posts/datascience/regression/0502basis-function-overfit.md)
         - [다중공선성](posts/datascience/regression/0503multicollinearity.md)
         - [정규화](posts/datascience/regression/0504regularize.md)
+    - [시계열 분석](posts/datascience/timeseries/README.md)
+        - [시계열 자료와 확률과정](posts/datascience/timeseries/0601timeseries-stochastic-process.md)
