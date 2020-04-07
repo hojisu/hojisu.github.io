@@ -53,3 +53,4 @@
         - [데이터와 파이썬 패키지](posts/datascience/regression/0102python-package-data.md)
         - [선형 회귀분석](posts/datascience/regression/0201linear-regression.md)
         - [회귀분석의 기하학](posts/datascience/regression/0202regression-geometry.md)
+        - [부분 회귀](posts/datascience/regression/0203partial-regression.md)
