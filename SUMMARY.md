@@ -63,3 +63,4 @@
         - [교차검증](posts/datascience/regression/0404crossvalidation.md)
         - [회귀분석 모형의 진단](posts/datascience/regression/0404regression-diagnosis.md)
         - [비선형모형 변형방법](posts/datascience/regression/0501non-linear-model-trans.md)
+        - [기저함수모형과 과최적화](posts/datascience/regression/0502basis-function-overfit.md)
