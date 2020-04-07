@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>회귀분석 · GitBook</title>
+        <title>데이터와 파이썬 패키지 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="0101dataintro.html" />
     
-    
-    <link rel="prev" href="../" />
+    <link rel="prev" href="0101dataintro.html" />
     
 
     </head>
@@ -739,7 +737,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="./">
+        <li class="chapter " data-level="1.3.1" data-path="./">
             
                 <a href="./">
             
@@ -766,7 +764,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.2" data-path="0102python-package-data.html">
+        <li class="chapter active" data-level="1.3.1.2" data-path="0102python-package-data.html">
             
                 <a href="0102python-package-data.html">
             
@@ -819,7 +817,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >회귀분석</a>
+        <a href="../../.." >데이터와 파이썬 패키지</a>
     </h1>
 </div>
 
@@ -834,7 +832,87 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC;-&#xC2DC;&#xACC4;&#xC5F4;-&#xBD84;&#xC11D;">&#xD68C;&#xADC0;&#xBD84;&#xC11D;&#xACFC; &#xC2DC;&#xACC4;&#xC5F4; &#xBD84;&#xC11D;</h1>
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xD30C;&#xC774;&#xC36C;-&#xD328;&#xD0A4;&#xC9C0;&#xC640;-&#xB370;&#xC774;&#xD130;">&#xD30C;&#xC774;&#xC36C; &#xD328;&#xD0A4;&#xC9C0;&#xC640; &#xB370;&#xC774;&#xD130;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#statsmodels-&#xD328;&#xD0A4;&#xC9C0;">statsmodels &#xD328;&#xD0A4;&#xC9C0;</a></li>
+<li><a href="#scikit-learn-&#xD328;&#xD0A4;&#xC9C0;">scikit-learn &#xD328;&#xD0A4;&#xC9C0;</a></li>
+<li><a href="#&#xAC00;&#xC0C1;&#xB370;&#xC774;&#xD130;">&#xAC00;&#xC0C1;&#xB370;&#xC774;&#xD130;</a><ul>
+<li><a href="#makeregression--&#xBA85;&#xB839;&#xC740;-&#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C;-&#xB2E4;&#xC74C;-&#xACFC;&#xC815;&#xC744;-&#xAC70;&#xCCD0;-&#xAC00;&#xC0C1;&#xC758;-&#xB370;&#xC774;&#xD130;&#xB97C;-&#xB9CC;&#xB4E0;&#xB2E4;"><code>make_regression( )</code> &#xBA85;&#xB839;&#xC740; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xC74C; &#xACFC;&#xC815;&#xC744; &#xAC70;&#xCCD0; &#xAC00;&#xC0C1;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</a></li>
+<li><a href="#makeregression--&#xD568;&#xC218;-&#xAD6C;&#xD604;-coeftrue-nfeatures1"><code>make_regression( )</code> &#xD568;&#xC218; &#xAD6C;&#xD604; (coef=True, n_features=1)</a></li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<p>statsmodels &#xD328;&#xD0A4;&#xC9C0; (&#xC2A4;&#xD0EF;&#xCE20;&#xBAA8;&#xB378;&#xC988; &#xD328;&#xD0A4;&#xC9C0;&#xB77C;&#xACE0; &#xC77D;&#xB294;&#xB2E4;.)</p>
+<p>scikit-learn &#xD328;&#xD0A4;&#xC9C0; (&#xC2F8;&#xC774;&#xD0B7;-&#xB7F0; &#xD328;&#xD0A4;&#xC9C0;&#xB77C;&#xACE0; &#xC77D;&#xB294;&#xB2E4;.)</p>
+<h3 id="statsmodels-&#xD328;&#xD0A4;&#xC9C0;">statsmodels &#xD328;&#xD0A4;&#xC9C0;</h3>
+<p>&#xAC80;&#xC815; &#xBC0F; &#xCD94;&#xC815; (test and estimation)</p>
+<p>&#xD68C;&#xADC0;&#xBD84;&#xC11D; (regression analysis)</p>
+<p>&#xC2DC;&#xACC4;&#xC5F4; &#xBD84;&#xC11D; (time-seies analysis)</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> statsmodels.api <span class="hljs-keyword">as</span> sm
+</code></pre>
+<h3 id="scikit-learn-&#xD328;&#xD0A4;&#xC9C0;">scikit-learn &#xD328;&#xD0A4;&#xC9C0;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sklearn <span class="hljs-keyword">as</span> sk
+</code></pre>
+<h3 id="&#xAC00;&#xC0C1;&#xB370;&#xC774;&#xD130;">&#xAC00;&#xC0C1;&#xB370;&#xC774;&#xD130;</h3>
+<p><code>make_regression()</code> : &#xD68C;&#xADC0;&#xBD84;&#xC11D; &#xACB0;&#xACFC;&#xB97C; &#xAC80;&#xC99D;&#xD558;&#xAE30; &#xC704;&#xD574; &#xAC00;&#xC0C1;&#xC758; &#xB370;&#xC774;&#xD130;&#xAC00; &#xD544;&#xC694;&#xD55C; &#xACBD;&#xC6B0; &#xC0AC;&#xC6A9;</p>
+<pre><code class="lang-python">X, y = make_regression(n_samples, n_features, bias, noise, random_state)
+</code></pre>
+<pre><code class="lang-python">X, y, w = make_regression(... coef=<span class="hljs-keyword">True</span>)
+</code></pre>
+<p><code>n_samples</code>: &#xC815;&#xC218; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; 100)</p>
+<p>&#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xC758; &#xAC2F;&#xC218; &#x1D441;N</p>
+<p><code>n_features</code> : &#xC815;&#xC218; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; 100)</p>
+<p>&#xB3C5;&#xB9BD; &#xBCC0;&#xC218;(feature)&#xC758; &#xC218;(&#xCC28;&#xC6D0;) &#x1D440;M</p>
+<p><code>bias</code>: &#xC2E4;&#xC218; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; 0.0)</p>
+<p>y &#xC808;&#xD3B8;</p>
+<p><code>noise</code>: &#xC2E4;&#xC218; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; 0.0)</p>
+<p>&#xCD9C;&#xB825; &#xC989;, &#xC885;&#xC18D; &#xBCC0;&#xC218;&#xC5D0; &#xB354;&#xD574;&#xC9C0;&#xB294; &#xC7A1;&#xC74C; &#x1D716;&#x3F5;&#xC758; &#xD45C;&#xC900;&#xD3B8;&#xCC28;</p>
+<p><code>random_state</code>: &#xC815;&#xC218; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; None)</p>
+<p>&#xB09C;&#xC218; &#xBC1C;&#xC0DD;&#xC6A9; &#xC2DC;&#xB4DC;&#xAC12;</p>
+<p><code>coef</code>: &#xBD88;&#xB9AC;&#xC5B8; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; False)</p>
+<p>True &#xC774;&#xBA74; &#xC120;&#xD615; &#xBAA8;&#xD615;&#xC758; &#xACC4;&#xC218;&#xB3C4; &#xCD9C;&#xB825;</p>
+<p>&#xCD9C;&#xB825;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;</p>
+<p><code>X</code>: [<code>n_samples</code>, <code>n_features</code>] &#xD615;&#xC0C1;&#xC758; 2&#xCC28;&#xC6D0; &#xBC30;&#xC5F4;</p>
+<p>&#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xC758; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130; &#xD589;&#xB82C; X</p>
+<p><code>y</code>: [<code>n_samples</code>] &#xD615;&#xC0C1;&#xC758; 1&#xCC28;&#xC6D0; &#xBC30;&#xC5F4;</p>
+<p>&#xC885;&#xC18D; &#xBCC0;&#xC218;&#xC758; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130; &#xBCA1;&#xD130; &#x1D466;y</p>
+<p><code>coef</code>: [<code>n_features</code>] &#xD615;&#xC0C1;&#xC758; 1&#xCC28;&#xC6D0; &#xBC30;&#xC5F4; &#xB610;&#xB294; [<code>n_features</code>, <code>n_targets</code>] &#xD615;&#xC0C1;&#xC758; 2&#xCC28;&#xC6D0; &#xBC30;&#xC5F4; (&#xC635;&#xC158;)</p>
+<p>&#xC120;&#xD615; &#xBAA8;&#xD615;&#xC758; &#xACC4;&#xC218; &#xBCA1;&#xD130; &#x1D464;, &#xC785;&#xB825; &#xC778;&#xC218; <code>coef</code>&#xAC00; True &#xC778; &#xACBD;&#xC6B0;&#xC5D0;&#xB9CC; &#xCD9C;&#xB825;&#xB428;</p>
+<h4 id="makeregression--&#xBA85;&#xB839;&#xC740;-&#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C;-&#xB2E4;&#xC74C;-&#xACFC;&#xC815;&#xC744;-&#xAC70;&#xCCD0;-&#xAC00;&#xC0C1;&#xC758;-&#xB370;&#xC774;&#xD130;&#xB97C;-&#xB9CC;&#xB4E0;&#xB2E4;"><code>make_regression( )</code> &#xBA85;&#xB839;&#xC740; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xC74C; &#xACFC;&#xC815;&#xC744; &#xAC70;&#xCCD0; &#xAC00;&#xC0C1;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</h4>
+<ol>
+<li>&#xB3C5;&#xB9BD;&#xBCC0;&#xC218; &#xB370;&#xC774;&#xD130; &#xD589;&#xB82C; <code>X</code>&#xB97C; &#xBB34;&#xC791;&#xC704;&#xB85C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+<li>&#xC885;&#xC18D;&#xBCC0;&#xC218;&#xC640; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xB97C; &#xC5F0;&#xACB0;&#xD558;&#xB294; &#xAC00;&#xC911;&#xCE58; &#xBCA1;&#xD130; <code>w</code>&#xB97C; &#xBB34;&#xC791;&#xC704;&#xB85C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+<li><code>X</code>&#xC640; <code>w</code>&#xB97C; &#xB0B4;&#xC801;&#xD558;&#xACE0; y&#xC808;&#xD3B8; <code>b</code> &#xAC12;&#xC744; &#xB354;&#xD558;&#xC5EC; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xC640; &#xC644;&#xC804;&#xC120;&#xD615;&#xC778; &#xC885;&#xC18D;&#xBCC0;&#xC218; &#xBCA1;&#xD130; <code>y_0</code>&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+<li>&#xAE30;&#xB313;&#xAC12;&#xC774; 0&#xC774;&#xACE0; &#xD45C;&#xC900;&#xD3B8;&#xCC28;&#xAC00; <code>noise</code>&#xC778; &#xC815;&#xADDC;&#xBD84;&#xD3EC;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC7A1;&#xC74C; <code>epsilon</code>&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+<li>&#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xC640; &#xC644;&#xC804;&#xC120;&#xD615;&#xC778; &#xC885;&#xC18D;&#xBCC0;&#xC218; &#xBCA1;&#xD130; <code>y_0</code>&#xC5D0; &#xC7A1;&#xC74C; <code>epsilon</code>&#xC744; &#xB354;&#xD574;&#xC11C; &#xC885;&#xC18D;&#xBCC0;&#xC218; &#xB370;&#xC774;&#xD130; &#x1D466;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+</ol>
+<p><script type="math/tex; mode=display">
+y = w^Tx + b + \epsilon
+</script></p>
+<h4 id="makeregression--&#xD568;&#xC218;-&#xAD6C;&#xD604;-coeftrue-nfeatures1"><code>make_regression( )</code> &#xD568;&#xC218; &#xAD6C;&#xD604; (coef=True, n_features=1)</h4>
+<pre><code class="lang-python">coef=<span class="hljs-keyword">True</span>, n_features=<span class="hljs-number">1</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_regression</span><span class="hljs-params">(n_sample, bias, noise, random_state=None)</span>:</span>
+    np.random.seed(random_state)
+    n_sample = np.random.rand(n_sample)
+    w = np.random.rand()*<span class="hljs-number">100</span>
+    epsilon = np.random.randn(n_sample)*noise
+    y_0 = (n_sample * w) + bias + epsilon
+    <span class="hljs-keyword">return</span> n_sample, y_0, w
+</code></pre>
+<p><code>n_features</code> &#xC989;, &#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xAC00; 2&#xAC1C;&#xC778; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xC2A4;&#xCE90;&#xD130; &#xD50C;&#xB86F;&#xC744; &#xADF8;&#xB9AC;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. &#xC885;&#xC18D; &#xBCC0;&#xC218; &#xAC12;&#xC740; &#xC810;&#xC758; &#xBA85;&#xC554;&#xC73C;&#xB85C; &#xD45C;&#xC2DC;&#xD558;&#xC600;&#xB2E4;.</p>
+<p><code>make_regression</code> &#xBA85;&#xB839;&#xC740; &#xC704;&#xC5D0;&#xC11C; &#xC124;&#xBA85;&#xD55C; &#xC778;&#xC218; &#xC774;&#xC678;&#xC5D0;&#xB3C4; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC778;&#xC218;&#xB97C; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><code>n_informative</code>: &#xC815;&#xC218; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; 10)</p>
+<p>&#xB3C5;&#xB9BD; &#xBCC0;&#xC218;(feature) &#xC911; &#xC2E4;&#xC81C;&#xB85C; &#xC885;&#xC18D; &#xBCC0;&#xC218;&#xC640; &#xC0C1;&#xAD00; &#xAD00;&#xACC4;&#xAC00; &#xC788;&#xB294; &#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xC758; &#xC218;(&#xCC28;&#xC6D0;)</p>
+<p><code>effective_rank</code>: &#xC815;&#xC218; &#xB610;&#xB294; None (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; None)</p>
+<p>&#xB3C5;&#xB9BD; &#xBCC0;&#xC218;(feature) &#xC911; &#xC11C;&#xB85C; &#xB3C5;&#xB9BD;&#xC778; &#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xC758; &#xC218;. &#xB9CC;&#xC57D; None&#xC774;&#xBA74; &#xBAA8;&#xB450; &#xB3C5;&#xB9BD;</p>
+<p><code>tail_strength</code>: 0&#xBD80;&#xD130; 1&#xC0AC;&#xC774;&#xC758; &#xC2E4;&#xC218; (&#xC635;&#xC158;, &#xB514;&#xD3F4;&#xD2B8; 0.5)</p>
+<p><code>effective_rank</code>&#xAC00; None&#xC774; &#xC544;&#xB2CC; &#xACBD;&#xC6B0; &#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xAC04;&#xC758; &#xC0C1;&#xAD00;&#xAD00;&#xACC4;&#xB97C; &#xACB0;&#xC815;&#xD558;&#xB294; &#xBCC0;&#xC218;. 0.5&#xBA74; &#xB3C5;&#xB9BD; &#xBCC0;&#xC218;&#xAC04;&#xC758; &#xC0C1;&#xAD00;&#xAD00;&#xACC4;&#xAC00; &#xC5C6;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -862,14 +940,10 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 데이터 사이언스">
+                <a href="0101dataintro.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 데이터분석 기초">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="0101dataintro.html" class="navigation navigation-next " aria-label="Next page: 데이터분석 기초">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -878,7 +952,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"회귀분석","level":"1.3.1","depth":2,"next":{"title":"데이터분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regression/0101dataintro.md","ref":"posts/datascience/regression/0101dataintro.md","articles":[]},"previous":{"title":"데이터 사이언스","level":"1.3","depth":1,"path":"posts/datascience/README.md","ref":"posts/datascience/README.md","articles":[{"title":"회귀분석","level":"1.3.1","depth":2,"path":"posts/datascience/regression/README.md","ref":"posts/datascience/regression/README.md","articles":[{"title":"데이터분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regression/0101dataintro.md","ref":"posts/datascience/regression/0101dataintro.md","articles":[]},{"title":"데이터와 파이썬 패키지","level":"1.3.1.2","depth":3,"path":"posts/datascience/regression/0102python-package-data.md","ref":"posts/datascience/regression/0102python-package-data.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/regression/README.md","mtime":"2020-04-05T11:31:13.826Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-07T02:36:06.926Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"데이터와 파이썬 패키지","level":"1.3.1.2","depth":3,"previous":{"title":"데이터분석 기초","level":"1.3.1.1","depth":3,"path":"posts/datascience/regression/0101dataintro.md","ref":"posts/datascience/regression/0101dataintro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/regression/0102python-package-data.md","mtime":"2020-04-07T02:34:26.162Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-07T02:36:06.926Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
