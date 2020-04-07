@@ -51,3 +51,4 @@
     - [회귀분석](posts/datascience/regression/README.md)
         - [데이터분석 기초](posts/datascience/regression/0101dataintro.md)
         - [데이터와 파이썬 패키지](posts/datascience/regression/0102python-package-data.md)
+        - [선형 회귀분석](posts/datascience/regression/0201linear-regression.md)
