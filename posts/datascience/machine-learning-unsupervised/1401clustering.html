@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>머신러닝-비지도학습 · GitBook</title>
+        <title>군집화 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1401clustering.html" />
     
-    
-    <link rel="prev" href="../machine-learning-supervised/1203featureselection.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -1251,7 +1249,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="./">
+        <li class="chapter " data-level="1.3.4" data-path="./">
             
                 <a href="./">
             
@@ -1265,7 +1263,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.4.1" data-path="1401clustering.html">
+        <li class="chapter active" data-level="1.3.4.1" data-path="1401clustering.html">
             
                 <a href="1401clustering.html">
             
@@ -1318,7 +1316,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >머신러닝-비지도학습</a>
+        <a href="../../.." >군집화</a>
     </h1>
 </div>
 
@@ -1333,7 +1331,92 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xBA38;&#xC2E0;&#xB7EC;&#xB2DD;---&#xBE44;&#xC9C0;&#xB3C4;-&#xD559;&#xC2B5;">&#xBA38;&#xC2E0;&#xB7EC;&#xB2DD; - &#xBE44;&#xC9C0;&#xB3C4; &#xD559;&#xC2B5;</h1>
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xAD70;&#xC9D1;&#xD654;-clustering">&#xAD70;&#xC9D1;&#xD654; clustering</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#&#xAD70;&#xC9D1;&#xD654;-clustering">&#xAD70;&#xC9D1;&#xD654; (clustering)</a></li>
+<li><a href="#&#xAD70;&#xC9D1;&#xD654;-&#xBC29;&#xBC95;">&#xAD70;&#xC9D1;&#xD654; &#xBC29;&#xBC95;</a></li>
+<li><a href="#&#xAD70;&#xC9D1;&#xD654;-&#xC131;&#xB2A5;&#xAE30;&#xC900;">&#xAD70;&#xC9D1;&#xD654; &#xC131;&#xB2A5;&#xAE30;&#xC900;</a><ul>
+<li><a href="#&#xC77C;&#xCE58;&#xD589;&#xB82C;">&#xC77C;&#xCE58;&#xD589;&#xB82C;</a></li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="summary">Summary</h3>
+<ul>
+<li>&#xAD70;&#xC9D1;&#xD654;(clustering)&#xB780; &#xC8FC;&#xC5B4;&#xC9C4; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC744; &#xC720;&#xC0AC;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xC758; &#xADF8;&#xB8F9;&#xC73C;&#xB85C; &#xB098;&#xB204;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xBE44;&#xC9C0;&#xB3C4; &#xD559;&#xC2B5;&#xC774;&#xB2E4;.</li>
+<li>&#xC870;&#xC815; &#xB79C;&#xB4DC;&#xC9C0;&#xC218;(Adjusted Rand Index)&#xB294; &#xBB34;&#xC791;&#xC704; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xC5D0;&#xC11C; &#xC0DD;&#xAE30;&#xB294; &#xB79C;&#xB4DC;&#xC9C0;&#xC218; &#xAE30;&#xB313;&#xAC12;&#xC744; &#xC6D0;&#xB798; &#xB79C;&#xB4DC;&#xC9C0;&#xC218; &#xAC12;&#xC5D0; &#xBE7C;&#xC11C; &#xAE30;&#xB313;&#xAC12;&#xACFC; &#xBD84;&#xC0B0;&#xC744; &#xC7AC;&#xC870;&#xC815;&#xD55C; &#xAC83;&#xC774;&#xB2E4;. &#xC815;&#xB2F5;&#xD45C;&#xAC00; &#xC788;&#xB2E4;.</li>
+<li>&#xC870;&#xC815; &#xC0C1;&#xD638;&#xC815;&#xBCF4;&#xB7C9;(Adjusted Mutual Information)&#xC740; &#xB450; &#xD655;&#xB960;&#xBCC0;&#xC218; &#xC758;&#xC874;&#xC131;&#xC774; &#xAC15;&#xD558;&#xAC70;&#xB098; &#xAD70;&#xC9D1;&#xC758; &#xAC1C;&#xC218;&#xAC00; &#xB9CE;&#xC544;&#xC838; &#xC0C1;&#xD638;&#xC815;&#xBCF4;&#xB7C9;&#xC774; &#xC99D;&#xAC00;&#xD558;&#xC5EC; &#xC62C;&#xBC14;&#xB978; &#xBE44;&#xAD50;&#xAC00; &#xC5B4;&#xB824;&#xC6B8; &#xB54C; &#xC0C1;&#xD638;&#xC815;&#xBCF4;&#xB7C9;&#xC758; &#xAE30;&#xB313;&#xAC12;&#xC744; &#xBE7C;&#xC11C; &#xC7AC;&#xC870;&#xC815;&#xD55C; &#xAC83;&#xC774;&#xB2E4;. &#xC815;&#xB2F5;&#xD45C;&#xAC00; &#xC788;&#xB2E4;. (&#xC870;&#xC815;&#xB79C;&#xB4DC;&#xC9C0;&#xC218;&#xC640; &#xBE44;&#xC2B7;&#xD568;)</li>
+<li>&#xC2E4;&#xB8E8;&#xC5E3;&#xACC4;&#xC218;(silhouette Coefficient)&#xB294; &#xC815;&#xB2F5;&#xC815;&#xBCF4;&#xAC00; &#xC5C6;&#xC744; &#xACBD;&#xC6B0; &#xAD70;&#xC9D1;&#xD654; &#xC131;&#xB2A5;&#xC744; &#xD310;&#xB2E8;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;. &#xC2E4;&#xB8E8;&#xC5E3; &#xACC4;&#xC218;&#xAC00; &#xD074;&#xC218;&#xB85D; &#xC88B;&#xC740; &#xAD70;&#xC9D1;&#xD654;&#xC774;&#xB2E4;. &#xAD70;&#xC9D1;&#xC758; &#xAC1C;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC815;&#xD574;&#xC8FC;&#xC5B4;&#xC57C; &#xD560; &#xB54C; &#xB3C4;&#xC6C0;&#xC774; &#xB41C;&#xB2E4;. &#xAD70;&#xC9D1;&#xC758; &#xD615;&#xC0C1;&#xC774; &#xBCF5;&#xC7A1;&#xD558;&#xAC70;&#xB098; &#xD06C;&#xAE30;&#xC758; &#xCC28;&#xC774;&#xAC00; &#xB9CE;&#xC774;&#xB098;&#xBA74; &#xC815;&#xC0C1;&#xBE44;&#xAD50;&#xAC00; &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;. </li>
+</ul>
+<hr>
+<h3 id="&#xAD70;&#xC9D1;&#xD654;-clustering">&#xAD70;&#xC9D1;&#xD654; (clustering)</h3>
+<p>&#xAD70;&#xC9D1;&#xD654;(clustering)&#xB294; &#xC8FC;&#xC5B4;&#xC9C4; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC744; &#xC720;&#xC0AC;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xC758; &#xADF8;&#xB8F9;&#xC73C;&#xB85C; &#xB098;&#xB204;&#xB294; &#xAC83;&#xC774;&#xB2E4;. &#xAD70;&#xC9D1;(cluster)&#xC740; &#xAD70;&#xC9D1;&#xD654;&#xC73C;&#xB85C; &#xB098;&#xB204;&#xC5B4;&#xC9C4; &#xC720;&#xC0AC;&#xD55C; &#xB370;&#xC774;&#xD130;&#xC758; &#xADF8;&#xB8F9;&#xC774;&#xACE0; &#xAD70;&#xC9D1;&#xD654;&#xB294; &#xC608;&#xCE21; &#xBB38;&#xC81C;&#xC640; &#xB2EC;&#xB9AC; &#xD2B9;&#xC815;&#xD55C; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218;&#xC640; &#xC885;&#xC18D;&#xBCC0;&#xC218;&#xC758; &#xAD6C;&#xBD84;&#xB3C4; &#xC5C6;&#xACE0; &#xD559;&#xC2B5;&#xC744; &#xC704;&#xD55C; &#xBAA9;&#xD46F;&#xAC12;&#xB3C4; &#xD544;&#xC694;&#xB85C; &#xD558;&#xC9C0; &#xC54A;&#xB294; &#xBE44;&#xC9C0;&#xB3C4;&#xD559;&#xC2B5;&#xC758; &#xC77C;&#xC885;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xAD70;&#xC9D1;&#xD654;-&#xBC29;&#xBC95;">&#xAD70;&#xC9D1;&#xD654; &#xBC29;&#xBC95;</h3>
+<ul>
+<li>K-&#xD3C9;&#xADE0; &#xAD70;&#xC9D1;&#xD654; (K-means Clustering)</li>
+<li>&#xB514;&#xBE44;&#xC2A4;&#xCE94; &#xAD70;&#xC9D1;&#xD654;(DBSCAN Clustering)</li>
+<li>&#xC720;&#xC0AC;&#xB3C4; &#xC804;&#xD30C; &#xAD70;&#xC9D1;&#xD654;(Affinity Propagation Clustering)</li>
+<li>&#xACC4;&#xCE35;&#xC801; &#xAD70;&#xC9D1;&#xD654;(Hierarhical Clustering)</li>
+<li>&#xC2A4;&#xD399;&#xD2B8;&#xB7F4; &#xAD70;&#xC9D1;&#xD654;(Spectral Clustering)</li>
+</ul>
+<p>&#xAD70;&#xC9D1;&#xD654; &#xBC29;&#xBC95;&#xC740; &#xC0AC;&#xC6A9;&#xBC95;&#xACFC; &#xBAA8;&#xC218; &#xB4F1;&#xC774; &#xC11C;&#xB85C; &#xB2E4;&#xB974;&#xB2E4;. K-&#xD3C9;&#xADE0;&#xBC95;, &#xC2A4;&#xD399;&#xD2B8;&#xB7F4; &#xAD70;&#xC9D1;&#xD654; &#xB4F1;&#xC740; &#xAD70;&#xC9D1;&#xC758; &#xAC1C;&#xC218;&#xB97C; &#xBBF8;&#xB9AC; &#xC9C0;&#xC815;&#xD574;&#xC8FC;&#xC5B4;&#xC57C; &#xD558;&#xC9C0;&#xB9CC; &#xB514;&#xBE44;&#xC2A4;&#xCE94;, &#xC720;&#xC0AC;&#xB3C4; &#xC804;&#xD30C;&#xBC95; &#xB4F1;&#xC740; &#xAD70;&#xC9D1;&#xC758; &#xAC1C;&#xC218;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xB2E4;. &#xB2E4;&#xB9CC; &#xC774; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xBAA8;&#xD615;&#xC5D0; &#xB530;&#xB77C; &#xD2B9;&#xBCC4;&#xD55C; &#xBAA8;&#xC218;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC8FC;&#xC5B4;&#xC57C; &#xD558;&#xB294;&#xB370; &#xC774; &#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC5D0; &#xB530;&#xB77C; &#xAD70;&#xC9D1;&#xD654; &#xAC1C;&#xC218;&#xAC00; &#xB2EC;&#xB77C;&#xC9C8; &#xC218; &#xC788;&#xB2E4;. </p>
+<h3 id="&#xAD70;&#xC9D1;&#xD654;-&#xC131;&#xB2A5;&#xAE30;&#xC900;">&#xAD70;&#xC9D1;&#xD654; &#xC131;&#xB2A5;&#xAE30;&#xC900;</h3>
+<ul>
+<li>&#xC870;&#xC815; &#xB79C;&#xB4DC;&#xC9C0;&#xC218;(Adjusted Rand Index) </li>
+<li>&#xC870;&#xC815; &#xC0C1;&#xD638;&#xC815;&#xBCF4;&#xB7C9;(Adjusted Mutual Information)</li>
+<li>&#xC2E4;&#xB8E8;&#xC5E3;&#xACC4;&#xC218;(silhouette Coefficient)</li>
+</ul>
+<h4 id="&#xC77C;&#xCE58;&#xD589;&#xB82C;">&#xC77C;&#xCE58;&#xD589;&#xB82C;</h4>
+<p>&#xB79C;&#xB4DC;&#xC9C0;&#xC218;&#xB97C; &#xAD6C;&#xD558;&#xB824;&#xBA74; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC6D0;&#xB798; &#xC5B4;&#xB5BB;&#xAC8C; &#xAD70;&#xC9D1;&#xD654;&#xB418;&#xC5B4; &#xC788;&#xC5B4;&#xC57C; &#xD558;&#xB294;&#xC9C0;&#xB97C; &#xC54C;&#xB824;&#xC8FC;&#xB294; &#xC815;&#xB2F5;(groundtruth)&#xC774; &#xC788;&#xC5B4;&#xC57C;&#xD55C;&#xB2E4;. <script type="math/tex; ">N</script>&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC5D0;&#xC11C; <script type="math/tex; ">i, j</script> &#xB450; &#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC120;&#xD0DD;&#xD558;&#xC600;&#xC744; &#xB54C; &#xADF8; &#xB450; &#xB370;&#xC774;&#xD130;&#xAC00; &#xAC19;&#xC740; &#xAD70;&#xC9D1;&#xC5D0; &#xC18D;&#xD558;&#xBA74; 1, &#xB2E4;&#xB978; &#xAD70;&#xC9D1;&#xC5D0; &#xC18D;&#xD558;&#xBA74; 0&#xC774;&#xB77C;&#xACE0; &#xD558;&#xC790;. &#xC774; &#xAC12;&#xC740; <script type="math/tex; ">N</script> x <script type="math/tex; ">N</script> &#xD589;&#xB82C; <script type="math/tex; ">T</script> &#xB85C; &#xB098;&#xD0C0;&#xB0B4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+T_{ij} = 
+\begin{cases} 
+1 & \text{ </script>i<script type="math/tex; ">와 </script>j<script type="math/tex; ">가 같은 군집} \\
+0 & \text{ </script>i<script type="math/tex; ">와 </script>j<script type="math/tex; ">가 다른 군집} \\
+\end{cases}
+</script></p>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; {0, 1, 2, 3, 4} &#xB77C;&#xB294; 5&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC5D0;&#xC11C; {0, 1, 2} &#xC640; {3, 4}&#xAC00; &#xAC01;&#xAC01; &#xAC19;&#xC740; &#xAD70;&#xC9D1;&#xC774;&#xBA74; &#xD589;&#xB82C; T&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;</p>
+<pre><code class="lang-python">groundtruth = np.array([
+  [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+  [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+  [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+  [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+  [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+])
+</code></pre>
+<p>&#xC774;&#xC81C; &#xAD70;&#xC9D1;&#xD654; &#xACB0;&#xACFC;&#xB97C; &#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xD589;&#xB82C; <script type="math/tex; ">C</script>&#xB85C; &#xD45C;&#xC2DC;&#xD558;&#xC790;. &#xB9CC;&#xC57D; &#xAD70;&#xC9D1;&#xD654;&#xAC00; &#xC815;&#xD655;&#xD558;&#xB2E4;&#xBA74; &#xC774; &#xD589;&#xB82C;&#xC740; &#xC815;&#xB2F5;&#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB9CC;&#xB4E0; &#xD589;&#xB82C;&#xACFC; &#xAC70;&#xC758; &#xAC19;&#xC740; &#xAC12;&#xC744; &#xAC00;&#xC838;&#xC57C; &#xD55C;&#xB2E4;. &#xB9CC;&#xC57D; &#xAD70;&#xC9D1;&#xD654; &#xACB0;&#xACFC;&#xAC00; {0, 1}&#xACFC; {2, 3, 4}&#xAC00; &#xAC19;&#xC740; &#xAD70;&#xC9D1;&#xC774;&#xB77C;&#xBA74; &#xD589;&#xB82C; <script type="math/tex; ">C</script> &#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<pre><code class="lang-python">clustering = np.array([
+  [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+  [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+  [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+  [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+  [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+])
+</code></pre>
+<p>&#xC77C;&#xCE58;&#xD589;&#xB82C;(incidence matrix)&#xC740; &#xC704; &#xB450; &#xD589;&#xB82C;&#xC758; &#xBAA8;&#xB4E0; &#xC6D0;&#xC18C;&#xC5D0; &#xB300;&#xD574; &#xAC12;&#xC774; &#xAC19;&#xC73C;&#xBA74; 1, &#xB2E4;&#xB974;&#xBA74; 0&#xC73C;&#xB85C; &#xACC4;&#xC0B0;&#xD55C; &#xD589;&#xB82C;&#xC774;&#xB2E4;. &#xC989;, &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC5D0;&#xC11C; &#xB9CC;&#xB4E4;&#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xB370;&#xC774;&#xD130; &#xC30D;&#xC5D0; &#xB300;&#xD574; &#xC815;&#xB2F5;&#xACFC; &#xAD70;&#xC9D1;&#xD654; &#xACB0;&#xACFC;&#xC5D0;&#xC11C; &#xB3D9;&#xC77C;&#xD55C; &#xAC12;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xBA74; 1, &#xB2E4;&#xB974;&#xBA74; 0&#xC774; &#xB41C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+R_{ij} = 
+\begin{cases} 
+1 & \text{ if } T_{ij} = C_{ij} \\
+0 & \text{ if } T_{ij} \neq C_{ij} \\
+\end{cases}
+</script></p>
+<pre><code class="lang-python">incidence = <span class="hljs-number">1</span> * (groundtruth == clustering)  <span class="hljs-comment"># 1*&#xB294; True/False&#xB97C; &#xC22B;&#xC790; 0/1&#xB85C; &#xBC14;&#xAFB8;&#xAE30; &#xC704;&#xD55C; &#xACC4;&#xC0B0; </span>
+incidence
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+        [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+        [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+        [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+        [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]])
+</code></pre>
 
                                 
                                 </section>
@@ -1361,14 +1444,10 @@
 
             
                 
-                <a href="../machine-learning-supervised/1203featureselection.html" class="navigation navigation-prev " aria-label="Previous page: 특징변수 선택">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 머신러닝-비지도학습">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="1401clustering.html" class="navigation navigation-next " aria-label="Next page: 군집화">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1377,7 +1456,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"머신러닝-비지도학습","level":"1.3.4","depth":2,"next":{"title":"군집화","level":"1.3.4.1","depth":3,"path":"posts/datascience/machine-learning-unsupervised/1401clustering.md","ref":"posts/datascience/machine-learning-unsupervised/1401clustering.md","articles":[]},"previous":{"title":"특징변수 선택","level":"1.3.3.13","depth":3,"path":"posts/datascience/machine-learning-supervised/1203featureselection.md","ref":"posts/datascience/machine-learning-supervised/1203featureselection.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-unsupervised/README.md","mtime":"2020-04-08T09:32:38.407Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T09:53:54.520Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"군집화","level":"1.3.4.1","depth":3,"previous":{"title":"머신러닝-비지도학습","level":"1.3.4","depth":2,"path":"posts/datascience/machine-learning-unsupervised/README.md","ref":"posts/datascience/machine-learning-unsupervised/README.md","articles":[{"title":"군집화","level":"1.3.4.1","depth":3,"path":"posts/datascience/machine-learning-unsupervised/1401clustering.md","ref":"posts/datascience/machine-learning-unsupervised/1401clustering.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-unsupervised/1401clustering.md","mtime":"2020-04-08T09:53:18.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T09:53:54.520Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
