@@ -80,3 +80,4 @@
         - [나이브베이즈 분류모형](posts/datascience/machine-learning-supervised/0702naive.md)
         - [의사결정나무](posts/datascience/machine-learning-supervised/0801decisiontree.md)
         - [앙상블모형](posts/datascience/machine-learning-supervised/0901ensemble.md)
+        - [퍼셉트론](posts/datascience/machine-learning-supervised/1001perceptron.md)
