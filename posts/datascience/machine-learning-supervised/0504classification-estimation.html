@@ -1252,26 +1252,21 @@
 </tr>
 </tbody>
 </table>
-<!-- ~~~python
-from sklearn.metrics import confusion_matrix
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> confusion_matrix
 
-y_true = [2, 0, 2, 2, 0, 1]
-y_pred = [0, 0, 2, 2, 0, 2]
-~~~
+y_true = [<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
+y_pred = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>]
 
 
-~~~python
 confusion_matrix(y_true, y_pred)
 
-# 결과
-array([[2, 0, 0],
-       [0, 0, 1],
-       [1, 0, 2]])
-~~~
-
-첫 행은 실제로 0인 두개의 데이터가 둘 다 정확하게 0으로 예측되었다는 뜻이다. 두번째 행은 실제로 1인 하나의 데이터가 2로 분류되었다는 뜻이다. 마지막 행은 실제로 2인 데이터 3개 중 2개만 정확하게 3으로 분류되었고 하나는 0으로 분류되었다는 뜻이다.
-
-열 기준으로 보면 첫번째 열은 분류 모형이 0이라고 예측한 3개의 데이터 중 2개만 원래 0이었고 하나는 2였다는 뜻이다. 마지막 열은 분류 모형이 2라고 예측한 3개의 데이터 중 2개만 2였고 하나는 1이었다는 의미이다. -->
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+       [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+       [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>]])
+</code></pre>
+<p>&#xCCAB; &#xD589;&#xC740; &#xC2E4;&#xC81C;&#xB85C; 0&#xC778; &#xB450;&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130;&#xAC00; &#xB458; &#xB2E4; &#xC815;&#xD655;&#xD558;&#xAC8C; 0&#xC73C;&#xB85C; &#xC608;&#xCE21;&#xB418;&#xC5C8;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;. &#xB450;&#xBC88;&#xC9F8; &#xD589;&#xC740; &#xC2E4;&#xC81C;&#xB85C; 1&#xC778; &#xD558;&#xB098;&#xC758; &#xB370;&#xC774;&#xD130;&#xAC00; 2&#xB85C; &#xBD84;&#xB958;&#xB418;&#xC5C8;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;. &#xB9C8;&#xC9C0;&#xB9C9; &#xD589;&#xC740; &#xC2E4;&#xC81C;&#xB85C; 2&#xC778; &#xB370;&#xC774;&#xD130; 3&#xAC1C; &#xC911; 2&#xAC1C;&#xB9CC; &#xC815;&#xD655;&#xD558;&#xAC8C; 3&#xC73C;&#xB85C; &#xBD84;&#xB958;&#xB418;&#xC5C8;&#xACE0; &#xD558;&#xB098;&#xB294; 0&#xC73C;&#xB85C; &#xBD84;&#xB958;&#xB418;&#xC5C8;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;.</p>
+<p>&#xC5F4; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xBCF4;&#xBA74; &#xCCAB;&#xBC88;&#xC9F8; &#xC5F4;&#xC740; &#xBD84;&#xB958; &#xBAA8;&#xD615;&#xC774; 0&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; 3&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130; &#xC911; 2&#xAC1C;&#xB9CC; &#xC6D0;&#xB798; 0&#xC774;&#xC5C8;&#xACE0; &#xD558;&#xB098;&#xB294; 2&#xC600;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;. &#xB9C8;&#xC9C0;&#xB9C9; &#xC5F4;&#xC740; &#xBD84;&#xB958; &#xBAA8;&#xD615;&#xC774; 2&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; 3&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130; &#xC911; 2&#xAC1C;&#xB9CC; 2&#xC600;&#xACE0; &#xD558;&#xB098;&#xB294; 1&#xC774;&#xC5C8;&#xB2E4;&#xB294; &#xC758;&#xBBF8;&#xC774;&#xB2E4;.</p>
 <h3 id="&#xC774;&#xC9C4;-&#xBD84;&#xB958;-&#xACB0;&#xACFC;&#xD45C;">&#xC774;&#xC9C4; &#xBD84;&#xB958; &#xACB0;&#xACFC;&#xD45C;</h3>
 <p>&#xD074;&#xB798;&#xC2A4;&#xAC00; 0&#xACFC; 1 &#xB450; &#xC885;&#xB958; &#xBC16;&#xC5D0; &#xC5C6;&#xB294; &#xC774;&#xC9C4; &#xBD84;&#xB958;&#xC758; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xD074;&#xB798;&#xC2A4; &#xC774;&#xB984;&#xC744; &#xC591;&#xC131;(positive) &#xC640; &#xC74C;&#xC131;(Negative)&#xB85C; &#xD45C;&#xC2DC;&#xD55C;&#xB2E4;. </p>
 <p>&#xC774; &#xB54C;&#xC758; &#xACB0;&#xACFC;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; <strong>&#xC774;&#xC9C4; &#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;(Binary Confusion Matrix)</strong> &#xC774;&#xB2E4;.</p>
@@ -1590,7 +1585,7 @@ plt.show()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"분류 성능평가","level":"1.3.3.2","depth":3,"next":{"title":"로지스틱 회귀분석","level":"1.3.3.3","depth":3,"path":"posts/datascience/machine-learning-supervised/0601logistickregression.md","ref":"posts/datascience/machine-learning-supervised/0601logistickregression.md","articles":[]},"previous":{"title":"분류 모형의 종류","level":"1.3.3.1","depth":3,"path":"posts/datascience/machine-learning-supervised/0503classification-model.md","ref":"posts/datascience/machine-learning-supervised/0503classification-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-supervised/0504classification-estimation.md","mtime":"2020-04-08T02:13:14.292Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T02:13:59.415Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"분류 성능평가","level":"1.3.3.2","depth":3,"next":{"title":"로지스틱 회귀분석","level":"1.3.3.3","depth":3,"path":"posts/datascience/machine-learning-supervised/0601logistickregression.md","ref":"posts/datascience/machine-learning-supervised/0601logistickregression.md","articles":[]},"previous":{"title":"분류 모형의 종류","level":"1.3.3.1","depth":3,"path":"posts/datascience/machine-learning-supervised/0503classification-model.md","ref":"posts/datascience/machine-learning-supervised/0503classification-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-supervised/0504classification-estimation.md","mtime":"2020-04-08T02:15:51.570Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T02:17:09.349Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
