@@ -114,4 +114,5 @@
         - [신경망](posts/datascience/deeplearning/01neuralnetwork.md)
         - [그레디언트 소멸 문제](posts/datascience/deeplearning/02gradient-vanishing.md)
         - [신경망 성능 개선 방법](posts/datascience/deeplearning/03neuralnetwork-performance.md)
-        - [신경말 최적화 방법](posts/datascience/deeplearning/04neuralnetwork-optimization.md)
+        - [신경망 최적화 방법](posts/datascience/deeplearning/04neuralnetwork-optimization.md)
+        - [그레디언트 알고리즘 요약](posts/datascience/deeplearning/gd-algorithem.md)
