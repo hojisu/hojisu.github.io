@@ -641,4 +641,4 @@ Contents Based Filtering과 Collaborative Filter을 모두 적용하고, 이의 
 Reference
 - https://rfriend.tistory.com/191
 - https://yeomko.tistory.com/3
-- https://datascienceschool.net/ (데이터사이언티스트스쿨 )
+- https://datascienceschool.net/ (데이터사이언티스트스쿨)
