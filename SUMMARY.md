@@ -77,4 +77,5 @@
         - [분류 성능평가](posts/datascience/machine-learning-supervised/0504classification-estimation.md)
         - [로지스틱 회귀분석](posts/datascience/machine-learning-supervised/0601logistickregression.md)
         - [LDA & QDA](posts/datascience/machine-learning-supervised/0701lda-qda.md)
+        - [나이브베이즈 분류모형](posts/datascience/machine-learning-supervised/0702naive.md)
         
