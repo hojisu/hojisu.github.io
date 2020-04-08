@@ -112,3 +112,4 @@
         - [확률론적 언어 모형](posts/datascience/machine-learning-text/probabilistic-language-model.md)
     - [딥러닝](posts/datascience/deeplearning/README.md)
         - [신경망](posts/datascience/deeplearning/01neuralnetwork.md)
+        - [그레디언트 소멸 문제](posts/datascience/deeplearning/02gradient-vanishing.md)
