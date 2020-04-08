@@ -2,7 +2,7 @@
 
 # 디비스캔 군집화 (DBSCAN: Density-Based Spatial Clustering of Applications with Noise)
 
-##$ Summary
+### Summary
 
 - 디비스캔 군집화는 데이터가 밀집한 정도 즉 밀도를 이용한다. 점이 세밀하게 몰려 있어서 밀도가 높은 부분을 클러스터링 하는 방식이다
 - 어느 점을 기준으로 반경 x내에 점이 n개 이상 있으면 하나의 군집으로 인식하는 방식이다.
