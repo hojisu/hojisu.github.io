@@ -85,3 +85,4 @@
         - [커널 서포트벡터 머신](posts/datascience/machine-learning-supervised/1101kernelsvm.md)
         - [모형 최적화 방법](posts/datascience/machine-learning-supervised/1201modeloptimization.md)
         - [비대칭 데이터 문제](posts/datascience/machine-learning-supervised/1202imbalanceproblem.md)
+        - [특징변수 선택](posts/datascience/machine-learning-supervised/1203featureselection.md)
