@@ -86,6 +86,7 @@
         - [모형 최적화 방법](posts/datascience/machine-learning-supervised/1201modeloptimization.md)
         - [비대칭 데이터 문제](posts/datascience/machine-learning-supervised/1202imbalanceproblem.md)
         - [특징변수 선택](posts/datascience/machine-learning-supervised/1203featureselection.md)
+        - [기계학습 & 인공신경망 요약](posts/datascience/machine-learning-supervised/machine-learning.md)
     - [머신러닝-비지도학습](posts/datascience/machine-learning-unsupervised/README.md)
         - [군집화](posts/datascience/machine-learning-unsupervised/1401clustering.md)
         - [K-Means](posts/datascience/machine-learning-unsupervised/1402kmeans.md)
