@@ -1351,30 +1351,54 @@ weighted avg       0.63      0.57      0.59         7
 <ul>
 <li><code>macro</code>: &#xB2E8;&#xC21C;&#xD3C9;&#xADE0;</li>
 <li><code>weighted</code>: &#xAC01; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD558;&#xB294; &#xD45C;&#xBCF8;&#xC758; &#xAC2F;&#xC218;&#xB85C; &#xAC00;&#xC911;&#xD3C9;&#xADE0;</li>
-<li><p><code>micro</code>: &#xAC01; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC790;&#xC2E0;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC815;&#xD655;&#xD558;&#xAC8C; &#xB9DE;&#xCD98; &#xACBD;&#xC6B0;, &#xC989; &#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;&#xC758; &#xB300;&#xAC01; &#xC131;&#xBD84;&#xC744; True Positive&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xACE0; &#xBE44;&#xB300;&#xAC01; &#xC131;&#xBD84;&#xC744; False Positive&#xC774;&#xBA74;&#xC11C; False Negative&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;. &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xB960;, F1&#xC810;&#xC218;&#xAC00; &#xAC19;&#xC740; &#xAC12;&#xC774; &#xB41C;&#xB2E4;.</p>
-<p>| &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 0 | &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 1 | &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 2 |       |
-| :------------ | :------------ | :------------ | ----- |
-| &#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 0 | TP            | FP/FN         | FP/FN |
-| &#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 1 | FP/FN         | TP            | FP/FN |
-| &#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 2 | FP/FN         | FP/FN         | TP    |</p>
-<pre><code class="lang-python">y_true = [0, 0, 1, 1, 2, 2, 2]
-y_pred = [0, 0, 1, 2, 2, 2, 1]
-target_names = [&apos;class 0&apos;, &apos;class 1&apos;, &apos;class 2&apos;]
-print(classification_report(y_true, y_pred, target_names=target_names))
-
-# &#xACB0;&#xACFC;
-            precision    recall  f1-score   support
-
-   class 0       1.00      1.00      1.00         2
-   class 1       0.50      0.50      0.50         2
-   class 2       0.67      0.67      0.67         3
-
- micro avg       0.71      0.71      0.71         7
- macro avg       0.72      0.72      0.72         7
-weighted avg       0.71      0.71      0.71         7
-</code></pre>
-</li>
+<li><code>micro</code>: &#xAC01; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC790;&#xC2E0;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC815;&#xD655;&#xD558;&#xAC8C; &#xB9DE;&#xCD98; &#xACBD;&#xC6B0;, &#xC989; &#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;&#xC758; &#xB300;&#xAC01; &#xC131;&#xBD84;&#xC744; True Positive&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xACE0; &#xBE44;&#xB300;&#xAC01; &#xC131;&#xBD84;&#xC744; False Positive&#xC774;&#xBA74;&#xC11C; False Negative&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;. &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xB960;, F1&#xC810;&#xC218;&#xAC00; &#xAC19;&#xC740; &#xAC12;&#xC774; &#xB41C;&#xB2E4;.</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 0</th>
+<th style="text-align:left">&#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 1</th>
+<th style="text-align:left">&#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 2</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 0</td>
+<td style="text-align:left">TP</td>
+<td style="text-align:left">FP/FN</td>
+<td>FP/FN</td>
+</tr>
+<tr>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 1</td>
+<td style="text-align:left">FP/FN</td>
+<td style="text-align:left">TP</td>
+<td>FP/FN</td>
+</tr>
+<tr>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 2</td>
+<td style="text-align:left">FP/FN</td>
+<td style="text-align:left">FP/FN</td>
+<td>TP</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-python">  y_true = [0, 0, 1, 1, 2, 2, 2]
+  y_pred = [0, 0, 1, 2, 2, 2, 1]
+  target_names = [&apos;class 0&apos;, &apos;class 1&apos;, &apos;class 2&apos;]
+  print(classification_report(y_true, y_pred, target_names=target_names))
+
+  # &#xACB0;&#xACFC;
+                precision    recall  f1-score   support
+
+       class 0       1.00      1.00      1.00         2
+       class 1       0.50      0.50      0.50         2
+       class 2       0.67      0.67      0.67         3
+
+     micro avg       0.71      0.71      0.71         7
+     macro avg       0.72      0.72      0.72         7
+  weighted avg       0.71      0.71      0.71         7
+</code></pre>
 <h3 id="rocreceiver-operator-characteristic-&#xCEE4;&#xBE0C;">ROC(Receiver Operator Characteristic) &#xCEE4;&#xBE0C;</h3>
 <p>ROC &#xCEE4;&#xBE0C;&#xB294; &#xD074;&#xB798;&#xC2A4; &#xD310;&#xBCC4; &#xAE30;&#xC900; &#xAC12;&#xC758; &#xBCC0;&#xD654;&#xC5D0; &#xB530;&#xB978; &#xC704;&#xC591;&#xC131;&#xB960;(fall-out)&#xACFC; &#xC7AC;&#xD604;&#xC728;(recall)&#xC758; &#xBCC0;&#xD654;&#xB97C; &#xC2DC;&#xAC01;&#xD654; &#xD55C;&#xAC83;&#xC774;&#xB2E4;. &#xD074;&#xB798;&#xC2A4; &#xD310;&#xBCC4; &#xAE30;&#xC900;&#xAC12;&#xC774; &#xB2EC;&#xB77C;&#xC9C4;&#xB2E4;&#xBA74; &#xD310;&#xBCC4; &#xACB0;&#xACFC;&#xAC00; &#xC5B4;&#xB5BB;&#xAC8C; &#xB2EC;&#xB77C;&#xC9C0;&#xB294;&#xC9C0;&#xB294; &#xD45C;&#xD604;&#xD55C; &#xAC83;&#xC774;&#xB2E4;.</p>
 <p>&#xC7AC;&#xD604;&#xC728;(recall)&#xACFC; &#xC704;&#xC591;&#xC131;&#xB960;(fall-out)&#xC740; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC591;&#xC758; &#xC0C1;&#xAD00;&#xAD00;&#xACC4;&#xAC00; &#xC788;&#xB2E4;. </p>
@@ -1547,7 +1571,7 @@ plt.show()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"분류 성능평가","level":"1.3.3.2","depth":3,"next":{"title":"로지스틱 회귀분석","level":"1.3.3.3","depth":3,"path":"posts/datascience/machine-learning-supervised/0601logistickregression.md","ref":"posts/datascience/machine-learning-supervised/0601logistickregression.md","articles":[]},"previous":{"title":"분류 모형의 종류","level":"1.3.3.1","depth":3,"path":"posts/datascience/machine-learning-supervised/0503classification-model.md","ref":"posts/datascience/machine-learning-supervised/0503classification-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-supervised/0504classification-estimation.md","mtime":"2020-04-08T01:06:27.099Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T01:22:41.065Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"분류 성능평가","level":"1.3.3.2","depth":3,"next":{"title":"로지스틱 회귀분석","level":"1.3.3.3","depth":3,"path":"posts/datascience/machine-learning-supervised/0601logistickregression.md","ref":"posts/datascience/machine-learning-supervised/0601logistickregression.md","articles":[]},"previous":{"title":"분류 모형의 종류","level":"1.3.3.1","depth":3,"path":"posts/datascience/machine-learning-supervised/0503classification-model.md","ref":"posts/datascience/machine-learning-supervised/0503classification-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-supervised/0504classification-estimation.md","mtime":"2020-04-08T01:27:02.037Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T01:27:56.489Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
