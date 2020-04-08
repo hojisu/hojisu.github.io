@@ -97,3 +97,4 @@
         - [그래프 기초](posts/datascience/probability-graph-model/1501graph.md)
         - [그래프 확률 모형](posts/datascience/probability-graph-model/1502graphical-probability-model.md)
         - [네트워크 추론](posts/datascience/probability-graph-model/1503network.md)
+        - [히든마코프 모형](posts/datascience/probability-graph-model/1504hiddenmarkov.md)
