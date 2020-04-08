@@ -105,3 +105,5 @@
     - [추천시스템](posts/datascience/recommendsystem/README.md)
         - [추천시스템](posts/datascience/recommendsystem/recommend.md)
         - [Factorization Machine](posts/datascience/recommendsystem/fm.md)
+    - [텍스트 데이터 전처리](posts/datascience/machine-learning-text/README.md)
+        - [Scikit-Learn의 문서 전처리](posts/datascience/machine-learning-text/scikit-learn-preprocessing.md)

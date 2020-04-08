@@ -1,0 +1,1993 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Scikit-Learn의 문서 전처리 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../math/">
+            
+                <a href="../../math/">
+            
+                    
+                    수학
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../math/linearalgebra/">
+            
+                <a href="../../math/linearalgebra/">
+            
+                    
+                    선형대수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../math/linearalgebra/0201data-and-matrix.html">
+            
+                <a href="../../math/linearalgebra/0201data-and-matrix.html">
+            
+                    
+                    데이터와 행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../math/linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                <a href="../../math/linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                    
+                    벡터와 행렬의 연산
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../math/linearalgebra/0203matrix-character.html">
+            
+                <a href="../../math/linearalgebra/0203matrix-character.html">
+            
+                    
+                    행렬의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../math/linearalgebra/0204system-of-linear-equations.html">
+            
+                <a href="../../math/linearalgebra/0204system-of-linear-equations.html">
+            
+                    
+                    선형연립방정식과 역행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../math/linearalgebra/0301linear-algebra.html">
+            
+                <a href="../../math/linearalgebra/0301linear-algebra.html">
+            
+                    
+                    선형대수와 해석기하의 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../math/linearalgebra/0302coordinate-transform.html">
+            
+                <a href="../../math/linearalgebra/0302coordinate-transform.html">
+            
+                    
+                    좌표변환
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../math/linearalgebra/0303eigenvalue-decomposition.html">
+            
+                <a href="../../math/linearalgebra/0303eigenvalue-decomposition.html">
+            
+                    
+                    고윳값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../../math/linearalgebra/0304svd.html">
+            
+                <a href="../../math/linearalgebra/0304svd.html">
+            
+                    
+                    특이값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../../math/linearalgebra/0305pca.html">
+            
+                <a href="../../math/linearalgebra/0305pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../math/calculus/">
+            
+                <a href="../../math/calculus/">
+            
+                    
+                    미적분
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../math/calculus/0401function.html">
+            
+                <a href="../../math/calculus/0401function.html">
+            
+                    
+                    함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../math/calculus/0402function-differentiation.html">
+            
+                <a href="../../math/calculus/0402function-differentiation.html">
+            
+                    
+                    함수 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../math/calculus/0403integral.html">
+            
+                <a href="../../math/calculus/0403integral.html">
+            
+                    
+                    적분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../math/calculus/0404matrix-differentiation.html">
+            
+                <a href="../../math/calculus/0404matrix-differentiation.html">
+            
+                    
+                    행렬의 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../math/optimization/">
+            
+                <a href="../../math/optimization/">
+            
+                    
+                    최적화
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../math/optimization/0501optimization.html">
+            
+                <a href="../../math/optimization/0501optimization.html">
+            
+                    
+                    최적화 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../math/optimization/0502constrained-optimization.html">
+            
+                <a href="../../math/optimization/0502constrained-optimization.html">
+            
+                    
+                    제한조건이 있는 최적화 문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../math/optimization/0503lp-qp-problem.html">
+            
+                <a href="../../math/optimization/0503lp-qp-problem.html">
+            
+                    
+                    LP문제 & QP문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../math/probability-statistics/">
+            
+                <a href="../../math/probability-statistics/">
+            
+                    
+                    확률과 통계
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../math/probability-statistics/0602probability.html">
+            
+                <a href="../../math/probability-statistics/0602probability.html">
+            
+                    
+                    확률의 수학적 정의와 의미
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../math/probability-statistics/0603probability-character.html">
+            
+                <a href="../../math/probability-statistics/0603probability-character.html">
+            
+                    
+                    확률의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../math/probability-statistics/0604probability-distribution-function.html">
+            
+                <a href="../../math/probability-statistics/0604probability-distribution-function.html">
+            
+                    
+                    확률분포함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../math/probability-statistics/0605joint-conditional-probability.html">
+            
+                <a href="../../math/probability-statistics/0605joint-conditional-probability.html">
+            
+                    
+                    결합확률과 조건부확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../math/probability-statistics/0606baysian-rule.html">
+            
+                <a href="../../math/probability-statistics/0606baysian-rule.html">
+            
+                    
+                    베이즈 정리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../math/probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                <a href="../../math/probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                    
+                    확률적데이터와 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../math/probability-statistics/0702expectation.html">
+            
+                <a href="../../math/probability-statistics/0702expectation.html">
+            
+                    
+                    기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../math/probability-statistics/0703variance.html">
+            
+                <a href="../../math/probability-statistics/0703variance.html">
+            
+                    
+                    분산 & 표준편차
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../math/probability-statistics/0704multivariate-probability-variable.html">
+            
+                <a href="../../math/probability-statistics/0704multivariate-probability-variable.html">
+            
+                    
+                    다변수 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../math/probability-statistics/0705covariance-correlation.html">
+            
+                <a href="../../math/probability-statistics/0705covariance-correlation.html">
+            
+                    
+                    공분산과 상관계수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../math/probability-statistics/0706conditional-expectation.html">
+            
+                <a href="../../math/probability-statistics/0706conditional-expectation.html">
+            
+                    
+                    조건부 기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../math/probability-statistics/0801scipy-distribution.html">
+            
+                <a href="../../math/probability-statistics/0801scipy-distribution.html">
+            
+                    
+                    Scipy를 이용한 확률분포 분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.13" data-path="../../math/probability-statistics/0802bernoulli-binomial-distribution.html">
+            
+                <a href="../../math/probability-statistics/0802bernoulli-binomial-distribution.html">
+            
+                    
+                    베르누이분포 & 이항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.14" data-path="../../math/probability-statistics/0803categorical-multinomial-distribution.html">
+            
+                <a href="../../math/probability-statistics/0803categorical-multinomial-distribution.html">
+            
+                    
+                    카테고리분포 & 다항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.15" data-path="../../math/probability-statistics/0804normal-distribution.html">
+            
+                <a href="../../math/probability-statistics/0804normal-distribution.html">
+            
+                    
+                    정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.16" data-path="../../math/probability-statistics/0805t-chi-f-distribution.html">
+            
+                <a href="../../math/probability-statistics/0805t-chi-f-distribution.html">
+            
+                    
+                    스튜던트 t분포 & 카이분포 & F분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.17" data-path="../../math/probability-statistics/0806mvn.html">
+            
+                <a href="../../math/probability-statistics/0806mvn.html">
+            
+                    
+                    다변수 가우시안 정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.18" data-path="../../math/probability-statistics/0807beta-gamma-dirichlet.html">
+            
+                <a href="../../math/probability-statistics/0807beta-gamma-dirichlet.html">
+            
+                    
+                    베타분포 & 감마분포 & 디리클레분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.19" data-path="../../math/probability-statistics/0901parameter-estimation.html">
+            
+                <a href="../../math/probability-statistics/0901parameter-estimation.html">
+            
+                    
+                    모수 추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.20" data-path="../../math/probability-statistics/0902mle.html">
+            
+                <a href="../../math/probability-statistics/0902mle.html">
+            
+                    
+                    최대가능도와 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.21" data-path="../../math/probability-statistics/0903baysian-estimation.html">
+            
+                <a href="../../math/probability-statistics/0903baysian-estimation.html">
+            
+                    
+                    베이지안 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.22" data-path="../../math/probability-statistics/0904test-pvalue.html">
+            
+                <a href="../../math/probability-statistics/0904test-pvalue.html">
+            
+                    
+                    검정과 유의확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.23" data-path="../../math/probability-statistics/0905scipy-estimation.html">
+            
+                <a href="../../math/probability-statistics/0905scipy-estimation.html">
+            
+                    
+                    Scipy를 사용한 검정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.24" data-path="../../math/probability-statistics/0906confidence-interval.html">
+            
+                <a href="../../math/probability-statistics/0906confidence-interval.html">
+            
+                    
+                    신뢰구간 추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    데이터 사이언스
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../regression/">
+            
+                <a href="../regression/">
+            
+                    
+                    회귀분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../regression/0101dataintro.html">
+            
+                <a href="../regression/0101dataintro.html">
+            
+                    
+                    데이터분석 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../regression/0102python-package-data.html">
+            
+                <a href="../regression/0102python-package-data.html">
+            
+                    
+                    데이터와 파이썬 패키지
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../regression/0201linear-regression.html">
+            
+                <a href="../regression/0201linear-regression.html">
+            
+                    
+                    선형 회귀분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../regression/0202regression-geometry.html">
+            
+                <a href="../regression/0202regression-geometry.html">
+            
+                    
+                    회귀분석의 기하학
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../regression/0203partial-regression.html">
+            
+                <a href="../regression/0203partial-regression.html">
+            
+                    
+                    부분 회귀
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../regression/0301missingdata.html">
+            
+                <a href="../regression/0301missingdata.html">
+            
+                    
+                    누락데이터 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../regression/0304scale.html">
+            
+                <a href="../regression/0304scale.html">
+            
+                    
+                    스케일링 & 조건수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../regression/0305dummy-variable.html">
+            
+                <a href="../regression/0305dummy-variable.html">
+            
+                    
+                    풀랭크 & 축소랭크 방식
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../regression/0401probability-linear-regression.html">
+            
+                <a href="../regression/0401probability-linear-regression.html">
+            
+                    
+                    확률론적 선형회귀 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../regression/0402laverage-outlier.html">
+            
+                <a href="../regression/0402laverage-outlier.html">
+            
+                    
+                    레버리지와 아웃라이어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../regression/0403anova.html">
+            
+                <a href="../regression/0403anova.html">
+            
+                    
+                    분산분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../regression/0404crossvalidation.html">
+            
+                <a href="../regression/0404crossvalidation.html">
+            
+                    
+                    교차검증
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../regression/0404regression-diagnosis.html">
+            
+                <a href="../regression/0404regression-diagnosis.html">
+            
+                    
+                    회귀분석 모형의 진단
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="../regression/0501non-linear-model-trans.html">
+            
+                <a href="../regression/0501non-linear-model-trans.html">
+            
+                    
+                    비선형모형 변형방법
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="../regression/0502basis-function-overfit.html">
+            
+                <a href="../regression/0502basis-function-overfit.html">
+            
+                    
+                    기저함수모형과 과최적화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="../regression/0503multicollinearity.html">
+            
+                <a href="../regression/0503multicollinearity.html">
+            
+                    
+                    다중공선성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="../regression/0504regularize.html">
+            
+                <a href="../regression/0504regularize.html">
+            
+                    
+                    정규화
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../timeseries/">
+            
+                <a href="../timeseries/">
+            
+                    
+                    시계열 분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../timeseries/0601timeseries-stochastic-process.html">
+            
+                <a href="../timeseries/0601timeseries-stochastic-process.html">
+            
+                    
+                    시계열 자료와 확률과정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../timeseries/0602stationary-process.html">
+            
+                <a href="../timeseries/0602stationary-process.html">
+            
+                    
+                    정상확률과정 & 에르고딕성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../timeseries/0603whitenoise-randomwork.html">
+            
+                <a href="../timeseries/0603whitenoise-randomwork.html">
+            
+                    
+                    백색잡음 & 랜덤워크
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../timeseries/0604trend-season.html">
+            
+                <a href="../timeseries/0604trend-season.html">
+            
+                    
+                    추세 & 계절성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../timeseries/0701general-linear-process.html">
+            
+                <a href="../timeseries/0701general-linear-process.html">
+            
+                    
+                    일반선형확률과정 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../machine-learning-supervised/">
+            
+                <a href="../machine-learning-supervised/">
+            
+                    
+                    머신러닝-지도학습
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../machine-learning-supervised/0503classification-model.html">
+            
+                <a href="../machine-learning-supervised/0503classification-model.html">
+            
+                    
+                    분류 모형의 종류
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../machine-learning-supervised/0504classification-estimation.html">
+            
+                <a href="../machine-learning-supervised/0504classification-estimation.html">
+            
+                    
+                    분류 성능평가
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../machine-learning-supervised/0601logistickregression.html">
+            
+                <a href="../machine-learning-supervised/0601logistickregression.html">
+            
+                    
+                    로지스틱 회귀분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../machine-learning-supervised/0701lda-qda.html">
+            
+                <a href="../machine-learning-supervised/0701lda-qda.html">
+            
+                    
+                    LDA & QDA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../machine-learning-supervised/0702naive.html">
+            
+                <a href="../machine-learning-supervised/0702naive.html">
+            
+                    
+                    나이브베이즈 분류모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../machine-learning-supervised/0801decisiontree.html">
+            
+                <a href="../machine-learning-supervised/0801decisiontree.html">
+            
+                    
+                    의사결정나무
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../machine-learning-supervised/0901ensemble.html">
+            
+                <a href="../machine-learning-supervised/0901ensemble.html">
+            
+                    
+                    앙상블모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../machine-learning-supervised/1001perceptron.html">
+            
+                <a href="../machine-learning-supervised/1001perceptron.html">
+            
+                    
+                    퍼셉트론
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../machine-learning-supervised/1002svm.html">
+            
+                <a href="../machine-learning-supervised/1002svm.html">
+            
+                    
+                    서포트벡터 머신
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.10" data-path="../machine-learning-supervised/1101kernelsvm.html">
+            
+                <a href="../machine-learning-supervised/1101kernelsvm.html">
+            
+                    
+                    커널 서포트벡터 머신
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.11" data-path="../machine-learning-supervised/1201modeloptimization.html">
+            
+                <a href="../machine-learning-supervised/1201modeloptimization.html">
+            
+                    
+                    모형 최적화 방법
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.12" data-path="../machine-learning-supervised/1202imbalanceproblem.html">
+            
+                <a href="../machine-learning-supervised/1202imbalanceproblem.html">
+            
+                    
+                    비대칭 데이터 문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.13" data-path="../machine-learning-supervised/1203featureselection.html">
+            
+                <a href="../machine-learning-supervised/1203featureselection.html">
+            
+                    
+                    특징변수 선택
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../machine-learning-unsupervised/">
+            
+                <a href="../machine-learning-unsupervised/">
+            
+                    
+                    머신러닝-비지도학습
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../machine-learning-unsupervised/1401clustering.html">
+            
+                <a href="../machine-learning-unsupervised/1401clustering.html">
+            
+                    
+                    군집화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../machine-learning-unsupervised/1402kmeans.html">
+            
+                <a href="../machine-learning-unsupervised/1402kmeans.html">
+            
+                    
+                    K-Means
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../machine-learning-unsupervised/1403dbscan.html">
+            
+                <a href="../machine-learning-unsupervised/1403dbscan.html">
+            
+                    
+                    DBSCANE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../machine-learning-unsupervised/1404hierachical-clustering.html">
+            
+                <a href="../machine-learning-unsupervised/1404hierachical-clustering.html">
+            
+                    
+                    계층적 군집화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../machine-learning-unsupervised/1405affinity-propagation.html">
+            
+                <a href="../machine-learning-unsupervised/1405affinity-propagation.html">
+            
+                    
+                    Affinity Propagation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../machine-learning-unsupervised/knn.html">
+            
+                <a href="../machine-learning-unsupervised/knn.html">
+            
+                    
+                    KNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../machine-learning-unsupervised/1801gmm.html">
+            
+                <a href="../machine-learning-unsupervised/1801gmm.html">
+            
+                    
+                    가우시안 혼합 모형과 EM방법
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../probability-graph-model/">
+            
+                <a href="../probability-graph-model/">
+            
+                    
+                    그래프 확률 모형
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../probability-graph-model/1501graph.html">
+            
+                <a href="../probability-graph-model/1501graph.html">
+            
+                    
+                    그래프 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../probability-graph-model/1502graphical-probability-model.html">
+            
+                <a href="../probability-graph-model/1502graphical-probability-model.html">
+            
+                    
+                    그래프 확률 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../probability-graph-model/1503network.html">
+            
+                <a href="../probability-graph-model/1503network.html">
+            
+                    
+                    네트워크 추론
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../probability-graph-model/1504hiddenmarkov.html">
+            
+                <a href="../probability-graph-model/1504hiddenmarkov.html">
+            
+                    
+                    히든마코프 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../machine-learning-advanced/">
+            
+                <a href="../machine-learning-advanced/">
+            
+                    
+                    머신러닝 심화편
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../machine-learning-advanced/1802calculus-of-variations.html">
+            
+                <a href="../machine-learning-advanced/1802calculus-of-variations.html">
+            
+                    
+                    변분법 추론
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../machine-learning-advanced/1701montecalro.html">
+            
+                <a href="../machine-learning-advanced/1701montecalro.html">
+            
+                    
+                    몬테카를로 베이지안 분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../recommendsystem/">
+            
+                <a href="../recommendsystem/">
+            
+                    
+                    추천시스템
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../recommendsystem/recommend.html">
+            
+                <a href="../recommendsystem/recommend.html">
+            
+                    
+                    추천시스템
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../recommendsystem/fm.html">
+            
+                <a href="../recommendsystem/fm.html">
+            
+                    
+                    Factorization Machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    텍스트 데이터 전처리
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.8.1" data-path="scikit-learn-preprocessing.html">
+            
+                <a href="scikit-learn-preprocessing.html">
+            
+                    
+                    Scikit-Learn의 문서 전처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Scikit-Learn의 문서 전처리</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script> MathJax.Hub.Queue(["Typeset", MathJax.Hub]); </script>
+
+<h1 id="scikit-learn&#xC758;-&#xBB38;&#xC11C;-&#xC804;&#xCC98;&#xB9AC;-&#xAE30;&#xB2A5;">Scikit-Learn&#xC758; &#xBB38;&#xC11C; &#xC804;&#xCC98;&#xB9AC; &#xAE30;&#xB2A5;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#bow-bag-of-words">BOW (Bag of Words)</a></li>
+<li><a href="#scikit-learn-&#xC758;-&#xBB38;&#xC11C;-&#xC804;&#xCC98;&#xB9AC;-&#xAE30;&#xB2A5;">Scikit-Learn &#xC758; &#xBB38;&#xC11C; &#xC804;&#xCC98;&#xB9AC; &#xAE30;&#xB2A5;</a><ul>
+<li><a href="#dictvectorizer">DictVectorizer</a></li>
+<li><a href="#countvectorizer">CountVectorizer</a></li>
+<li><a href="#stop-words">Stop Words</a></li>
+<li><a href="#&#xD1A0;&#xD070;">&#xD1A0;&#xD070;</a></li>
+<li><a href="#n-&#xADF8;&#xB7A8;">n-&#xADF8;&#xB7A8;</a></li>
+<li><a href="#&#xBE48;&#xB3C4;&#xC218;">&#xBE48;&#xB3C4;&#xC218;</a></li>
+<li><a href="#tf-idfterm-frequency---inverse-document-frequency">TF-IDF(Term Frequency - Inverse Document Frequency)</a></li>
+<li><a href="#hashing-trick">Hashing Trick</a></li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="bow-bag-of-words">BOW (Bag of Words)</h3>
+<p>BOW&#xB294; &#xBB38;&#xC11C;&#xB97C; &#xC22B;&#xC790; &#xBCA1;&#xD130;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xB294; &#xAC00;&#xC7A5; &#xAE30;&#xBCF8;&#xC801;&#xC778; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. &#xC804;&#xCCB4; &#xBB38;&#xC11C; $ {d_1, d_2, \ldots, d_n} $ &#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xACE0;&#xC815;&#xB41C; &#xB2E8;&#xC5B4;&#xC7A5;(vocabulary) ${t_1, t_2, \ldots, t_m}$ &#xB97C; &#xB9CC;&#xB4E4;&#xACE0; $d_i$  &#xB77C;&#xB294; &#xAC1C;&#xBCC4; &#xBB38;&#xC11C;&#xC758; &#xB2E8;&#xC5B4;&#xC7A5;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xB2E8;&#xC5B4;&#xB4E4;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xB294;&#xC9C0;&#xB97C; &#xD45C;&#xC2DC;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+x_{i,j} = \text{문서 $d_i$내의 단어 $t_j$의 출현 빈도}
+</script></p>
+<p>&#x200B;&#xB610;&#xB294;</p>
+<p><script type="math/tex; mode=display">
+x_{i,j} = 
+\begin{cases}
+0, & \text{만약 단어 $t_j$가 문서 $d_i$ 안에 없으면} \\
+1. & \text{만약 단어 $t_j$가 문서 $d_i$ 안에 있으면}
+\end{cases}
+</script></p>
+<h3 id="scikit-learn-&#xC758;-&#xBB38;&#xC11C;-&#xC804;&#xCC98;&#xB9AC;-&#xAE30;&#xB2A5;">Scikit-Learn &#xC758; &#xBB38;&#xC11C; &#xC804;&#xCC98;&#xB9AC; &#xAE30;&#xB2A5;</h3>
+<p>Scikit-Learn &#xC758; feature_extraction &#xC11C;&#xBE0C;&#xD328;&#xD0A4;&#xC9C0;&#xC640; feature_extraction.text &#xC11C;&#xBE0C; &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xBB38;&#xC11C; &#xC804;&#xCC98;&#xB9AC;&#xC6A9; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html" target="_blank"><code>DictVectorizer</code></a>:<ul>
+<li>&#xAC01; &#xB2E8;&#xC5B4;&#xC758; &#xC218;&#xB97C; &#xC138;&#xC5B4;&#xB193;&#xC740; &#xC0AC;&#xC804;&#xC5D0;&#xC11C; BOW &#xBCA1;&#xD130;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+</ul>
+</li>
+<li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html" target="_blank"><code>CountVectorizer</code></a>:<ul>
+<li>&#xBB38;&#xC11C; &#xC9D1;&#xD569;&#xC5D0;&#xC11C; &#xB2E8;&#xC5B4; &#xD1A0;&#xD070;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xAC01; &#xB2E8;&#xC5B4;&#xC758; &#xC218;&#xB97C; &#xC138;&#xC5B4; BOW &#xC778;&#xCF54;&#xB529;&#xD55C; &#xBCA1;&#xD130;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+</ul>
+</li>
+<li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html" target="_blank"><code>TfidfVectorizer</code></a>:<ul>
+<li>TF-IDF(Term Frequency &#x2013; Inverse Document Frequency) &#xC778;&#xCF54;&#xB529;&#xC740; &#xB2E8;&#xC5B4;&#xB97C; &#xAC2F;&#xC218; &#xADF8;&#xB300;&#xB85C; &#xCE74;&#xC6B4;&#xD2B8;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xBAA8;&#xB4E0; &#xBB38;&#xC11C;&#xC5D0; &#xACF5;&#xD1B5;&#xC801;&#xC73C;&#xB85C; &#xB4E4;&#xC5B4;&#xC788;&#xB294; &#xB2E8;&#xC5B4;&#xC758; &#xACBD;&#xC6B0; &#xBB38;&#xC11C; &#xAD6C;&#xBCC4; &#xB2A5;&#xB825;&#xC774; &#xB5A8;&#xC5B4;&#xC9C4;&#xB2E4;&#xACE0; &#xBCF4;&#xC544; &#xAC00;&#xC911;&#xCE58;&#xB97C; &#xCD95;&#xC18C;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</li>
+</ul>
+</li>
+<li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html" target="_blank"><code>HashingVectorizer</code></a>:<ul>
+<li>&#xD574;&#xC2DC; &#xD568;&#xC218;(hash function)&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC801;&#xC740; &#xBA54;&#xBAA8;&#xB9AC;&#xC640; &#xBE60;&#xB978; &#xC18D;&#xB3C4;&#xB85C; BOW &#xBCA1;&#xD130;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<h4 id="dictvectorizer">DictVectorizer</h4>
+<p>feature_extraction &#xC11C;&#xBE0C; &#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;. &#xBB38;&#xC11C;&#xC5D0;&#xC11C; &#xB2E8;&#xC5B4;&#xC758; &#xC0AC;&#xC6A9; &#xBE48;&#xB3C4;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xB515;&#xC154;&#xB108;&#xB9AC; &#xC815;&#xBCF4;&#xB97C; &#xC785;&#xB825;&#xBC1B;&#xC544; BOW &#xC778;&#xCF54;&#xB529;&#xD55C; &#xC218;&#xCE58; &#xBCA1;&#xD130;&#xB85C; &#xBCC0;&#xD658;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.feature_extraction <span class="hljs-keyword">import</span> DictVectorizer
+v = DictVectorizer(sparse=<span class="hljs-keyword">False</span>)
+D = [{<span class="hljs-string">&apos;A&apos;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&apos;B&apos;</span>: <span class="hljs-number">2</span>}, {<span class="hljs-string">&apos;B&apos;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&apos;C&apos;</span>: <span class="hljs-number">1</span>}]
+X = v.fit_transform(D)
+X
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">1.</span>, <span class="hljs-number">2.</span>, <span class="hljs-number">0.</span>],
+       [<span class="hljs-number">0.</span>, <span class="hljs-number">3.</span>, <span class="hljs-number">1.</span>]])
+</code></pre>
+<pre><code class="lang-python">v.feature_names_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+[<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>]
+</code></pre>
+<pre><code class="lang-python">v.transform({<span class="hljs-string">&apos;C&apos;</span>: <span class="hljs-number">4</span>, <span class="hljs-string">&apos;D&apos;</span>: <span class="hljs-number">3</span>})
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">4.</span>]])
+</code></pre>
+<h4 id="countvectorizer">CountVectorizer</h4>
+<p>&#xBB38;&#xC11C;&#xB97C; &#xD1A0;&#xD070; &#xB9AC;&#xC2A4;&#xD2B8;&#xB85C; &#xBCC0;&#xD658;&#xD55C;&#xB2E4;. &#xAC01; &#xBB38;&#xC11C;&#xC5D0;&#xC11C; &#xD1A0;&#xD070;&#xC758; &#xCD9C;&#xD604; &#xBE48;&#xB3C4;&#xB97C; &#xC13C;&#xB2E4;. &#xAC01; &#xBB38;&#xC11C;&#xB97C; BOW &#xC778;&#xCF54;&#xB529; &#xBCA1;&#xD130;&#xB85C; &#xBCC0;&#xD658;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.feature_extraction.text <span class="hljs-keyword">import</span> CountVectorizer
+corpus = [
+    <span class="hljs-string">&apos;This is the first document.&apos;</span>,
+    <span class="hljs-string">&apos;This is the second second document.&apos;</span>,
+    <span class="hljs-string">&apos;And the third one.&apos;</span>,
+    <span class="hljs-string">&apos;Is this the first document?&apos;</span>,
+    <span class="hljs-string">&apos;The last document?&apos;</span>,
+]
+vect = CountVectorizer()
+vect.fit(corpus)
+vect.vocabulary_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+{<span class="hljs-string">&apos;this&apos;</span>: <span class="hljs-number">9</span>,
+ <span class="hljs-string">&apos;is&apos;</span>: <span class="hljs-number">3</span>,
+ <span class="hljs-string">&apos;the&apos;</span>: <span class="hljs-number">7</span>,
+ <span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-number">2</span>,
+ <span class="hljs-string">&apos;document&apos;</span>: <span class="hljs-number">1</span>,
+ <span class="hljs-string">&apos;second&apos;</span>: <span class="hljs-number">6</span>,
+ <span class="hljs-string">&apos;and&apos;</span>: <span class="hljs-number">0</span>,
+ <span class="hljs-string">&apos;third&apos;</span>: <span class="hljs-number">8</span>,
+ <span class="hljs-string">&apos;one&apos;</span>: <span class="hljs-number">5</span>,
+ <span class="hljs-string">&apos;last&apos;</span>: <span class="hljs-number">4</span>}
+</code></pre>
+<pre><code class="lang-python">vect.transform([<span class="hljs-string">&apos;This is the second document.&apos;</span>]).toarray()
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]])
+</code></pre>
+<pre><code class="lang-python">vect.transform([<span class="hljs-string">&apos;Something completely new.&apos;</span>]).toarray()
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]])
+</code></pre>
+<pre><code class="lang-python">vect.transform(corpus).toarray()
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+       [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+       [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>],
+       [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+       [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]])
+</code></pre>
+<p><code>CountVectorizer</code>&#xB294; &#xC774;&#xB7EC;&#xD55C; &#xC791;&#xC5C5;&#xC744; &#xD558;&#xAE30; &#xC704;&#xD55C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC778;&#xC218;&#xB97C; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB2E4;.</p>
+<ul>
+<li><code>stop_words</code> : &#xBB38;&#xC790;&#xC5F4; {&#x2018;english&#x2019;}, &#xB9AC;&#xC2A4;&#xD2B8; &#xB610;&#xB294; None (&#xB514;&#xD3F4;&#xD2B8;)<ul>
+<li>stop words &#xBAA9;&#xB85D;. &#x2018;english&#x2019;&#xC774;&#xBA74; &#xC601;&#xC5B4;&#xC6A9; &#xC2A4;&#xD0D1; &#xC6CC;&#xB4DC; &#xC0AC;&#xC6A9;.</li>
+</ul>
+</li>
+<li><code>analyzer</code> : &#xBB38;&#xC790;&#xC5F4; {&#x2018;word&#x2019;, &#x2018;char&#x2019;, &#x2018;char_wb&#x2019;} &#xB610;&#xB294; &#xD568;&#xC218;<ul>
+<li>&#xB2E8;&#xC5B4; n-&#xADF8;&#xB7A8;, &#xBB38;&#xC790; n-&#xADF8;&#xB7A8;, &#xB2E8;&#xC5B4; &#xB0B4;&#xC758; &#xBB38;&#xC790; n-&#xADF8;&#xB7A8;</li>
+</ul>
+</li>
+<li><code>token_pattern</code> : string<ul>
+<li>&#xD1A0;&#xD070; &#xC815;&#xC758;&#xC6A9; &#xC815;&#xADDC; &#xD45C;&#xD604;&#xC2DD;</li>
+</ul>
+</li>
+<li><code>tokenizer</code> : &#xD568;&#xC218; &#xB610;&#xB294; None (&#xB514;&#xD3F4;&#xD2B8;)<ul>
+<li>&#xD1A0;&#xD070; &#xC0DD;&#xC131; &#xD568;&#xC218; </li>
+</ul>
+</li>
+<li><code>ngram_range</code> : (min_n, max_n) &#xD29C;&#xD50C;<ul>
+<li>n-&#xADF8;&#xB7A8; &#xBC94;&#xC704;</li>
+</ul>
+</li>
+<li><code>max_df</code> : &#xC815;&#xC218; &#xB610;&#xB294; [0.0, 1.0] &#xC0AC;&#xC774;&#xC758; &#xC2E4;&#xC218;. &#xB514;&#xD3F4;&#xD2B8; 1<ul>
+<li>&#xB2E8;&#xC5B4;&#xC7A5;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xAE30; &#xC704;&#xD55C; &#xCD5C;&#xB300; &#xBE48;&#xB3C4;</li>
+</ul>
+</li>
+<li><code>min_df</code> : &#xC815;&#xC218; &#xB610;&#xB294; [0.0, 1.0] &#xC0AC;&#xC774;&#xC758; &#xC2E4;&#xC218;. &#xB514;&#xD3F4;&#xD2B8; 1<ul>
+<li>&#xB2E8;&#xC5B4;&#xC7A5;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xAE30; &#xC704;&#xD55C; &#xCD5C;&#xC18C; &#xBE48;&#xB3C4;</li>
+</ul>
+</li>
+</ul>
+<h4 id="stop-words">Stop Words</h4>
+<p>&#xBB38;&#xC11C;&#xC5D0;&#xC11C; &#xB2E8;&#xC5B4;&#xC7A5;&#xC744; &#xC0DD;&#xC131;&#xD560; &#xB54C; &#xBB34;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB294; &#xB2E8;&#xC5B4;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;. &#xBCF4;&#xD1B5; &#xC601;&#xC5B4;&#xC758; &#xAD00;&#xC0AC;&#xB098; &#xC811;&#xC18D;&#xC0AC;, &#xD55C;&#xAD6D;&#xC5B4;&#xC758; &#xC870;&#xC0AC; &#xB4F1;&#xC774; &#xC5EC;&#xAE30;&#xC5D0; &#xD574;&#xB2F9;&#xD55C;&#xB2E4;. <code>stop_words</code> &#xC778;&#xC218;&#xB85C; &#xC870;&#xC808;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python">vect = CountVectorizer(stop_words=[<span class="hljs-string">&quot;and&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;the&quot;</span>, <span class="hljs-string">&quot;this&quot;</span>]).fit(corpus)
+vect.vocabulary_
+</code></pre>
+<pre><code class="lang-python">vect = CountVectorizer(stop_words=<span class="hljs-string">&quot;english&quot;</span>).fit(corpus)
+vect.vocabulary_
+</code></pre>
+<h4 id="&#xD1A0;&#xD070;">&#xD1A0;&#xD070;</h4>
+<p><code>analyzer</code>, <code>tokenizer</code>, <code>token_pattern</code> &#xB4F1;&#xC758; &#xC778;&#xC218;&#xB85C;, &#xC0AC;&#xC6A9;&#xD560; &#xD1A0;&#xD070; &#xC0DD;&#xC131;&#xAE30;&#xB97C; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python">vect = CountVectorizer(analyzer=<span class="hljs-string">&quot;char&quot;</span>).fit(corpus)
+vect.vocabulary_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+{<span class="hljs-string">&apos;t&apos;</span>: <span class="hljs-number">16</span>,
+ <span class="hljs-string">&apos;h&apos;</span>: <span class="hljs-number">8</span>,
+ <span class="hljs-string">&apos;i&apos;</span>: <span class="hljs-number">9</span>,
+ <span class="hljs-string">&apos;s&apos;</span>: <span class="hljs-number">15</span>,
+ <span class="hljs-string">&apos; &apos;</span>: <span class="hljs-number">0</span>,
+ <span class="hljs-string">&apos;e&apos;</span>: <span class="hljs-number">6</span>,
+ <span class="hljs-string">&apos;f&apos;</span>: <span class="hljs-number">7</span>,
+ <span class="hljs-string">&apos;r&apos;</span>: <span class="hljs-number">14</span>,
+ <span class="hljs-string">&apos;d&apos;</span>: <span class="hljs-number">5</span>,
+ <span class="hljs-string">&apos;o&apos;</span>: <span class="hljs-number">13</span>,
+ <span class="hljs-string">&apos;c&apos;</span>: <span class="hljs-number">4</span>,
+ <span class="hljs-string">&apos;u&apos;</span>: <span class="hljs-number">17</span>,
+ <span class="hljs-string">&apos;m&apos;</span>: <span class="hljs-number">11</span>,
+ <span class="hljs-string">&apos;n&apos;</span>: <span class="hljs-number">12</span>,
+ <span class="hljs-string">&apos;.&apos;</span>: <span class="hljs-number">1</span>,
+ <span class="hljs-string">&apos;a&apos;</span>: <span class="hljs-number">3</span>,
+ <span class="hljs-string">&apos;?&apos;</span>: <span class="hljs-number">2</span>,
+ <span class="hljs-string">&apos;l&apos;</span>: <span class="hljs-number">10</span>}
+</code></pre>
+<pre><code class="lang-python">vect = CountVectorizer(token_pattern=<span class="hljs-string">&quot;t\w+&quot;</span>).fit(corpus)
+vect.vocabulary_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+{<span class="hljs-string">&apos;this&apos;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&apos;the&apos;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&apos;third&apos;</span>: <span class="hljs-number">1</span>}
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> nltk
+
+vect = CountVectorizer(tokenizer=nltk.word_tokenize).fit(corpus)
+vect.vocabulary_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+{<span class="hljs-string">&apos;this&apos;</span>: <span class="hljs-number">11</span>,
+ <span class="hljs-string">&apos;is&apos;</span>: <span class="hljs-number">5</span>,
+ <span class="hljs-string">&apos;the&apos;</span>: <span class="hljs-number">9</span>,
+ <span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-number">4</span>,
+ <span class="hljs-string">&apos;document&apos;</span>: <span class="hljs-number">3</span>,
+ <span class="hljs-string">&apos;.&apos;</span>: <span class="hljs-number">0</span>,
+ <span class="hljs-string">&apos;second&apos;</span>: <span class="hljs-number">8</span>,
+ <span class="hljs-string">&apos;and&apos;</span>: <span class="hljs-number">2</span>,
+ <span class="hljs-string">&apos;third&apos;</span>: <span class="hljs-number">10</span>,
+ <span class="hljs-string">&apos;one&apos;</span>: <span class="hljs-number">7</span>,
+ <span class="hljs-string">&apos;?&apos;</span>: <span class="hljs-number">1</span>,
+ <span class="hljs-string">&apos;last&apos;</span>: <span class="hljs-number">6</span>}
+</code></pre>
+<h4 id="n-&#xADF8;&#xB7A8;">n-&#xADF8;&#xB7A8;</h4>
+<p>&#xB2E8;&#xC5B4;&#xC7A5; &#xC0DD;&#xC131;&#xC5D0; &#xC0AC;&#xC6A9;&#xD560; &#xD1A0;&#xD070;&#xC758; &#xD06C;&#xAE30;&#xB97C; &#xACB0;&#xC815;&#xD55C;&#xB2E4;. &#xBAA8;&#xB178;&#xADF8;&#xB7A8;(1-&#xADF8;&#xB7A8;)&#xC740; &#xD1A0;&#xD070; &#xD558;&#xB098;&#xB9CC; &#xB2E8;&#xC5B4;&#xB85C; &#xC0AC;&#xC6A9;, &#xBC14;&#xC774;&#xADF8;&#xB7A8;(2-&#xADF8;&#xB7A8;)&#xC740; &#xB450;&#xAC1C;&#xC758; &#xC5F0;&#xACB0;&#xB41C; &#xD1A0;&#xD070;&#xC744; &#xD558;&#xB098;&#xC758; &#xB2E8;&#xC5B4;&#xB85C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python">vect = CountVectorizer(ngram_range=(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)).fit(corpus)
+vect.vocabulary_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+{<span class="hljs-string">&apos;this is&apos;</span>: <span class="hljs-number">12</span>,
+ <span class="hljs-string">&apos;is the&apos;</span>: <span class="hljs-number">2</span>,
+ <span class="hljs-string">&apos;the first&apos;</span>: <span class="hljs-number">7</span>,
+ <span class="hljs-string">&apos;first document&apos;</span>: <span class="hljs-number">1</span>,
+ <span class="hljs-string">&apos;the second&apos;</span>: <span class="hljs-number">9</span>,
+ <span class="hljs-string">&apos;second second&apos;</span>: <span class="hljs-number">6</span>,
+ <span class="hljs-string">&apos;second document&apos;</span>: <span class="hljs-number">5</span>,
+ <span class="hljs-string">&apos;and the&apos;</span>: <span class="hljs-number">0</span>,
+ <span class="hljs-string">&apos;the third&apos;</span>: <span class="hljs-number">10</span>,
+ <span class="hljs-string">&apos;third one&apos;</span>: <span class="hljs-number">11</span>,
+ <span class="hljs-string">&apos;is this&apos;</span>: <span class="hljs-number">3</span>,
+ <span class="hljs-string">&apos;this the&apos;</span>: <span class="hljs-number">13</span>,
+ <span class="hljs-string">&apos;the last&apos;</span>: <span class="hljs-number">8</span>,
+ <span class="hljs-string">&apos;last document&apos;</span>: <span class="hljs-number">4</span>}
+</code></pre>
+<pre><code class="lang-python">vect = CountVectorizer(ngram_range=(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>), token_pattern=<span class="hljs-string">&quot;t\w+&quot;</span>).fit(corpus)
+vect.vocabulary_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+{<span class="hljs-string">&apos;this&apos;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&apos;the&apos;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&apos;this the&apos;</span>: <span class="hljs-number">4</span>, <span class="hljs-string">&apos;third&apos;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&apos;the third&apos;</span>: <span class="hljs-number">1</span>}
+</code></pre>
+<h4 id="&#xBE48;&#xB3C4;&#xC218;">&#xBE48;&#xB3C4;&#xC218;</h4>
+<p><code>max_df</code>, <code>min_df</code> &#xC778;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xBB38;&#xC11C;&#xC5D0;&#xC11C; &#xD1A0;&#xD070;&#xC774; &#xB098;&#xD0C0;&#xB09C; &#xD69F;&#xC218;&#xB97C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xB2E8;&#xC5B4;&#xC7A5;&#xC744; &#xAD6C;&#xC131;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;. &#xD1A0;&#xD070;&#xC758; &#xBE48;&#xB3C4;&#xAC00; <code>max_df</code>&#xB85C; &#xC9C0;&#xC815;&#xD55C; &#xAC12;&#xC744; &#xCD08;&#xACFC; &#xD558;&#xAC70;&#xB098; <code>min_df</code>&#xB85C; &#xC9C0;&#xC815;&#xD55C; &#xAC12;&#xBCF4;&#xB2E4; &#xC791;&#xC740; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xBB34;&#xC2DC;&#xD55C;&#xB2E4;. &#xC778;&#xC218; &#xAC12;&#xC740; &#xC815;&#xC218;&#xC778; &#xACBD;&#xC6B0; &#xD69F;&#xC218;, &#xBD80;&#xB3D9;&#xC18C;&#xC218;&#xC810;&#xC778; &#xACBD;&#xC6B0; &#xBE44;&#xC911;&#xC744; &#xB73B;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python">vect = CountVectorizer(max_df=<span class="hljs-number">4</span>, min_df=<span class="hljs-number">2</span>).fit(corpus)
+vect.vocabulary_, vect.stop_words_
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+({<span class="hljs-string">&apos;this&apos;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&apos;is&apos;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&apos;document&apos;</span>: <span class="hljs-number">0</span>},
+ {<span class="hljs-string">&apos;and&apos;</span>, <span class="hljs-string">&apos;last&apos;</span>, <span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;second&apos;</span>, <span class="hljs-string">&apos;the&apos;</span>, <span class="hljs-string">&apos;third&apos;</span>})
+</code></pre>
+<pre><code class="lang-python">vect.transform(corpus).toarray().sum(axis=<span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([<span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>])
+</code></pre>
+<h4 id="tf-idfterm-frequency---inverse-document-frequency">TF-IDF(Term Frequency - Inverse Document Frequency)</h4>
+<p>&#xB2E8;&#xC5B4;&#xB97C; &#xAC2F;&#xC218; &#xADF8;&#xB300;&#xB85C; &#xCE74;&#xC6B4;&#xD2B8;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xBAA8;&#xB4E0; &#xBB38;&#xC11C;&#xC5D0; &#xACF5;&#xD1B5;&#xC801;&#xC73C;&#xB85C; &#xB4E4;&#xC5B4;&#xC788;&#xB294; &#xB2E8;&#xC5B4;&#xC758; &#xACBD;&#xC6B0; &#xBB38;&#xC11C; &#xAD6C;&#xBCC4; &#xB2A5;&#xB825;&#xC774; &#xB5A8;&#xC5B4;&#xC9C4;&#xB2E4;&#xACE0; &#xBCF4;&#xC544; &#xAC00;&#xC911;&#xCE58;&#xB97C; &#xCD95;&#xC18C;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. &#xBB38;&#xC11C; $d$ (document)&#xC640; &#xB2E8;&#xC5B4; $t$ &#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xACC4;&#xC0B0;&#xD55C;&#xB2E4;</p>
+<ul>
+<li><p><script type="math/tex; mode=display">
+  \text{tf-idf}(d, t) = \text{tf}(d, t) \cdot \text{idf}(t)
+  </script></p>
+<ul>
+<li><p>$tf(d,t)$ : term frequency. &#xD2B9;&#xC815;&#xD55C; &#xB2E8;&#xC5B4;&#xC758; &#xBE48;&#xB3C4;&#xC218;</p>
+</li>
+<li><p>$idf(t)$ : inverse document frequency. &#xD2B9;&#xC815;&#xD55C; &#xB2E8;&#xC5B4;&#xAC00; &#xB4E4;&#xC5B4; &#xC788;&#xB294; &#xBB38;&#xC11C;&#xC758; &#xC218;&#xC5D0; &#xBC18;&#xBE44;&#xB840;</p>
+</li>
+<li><p><script type="math/tex; mode=display">
+    \text{idf}(d, t) = \log \dfrac{n}{1 + \text{df}(t)}
+    </script></p>
+</li>
+<li><p>$n$ : &#xC804;&#xCCB4; &#xBB38;&#xC11C;&#xC758; &#xC218;</p>
+</li>
+<li><p>$df(t)$ : &#xB2E8;&#xC5B4; $t$ &#xB97C; &#xAC00;&#xC9C4; &#xBB38;&#xC11C;&#xC758; &#xC218;</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.feature_extraction.text <span class="hljs-keyword">import</span> TfidfVectorizer
+
+tfidv = TfidfVectorizer().fit(corpus)
+tfidv.transform(corpus).toarray()
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">0.</span>        , <span class="hljs-number">0.38947624</span>, <span class="hljs-number">0.55775063</span>, <span class="hljs-number">0.4629834</span> , <span class="hljs-number">0.</span>        ,
+        <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        , <span class="hljs-number">0.32941651</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.4629834</span> ],
+       [<span class="hljs-number">0.</span>        , <span class="hljs-number">0.24151532</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.28709733</span>, <span class="hljs-number">0.</span>        ,
+        <span class="hljs-number">0.</span>        , <span class="hljs-number">0.85737594</span>, <span class="hljs-number">0.20427211</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.28709733</span>],
+       [<span class="hljs-number">0.55666851</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        ,
+        <span class="hljs-number">0.55666851</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.26525553</span>, <span class="hljs-number">0.55666851</span>, <span class="hljs-number">0.</span>        ],
+       [<span class="hljs-number">0.</span>        , <span class="hljs-number">0.38947624</span>, <span class="hljs-number">0.55775063</span>, <span class="hljs-number">0.4629834</span> , <span class="hljs-number">0.</span>        ,
+        <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        , <span class="hljs-number">0.32941651</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.4629834</span> ],
+       [<span class="hljs-number">0.</span>        , <span class="hljs-number">0.45333103</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        , <span class="hljs-number">0.80465933</span>,
+        <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        , <span class="hljs-number">0.38342448</span>, <span class="hljs-number">0.</span>        , <span class="hljs-number">0.</span>        ]])
+</code></pre>
+<h4 id="hashing-trick">Hashing Trick</h4>
+<p><code>CountVectorizer</code> &#xB294; &#xBAA8;&#xB4E0; &#xC791;&#xC5C5;&#xC744; &#xBA54;&#xBAA8;&#xB9AC; &#xC0C1;&#xC5D0;&#xC11C; &#xC218;&#xD589;&#xD558;&#xBBC0;&#xB85C; &#xCC98;&#xB9AC;&#xD560; &#xBB38;&#xC11C;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xCEE4;&#xC9C0;&#xBA74; &#xC18D;&#xB3C4;&#xAC00; &#xB290;&#xB824;&#xC9C0;&#xAC70;&#xB098; &#xC2E4;&#xD589;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD574;&#xC9C4;&#xB2E4;. 
+<code>HasingVectorizer</code> &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD574;&#xC2DC; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xB2E8;&#xC5B4;&#xC5D0; &#xB300;&#xD55C; &#xC778;&#xB371;&#xC2A4; &#xBC88;&#xD638;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBA54;&#xBAA8;&#xB9AC; &#xBC0F; &#xC2E4;&#xD589; &#xC2DC;&#xAC04;&#xC744; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 텍스트 데이터 전처리">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Scikit-Learn의 문서 전처리","level":"1.3.8.1","depth":3,"previous":{"title":"텍스트 데이터 전처리","level":"1.3.8","depth":2,"path":"posts/datascience/machine-learning-text/README.md","ref":"posts/datascience/machine-learning-text/README.md","articles":[{"title":"Scikit-Learn의 문서 전처리","level":"1.3.8.1","depth":3,"path":"posts/datascience/machine-learning-text/scikit-learn-preprocessing.md","ref":"posts/datascience/machine-learning-text/scikit-learn-preprocessing.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-text/scikit-learn-preprocessing.md","mtime":"2020-04-08T15:48:22.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T15:48:48.464Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
