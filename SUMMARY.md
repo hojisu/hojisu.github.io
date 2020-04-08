@@ -90,3 +90,4 @@
         - [군집화](posts/datascience/machine-learning-unsupervised/1401clustering.md)
         - [K-Means](posts/datascience/machine-learning-unsupervised/1402kmeans.md)
         - [DBSCANE](posts/datascience/machine-learning-unsupervised/1403dbscan.md)
+        - [계층적 군집화](posts/datascience/machine-learning-unsupervised/1404hierachical-clustering.md)
