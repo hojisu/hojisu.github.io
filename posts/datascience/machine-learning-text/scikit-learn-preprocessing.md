@@ -249,21 +249,20 @@ array([4, 2, 3, 3])
 
 단어를 갯수 그대로 카운트하지 않고 모든 문서에 공통적으로 들어있는 단어의 경우 문서 구별 능력이 떨어진다고 보아 가중치를 축소하는 방법이다. 문서 $$d$$ (document)와 단어 $$t$$ 에 대해 다음과 같이 계산한다
 
-- $$
-  \text{tf-idf}(d, t) = \text{tf}(d, t) \cdot \text{idf}(t)
-  $$
+$$
+\text{tf-idf}(d, t) = \text{tf}(d, t) \cdot \text{idf}(t)
+$$
 
-  - $$tf(d,t)$$ : term frequency. 특정한 단어의 빈도수
+- $$tf(d,t)$$ : term frequency. 특정한 단어의 빈도수
+- $$idf(t)$$ : inverse document frequency. 특정한 단어가 들어 있는 문서의 수에 반비례
 
-  - $$idf(t)$$ : inverse document frequency. 특정한 단어가 들어 있는 문서의 수에 반비례
+$$
+\text{idf}(d, t) = \log \dfrac{n}{1 + \text{df}(t)}
+$$
 
-  - $$
-    \text{idf}(d, t) = \log \dfrac{n}{1 + \text{df}(t)}
-    $$
+- $$n$$ : 전체 문서의 수
 
-  - $$n$$ : 전체 문서의 수
-
-  - $$df(t)$$ : 단어 $$t$$ 를 가진 문서의 수
+- $$df(t)$$ : 단어 $$t$$ 를 가진 문서의 수
 
 ~~~python
 from sklearn.feature_extraction.text import TfidfVectorizer
