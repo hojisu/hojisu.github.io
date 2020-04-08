@@ -94,4 +94,5 @@
         - [Affinity Propagation](posts/datascience/machine-learning-unsupervised/1405affinity-propagation.md)
         - [KNN](posts/datascience/machine-learning-unsupervised/knn.md)
     - [확률적 그래프 모형](posts/datascience/probability-graph-model/README.md)
-        - [그래프 개념](posts/datascience/probability-graph-model/1501graph.md)
+        - [그래프 기초](posts/datascience/probability-graph-model/1501graph.md)
+        - [그래프 확률 모형](posts/datascience/probability-graph-model/1502graphical-probability-model.md)

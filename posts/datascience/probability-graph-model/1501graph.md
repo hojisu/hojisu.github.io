@@ -1,6 +1,6 @@
 <script> MathJax.Hub.Queue(["Typeset", MathJax.Hub]); </script>
 
-# 그래프(graph) 이론 기초
+# 그래프(graph) 기초
 
 ### summary
 
