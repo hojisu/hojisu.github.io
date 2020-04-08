@@ -83,3 +83,4 @@
         - [퍼셉트론](posts/datascience/machine-learning-supervised/1001perceptron.md)
         - [서포트벡터 머신](posts/datascience/machine-learning-supervised/1002svm.md)
         - [커널 서포트벡터 머신](posts/datascience/machine-learning-supervised/1101kernelsvm.md)
+        - [모형 최적화 방법](posts/datascience/machine-learning-supervised/1201modeloptimization.md)
