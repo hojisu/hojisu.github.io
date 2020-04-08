@@ -93,6 +93,7 @@
         - [계층적 군집화](posts/datascience/machine-learning-unsupervised/1404hierachical-clustering.md)
         - [Affinity Propagation](posts/datascience/machine-learning-unsupervised/1405affinity-propagation.md)
         - [KNN](posts/datascience/machine-learning-unsupervised/knn.md)
-    - [확률적 그래프 모형](posts/datascience/probability-graph-model/README.md)
+    - [그래프 확률 모형](posts/datascience/probability-graph-model/README.md)
         - [그래프 기초](posts/datascience/probability-graph-model/1501graph.md)
         - [그래프 확률 모형](posts/datascience/probability-graph-model/1502graphical-probability-model.md)
+        - [네트워크 추론](posts/datascience/probability-graph-model/1503network.md)
