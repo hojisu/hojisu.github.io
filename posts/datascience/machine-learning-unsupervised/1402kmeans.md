@@ -1,4 +1,4 @@
-<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+<script> MathJax.Hub.Queue(["Typeset", MathJax.Hub]); </script>
 
 # K-평균 군집화 K-means Clustering
 
