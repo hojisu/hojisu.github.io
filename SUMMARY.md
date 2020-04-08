@@ -104,3 +104,4 @@
         - [몬테카를로 베이지안 분석](posts/datascience/machine-learning-advanced/1701montecalro.md)
     - [추천시스템](posts/datascience/recommendsystem/README.md)
         - [추천시스템](posts/datascience/recommendsystem/recommend.md)
+        - [Factorization Machine](posts/datascience/recommendsystem/fm.md)
