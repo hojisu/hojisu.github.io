@@ -75,3 +75,4 @@
     - [머신러닝-지도학습](posts/datascience/machine-learning-supervised/README.md)
         - [분류 모형의 종류](posts/datascience/machine-learning-supervised/0503classification-model.md)
         - [분류 성능평가](posts/datascience/machine-learning-supervised/0504classification-estimation.md)
+        - [로지스틱 회귀분석](posts/datascience/machine-learning-supervised/0601logistickregression.md)

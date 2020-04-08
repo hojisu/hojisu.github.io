@@ -1,0 +1,1506 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>로지스틱 회귀분석 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="0504classification-estimation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../math/">
+            
+                <a href="../../math/">
+            
+                    
+                    수학
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../math/linearalgebra/">
+            
+                <a href="../../math/linearalgebra/">
+            
+                    
+                    선형대수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../math/linearalgebra/0201data-and-matrix.html">
+            
+                <a href="../../math/linearalgebra/0201data-and-matrix.html">
+            
+                    
+                    데이터와 행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../math/linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                <a href="../../math/linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                    
+                    벡터와 행렬의 연산
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../math/linearalgebra/0203matrix-character.html">
+            
+                <a href="../../math/linearalgebra/0203matrix-character.html">
+            
+                    
+                    행렬의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../math/linearalgebra/0204system-of-linear-equations.html">
+            
+                <a href="../../math/linearalgebra/0204system-of-linear-equations.html">
+            
+                    
+                    선형연립방정식과 역행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../math/linearalgebra/0301linear-algebra.html">
+            
+                <a href="../../math/linearalgebra/0301linear-algebra.html">
+            
+                    
+                    선형대수와 해석기하의 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../math/linearalgebra/0302coordinate-transform.html">
+            
+                <a href="../../math/linearalgebra/0302coordinate-transform.html">
+            
+                    
+                    좌표변환
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../math/linearalgebra/0303eigenvalue-decomposition.html">
+            
+                <a href="../../math/linearalgebra/0303eigenvalue-decomposition.html">
+            
+                    
+                    고윳값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../../math/linearalgebra/0304svd.html">
+            
+                <a href="../../math/linearalgebra/0304svd.html">
+            
+                    
+                    특이값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../../math/linearalgebra/0305pca.html">
+            
+                <a href="../../math/linearalgebra/0305pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../math/calculus/">
+            
+                <a href="../../math/calculus/">
+            
+                    
+                    미적분
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../math/calculus/0401function.html">
+            
+                <a href="../../math/calculus/0401function.html">
+            
+                    
+                    함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../math/calculus/0402function-differentiation.html">
+            
+                <a href="../../math/calculus/0402function-differentiation.html">
+            
+                    
+                    함수 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../math/calculus/0403integral.html">
+            
+                <a href="../../math/calculus/0403integral.html">
+            
+                    
+                    적분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../math/calculus/0404matrix-differentiation.html">
+            
+                <a href="../../math/calculus/0404matrix-differentiation.html">
+            
+                    
+                    행렬의 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../math/optimization/">
+            
+                <a href="../../math/optimization/">
+            
+                    
+                    최적화
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../math/optimization/0501optimization.html">
+            
+                <a href="../../math/optimization/0501optimization.html">
+            
+                    
+                    최적화 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../math/optimization/0502constrained-optimization.html">
+            
+                <a href="../../math/optimization/0502constrained-optimization.html">
+            
+                    
+                    제한조건이 있는 최적화 문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../math/optimization/0503lp-qp-problem.html">
+            
+                <a href="../../math/optimization/0503lp-qp-problem.html">
+            
+                    
+                    LP문제 & QP문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../math/probability-statistics/">
+            
+                <a href="../../math/probability-statistics/">
+            
+                    
+                    확률과 통계
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../math/probability-statistics/0602probability.html">
+            
+                <a href="../../math/probability-statistics/0602probability.html">
+            
+                    
+                    확률의 수학적 정의와 의미
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../math/probability-statistics/0603probability-character.html">
+            
+                <a href="../../math/probability-statistics/0603probability-character.html">
+            
+                    
+                    확률의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../math/probability-statistics/0604probability-distribution-function.html">
+            
+                <a href="../../math/probability-statistics/0604probability-distribution-function.html">
+            
+                    
+                    확률분포함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../math/probability-statistics/0605joint-conditional-probability.html">
+            
+                <a href="../../math/probability-statistics/0605joint-conditional-probability.html">
+            
+                    
+                    결합확률과 조건부확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../math/probability-statistics/0606baysian-rule.html">
+            
+                <a href="../../math/probability-statistics/0606baysian-rule.html">
+            
+                    
+                    베이즈 정리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../math/probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                <a href="../../math/probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                    
+                    확률적데이터와 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../math/probability-statistics/0702expectation.html">
+            
+                <a href="../../math/probability-statistics/0702expectation.html">
+            
+                    
+                    기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../math/probability-statistics/0703variance.html">
+            
+                <a href="../../math/probability-statistics/0703variance.html">
+            
+                    
+                    분산 & 표준편차
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../math/probability-statistics/0704multivariate-probability-variable.html">
+            
+                <a href="../../math/probability-statistics/0704multivariate-probability-variable.html">
+            
+                    
+                    다변수 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../math/probability-statistics/0705covariance-correlation.html">
+            
+                <a href="../../math/probability-statistics/0705covariance-correlation.html">
+            
+                    
+                    공분산과 상관계수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../math/probability-statistics/0706conditional-expectation.html">
+            
+                <a href="../../math/probability-statistics/0706conditional-expectation.html">
+            
+                    
+                    조건부 기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../math/probability-statistics/0801scipy-distribution.html">
+            
+                <a href="../../math/probability-statistics/0801scipy-distribution.html">
+            
+                    
+                    Scipy를 이용한 확률분포 분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.13" data-path="../../math/probability-statistics/0802bernoulli-binomial-distribution.html">
+            
+                <a href="../../math/probability-statistics/0802bernoulli-binomial-distribution.html">
+            
+                    
+                    베르누이분포 & 이항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.14" data-path="../../math/probability-statistics/0803categorical-multinomial-distribution.html">
+            
+                <a href="../../math/probability-statistics/0803categorical-multinomial-distribution.html">
+            
+                    
+                    카테고리분포 & 다항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.15" data-path="../../math/probability-statistics/0804normal-distribution.html">
+            
+                <a href="../../math/probability-statistics/0804normal-distribution.html">
+            
+                    
+                    정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.16" data-path="../../math/probability-statistics/0805t-chi-f-distribution.html">
+            
+                <a href="../../math/probability-statistics/0805t-chi-f-distribution.html">
+            
+                    
+                    스튜던트 t분포 & 카이분포 & F분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.17" data-path="../../math/probability-statistics/0806mvn.html">
+            
+                <a href="../../math/probability-statistics/0806mvn.html">
+            
+                    
+                    다변수 가우시안 정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.18" data-path="../../math/probability-statistics/0807beta-gamma-dirichlet.html">
+            
+                <a href="../../math/probability-statistics/0807beta-gamma-dirichlet.html">
+            
+                    
+                    베타분포 & 감마분포 & 디리클레분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.19" data-path="../../math/probability-statistics/0901parameter-estimation.html">
+            
+                <a href="../../math/probability-statistics/0901parameter-estimation.html">
+            
+                    
+                    모수 추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.20" data-path="../../math/probability-statistics/0902mle.html">
+            
+                <a href="../../math/probability-statistics/0902mle.html">
+            
+                    
+                    최대가능도와 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.21" data-path="../../math/probability-statistics/0903baysian-estimation.html">
+            
+                <a href="../../math/probability-statistics/0903baysian-estimation.html">
+            
+                    
+                    베이지안 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.22" data-path="../../math/probability-statistics/0904test-pvalue.html">
+            
+                <a href="../../math/probability-statistics/0904test-pvalue.html">
+            
+                    
+                    검정과 유의확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.23" data-path="../../math/probability-statistics/0905scipy-estimation.html">
+            
+                <a href="../../math/probability-statistics/0905scipy-estimation.html">
+            
+                    
+                    Scipy를 사용한 검정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.24" data-path="../../math/probability-statistics/0906confidence-interval.html">
+            
+                <a href="../../math/probability-statistics/0906confidence-interval.html">
+            
+                    
+                    신뢰구간 추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    데이터 사이언스
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../regression/">
+            
+                <a href="../regression/">
+            
+                    
+                    회귀분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../regression/0101dataintro.html">
+            
+                <a href="../regression/0101dataintro.html">
+            
+                    
+                    데이터분석 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../regression/0102python-package-data.html">
+            
+                <a href="../regression/0102python-package-data.html">
+            
+                    
+                    데이터와 파이썬 패키지
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../regression/0201linear-regression.html">
+            
+                <a href="../regression/0201linear-regression.html">
+            
+                    
+                    선형 회귀분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../regression/0202regression-geometry.html">
+            
+                <a href="../regression/0202regression-geometry.html">
+            
+                    
+                    회귀분석의 기하학
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../regression/0203partial-regression.html">
+            
+                <a href="../regression/0203partial-regression.html">
+            
+                    
+                    부분 회귀
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../regression/0301missingdata.html">
+            
+                <a href="../regression/0301missingdata.html">
+            
+                    
+                    누락데이터 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../regression/0304scale.html">
+            
+                <a href="../regression/0304scale.html">
+            
+                    
+                    스케일링 & 조건수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../regression/0305dummy-variable.html">
+            
+                <a href="../regression/0305dummy-variable.html">
+            
+                    
+                    풀랭크 & 축소랭크 방식
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../regression/0401probability-linear-regression.html">
+            
+                <a href="../regression/0401probability-linear-regression.html">
+            
+                    
+                    확률론적 선형회귀 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../regression/0402laverage-outlier.html">
+            
+                <a href="../regression/0402laverage-outlier.html">
+            
+                    
+                    레버리지와 아웃라이어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../regression/0403anova.html">
+            
+                <a href="../regression/0403anova.html">
+            
+                    
+                    분산분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../regression/0404crossvalidation.html">
+            
+                <a href="../regression/0404crossvalidation.html">
+            
+                    
+                    교차검증
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../regression/0404regression-diagnosis.html">
+            
+                <a href="../regression/0404regression-diagnosis.html">
+            
+                    
+                    회귀분석 모형의 진단
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="../regression/0501non-linear-model-trans.html">
+            
+                <a href="../regression/0501non-linear-model-trans.html">
+            
+                    
+                    비선형모형 변형방법
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="../regression/0502basis-function-overfit.html">
+            
+                <a href="../regression/0502basis-function-overfit.html">
+            
+                    
+                    기저함수모형과 과최적화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="../regression/0503multicollinearity.html">
+            
+                <a href="../regression/0503multicollinearity.html">
+            
+                    
+                    다중공선성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="../regression/0504regularize.html">
+            
+                <a href="../regression/0504regularize.html">
+            
+                    
+                    정규화
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../timeseries/">
+            
+                <a href="../timeseries/">
+            
+                    
+                    시계열 분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../timeseries/0601timeseries-stochastic-process.html">
+            
+                <a href="../timeseries/0601timeseries-stochastic-process.html">
+            
+                    
+                    시계열 자료와 확률과정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../timeseries/0602stationary-process.html">
+            
+                <a href="../timeseries/0602stationary-process.html">
+            
+                    
+                    정상확률과정 & 에르고딕성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../timeseries/0603whitenoise-randomwork.html">
+            
+                <a href="../timeseries/0603whitenoise-randomwork.html">
+            
+                    
+                    백색잡음 & 랜덤워크
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../timeseries/0604trend-season.html">
+            
+                <a href="../timeseries/0604trend-season.html">
+            
+                    
+                    추세 & 계절성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../timeseries/0701general-linear-process.html">
+            
+                <a href="../timeseries/0701general-linear-process.html">
+            
+                    
+                    일반선형확률과정 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    머신러닝-지도학습
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="0503classification-model.html">
+            
+                <a href="0503classification-model.html">
+            
+                    
+                    분류 모형의 종류
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="0504classification-estimation.html">
+            
+                <a href="0504classification-estimation.html">
+            
+                    
+                    분류 성능평가
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3.3" data-path="0601logistickregression.html">
+            
+                <a href="0601logistickregression.html">
+            
+                    
+                    로지스틱 회귀분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >로지스틱 회귀분석</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;logistic-&#xD68C;&#xADC0;&#xBD84;&#xC11D;">&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;(Logistic) &#xD68C;&#xADC0;&#xBD84;&#xC11D;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#&#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC;-&#xD568;&#xC218;sigmoid-function">&#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC; &#xD568;&#xC218;(sigmoid function)</a></li>
+<li><a href="#&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD568;&#xC218;">&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD568;&#xC218;</a></li>
+<li><a href="#&#xC120;&#xD615;-&#xD310;&#xBCC4;&#xD568;&#xC218;">&#xC120;&#xD615; &#xD310;&#xBCC4;&#xD568;&#xC218;</a></li>
+<li><a href="#&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD68C;&#xADC0;&#xBD84;&#xC11D;-&#xBAA8;&#xD615;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;&#xBD84;&#xC11D; &#xBAA8;&#xD615;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</a></li>
+<li><a href="#&#xC218;&#xCE58;&#xC801;-&#xCD5C;&#xC801;&#xD654;numerical-optimization">&#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654;(numerical optimization)</a></li>
+<li><a href="#statsmodels-&#xD328;&#xD0A4;&#xC9C0;&#xC758;-&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD68C;&#xADC0;">StatsModels &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;</a><ul>
+<li><a href="#&#xD310;&#xBCC4;&#xD568;&#xC218;">&#xD310;&#xBCC4;&#xD568;&#xC218;</a></li>
+<li><a href="#&#xC131;&#xB2A5;-&#xCE21;&#xC815;">&#xC131;&#xB2A5; &#xCE21;&#xC815;</a></li>
+</ul>
+</li>
+<li><a href="#scikit-learn-&#xD328;&#xD0A4;&#xC9C0;&#xC758;-&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD68C;&#xADC0;">Scikit-Learn &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="summary">Summary</h3>
+<ul>
+<li>&#xD68C;&#xADC0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC5B4;&#xB5A4; &#xBC94;&#xC8FC;&#xC5D0; &#xC18D;&#xD560; &#xD655;&#xB960;&#xC744; 0&#xC5D0;&#xC11C; 1 &#xC0AC;&#xC774;&#xC758; &#xAC12;&#xC73C;&#xB85C; &#xC608;&#xCE21;&#xD558;&#xACE0; &#xADF8; &#xD655;&#xB960;&#xC5D0; &#xB530;&#xB77C; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xB354; &#xB192;&#xC740; &#xBC94;&#xC8FC;&#xC5D0; &#xC18D;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xBD84;&#xB958;&#xD574;&#xC8FC;&#xB294; &#xC9C0;&#xB3C4; &#xD559;&#xC2B5; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC774;&#xB2E4;.</li>
+<li>&#xAC01; &#xC18D;&#xC131;(feature)&#xB4E4;&#xC758; &#xACC4;&#xC218; log-odds&#xB97C; &#xAD6C;&#xD55C; &#xD6C4; Sigmoid &#xD568;&#xC218;&#xB97C; &#xC801;&#xC6A9;&#xD558;&#xC5EC; &#xC2E4;&#xC81C;&#xB85C; &#xB370;&#xC774;&#xD130;&#xAC00; &#xD574;&#xB2F9; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD560; &#xD655;&#xB960;&#xC744; 0&#xACFC; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xC73C;&#xB85C; &#xB098;&#xD0C0;&#xB0B8;&#xB2E4;.</li>
+<li>&#xC190;&#xC2E4;&#xD568;&#xC218;(Loss Function)&#xB294; &#xBA38;&#xC2E0;&#xB7EC;&#xB2DD; &#xBAA8;&#xB378;&#xC774; &#xC5BC;&#xB9C8;&#xB098; &#xC798; &#xC608;&#xCE21;&#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB2E4;. &#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;&#xC758; &#xC190;&#xC2E4;&#xD568;&#xC218;&#xB294; Log Loss&#xC774;&#xB2E4;.</li>
+<li>&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD568;&#xC218;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xACC4;&#xC218;&#xC640; &#xC808;&#xD3B8;&#xC5D0; &#xB300;&#xD574; Log Loss(&#xB85C;&#xADF8; &#xC190;&#xC2E4;)&#xC744; &#xCD5C;&#xC18C;&#xD654;&#xD558;&#xB294; &#xAC12;&#xC744; &#xCC3E;&#xB294; &#xAC83;</li>
+<li>&#xC885;&#xC18D;&#xBCC0;&#xC218;&#xAC00; &#xBC94;&#xC8FC;&#xD615; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xD558;&#xC5EC; &#xC785;&#xB825; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC8FC;&#xC5B4;&#xC84C;&#xC744; &#xB54C; &#xD574;&#xB2F9; &#xB370;&#xC774;&#xD130;&#xC758; &#xACB0;&#xACFC;&#xAC00; &#xD2B9;&#xC815; &#xBD84;&#xB958;&#xB85C; &#xB098;&#xB220;&#xC9C0;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC77C;&#xC885;&#xC758; &#xBD84;&#xB958; &#xAE30;&#xBC95;&#xC73C;&#xB85C; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>&#xC120;&#xD615; &#xD68C;&#xADC0;&#xC2DD;&#xC758; &#xC6B0;&#xBCC0;&#xC758; &#xBC94;&#xC704;&#xB97C; 0~1&#xB85C; &#xC81C;&#xD55C;&#xD558;&#xACE0; &#xC6B0;&#xBCC0;&#xC758; &#xACB0;&#xACFC; &#xAC12;&#xC774; &#xBC94;&#xC8FC; 1&#xC5D0; &#xC18D;&#xD558;&#xB294; &#xD655;&#xB960;&#xC744; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xC2DD;&#xC774;&#xB2E4;. </li>
+</ul>
+<hr>
+<p>&#xC885;&#xC18D;&#xBCC0;&#xC218;&#xAC00; &#xC774;&#xD56D; &#xBD84;&#xD3EC;(binomial distribution)&#xB97C; &#xB530;&#xB974;&#xACE0; &#xADF8; &#xBAA8;&#xC218; $\mu$ &#xAC00; &#xB3C5;&#xB9BD;&#xBCC0;&#xC218; $x$ &#xC5D0; &#xC758;&#xC874;&#xD55C;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+p(y \mid x) = \text{Bin} (y; \mu(x), N)
+</script></p>
+<p>y&#xC758; &#xAC12;&#xC740; &#xD2B9;&#xC815;&#xD55C; &#xAD6C;&#xAC04;&#xB0B4;&#xC758; &#xAC12;(0~N)&#xB9CC; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB2E4;. &#xC774;&#xD56D; &#xBD84;&#xD3EC;&#xC758; &#xD2B9;&#xBCC4;&#xD55C; &#xACBD;&#xC6B0;(N=1)&#xB85C; y&#xAC00; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xD655;&#xB960;&#xBD84;&#xD3EC;&#xC778; &#xACBD;&#xC6B0;&#xB3C4; &#xC788;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+p(y \mid x) = \text{Bern} (y; \mu(x) )
+</script></p>
+<p>&#xC885;&#xC18D;&#xBCC0;&#xC218;&#xAC00; y&#xAC00; 0 &#xB610;&#xB294; 1&#xC778; &#xBD84;&#xB958; &#xC608;&#xCE21; &#xBB38;&#xC81C;&#xB97C; &#xD480; &#xB54C;&#xB294; x &#xAC12;&#xC5D0; &#xB530;&#xB77C; $\mu(x)$ &#xB97C; &#xC608;&#xCE21;&#xD55C; &#xD6C4; &#xB2E4;&#xC74C; &#xAE30;&#xC900;&#xC5D0; &#xB530;&#xB77C; y&#xB97C; &#xC608;&#xCE21;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\hat{y} = \begin{cases} 1 & \text{ if } \mu(x) \geq 0.5 \\ 0 & \text{ if } \mu(x) < 0.5 \end{cases}
+</script></p>
+<p>&#xB610;&#xB294; $\hat y$ &#xB85C; $y=1$ &#xC774; &#xB420; &#xD655;&#xB960;&#xAC12; $\mu(x)$ &#xB97C; &#xC9C1;&#xC811; &#xCD9C;&#xB825;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\hat y = \mu(x)
+</script></p>
+<h3 id="&#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC;-&#xD568;&#xC218;sigmoid-function">&#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC; &#xD568;&#xC218;(sigmoid function)</h3>
+<p>&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;&#xBAA8;&#xD615;&#xC5D0;&#xC11C;&#xB294; &#xBCA0;&#xB974;&#xB204;&#xC774; &#xD655;&#xB960;&#xBD84;&#xD3EC; &#xBAA8;&#xC218; $\mu$ &#xAC00; x&#xC758; &#xD568;&#xC218;&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;. $\mu(x)$ &#xB294; x&#xC5D0; &#xB300;&#xD55C; &#xC120;&#xD615;&#xD568;&#xC218;&#xB97C; 0&#xBD80;&#xD130; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xB9CC; &#xB098;&#xC62C;&#xC218; &#xC788;&#xB3C4;&#xB85D; &#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC; &#xD568;&#xC218;(sigmoid function)&#xB77C;&#xB294; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xBCC0;&#xD615;&#xD55C; &#xAC83;&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\mu = f(w^Tx)
+</script></p>
+<p>&#xBAA8;&#xC218; $\mu$ &#xB294; 0&#xBD80;&#xD130; 1&#xAE4C;&#xC9C0;&#xC758; &#xC2E4;&#xC218;&#xAC12;&#xB9CC; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. </p>
+<ul>
+<li>&#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC; &#xD568;&#xC218;&#xB294; &#xC885;&#xC18D;&#xBCC0;&#xC218;&#xC758; &#xBAA8;&#xB4E0; &#xC2E4;&#xC218; &#xAC12;&#xC5D0; &#xB300;&#xD574; &#xC720;&#xD55C;&#xD55C; &#xAD6C;&#xAC04; (a, b) &#xC0AC;&#xC774;&#xC758; &#xD55C;&#xC815;&#xB41C;(bounded) &#xAC12;&#xACFC; &#xD56D;&#xC0C1; &#xC591;&#xC758; &#xAE30;&#xC6B8;&#xAE30;&#xB97C; &#xAC00;&#xC9C0;&#xB294;(&#xB2E8;&#xC870;&#xC99D;&#xAC00;) &#xD568;&#xC218;&#xC758; &#xC9D1;&#xD569;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. </li>
+</ul>
+<p>&#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC; &#xD568;&#xC218; &#xC885;&#xB958;</p>
+<ul>
+<li>&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;(Logistic)&#xD568;&#xC218;</li>
+</ul>
+<p><script type="math/tex; mode=display">
+\text{logitstic}(z) = \sigma(z) = \dfrac{1}{1+\exp{(-z)}}
+</script></p>
+<ul>
+<li>&#xD558;&#xC774;&#xD37C;&#xBCFC;&#xB9AD;&#xD0C4;&#xC820;&#xD2B8;(Hyperbolic tangent) &#xD568;&#xC218; (&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;&#xD568;&#xC218; &#xAE30;&#xC6B8;&#xAE30;&#xC758; 4&#xBC30;)</li>
+</ul>
+<p><script type="math/tex; mode=display">
+\tanh(z) = \frac{\sinh z}{\cosh z} = \frac{(e^z - e^{-z})/2}{(e^z + e^{-z})/2} = 2 \sigma(2z) - 1
+</script></p>
+<ul>
+<li>&#xC624;&#xCC28;(Error) &#xD568;&#xC218;</li>
+</ul>
+<p><script type="math/tex; mode=display">
+\text{erf}(z) = \frac{2}{\sqrt\pi}\int_0^z e^{-t^2}\,dt
+</script></p>
+<h3 id="&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD568;&#xC218;">&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD568;&#xC218;</h3>
+<p>&#xBB34;&#xD55C;&#xB300;&#xC758; &#xC2E4;&#xC218;&#xAC12;&#xC744; 0&#xBD80;&#xD130; 1&#xC0AC;&#xC774;&#xC758; &#xC2E4;&#xC218;&#xAC12;&#xC73C;&#xB85C; 1&#xB300;1 &#xB300;&#xC751;&#xC2DC;&#xD0A4;&#xB294; &#xC2DC;&#xADF8;&#xBAA8;&#xC774;&#xB4DC;&#xD568;&#xC218;&#xC774;&#xB2E4;. </p>
+<p>&#xBCA0;&#xB974;&#xB204;&#xC774; &#xC2DC;&#xB3C4;&#xC5D0;&#xC11C; 1&#xC774; &#xB098;&#xC62C; &#xD655;&#xB960; $\mu$ &#xC640; 0&#xC774; &#xB098;&#xC62C; &#xD655;&#xB960; $1 -\mu$ &#xC758; &#xBE44;(ratio)&#xC758; &#xC2B9;&#xC0B0;&#xBE44;(odds ratio)&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;</p>
+<p><script type="math/tex; mode=display">
+\text{odds ratio} = \dfrac{\mu}{1-\mu}
+</script></p>
+<p>0&#xBD80;&#xD130; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xB9CC; &#xAC00;&#xC9C0;&#xB294; $\mu$ &#xB97C; &#xC2B9;&#xC0B0;&#xBE44;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xBA74; 0&#xBD80;&#xD130; $\infty$ &#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C8;&#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC2B9;&#xC0B0;&#xBE44;&#xB97C; &#xB85C;&#xADF8; &#xBCC0;&#xD658;&#xD55C; &#xAC83;&#xC774; &#xB85C;&#xC9C0;&#xD2B8; &#xD568;&#xC218;(Logit function)&#xC774;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+z = \text{logit}(\text{odds ratio}) = \log \left(\dfrac{\mu}{1-\mu}\right)
+</script></p>
+<p>&#xB85C;&#xC9C0;&#xD2B8;&#xD568;&#xC218;&#xC758; &#xAC12;&#xC740; &#xB85C;&#xADF8; &#xBCC0;&#xD658;&#xC5D0; &#xC758;&#xD574; $-\infty$ &#xBD80;&#xD130; $\infty$ &#xAE4C;&#xC9C0;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;&#xD568;&#xC218;(Logistic function)&#xB294; &#xB85C;&#xC9C0;&#xD2B8;&#xD568;&#xC218;&#xC758; &#xC5ED;&#xD568;&#xC218;&#xC774;&#xB2E4;.  </p>
+<p>$-\infty$ &#xBD80;&#xD130; $\infty$ &#xAE4C;&#xC9C0;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xB294; &#xBCC0;&#xC218;&#xB97C; 0&#xBD80;&#xD130; 1&#xC0AC;&#xC774;&#xC758; &#xAC12;&#xC73C;&#xB85C; &#xBCC0;&#xD658;&#xD55C; &#xACB0;&#xACFC;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{logitstic}(z) = \mu(z) = \dfrac{1}{1+\exp{(-z)}}
+</script></p>
+<h3 id="&#xC120;&#xD615;-&#xD310;&#xBCC4;&#xD568;&#xC218;">&#xC120;&#xD615; &#xD310;&#xBCC4;&#xD568;&#xC218;</h3>
+<p>&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;&#xD568;&#xC218; $\sigma(z)$ &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; $z$ &#xAC12;&#xACFC; $\mu$ &#xAC12;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xAD00;&#xACC4;&#xAC00; &#xC788;&#xB2E4;.</p>
+<ul>
+<li>$z = 0$ &#xC77C; &#xB54C; $\mu=0.5$ </li>
+<li>$z &gt; 0$ &#xC77C; &#xB54C; $\mu &gt; 0.5 \; \rightarrow \hat{y} = 1$</li>
+<li>$z &lt; 0$ &#xC77C; &#xB54C; $\mu &lt; 0.5 \; \rightarrow \hat{y} = 0$</li>
+</ul>
+<p>$z$ &#xAC00; &#xBD84;&#xB958; &#xBAA8;&#xD615;&#xC758; &#xD310;&#xBCC4;&#xD568;&#xC218;(decision function) &#xC5ED;&#xD560;&#xC744; &#xD55C;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+z = w^Tx
+</script></p>
+<p>&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;&#xBAA8;&#xD615;&#xC758; &#xC601;&#xC5ED; &#xACBD;&#xACC4;&#xBA74;&#xC740; &#xC120;&#xD615;&#xC774;&#xB2E4;. </p>
+<h3 id="&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD68C;&#xADC0;&#xBD84;&#xC11D;-&#xBAA8;&#xD615;&#xC758;-&#xBAA8;&#xC218;-&#xCD94;&#xC815;">&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;&#xBD84;&#xC11D; &#xBAA8;&#xD615;&#xC758; &#xBAA8;&#xC218; &#xCD94;&#xC815;</h3>
+<p>&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;&#xBD84;&#xC11D; &#xBAA8;&#xD615;(&#xBE44;&#xC120;&#xD615; &#xD68C;&#xADC0;&#xBAA8;&#xD615;)&#xC758; &#xBAA8;&#xC218; $w$&#xB97C; &#xCD5C;&#xB300;&#xAC00;&#xB2A5;&#xB3C4;(Maximum Likelihood Estimation, MLE) &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xCD94;&#xC815;&#xD558;&#xBA74; &#xC120;&#xD615;&#xBAA8;&#xD615;&#xACFC; &#xAC19;&#xC774; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; 0&#xC774; &#xB418;&#xB294; &#xBAA8;&#xC218; $w$ &#xAC12;&#xC5D0; &#xB300;&#xD55C; &#xC218;&#xC2DD;&#xC744; &#xAD6C;&#xD560; &#xC218; &#xC5C6;&#xC73C;&#xBA70; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654; &#xBC29;&#xBC95;(numerical optimization)&#xC744; &#xD1B5;&#xD574; &#xAD6C;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xC608;&#xC2DC;&#xB85C; &#xBCA0;&#xB974;&#xB204;&#xC544;&#xBD84;&#xD3EC;&#xC758; &#xD655;&#xB960;&#xBC00;&#xB3C4;&#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;</p>
+<p><script type="math/tex; mode=display">
+p(y \mid x) = \text{Bern} (y;\mu(x;w) ) = \mu(x;w)^y ( 1 - \mu(x;w) )^{1-y}
+</script></p>
+<p>$\mu$ &#xB294; $w^Tx$ &#xC5D0; &#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;&#xD568;&#xC218;&#xB97C; &#xC801;&#xC6A9;&#xD55C; &#xAC12;&#xC774;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\mu(x;w) = \dfrac{1}{1 + \exp{(-w^Tx)}}
+</script></p>
+<p>&#xC774; &#xC2DD;&#xC744; &#xB300;&#xC785;&#xD558;&#xBA74; &#xC870;&#xAC74;&#xBD80;&#xD655;&#xB960;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+p(y \mid x) 
+&=& \left(  \dfrac{1}{1 + \exp{(-w^Tx)}} \right) ^y \left(  1 - \dfrac{1}{1 + \exp{(-w^Tx)}} \right) ^{1-y} \\
+&=& \left(  \dfrac{1}{1 + \exp{(-w^Tx)}} \right) ^y \left( \dfrac{\exp{(-w^Tx)}}{1 + \exp{(-w^Tx)}} \right) ^{1-y} \\
+\end{eqnarray}
+</script></p>
+<p>&#xB85C;&#xADF8;&#xAC00;&#xB2A5;&#xB3C4; $LL$ 
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+{LL} 
+&=& \log \prod_{i=1}^N \mu(x_i;w)^{y_i} (1-\mu(x_i;w))^{1-y_i} \\
+&=& \sum_{i=1}^N \left( y_i \log\mu(x_i;w) +  (1-y_i)\log(1-\mu(x_i;w)) \right) \\
+&=& \sum_{i=1}^N \left( y_i \log\left(\dfrac{1}{1 + \exp{(-w^Tx_i)}}\right) + (1-y_i)\log\left(\dfrac{\exp{(-w^Tx_i)}}{1 + \exp{(-w^Tx_i)}}\right) \right) \\
+\end{eqnarray}
+</script></p>
+<p>&#xB85C;&#xADF8;&#xAC00;&#xB2A5;&#xB3C4;&#xB97C; &#xCD5C;&#xB300;&#xD654;&#xD558;&#xB294; $w$ &#xAC12;&#xC744; &#xAD6C;&#xD558;&#xAE30; &#xC704;&#xD574; &#xBAA8;&#xC218;&#xB85C; &#xBBF8;&#xBD84;&#xD55C;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+\dfrac{\partial{LL}}{\partial w}  = \sum_{i=1}^N \dfrac{\partial{LL}}{\partial \mu(x_i;w)} \dfrac{\partial\mu(x_i;w)}{\partial w}
+</script></p>
+<p>$LL$ &#xC744; $\mu$ &#xB85C; &#xBBF8;&#xBD84;&#xD558;&#xBA74;</p>
+<p><script type="math/tex; mode=display">
+\dfrac{\partial{LL}}{\partial \mu(x_i;w)} =  \left( y_i \dfrac{1}{\mu(x_i;w)} - (1-y_i)\dfrac{1}{1-\mu(x_i;w)} \right)
+</script></p>
+<p>$\mu$ &#xB97C; $w$ &#xB85C; &#xBBF8;&#xBD84;&#xD558;&#xBA74;</p>
+<p><script type="math/tex; mode=display">
+\dfrac{\partial \mu(x_i;w)}{\partial w} 
+= \dfrac{\partial}{\partial w} \dfrac{1}{1 + \exp{(-w^Tx_i)}} \ 
+= \dfrac{\exp{(-w^Tx_i)}}{(1 + \exp{(-w^Tx_i)})^2} x_i \ 
+= \mu(x_i;w)(1-\mu(x_i;w)) x_i
+</script></p>
+<p>&#xB450; &#xC2DD;&#xC744; &#xACF1;&#xD558;&#xBA74; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xC758; &#xC218;&#xC2DD;&#xC744; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+\dfrac{\partial {LL}}{\partial w} 
+&=& \sum_{i=1}^N \left( y_i \dfrac{1}{\mu(x_i;w)} - (1-y_i)\dfrac{1}{1-\mu(x_i;w)} \right) \mu(x_i;w)(1-\mu(x_i;w)) x_i   \\
+&=& \sum_{i=1}^N \big( y_i (1-\mu(x_i;w)) - (1-y_i)\mu(x_i;w)  \big)  x_i \\
+&=& \sum_{i=1}^N \big( y_i  - \mu(x_i;w) \big) x_i \\
+\end{eqnarray}
+</script></p>
+<p>&#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xAC00; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xB418;&#xB294; &#xBAA8;&#xC218;&#xC758; &#xAC12;&#xC774; &#xB85C;&#xADF8;&#xAC00;&#xB2A5;&#xB3C4;&#xB97C; &#xCD5C;&#xB300;&#xD654;&#xD558;&#xB294; &#xAC12;&#xC774;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130; &#xC218;&#xC2DD;&#xC774; $w$ &#xC5D0; &#xB300;&#xD55C; &#xBE44;&#xC120;&#xD615; &#xD568;&#xC218;&#xC774;&#xBBC0;&#xB85C; &#xC120;&#xD615; &#xBAA8;&#xD615;&#xACFC; &#xAC19;&#xC774; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8;&#xAC00; 0&#xC774; &#xB418;&#xB294; &#xBAA8;&#xC218; $w$ &#xAC12;&#xC5D0; &#xB300;&#xD55C; &#xC218;&#xC2DD;&#xC744; &#xAD6C;&#xD560; &#xC218; &#xC5C6;&#xC73C;&#xBA74; &#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654;&#xBC29;&#xBC95;(numerical optimization )&#xC744; &#xD1B5;&#xD574; &#xBC18;&#xBCF5;&#xC801;&#xC73C;&#xB85C; &#xCD5C;&#xC801; &#xBAA8;&#xC218; $w$ &#xAC12;&#xC744; &#xAD6C;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.  </p>
+<h3 id="&#xC218;&#xCE58;&#xC801;-&#xCD5C;&#xC801;&#xD654;numerical-optimization">&#xC218;&#xCE58;&#xC801; &#xCD5C;&#xC801;&#xD654;(numerical optimization)</h3>
+<p>&#xB85C;&#xADF8; &#xAC00;&#xB2A5;&#xB3C4; &#xD568;&#xC218; $LL$ &#xC744; &#xCD5C;&#xB300;&#xD654;&#xD558;&#xB294; &#xAC83;&#xC740; &#xB2E4;&#xC74C; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xB97C; &#xCD5C;&#xC18C;&#xD654;&#xD558;&#xB294; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+J = -LL
+</script></p>
+<p>&#xCD5C;&#xB300;&#xACBD;&#xC0AC;&#xB3C4;(Steepest Gradient Descent) &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<p>&#xADF8;&#xB808;&#xB514;&#xC5B8;&#xD2B8; &#xBCA1;&#xD130;&#xB294; $g_k = \dfrac{d}{dw}(-LL)$ &#xC774;&#xACE0; &#xC774; &#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xC2A4;&#xD15D;&#xC0AC;&#xC774;&#xC988; $\eta_k$ &#xB9CC;&#xD07C; &#xC774;&#xB3D9;&#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\begin{eqnarray}
+w_{k+1} 
+&=& w_{k} - \eta_k g_k \\
+&=& w_{k} + \eta_k \sum_{i=1}^N \big( y_i  - \mu(x_i; w_k) \big) x_i\\
+\end{eqnarray}
+</script></p>
+<h3 id="statsmodels-&#xD328;&#xD0A4;&#xC9C0;&#xC758;-&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD68C;&#xADC0;">StatsModels &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;</h3>
+<pre><code class="lang-python">logit_mod = sm.Logit(y, X)
+logit_res = logit_mod.fit(disp=<span class="hljs-number">0</span>)
+print(logit_res.summary())
+</code></pre>
+<h4 id="&#xD310;&#xBCC4;&#xD568;&#xC218;">&#xD310;&#xBCC4;&#xD568;&#xC218;</h4>
+<p><code>Logit</code> &#xBAA8;&#xD615;&#xC758; &#xACB0;&#xACFC; &#xAC1D;&#xCCB4;&#xC5D0;&#xB294; <code>fittedvalues</code>&#xB77C;&#xB294; &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xD310;&#xBCC4;&#xD568;&#xC218; $z=w^Tx$ &#xAC12;&#xC774; &#xB4E4;&#xC5B4;&#xAC00; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python">plt.scatter(X0, y, c=y, s=<span class="hljs-number">100</span>, edgecolor=<span class="hljs-string">&quot;k&quot;</span>, lw=<span class="hljs-number">2</span>, label=<span class="hljs-string">&quot;&#xB370;&#xC774;&#xD130;&quot;</span>)
+plt.plot(X0, logit_res.fittedvalues * <span class="hljs-number">0.1</span>, label=<span class="hljs-string">&quot;&#xD310;&#xBCC4;&#xD568;&#xC218;&#xAC12;&quot;</span>)
+plt.legend()
+plt.show()
+</code></pre>
+<h4 id="&#xC131;&#xB2A5;-&#xCE21;&#xC815;">&#xC131;&#xB2A5; &#xCE21;&#xC815;</h4>
+<p>McFadden pseudo R square &#xAC12;&#xC73C;&#xB85C; &#xCE21;&#xC815;</p>
+<p><script type="math/tex; mode=display">
+R^2_{\text{pseudo}} = 1 - \dfrac{G^2}{G^2_0}
+</script></p>
+<p>$G^2$ = deviance or log loss(&#xB85C;&#xADF8; &#xC190;&#xC2E4;) </p>
+<p><script type="math/tex; mode=display">
+G^2 = 2\sum_{i=1}^N \left( y_i\log\dfrac{y_i}{\hat{y}_i} + (1-y_i)\log\dfrac{1-y_i}{1-\hat{y}_i} \right)
+</script></p>
+<p>$\hat y$ &#xC740; $y = 1$ &#xC77C; &#xD655;&#xB960;&#xC744; &#xB73B;&#xD55C;&#xB2E4;. $\hat y = \mu(x_i)$</p>
+<p>deviance&#xB294; &#xBAA8;&#xD615;&#xC774; 100% &#xC815;&#xD655;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; 0&#xC774; &#xB418;&#xACE0; &#xBAA8;&#xD615;&#xC758; &#xC131;&#xB2A5;&#xC774; &#xB098;&#xBE60;&#xC9C8;&#xC218;&#xB85D; &#xAC12;&#xC774; &#xCEE4;&#xC9C4;&#xB2E4;.</p>
+<p>&#xC774; &#xAC12;&#xC740; &#xB85C;&#xADF8; &#xAC00;&#xB2A5;&#xB3C4;&#xC758; &#xC74C;&#xC218;&#xAC12;&#xACFC; &#xAC19;&#xB2E4;. $G^2 = -LL$</p>
+<p>$G_{0}^2$ &#xB294; &#xADC0;&#xBB34;&#xBAA8;&#xD615;(null model)&#xC73C;&#xB85C; &#xCE21;&#xC815;&#xD55C; deviance&#xC774;&#xB2E4;. </p>
+<p>&#xADC0;&#xBB34;&#xBAA8;&#xD615;&#xC774;&#xB780; &#xBAA8;&#xB4E0; $x$ &#xAC00; $y$ &#xB97C; &#xC608;&#xCE21;&#xD558;&#xB294;&#xB370; &#xC804;&#xD600; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE58;&#xC9C0; &#xC54A;&#xB294; &#xBAA8;&#xD615;&#xC774;&#xB2E4;. &#xC989; &#xBB34;&#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960; $p(y)$ &#xC5D0; &#xB530;&#xB77C; $x$ &#xC5D0; &#xC0C1;&#xAD00;&#xC5C6;&#xC774; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; $y$ &#xB97C; &#xC608;&#xCE21;&#xD558;&#xB294; &#xBAA8;&#xD615;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. </p>
+<p>scikit-learn &#xD328;&#xD0A4;&#xC9C0;&#xC758; metric &#xC11C;&#xBE0C;&#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xB294; &#xB85C;&#xADF8; &#xC190;&#xC2E4;&#xC744; &#xACC4;&#xC0B0;&#xD558;&#xB294; <code>log_loss</code> &#xD568;&#xC218;&#xAC00; &#xC788;&#xB2E4;. <code>normalize=False</code>&#xB85C; &#xB193;&#xC73C;&#xBA74; &#xC704;&#xC640; &#xAC19;&#xC740; &#xAC12;&#xC744; &#xAD6C;&#xD55C;&#xB2E4;. <code>normalize</code> &#xC778;&#xC218;&#xC758; &#xB514;&#xD3F4;&#xD2B8; &#xAC12;&#xC740; <code>True</code>&#xC774;&#xACE0; &#xC774; &#xB54C;&#xB294; &#xB85C;&#xADF8; &#xC190;&#xC2E4;&#xC758; &#xD3C9;&#xADE0;&#xAC12;&#xC744; &#xCD9C;&#xB825;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> log_loss
+
+y_hat = logit_res.predict(X)
+log_loss(y, y_hat, normalize=<span class="hljs-keyword">False</span>)
+</code></pre>
+<ul>
+<li>&#xADC0;&#xBB34; &#xBAA8;&#xD615;&#xC758; &#xBAA8;&#xC218;&#xAC12;&#xC744; &#xAD6C;&#xD558;&#xAE30;</li>
+</ul>
+<pre><code class="lang-python">mu_null = np.sum(y) / len(y)
+</code></pre>
+<ul>
+<li>&#xADC0;&#xBB34; &#xBAA8;&#xD615;&#xC73C;&#xB85C; &#xB85C;&#xADF8; &#xC190;&#xC2E4; &#xACC4;&#xC0B0;</li>
+</ul>
+<pre><code class="lang-python">y_null = np.ones_like(y) * mu_null
+log_loss(y, y_null, normalize=<span class="hljs-keyword">False</span>)
+</code></pre>
+<ul>
+<li>McFadden pseudo R square &#xACC4;&#xC0B0;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-number">1</span> - (log_loss(y, y_hat) / log_loss(y, y_null))
+</code></pre>
+<h3 id="scikit-learn-&#xD328;&#xD0A4;&#xC9C0;&#xC758;-&#xB85C;&#xC9C0;&#xC2A4;&#xD2F1;-&#xD68C;&#xADC0;">Scikit-Learn &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0;</h3>
+<ul>
+<li>Scikit-Learn &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xB85C;&#xC9C0;&#xC2A4;&#xD2F1; &#xD68C;&#xADC0; &#xBAA8;&#xD615; <code>LogisticRegression</code> &#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LogisticRegression
+
+model_sk = LogisticRegression().fit(X0, y)
+
+xx = np.linspace(<span class="hljs-number">-3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">100</span>)
+mu = <span class="hljs-number">1.0</span>/(<span class="hljs-number">1</span> + np.exp(-model_sk.coef_[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]*xx - model_sk.intercept_[<span class="hljs-number">0</span>]))
+plt.plot(xx, mu)
+plt.scatter(X0, y, c=y, s=<span class="hljs-number">100</span>, edgecolor=<span class="hljs-string">&quot;k&quot;</span>, lw=<span class="hljs-number">2</span>)
+plt.scatter(X0, model_sk.predict(X0), label=<span class="hljs-string">r&quot;$\hat{y}$&quot;</span>, marker=<span class="hljs-string">&apos;s&apos;</span>, c=y,
+            s=<span class="hljs-number">100</span>, edgecolor=<span class="hljs-string">&quot;k&quot;</span>, lw=<span class="hljs-number">1</span>, alpha=<span class="hljs-number">0.5</span>)
+plt.xlim(<span class="hljs-number">-3</span>, <span class="hljs-number">3</span>)
+plt.xlabel(<span class="hljs-string">&quot;x&quot;</span>)
+plt.ylabel(<span class="hljs-string">r&quot;$\mu$&quot;</span>)
+plt.title(<span class="hljs-string">r&quot;$\hat{y}$ = sign $\mu(x)$&quot;</span>)
+plt.legend()
+plt.show()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0504classification-estimation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 분류 성능평가">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"로지스틱 회귀분석","level":"1.3.3.3","depth":3,"previous":{"title":"분류 성능평가","level":"1.3.3.2","depth":3,"path":"posts/datascience/machine-learning-supervised/0504classification-estimation.md","ref":"posts/datascience/machine-learning-supervised/0504classification-estimation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-supervised/0601logistickregression.md","mtime":"2020-04-08T01:21:10.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T01:22:41.065Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
