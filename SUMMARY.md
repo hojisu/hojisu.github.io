@@ -107,3 +107,4 @@
         - [Factorization Machine](posts/datascience/recommendsystem/fm.md)
     - [텍스트 데이터 전처리](posts/datascience/machine-learning-text/README.md)
         - [Scikit-Learn의 문서 전처리](posts/datascience/machine-learning-text/scikit-learn-preprocessing.md)
+        - [확률론적 언어 모형](posts/datascience/machine-learning-text/probabilistic-language-model.md)

@@ -4,10 +4,10 @@
 
 ### BOW (Bag of Words)
 
-BOW는 문서를 숫자 벡터로 변환하는 가장 기본적인 방법이다. 전체 문서 $ \{d_1, d_2, \ldots, d_n\} $ 를 구성하는 고정된 단어장(vocabulary) $\{t_1, t_2, \ldots, t_m\}$ 를 만들고 $d_i$  라는 개별 문서의 단어장에 해당하는 단어들이 포함되어 있는지를 표시하는 방법이다.
+BOW는 문서를 숫자 벡터로 변환하는 가장 기본적인 방법이다. 전체 문서 $$ \{d_1, d_2, \ldots, d_n\} $$ 를 구성하는 고정된 단어장(vocabulary) $$\{t_1, t_2, \ldots, t_m\}$$ 를 만들고 $$d_i$$  라는 개별 문서의 단어장에 해당하는 단어들이 포함되어 있는지를 표시하는 방법이다.
 
 $$
-x_{i,j} = \text{문서 $d_i$내의 단어 $t_j$의 출현 빈도}
+x_{i,j} = \text{문서 $$d_i$$내의 단어 $$t_j$$의 출현 빈도}
 $$
 
 ​또는
@@ -15,8 +15,8 @@ $$
 $$
 x_{i,j} = 
 \begin{cases}
-0, & \text{만약 단어 $t_j$가 문서 $d_i$ 안에 없으면} \\
-1. & \text{만약 단어 $t_j$가 문서 $d_i$ 안에 있으면}
+0, & \text{만약 단어 $$t_j$$가 문서 $$d_i$$ 안에 없으면} \\
+1. & \text{만약 단어 $$t_j$$가 문서 $$d_i$$ 안에 있으면}
 \end{cases}
 $$
 
@@ -260,23 +260,23 @@ array([4, 2, 3, 3])
 
 #### TF-IDF(Term Frequency - Inverse Document Frequency)
 
-단어를 갯수 그대로 카운트하지 않고 모든 문서에 공통적으로 들어있는 단어의 경우 문서 구별 능력이 떨어진다고 보아 가중치를 축소하는 방법이다. 문서 $d$ (document)와 단어 $t$ 에 대해 다음과 같이 계산한다
+단어를 갯수 그대로 카운트하지 않고 모든 문서에 공통적으로 들어있는 단어의 경우 문서 구별 능력이 떨어진다고 보아 가중치를 축소하는 방법이다. 문서 $$d$$ (document)와 단어 $$t$$ 에 대해 다음과 같이 계산한다
 
 - $$
   \text{tf-idf}(d, t) = \text{tf}(d, t) \cdot \text{idf}(t)
   $$
 
-  - $tf(d,t)$ : term frequency. 특정한 단어의 빈도수
+  - $$tf(d,t)$$ : term frequency. 특정한 단어의 빈도수
 
-  - $idf(t)$ : inverse document frequency. 특정한 단어가 들어 있는 문서의 수에 반비례
+  - $$idf(t)$$ : inverse document frequency. 특정한 단어가 들어 있는 문서의 수에 반비례
 
   - $$
     \text{idf}(d, t) = \log \dfrac{n}{1 + \text{df}(t)}
     $$
 
-  - $n$ : 전체 문서의 수
+  - $$n$$ : 전체 문서의 수
 
-  - $df(t)$ : 단어 $t$ 를 가진 문서의 수
+  - $$df(t)$$ : 단어 $$t$$ 를 가진 문서의 수
 
 ~~~python
 from sklearn.feature_extraction.text import TfidfVectorizer
