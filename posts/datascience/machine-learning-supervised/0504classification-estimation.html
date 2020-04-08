@@ -1,0 +1,1587 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>분류 성능평가 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="0503classification-model.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../math/">
+            
+                <a href="../../math/">
+            
+                    
+                    수학
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../math/linearalgebra/">
+            
+                <a href="../../math/linearalgebra/">
+            
+                    
+                    선형대수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../math/linearalgebra/0201data-and-matrix.html">
+            
+                <a href="../../math/linearalgebra/0201data-and-matrix.html">
+            
+                    
+                    데이터와 행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../math/linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                <a href="../../math/linearalgebra/0202vector-and-matrix-calculation.html">
+            
+                    
+                    벡터와 행렬의 연산
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../math/linearalgebra/0203matrix-character.html">
+            
+                <a href="../../math/linearalgebra/0203matrix-character.html">
+            
+                    
+                    행렬의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../math/linearalgebra/0204system-of-linear-equations.html">
+            
+                <a href="../../math/linearalgebra/0204system-of-linear-equations.html">
+            
+                    
+                    선형연립방정식과 역행렬
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../math/linearalgebra/0301linear-algebra.html">
+            
+                <a href="../../math/linearalgebra/0301linear-algebra.html">
+            
+                    
+                    선형대수와 해석기하의 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../math/linearalgebra/0302coordinate-transform.html">
+            
+                <a href="../../math/linearalgebra/0302coordinate-transform.html">
+            
+                    
+                    좌표변환
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../math/linearalgebra/0303eigenvalue-decomposition.html">
+            
+                <a href="../../math/linearalgebra/0303eigenvalue-decomposition.html">
+            
+                    
+                    고윳값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../../math/linearalgebra/0304svd.html">
+            
+                <a href="../../math/linearalgebra/0304svd.html">
+            
+                    
+                    특이값 분해
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../../math/linearalgebra/0305pca.html">
+            
+                <a href="../../math/linearalgebra/0305pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../math/calculus/">
+            
+                <a href="../../math/calculus/">
+            
+                    
+                    미적분
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../math/calculus/0401function.html">
+            
+                <a href="../../math/calculus/0401function.html">
+            
+                    
+                    함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../math/calculus/0402function-differentiation.html">
+            
+                <a href="../../math/calculus/0402function-differentiation.html">
+            
+                    
+                    함수 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../math/calculus/0403integral.html">
+            
+                <a href="../../math/calculus/0403integral.html">
+            
+                    
+                    적분
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../math/calculus/0404matrix-differentiation.html">
+            
+                <a href="../../math/calculus/0404matrix-differentiation.html">
+            
+                    
+                    행렬의 미분
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../math/optimization/">
+            
+                <a href="../../math/optimization/">
+            
+                    
+                    최적화
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../math/optimization/0501optimization.html">
+            
+                <a href="../../math/optimization/0501optimization.html">
+            
+                    
+                    최적화 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../math/optimization/0502constrained-optimization.html">
+            
+                <a href="../../math/optimization/0502constrained-optimization.html">
+            
+                    
+                    제한조건이 있는 최적화 문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../math/optimization/0503lp-qp-problem.html">
+            
+                <a href="../../math/optimization/0503lp-qp-problem.html">
+            
+                    
+                    LP문제 & QP문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../math/probability-statistics/">
+            
+                <a href="../../math/probability-statistics/">
+            
+                    
+                    확률과 통계
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../math/probability-statistics/0602probability.html">
+            
+                <a href="../../math/probability-statistics/0602probability.html">
+            
+                    
+                    확률의 수학적 정의와 의미
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../math/probability-statistics/0603probability-character.html">
+            
+                <a href="../../math/probability-statistics/0603probability-character.html">
+            
+                    
+                    확률의 성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../math/probability-statistics/0604probability-distribution-function.html">
+            
+                <a href="../../math/probability-statistics/0604probability-distribution-function.html">
+            
+                    
+                    확률분포함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../math/probability-statistics/0605joint-conditional-probability.html">
+            
+                <a href="../../math/probability-statistics/0605joint-conditional-probability.html">
+            
+                    
+                    결합확률과 조건부확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../math/probability-statistics/0606baysian-rule.html">
+            
+                <a href="../../math/probability-statistics/0606baysian-rule.html">
+            
+                    
+                    베이즈 정리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../math/probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                <a href="../../math/probability-statistics/0701probabilistic-data-descriptive.html">
+            
+                    
+                    확률적데이터와 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../math/probability-statistics/0702expectation.html">
+            
+                <a href="../../math/probability-statistics/0702expectation.html">
+            
+                    
+                    기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../math/probability-statistics/0703variance.html">
+            
+                <a href="../../math/probability-statistics/0703variance.html">
+            
+                    
+                    분산 & 표준편차
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../math/probability-statistics/0704multivariate-probability-variable.html">
+            
+                <a href="../../math/probability-statistics/0704multivariate-probability-variable.html">
+            
+                    
+                    다변수 확률변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../math/probability-statistics/0705covariance-correlation.html">
+            
+                <a href="../../math/probability-statistics/0705covariance-correlation.html">
+            
+                    
+                    공분산과 상관계수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../math/probability-statistics/0706conditional-expectation.html">
+            
+                <a href="../../math/probability-statistics/0706conditional-expectation.html">
+            
+                    
+                    조건부 기댓값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../math/probability-statistics/0801scipy-distribution.html">
+            
+                <a href="../../math/probability-statistics/0801scipy-distribution.html">
+            
+                    
+                    Scipy를 이용한 확률분포 분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.13" data-path="../../math/probability-statistics/0802bernoulli-binomial-distribution.html">
+            
+                <a href="../../math/probability-statistics/0802bernoulli-binomial-distribution.html">
+            
+                    
+                    베르누이분포 & 이항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.14" data-path="../../math/probability-statistics/0803categorical-multinomial-distribution.html">
+            
+                <a href="../../math/probability-statistics/0803categorical-multinomial-distribution.html">
+            
+                    
+                    카테고리분포 & 다항분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.15" data-path="../../math/probability-statistics/0804normal-distribution.html">
+            
+                <a href="../../math/probability-statistics/0804normal-distribution.html">
+            
+                    
+                    정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.16" data-path="../../math/probability-statistics/0805t-chi-f-distribution.html">
+            
+                <a href="../../math/probability-statistics/0805t-chi-f-distribution.html">
+            
+                    
+                    스튜던트 t분포 & 카이분포 & F분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.17" data-path="../../math/probability-statistics/0806mvn.html">
+            
+                <a href="../../math/probability-statistics/0806mvn.html">
+            
+                    
+                    다변수 가우시안 정규분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.18" data-path="../../math/probability-statistics/0807beta-gamma-dirichlet.html">
+            
+                <a href="../../math/probability-statistics/0807beta-gamma-dirichlet.html">
+            
+                    
+                    베타분포 & 감마분포 & 디리클레분포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.19" data-path="../../math/probability-statistics/0901parameter-estimation.html">
+            
+                <a href="../../math/probability-statistics/0901parameter-estimation.html">
+            
+                    
+                    모수 추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.20" data-path="../../math/probability-statistics/0902mle.html">
+            
+                <a href="../../math/probability-statistics/0902mle.html">
+            
+                    
+                    최대가능도와 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.21" data-path="../../math/probability-statistics/0903baysian-estimation.html">
+            
+                <a href="../../math/probability-statistics/0903baysian-estimation.html">
+            
+                    
+                    베이지안 모수추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.22" data-path="../../math/probability-statistics/0904test-pvalue.html">
+            
+                <a href="../../math/probability-statistics/0904test-pvalue.html">
+            
+                    
+                    검정과 유의확률
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.23" data-path="../../math/probability-statistics/0905scipy-estimation.html">
+            
+                <a href="../../math/probability-statistics/0905scipy-estimation.html">
+            
+                    
+                    Scipy를 사용한 검정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.24" data-path="../../math/probability-statistics/0906confidence-interval.html">
+            
+                <a href="../../math/probability-statistics/0906confidence-interval.html">
+            
+                    
+                    신뢰구간 추정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    데이터 사이언스
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../regression/">
+            
+                <a href="../regression/">
+            
+                    
+                    회귀분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../regression/0101dataintro.html">
+            
+                <a href="../regression/0101dataintro.html">
+            
+                    
+                    데이터분석 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../regression/0102python-package-data.html">
+            
+                <a href="../regression/0102python-package-data.html">
+            
+                    
+                    데이터와 파이썬 패키지
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../regression/0201linear-regression.html">
+            
+                <a href="../regression/0201linear-regression.html">
+            
+                    
+                    선형 회귀분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../regression/0202regression-geometry.html">
+            
+                <a href="../regression/0202regression-geometry.html">
+            
+                    
+                    회귀분석의 기하학
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../regression/0203partial-regression.html">
+            
+                <a href="../regression/0203partial-regression.html">
+            
+                    
+                    부분 회귀
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../regression/0301missingdata.html">
+            
+                <a href="../regression/0301missingdata.html">
+            
+                    
+                    누락데이터 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../regression/0304scale.html">
+            
+                <a href="../regression/0304scale.html">
+            
+                    
+                    스케일링 & 조건수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../regression/0305dummy-variable.html">
+            
+                <a href="../regression/0305dummy-variable.html">
+            
+                    
+                    풀랭크 & 축소랭크 방식
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../regression/0401probability-linear-regression.html">
+            
+                <a href="../regression/0401probability-linear-regression.html">
+            
+                    
+                    확률론적 선형회귀 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../regression/0402laverage-outlier.html">
+            
+                <a href="../regression/0402laverage-outlier.html">
+            
+                    
+                    레버리지와 아웃라이어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../regression/0403anova.html">
+            
+                <a href="../regression/0403anova.html">
+            
+                    
+                    분산분석
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../regression/0404crossvalidation.html">
+            
+                <a href="../regression/0404crossvalidation.html">
+            
+                    
+                    교차검증
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../regression/0404regression-diagnosis.html">
+            
+                <a href="../regression/0404regression-diagnosis.html">
+            
+                    
+                    회귀분석 모형의 진단
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="../regression/0501non-linear-model-trans.html">
+            
+                <a href="../regression/0501non-linear-model-trans.html">
+            
+                    
+                    비선형모형 변형방법
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="../regression/0502basis-function-overfit.html">
+            
+                <a href="../regression/0502basis-function-overfit.html">
+            
+                    
+                    기저함수모형과 과최적화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="../regression/0503multicollinearity.html">
+            
+                <a href="../regression/0503multicollinearity.html">
+            
+                    
+                    다중공선성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="../regression/0504regularize.html">
+            
+                <a href="../regression/0504regularize.html">
+            
+                    
+                    정규화
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../timeseries/">
+            
+                <a href="../timeseries/">
+            
+                    
+                    시계열 분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../timeseries/0601timeseries-stochastic-process.html">
+            
+                <a href="../timeseries/0601timeseries-stochastic-process.html">
+            
+                    
+                    시계열 자료와 확률과정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../timeseries/0602stationary-process.html">
+            
+                <a href="../timeseries/0602stationary-process.html">
+            
+                    
+                    정상확률과정 & 에르고딕성질
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../timeseries/0603whitenoise-randomwork.html">
+            
+                <a href="../timeseries/0603whitenoise-randomwork.html">
+            
+                    
+                    백색잡음 & 랜덤워크
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../timeseries/0604trend-season.html">
+            
+                <a href="../timeseries/0604trend-season.html">
+            
+                    
+                    추세 & 계절성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../timeseries/0701general-linear-process.html">
+            
+                <a href="../timeseries/0701general-linear-process.html">
+            
+                    
+                    일반선형확률과정 모형
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    머신러닝-지도학습
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="0503classification-model.html">
+            
+                <a href="0503classification-model.html">
+            
+                    
+                    분류 모형의 종류
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3.2" data-path="0504classification-estimation.html">
+            
+                <a href="0504classification-estimation.html">
+            
+                    
+                    분류 성능평가
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >분류 성능평가</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
+<h1 id="&#xBD84;&#xB958;-&#xC131;&#xB2A5;&#xD3C9;&#xAC00;">&#xBD84;&#xB958; &#xC131;&#xB2A5;&#xD3C9;&#xAC00;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#sickit-learn-package&#xC5D0;&#xC11C;-&#xC9C0;&#xC6D0;&#xD558;&#xB294;-&#xBD84;&#xB958;-&#xC131;&#xB2A5;&#xD3C9;&#xAC00;-&#xBA85;&#xB839;">sickit-learn package&#xC5D0;&#xC11C; &#xC9C0;&#xC6D0;&#xD558;&#xB294; &#xBD84;&#xB958; &#xC131;&#xB2A5;&#xD3C9;&#xAC00; &#xBA85;&#xB839;</a></li>
+<li><a href="#&#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;confusion-matrix">&#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;(Confusion Matrix)</a></li>
+<li><a href="#&#xC774;&#xC9C4;-&#xBD84;&#xB958;-&#xACB0;&#xACFC;&#xD45C;">&#xC774;&#xC9C4; &#xBD84;&#xB958; &#xACB0;&#xACFC;&#xD45C;</a></li>
+<li><a href="#&#xD3C9;&#xAC00;&#xC810;&#xC218;">&#xD3C9;&#xAC00;&#xC810;&#xC218;</a><ul>
+<li><a href="#&#xC815;&#xD655;&#xB3C4;accuracy">&#xC815;&#xD655;&#xB3C4;(accuracy)</a></li>
+<li><a href="#&#xC815;&#xBC00;&#xB3C4;precision">&#xC815;&#xBC00;&#xB3C4;(precision)</a></li>
+<li><a href="#&#xC7AC;&#xD604;&#xC728;recall">&#xC7AC;&#xD604;&#xC728;(recall)</a></li>
+<li><a href="#&#xC704;&#xC591;&#xC131;&#xC728;fall-out">&#xC704;&#xC591;&#xC131;&#xC728;(fall-out)</a></li>
+<li><a href="#f&#xC810;&#xC218;f-score">F&#xC810;&#xC218;(F-score)</a></li>
+</ul>
+</li>
+<li><a href="#&#xB2E4;&#xC911;-&#xD074;&#xB798;&#xC2A4;-&#xBB38;&#xC81C;&#xC758;-&#xACBD;&#xC6B0;">&#xB2E4;&#xC911; &#xD074;&#xB798;&#xC2A4; &#xBB38;&#xC81C;&#xC758; &#xACBD;&#xC6B0;</a></li>
+<li><a href="#rocreceiver-operator-characteristic-&#xCEE4;&#xBE0C;">ROC(Receiver Operator Characteristic) &#xCEE4;&#xBE0C;</a></li>
+<li><a href="#aucarea-under-the-curve">AUC(Area Under the Curve)</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h3 id="sickit-learn-package&#xC5D0;&#xC11C;-&#xC9C0;&#xC6D0;&#xD558;&#xB294;-&#xBD84;&#xB958;-&#xC131;&#xB2A5;&#xD3C9;&#xAC00;-&#xBA85;&#xB839;">sickit-learn package&#xC5D0;&#xC11C; &#xC9C0;&#xC6D0;&#xD558;&#xB294; &#xBD84;&#xB958; &#xC131;&#xB2A5;&#xD3C9;&#xAC00; &#xBA85;&#xB839;</h3>
+<ul>
+<li><code>metrics</code> &#xC11C;&#xBE0C;&#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xC11C; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xB2E4;&#xC591;&#xD55C; &#xBD84;&#xB958;&#xC6A9; &#xC131;&#xB2A5;&#xD3C9;&#xAC00; &#xBA85;&#xB839;&#xC744; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.<ul>
+<li><code>confusion_matrix()</code></li>
+<li><code>classfication_report()</code></li>
+<li><code>accuracy_score(y_true, y_pred)</code></li>
+<li><code>precision_score(y_true, y_pred)</code></li>
+<li><code>recall_score(y_true, y_pred)</code></li>
+<li><code>fbeta_score(y_true, y_pred, beta)</code></li>
+<li><code>f1_score(y_true, y_pred)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="&#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;confusion-matrix">&#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;(Confusion Matrix)</h3>
+<p>target&#xC758; &#xC6D0;&#xB798; &#xD074;&#xB798;&#xC2A4;&#xC640; &#xBAA8;&#xD615;&#xC774; &#xC608;&#xCE21;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC77C;&#xCE58;&#xD558;&#xB294;&#xC9C0;&#xB97C; &#xAC2F;&#xC218;&#xB85C; &#xC13C; &#xACB0;&#xACFC;&#xB97C; &#xD45C;&#xB85C; &#xB098;&#xD0C0;&#xB0B8; &#xAC83;&#xC774;&#xB2E4;. &#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xB294; &#xD589;(row), &#xC608;&#xCE21;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC5F4;(column)&#xC73C;&#xB85C; &#xB098;&#xD0C0;&#xB0B8;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">&#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 0</th>
+<th style="text-align:left">&#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 1</th>
+<th style="text-align:left">&#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 0</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 0, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 0&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 0, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 1&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 0, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 2&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 1</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 1, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 0&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 1, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 1&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 1, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 2&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 2</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 2, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 0&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 2, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 1&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+<td style="text-align:left">&#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4;&#xAC00; 2, &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4;&#xAC00; 2&#xC778; &#xD45C;&#xBCF8;&#xC758; &#xC218;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> confusion_matrix
+
+y_true = [<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
+y_pred = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>]
+</code></pre>
+<pre><code class="lang-python">confusion_matrix(y_true, y_pred)
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+       [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+       [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>]])
+</code></pre>
+<p>&#xCCAB; &#xD589;&#xC740; &#xC2E4;&#xC81C;&#xB85C; 0&#xC778; &#xB450;&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130;&#xAC00; &#xB458; &#xB2E4; &#xC815;&#xD655;&#xD558;&#xAC8C; 0&#xC73C;&#xB85C; &#xC608;&#xCE21;&#xB418;&#xC5C8;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;. &#xB450;&#xBC88;&#xC9F8; &#xD589;&#xC740; &#xC2E4;&#xC81C;&#xB85C; 1&#xC778; &#xD558;&#xB098;&#xC758; &#xB370;&#xC774;&#xD130;&#xAC00; 2&#xB85C; &#xBD84;&#xB958;&#xB418;&#xC5C8;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;. &#xB9C8;&#xC9C0;&#xB9C9; &#xD589;&#xC740; &#xC2E4;&#xC81C;&#xB85C; 2&#xC778; &#xB370;&#xC774;&#xD130; 3&#xAC1C; &#xC911; 2&#xAC1C;&#xB9CC; &#xC815;&#xD655;&#xD558;&#xAC8C; 3&#xC73C;&#xB85C; &#xBD84;&#xB958;&#xB418;&#xC5C8;&#xACE0; &#xD558;&#xB098;&#xB294; 0&#xC73C;&#xB85C; &#xBD84;&#xB958;&#xB418;&#xC5C8;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;.</p>
+<p>&#xC5F4; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xBCF4;&#xBA74; &#xCCAB;&#xBC88;&#xC9F8; &#xC5F4;&#xC740; &#xBD84;&#xB958; &#xBAA8;&#xD615;&#xC774; 0&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; 3&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130; &#xC911; 2&#xAC1C;&#xB9CC; &#xC6D0;&#xB798; 0&#xC774;&#xC5C8;&#xACE0; &#xD558;&#xB098;&#xB294; 2&#xC600;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xB2E4;. &#xB9C8;&#xC9C0;&#xB9C9; &#xC5F4;&#xC740; &#xBD84;&#xB958; &#xBAA8;&#xD615;&#xC774; 2&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; 3&#xAC1C;&#xC758; &#xB370;&#xC774;&#xD130; &#xC911; 2&#xAC1C;&#xB9CC; 2&#xC600;&#xACE0; &#xD558;&#xB098;&#xB294; 1&#xC774;&#xC5C8;&#xB2E4;&#xB294; &#xC758;&#xBBF8;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xC774;&#xC9C4;-&#xBD84;&#xB958;-&#xACB0;&#xACFC;&#xD45C;">&#xC774;&#xC9C4; &#xBD84;&#xB958; &#xACB0;&#xACFC;&#xD45C;</h3>
+<p>&#xD074;&#xB798;&#xC2A4;&#xAC00; 0&#xACFC; 1 &#xB450; &#xC885;&#xB958; &#xBC16;&#xC5D0; &#xC5C6;&#xB294; &#xC774;&#xC9C4; &#xBD84;&#xB958;&#xC758; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xD074;&#xB798;&#xC2A4; &#xC774;&#xB984;&#xC744; &#xC591;&#xC131;(positive) &#xC640; &#xC74C;&#xC131;(Negative)&#xB85C; &#xD45C;&#xC2DC;&#xD55C;&#xB2E4;. </p>
+<p>&#xC774; &#xB54C;&#xC758; &#xACB0;&#xACFC;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; <strong>&#xC774;&#xC9C4; &#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;(Binary Confusion Matrix)</strong> &#xC774;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">&#xC591;&#xC131;&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;</th>
+<th style="text-align:left">&#xC74C;&#xC131;&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#xC2E4;&#xC81C; &#xC591;&#xC131;</td>
+<td style="text-align:left">&#xC591;&#xC131; &#xC608;&#xCE21;&#xC774; &#xB9DE;&#xC74C; (True Positive)</td>
+<td style="text-align:left">&#xC74C;&#xC131; &#xC608;&#xCE21;&#xC774; &#xD2C0;&#xB9BC; (False Negative)</td>
+</tr>
+<tr>
+<td style="text-align:left">&#xC2E4;&#xC81C; &#xC74C;&#xC131;</td>
+<td style="text-align:left">&#xC591;&#xC131; &#xC608;&#xCE21;&#xC774; &#xD2C0;&#xB9BC; (False Positive)</td>
+<td style="text-align:left">&#xC74C;&#xC131; &#xC608;&#xCE21;&#xC774; &#xB9DE;&#xC74C; (True Negative)</td>
+</tr>
+</tbody>
+</table>
+<p>&#xBD84;&#xB958; &#xBAA8;&#xD615;&#xC758; &#xC608;&#xCE21; &#xACB0;&#xACFC;&#xAC00; &#xB9DE;&#xC740; &#xACBD;&#xC6B0;, &#xC989; &#xC591;&#xC131;&#xC744; &#xC591;&#xC131;&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD558;&#xAC70;&#xB098; &#xC74C;&#xC131;&#xC744; &#xC74C;&#xC131;&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xCC38;(True)&#xB77C;&#xACE0; &#xD558;&#xACE0; &#xC608;&#xCE21; &#xACB0;&#xACFC;&#xAC00; &#xD2C0;&#xB9B0; &#xACBD;&#xC6B0;, &#xC989; &#xC591;&#xC131;&#xC744; &#xC74C;&#xC131;&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD558;&#xAC70;&#xB098; &#xC74C;&#xC131;&#xC744; &#xC591;&#xC131;&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xAC70;&#xC9D3;(False)&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC0AC;&#xC774;&#xD0B7;&#xB7F0; &#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; <code>confusion_matrix</code> &#xBA85;&#xB839;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xD074;&#xB798;&#xC2A4; &#xC21C;&#xC11C;&#xAC00; 0, 1, 2, ... &#xC21C;&#xC11C;&#xB85C; &#xCD9C;&#xB825;&#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC704;&#xC5D0;&#xC11C; &#xD45C;&#xC2DC;&#xD55C; &#xD45C;&#xC640; &#xB2E4;&#xB97C; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python">y_true = [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
+y_pred = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
+confusion_matrix(y_true, y_pred)
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">2</span>, <span class="hljs-number">0</span>],
+       [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>]])
+</code></pre>
+<p><code>labels</code> &#xC778;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC21C;&#xC11C;&#xB97C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python">confusion_matrix(y_true, y_pred, labels=[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>])
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">3</span>, <span class="hljs-number">1</span>],
+       [<span class="hljs-number">0</span>, <span class="hljs-number">2</span>]])
+</code></pre>
+<h3 id="&#xD3C9;&#xAC00;&#xC810;&#xC218;">&#xD3C9;&#xAC00;&#xC810;&#xC218;</h3>
+<p>&#xC774;&#xC9C4; &#xBD84;&#xB958;&#xD3C9;&#xAC00;&#xD45C;&#xB85C;&#xBD80;&#xD130; &#xD558;&#xB098;&#xC758; &#xD3C9;&#xAC00;&#xC810;&#xC218;(score)&#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xC5EC; &#xADF8; &#xAC12;&#xC744; &#xCD5C;&#xC885;&#xC801;&#xC778; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xB2E4;. &#xC774; &#xB54C; &#xAD00;&#xC810;&#xC5D0; &#xB530;&#xB77C; &#xB2E4;&#xC591;&#xD55C; &#xD3C9;&#xAC00;&#xC810;&#xC218;&#xAC00; &#xC4F0;&#xC778;&#xB2E4;.</p>
+<h4 id="&#xC815;&#xD655;&#xB3C4;accuracy">&#xC815;&#xD655;&#xB3C4;(accuracy)</h4>
+<p>&#xC804;&#xCCB4; &#xC0D8;&#xD50C; &#xC911; &#xB9DE;&#xAC8C; &#xC608;&#xCE21;&#xD55C; &#xC0D8;&#xD50C; &#xC218;&#xC758; &#xBE44;&#xC728;&#xC744; &#xB73B;&#xD55C;&#xB2E4;. &#xB192;&#xC744;&#xC218;&#xB85D; &#xC88B;&#xC740; &#xBAA8;&#xD615;&#xC774;&#xBA70; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xD559;&#xC2B5;&#xC5D0;&#xC11C; &#xCD5C;&#xC801;&#xD654; &#xBAA9;&#xC801;&#xD568;&#xC218;&#xB85C; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{accuracy} = \dfrac{TP + TN}{TP + TN + FP + FN}
+</script></p>
+<h4 id="&#xC815;&#xBC00;&#xB3C4;precision">&#xC815;&#xBC00;&#xB3C4;(precision)</h4>
+<p>&#xC591;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD55C;&#xB2E4;&#xACE0; &#xCD9C;&#xB825;&#xD55C; &#xC0D8;&#xD50C; &#xC911; &#xC2E4;&#xC81C;&#xB85C; &#xC591;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD558;&#xB294; &#xC0D8;&#xD50C; &#xC218;&#xC758; &#xBE44;&#xC728;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. &#xB192;&#xC744;&#xC218;&#xB85D; &#xC88B;&#xC740; &#xBAA8;&#xD615;&#xC774;&#xACE0; &#xC870;&#xAC74;(threshold) &#xAE30;&#xC900;&#xC744; &#xC5C4;&#xACA9;&#xD558;&#xAC8C; &#xD558;&#xBA74; &#xB192;&#xC544;&#xC9C4;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{precision} = \dfrac{TP}{TP + FP}
+</script></p>
+<h4 id="&#xC7AC;&#xD604;&#xC728;recall">&#xC7AC;&#xD604;&#xC728;(recall)</h4>
+<p>&#xC2E4;&#xC81C; &#xC591;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD55C; &#xD45C;&#xBCF8; &#xC911;&#xC5D0; &#xC591;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD55C;&#xB2E4;&#xACE0; &#xCD9C;&#xB825;&#xD55C; &#xD45C;&#xBCF8;&#xC758; &#xC218;&#xC758; &#xBE44;&#xC728;&#xC744; &#xB73B;&#xD55C;&#xB2E4;. &#xB192;&#xC744;&#xC218;&#xB85D; &#xC88B;&#xC740; &#xBAA8;&#xD615;&#xC774;&#xACE0; &#xC591;&#xC131;&#xC73C;&#xB85C; &#xD310;&#xB2E8;&#xD558;&#xB294; &#xAE30;&#xC900;(threshold) &#xC744; &#xB0AE;&#xCD94;&#xC5B4; &#xC57D;&#xAC04;&#xC758; &#xC99D;&#xAC70;&#xB9CC; &#xC788;&#xC5B4;&#xB3C4; &#xC591;&#xC131;&#xC73C;&#xB85C; &#xD310;&#xB2E8;&#xD558;&#xB3C4;&#xB85D; &#xD558;&#xBA74; &#xB192;&#xC544;&#xC9C4;&#xB2E4;. TPR(true positive rate) &#xB610;&#xB294; &#xBBFC;&#xAC10;&#xB3C4;(sensitivity) &#xB77C;&#xACE0;&#xB3C4; &#xD55C;&#xB2E4;.</p>
+<p><script type="math/tex; mode=display">
+\text{recall} = \dfrac{TP}{TP + FN}
+</script></p>
+<h4 id="&#xC704;&#xC591;&#xC131;&#xC728;fall-out">&#xC704;&#xC591;&#xC131;&#xC728;(fall-out)</h4>
+<p>&#xC2E4;&#xC81C; &#xC591;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xD45C;&#xBCF8; &#xC911;&#xC5D0; &#xC591;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD55C;&#xB2E4;&#xACE0; &#xCD9C;&#xB825;&#xD55C; &#xD45C;&#xBCF8;&#xC758; &#xBE44;&#xC728;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. &#xB0AE;&#xC744;&#xC218;&#xB85D; &#xC88B;&#xC740; &#xBAA8;&#xD615;&#xC774;&#xB2E4;. &#xC591;&#xC131;&#xC744; &#xD310;&#xB2E8;&#xD558;&#xB294; &#xAE30;&#xC900;(threshold) &#xC744; &#xC5C4;&#xACA9;&#xD558;&#xAC8C; &#xB450;&#xBA74; &#xB0AE;&#xC544;&#xC9C4;&#xB2E4;. FPR(false positive rate) &#xB610;&#xB294; 1&#xC5D0;&#xC11C; &#xC704;&#xC591;&#xC131;&#xB960;&#xC758; &#xAC12;&#xC744; &#xBE80; &#xAC12;&#xC740; &#xD2B9;&#xC774;&#xB3C4;(specificity)&#xB77C;&#xACE0;&#xB3C4; &#xD55C;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+\text{fallout} = \dfrac{FP}{FP + TN}
+</script></p>
+<h4 id="f&#xC810;&#xC218;f-score">F&#xC810;&#xC218;(F-score)</h4>
+<p>&#xC815;&#xBC00;&#xB3C4;&#xC640; &#xC7AC;&#xD604;&#xC728;&#xC758; &#xAC00;&#xC911;&#xC870;&#xD654;&#xD3C9;&#xADE0;(weight harmonic average)&#xC774;&#xB2E4;. &#xC815;&#xBC00;&#xB3C4;&#xC5D0; &#xC8FC;&#xC5B4;&#xC9C0;&#xB294; &#xAC00;&#xC911;&#xCE58;&#xB97C; &#xBCA0;&#xD0C0;(beta)&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. </p>
+<p><script type="math/tex; mode=display">
+F_\beta = (1 + \beta^2) \, ({\text{precision} \times \text{recall}}) \, / \, ({\beta^2 \, \text{precision} + \text{recall}})
+</script></p>
+<ul>
+<li>&#xBCA0;&#xD0C0;&#xAC00; 1&#xC778; &#xACBD;&#xC6B0;&#xB97C; F1&#xC810;&#xC218;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</li>
+</ul>
+<p><script type="math/tex; mode=display">
+F_1 = 2 \cdot \text{precision} \cdot \text{recall} \, / \, (\text{precision} + \text{recall})
+</script></p>
+<p>&#xC0AC;&#xC774;&#xD0B7;&#xB7F0; &#xD328;&#xD0A4;&#xC9C0;&#xC758; metrics &#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xC11C;&#xB294; &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xC728;, F1&#xC810;&#xC218;&#xB97C; &#xAD6C;&#xD558;&#xB294; <code>classification_report</code> &#xBA85;&#xB839;&#xC744; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;. &#xC774; &#xBA85;&#xB839;&#xC740; &#xAC01;&#xAC01;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC591;&#xC131;(positive) &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xBCF4;&#xC558;&#xC744; &#xB54C;&#xC758; &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xC728;, F1&#xC810;&#xC218;&#xB97C; &#xAC01;&#xAC01; &#xAD6C;&#xD558;&#xACE0; &#xADF8; &#xD3C9;&#xADE0;&#xAC12;&#xC73C;&#xB85C; &#xC804;&#xCCB4; &#xBAA8;&#xD615;&#xC758; &#xC131;&#xB2A5;&#xC744; &#xD3C9;&#xAC00;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python">from sklearn.metrics import classification_report
+
+y_true = [0, 0, 0, 1, 1, 0, 0]
+y_pred = [0, 0, 0, 0, 1, 1, 1]
+
+print(classification_report(y_true, y_pred, target_names=[&apos;class 0&apos;, &apos;class 1&apos;]))
+
+# &#xACB0;&#xACFC;
+        precision    recall  f1-score   support
+
+     class 0       0.75      0.60      0.67         5
+     class 1       0.33      0.50      0.40         2
+
+   micro avg       0.57      0.57      0.57         7
+   macro avg       0.54      0.55      0.53         7
+weighted avg       0.63      0.57      0.59         7
+</code></pre>
+<p>&#xC704; <code>classification_report</code> &#xACB0;&#xACFC;&#xC5D0;&#xC11C; 0&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; &#xB370;&#xC774;&#xD130;&#xC758; 75%&#xB9CC; &#xC2E4;&#xC81C;&#xB85C; 0&#xC774;&#xC5C8;&#xACE0; 1&#xC774;&#xB77C;&#xACE0; &#xC608;&#xCE21;&#xD55C; &#xB370;&#xC774;&#xD130;&#xC758; 33%&#xB9CC; &#xC2E4;&#xC81C;&#xB85C; 1&#xC774;&#xC5C8;&#xC74C;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xB610;&#xD55C; &#xC2E4;&#xC81C; 0&#xC778; &#xB370;&#xC774;&#xD130; &#xC911;&#xC758; 60%&#xB9CC; 0&#xC73C;&#xB85C; &#xD310;&#xBCC4;&#xB418;&#xC5C8;&#xACE0; &#xC2E4;&#xC81C; 1&#xC778; &#xB370;&#xC774;&#xD130; &#xC911;&#xC758; 50%&#xB9CC; 1&#xB85C; &#xD310;&#xBCC4;&#xB418;&#xC5C8;&#xC74C;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
+<h3 id="&#xB2E4;&#xC911;-&#xD074;&#xB798;&#xC2A4;-&#xBB38;&#xC81C;&#xC758;-&#xACBD;&#xC6B0;">&#xB2E4;&#xC911; &#xD074;&#xB798;&#xC2A4; &#xBB38;&#xC81C;&#xC758; &#xACBD;&#xC6B0;</h3>
+<p>&#xAC01;&#xAC01;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xB300;&#xD574; &#xC790;&#xC2E0;&#xC744; &#xB97C; &#xC591;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xB85C;, &#xB2E4;&#xB978; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC74C;&#xC131; &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xAC00;&#xC815;&#xD558;&#xC5EC; OvR &#xBB38;&#xC81C;&#xB97C; &#xD480;&#xACE0; &#xAC01;&#xAC01;&#xC5D0; &#xB300;&#xD574; &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xC728;, &#xC704;&#xC591;&#xC131;&#xB960; &#xB4F1;&#xC758; &#xD3C9;&#xAC00;&#xC810;&#xC218;&#xB97C; &#xAD6C;&#xD55C;&#xB2E4;. &#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xD074;&#xB798;&#xC2A4;&#xBCC4;&#xB85C; &#xAC01;&#xAC01; &#xB2E4;&#xB978; &#xD3C9;&#xAC00;&#xC810;&#xC218;&#xAC00; &#xB098;&#xC624;&#xBBC0;&#xB85C; &#xC774;&#xB97C; &#xD558;&#xB098;&#xB85C; &#xD569;&#xCCD0;&#xB294; &#xC77C;&#xC885;&#xC758; &#xD3C9;&#xADE0;&#xC744; &#xAD6C;&#xD574;&#xC57C; &#xD558;&#xB294;&#xB370; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xAE30;&#xC900;&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li><code>macro</code>: &#xB2E8;&#xC21C;&#xD3C9;&#xADE0;</li>
+<li><code>weighted</code>: &#xAC01; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC18D;&#xD558;&#xB294; &#xD45C;&#xBCF8;&#xC758; &#xAC2F;&#xC218;&#xB85C; &#xAC00;&#xC911;&#xD3C9;&#xADE0;</li>
+<li><p><code>micro</code>: &#xAC01; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC790;&#xC2E0;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC815;&#xD655;&#xD558;&#xAC8C; &#xB9DE;&#xCD98; &#xACBD;&#xC6B0;, &#xC989; &#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;&#xC758; &#xB300;&#xAC01; &#xC131;&#xBD84;&#xC744; True Positive&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xACE0; &#xBE44;&#xB300;&#xAC01; &#xC131;&#xBD84;&#xC744; False Positive&#xC774;&#xBA74;&#xC11C; False Negative&#xB77C;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;. &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xB960;, F1&#xC810;&#xC218;&#xAC00; &#xAC19;&#xC740; &#xAC12;&#xC774; &#xB41C;&#xB2E4;.</p>
+<p>| &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 0 | &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 1 | &#xC608;&#xCE21; &#xD074;&#xB798;&#xC2A4; 2 |       |
+| :------------ | :------------ | :------------ | ----- |
+| &#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 0 | TP            | FP/FN         | FP/FN |
+| &#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 1 | FP/FN         | TP            | FP/FN |
+| &#xC815;&#xB2F5; &#xD074;&#xB798;&#xC2A4; 2 | FP/FN         | FP/FN         | TP    |</p>
+<pre><code class="lang-python">y_true = [0, 0, 1, 1, 2, 2, 2]
+y_pred = [0, 0, 1, 2, 2, 2, 1]
+target_names = [&apos;class 0&apos;, &apos;class 1&apos;, &apos;class 2&apos;]
+print(classification_report(y_true, y_pred, target_names=target_names))
+
+# &#xACB0;&#xACFC;
+            precision    recall  f1-score   support
+
+   class 0       1.00      1.00      1.00         2
+   class 1       0.50      0.50      0.50         2
+   class 2       0.67      0.67      0.67         3
+
+ micro avg       0.71      0.71      0.71         7
+ macro avg       0.72      0.72      0.72         7
+weighted avg       0.71      0.71      0.71         7
+</code></pre>
+</li>
+</ul>
+<h3 id="rocreceiver-operator-characteristic-&#xCEE4;&#xBE0C;">ROC(Receiver Operator Characteristic) &#xCEE4;&#xBE0C;</h3>
+<p>ROC &#xCEE4;&#xBE0C;&#xB294; &#xD074;&#xB798;&#xC2A4; &#xD310;&#xBCC4; &#xAE30;&#xC900; &#xAC12;&#xC758; &#xBCC0;&#xD654;&#xC5D0; &#xB530;&#xB978; &#xC704;&#xC591;&#xC131;&#xB960;(fall-out)&#xACFC; &#xC7AC;&#xD604;&#xC728;(recall)&#xC758; &#xBCC0;&#xD654;&#xB97C; &#xC2DC;&#xAC01;&#xD654; &#xD55C;&#xAC83;&#xC774;&#xB2E4;. &#xD074;&#xB798;&#xC2A4; &#xD310;&#xBCC4; &#xAE30;&#xC900;&#xAC12;&#xC774; &#xB2EC;&#xB77C;&#xC9C4;&#xB2E4;&#xBA74; &#xD310;&#xBCC4; &#xACB0;&#xACFC;&#xAC00; &#xC5B4;&#xB5BB;&#xAC8C; &#xB2EC;&#xB77C;&#xC9C0;&#xB294;&#xC9C0;&#xB294; &#xD45C;&#xD604;&#xD55C; &#xAC83;&#xC774;&#xB2E4;.</p>
+<p>&#xC7AC;&#xD604;&#xC728;(recall)&#xACFC; &#xC704;&#xC591;&#xC131;&#xB960;(fall-out)&#xC740; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC591;&#xC758; &#xC0C1;&#xAD00;&#xAD00;&#xACC4;&#xAC00; &#xC788;&#xB2E4;. </p>
+<p>&#xC7AC;&#xD604;&#xC728;&#xC744; &#xB192;&#xC774;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC591;&#xC131;&#xC73C;&#xB85C; &#xD310;&#xB2E8;&#xD558;&#xB294; &#xAE30;&#xC900;(threshold)&#xC744; &#xB0AE;&#xCD94;&#xC5B4; &#xC57D;&#xAC04;&#xC758; &#xC99D;&#xAC70;&#xB9CC; &#xC788;&#xC5B4;&#xB3C4; &#xC591;&#xC131;&#xC73C;&#xB85C; &#xD310;&#xB2E8;&#xD558;&#xB3C4;&#xB85D; &#xD558;&#xBA74; &#xB41C;&#xB2E4;. &#xADF8;&#xB7EC;&#xB098; &#xC774;&#xB807;&#xAC8C; &#xB418;&#xBA74; &#xC74C;&#xC131;&#xC784;&#xC5D0;&#xB3C4; &#xC591;&#xC131;&#xC73C;&#xB85C; &#xD310;&#xB2E8;&#xB418;&#xB294; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xAC00; &#xAC19;&#xC774; &#xC99D;&#xAC00;&#xD558;&#xAC8C; &#xB418;&#xC5B4; &#xC704;&#xC591;&#xC131;&#xC728;&#xC774; &#xB3D9;&#xC2DC;&#xC5D0; &#xC99D;&#xAC00;&#xD55C;&#xB2E4;. &#xBC18;&#xB300;&#xB85C; &#xC704;&#xC591;&#xC131;&#xC728;&#xC744; &#xB0AE;&#xCD94;&#xAE30; &#xC704;&#xD574; &#xC591;&#xC131;&#xC744; &#xD310;&#xB2E8;&#xD558;&#xB294; &#xAE30;&#xC900;&#xC744; &#xC5C4;&#xACA9;&#xD558;&#xAC8C; &#xB450;&#xAC8C; &#xB418;&#xBA74; &#xC99D;&#xAC70; &#xBD80;&#xC871;&#xC73C;&#xB85C; &#xC74C;&#xC131; &#xD310;&#xB2E8;&#xC744; &#xBC1B;&#xB294; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xC758; &#xC218;&#xAC00; &#xAC19;&#xC774; &#xC99D;&#xAC00;&#xD558;&#xBBC0;&#xB85C; &#xC7AC;&#xD604;&#xC728;&#xC774; &#xB5A8;&#xC5B4;&#xC9C4;&#xB2E4;.</p>
+<p>&#xC0AC;&#xC774;&#xD0B7;&#xB7F0; &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xBD84;&#xB958;&#xBAA8;&#xD615; &#xD074;&#xB798;&#xC2A4;&#xB294; &#xD310;&#xBCC4;&#xD568;&#xC218;&#xAC12;&#xC744; &#xACC4;&#xC0B0;&#xD558;&#xB294; <code>decision_function</code>&#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;. &#xB2E4;&#xC74C; &#xD45C;&#xB294; &#xBD84;&#xB958;&#xBB38;&#xC81C;&#xB97C; &#xD480;&#xACE0; <code>decision_function</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xBAA8;&#xB4E0; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xC5D0; &#xB300;&#xD574; &#xD310;&#xBCC4;&#xD568;&#xC218;&#xAC12;&#xC744; &#xACC4;&#xC0B0;&#xD55C; &#xB2E4;&#xC74C; &#xACC4;&#xC0B0;&#xB41C; &#xD310;&#xBCC4;&#xD568;&#xC218;&#xAC12;&#xC774; &#xAC00;&#xC7A5; &#xD070; &#xB370;&#xC774;&#xD130;&#xBD80;&#xD130; &#xAC00;&#xC7A5; &#xC791;&#xC740; &#xB370;&#xC774;&#xD130; &#xC21C;&#xC11C;&#xB85C; &#xC815;&#xB82C;&#xD55C; &#xAC83;&#xC774;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> make_classification
+<span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LogisticRegression
+
+X, y = make_classification(n_samples=<span class="hljs-number">16</span>, n_features=<span class="hljs-number">2</span>,
+                           n_informative=<span class="hljs-number">2</span>, n_redundant=<span class="hljs-number">0</span>,
+                           random_state=<span class="hljs-number">0</span>)
+
+model = LogisticRegression().fit(X, y)
+y_hat = model.predict(X)
+f_value = model.decision_function(X)
+
+df = pd.DataFrame(np.vstack([f_value, y_hat, y]).T, columns=[<span class="hljs-string">&quot;f&quot;</span>, <span class="hljs-string">&quot;y_hat&quot;</span>, <span class="hljs-string">&quot;y&quot;</span>])
+df.sort_values(<span class="hljs-string">&quot;f&quot;</span>, ascending=<span class="hljs-keyword">False</span>).reset_index(drop=<span class="hljs-keyword">True</span>)
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+
+f      y_hat          y
+<span class="hljs-number">0</span>    <span class="hljs-number">2.167628</span>    <span class="hljs-number">1.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">1</span>    <span class="hljs-number">1.861485</span>    <span class="hljs-number">1.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">2</span>    <span class="hljs-number">1.482220</span>    <span class="hljs-number">1.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">3</span>    <span class="hljs-number">1.447944</span>    <span class="hljs-number">1.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">4</span>    <span class="hljs-number">1.432822</span>    <span class="hljs-number">1.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">5</span>    <span class="hljs-number">1.035662</span>    <span class="hljs-number">1.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">6</span>    <span class="hljs-number">0.244729</span>    <span class="hljs-number">1.0</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">7</span>    <span class="hljs-number">-0.063016</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">8</span>    <span class="hljs-number">-0.582239</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">9</span>    <span class="hljs-number">-0.878385</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">10</span>    <span class="hljs-number">-1.027759</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">11</span>    <span class="hljs-number">-1.153074</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">12</span>    <span class="hljs-number">-1.332066</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">13</span>    <span class="hljs-number">-1.526433</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">14</span>    <span class="hljs-number">-2.175147</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">15</span>    <span class="hljs-number">-4.148556</span>    <span class="hljs-number">0.0</span>    <span class="hljs-number">0.0</span>
+</code></pre>
+<p>ROC &#xCEE4;&#xBE0C;&#xB294; &#xC774; &#xD45C;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC791;&#xC131;&#xD55C;&#xB2E4;.</p>
+<ol>
+<li>&#xD604;&#xC7AC;&#xB294; 0&#xC744; &#xAE30;&#xC900;&#xAC12;(threshold)&#xC73C;&#xB85C; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xAD6C;&#xBD84;&#xD558;&#xC5EC; &#xD310;&#xBCC4;&#xD568;&#xC218;&#xAC12;&#xC774; 0&#xBCF4;&#xB2E4; &#xD06C;&#xBA74; &#xC591;&#xC131;(Positive), &#xC791;&#xC73C;&#xBA74; &#xC74C;&#xC131;(negative)&#xC774; &#xB41C;&#xB2E4;.</li>
+<li>&#xB370;&#xC774;&#xD130; &#xBD84;&#xB958;&#xAC00; &#xB2E4;&#xB974;&#xAC8C; &#xB418;&#xB3C4;&#xB85D; &#xAE30;&#xC900;&#xAC12;&#xC744; &#xC99D;&#xAC00; &#xD639;&#xC740; &#xAC10;&#xC18C;&#xC2DC;&#xD0A8;&#xB2E4;. &#xC704;&#xC758; &#xD45C;&#xC5D0;&#xC11C;&#xB294; &#xAE30;&#xC900;&#xAC12;&#xC744; 0.244729&#xBCF4;&#xB2E4; &#xD06C;&#xB3C4;&#xB85D; &#xC62C;&#xB9AC;&#xBA74; 6&#xBC88; &#xB370;&#xC774;&#xD130;&#xB294; &#xB354;&#xC774;&#xC0C1; &#xC591;&#xC131;&#xC774; &#xC544;&#xB2C8;&#xB2E4;.</li>
+<li>&#xAE30;&#xC900;&#xAC12;&#xC744; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC99D;&#xAC00; &#xD639;&#xC740; &#xAC10;&#xC18C;&#xC2DC;&#xD0A4;&#xBA74;&#xC11C; &#xC774;&#xB97C; &#xBC18;&#xBCF5;&#xD558;&#xBA74; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xB2E4;&#xB978; &#xAE30;&#xC900;&#xAC12;&#xC5D0; &#xB300;&#xD574; &#xBD84;&#xB958; &#xACB0;&#xACFC;&#xAC00; &#xB2EC;&#xB77C;&#xC9C0;&#xACE0; &#xC7AC;&#xD604;&#xC728;, &#xC704;&#xC591;&#xC131;&#xB960; &#xB4F1;&#xC758; &#xC131;&#xB2A5;&#xD3C9;&#xAC00; &#xC810;&#xC218;&#xB3C4; &#xB2EC;&#xB77C;&#xC9C4;&#xB2E4;.</li>
+</ol>
+<p>&#xAE30;&#xC900;&#xAC12; 0&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC774;&#xC9C4; &#xBD84;&#xB958;&#xACB0;&#xACFC;&#xD45C;, &#xC7AC;&#xD604;&#xC728;, &#xC704;&#xC591;&#xC131;&#xC728;&#xC744; &#xACC4;&#xC0B0;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<pre><code class="lang-python">confusion_matrix(y, y_hat, labels=[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>])
+
+<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
+array([[<span class="hljs-number">6</span>, <span class="hljs-number">2</span>],
+       [<span class="hljs-number">1</span>, <span class="hljs-number">7</span>]])
+</code></pre>
+<pre><code class="lang-python">recall = <span class="hljs-number">6</span> / (<span class="hljs-number">6</span> + <span class="hljs-number">2</span>)
+fallout = <span class="hljs-number">1</span> / (<span class="hljs-number">1</span> + <span class="hljs-number">7</span>)
+print(<span class="hljs-string">&quot;recall =&quot;</span>, recall)
+print(<span class="hljs-string">&quot;fallout =&quot;</span>, fallout)
+</code></pre>
+<p>&#xC0AC;&#xC774;&#xD0B7;&#xB7F0; &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xC704; &#xACFC;&#xC815;&#xC744; &#xC790;&#xB3D9;&#xD654;&#xD55C; <code>roc_curve</code> &#xBA85;&#xB839;&#xC744; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;. &#xC778;&#xC218;&#xB85C;&#xB294; &#xD0C0;&#xAC9F; y &#xBCA1;&#xD130;&#xC640; &#xD310;&#xBCC4;&#xD568;&#xC218; &#xBCA1;&#xD130;(&#xD639;&#xC740; &#xD655;&#xB960; &#xBCA1;&#xD130;)&#xB97C; &#xB123;&#xACE0; &#xACB0;&#xACFC;&#xB85C;&#xB294; &#xBCC0;&#xD654;&#xB418;&#xB294; &#xAE30;&#xC900;&#xAC12;&#xACFC; &#xADF8; &#xAE30;&#xC900;&#xAC12;&#xC744; &#xC0AC;&#xC6A9;&#xD588;&#xC744; &#xB54C;&#xC758; &#xC7AC;&#xD604;&#xC728;&#xACFC; &#xC704;&#xC591;&#xC131;&#xB960;&#xC744; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> roc_curve
+
+fpr, tpr, thresholds = roc_curve(y, model.decision_function(X))
+fpr, tpr, thresholds
+</code></pre>
+<p><code>decision_function</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xBAA8;&#xD615;&#xC740; <code>predict_proba</code> &#xBA85;&#xB839;&#xC744; &#xC368;&#xC11C; &#xD655;&#xB960;&#xC744; &#xC785;&#xB825;&#xD574;&#xB3C4; &#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-python">fpr, tpr, thresholds = roc_curve(y, model.predict_proba(X)[:, <span class="hljs-number">1</span>])
+fpr, tpr, thresholds
+</code></pre>
+<p>ROC &#xCEE4;&#xBE0C;&#xB97C; &#xC2DC;&#xAC01;&#xD654;&#xD654;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. &#xAE30;&#xC900;&#xAC12;&#xC774; 0&#xC778; &#xD604;&#xC7AC;&#xC758; &#xBAA8;&#xD615;&#xC744; &#xC810;&#xC73C;&#xB85C; &#xD45C;&#xC2DC;&#xD558;&#xC600;&#xB2E4;.</p>
+<pre><code class="lang-python">plt.plot(fpr, tpr, <span class="hljs-string">&apos;o-&apos;</span>, label=<span class="hljs-string">&quot;Logistic Regression&quot;</span>)
+plt.plot([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], <span class="hljs-string">&apos;k--&apos;</span>, label=<span class="hljs-string">&quot;random guess&quot;</span>)
+plt.plot([fallout], [recall], <span class="hljs-string">&apos;ro&apos;</span>, ms=<span class="hljs-number">10</span>)
+plt.xlabel(<span class="hljs-string">&apos;&#xC704;&#xC591;&#xC131;&#xB960;(Fall-Out)&apos;</span>)
+plt.ylabel(<span class="hljs-string">&apos;&#xC7AC;&#xD604;&#xB960;(Recall)&apos;</span>)
+plt.title(<span class="hljs-string">&apos;Receiver operating characteristic example&apos;</span>)
+plt.show()
+</code></pre>
+<p>&#xC0AC;&#xC774;&#xD0B7;&#xB7F0; &#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xC11C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xBAA8;&#xD615;&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC815;&#xD655;&#xB3C4;(accuracy)&#xB97C; &#xCD5C;&#xB300;&#xD654;&#xD558;&#xB294; &#xBAA8;&#xD615;&#xC774;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC815;&#xD655;&#xB3C4;, &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xB3C4; &#xB4F1;&#xC758; &#xC131;&#xB2A5;&#xC774; &#xB3D9;&#xC77C;&#xD55C; &#xBAA8;&#xD615;&#xB3C4; ROC &#xCEE4;&#xBE0C;&#xC5D0;&#xC11C; &#xC0B4;&#xD3B4;&#xBCF4;&#xBA74; &#xC131;&#xB2A5;&#xC774; &#xB2EC;&#xB77C;&#xC9C0;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> make_classification
+<span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LogisticRegression
+<span class="hljs-keyword">from</span> sklearn.svm <span class="hljs-keyword">import</span> SVC
+
+X, y = make_classification(n_samples=<span class="hljs-number">1000</span>, weights=[<span class="hljs-number">0.95</span>, <span class="hljs-number">0.05</span>], random_state=<span class="hljs-number">5</span>)
+
+model1 = LogisticRegression().fit(X, y)
+y_hat1 = model1.predict(X)
+
+model2 = SVC(gamma=<span class="hljs-number">0.0001</span>, C=<span class="hljs-number">3000</span>, probability=<span class="hljs-keyword">True</span>).fit(X, y)
+y_hat2 = model2.predict(X)
+
+fpr1, tpr1, thresholds1 = roc_curve(y, model1.decision_function(X))
+fpr2, tpr2, thresholds1 = roc_curve(y, model2.decision_function(X))
+
+plt.plot(fpr1, tpr1, <span class="hljs-string">&apos;o-&apos;</span>, ms=<span class="hljs-number">2</span>, label=<span class="hljs-string">&quot;Logistic Regression&quot;</span>)
+plt.plot(fpr2, tpr2, <span class="hljs-string">&apos;o-&apos;</span>, ms=<span class="hljs-number">2</span>, label=<span class="hljs-string">&quot;Kernel SVM&quot;</span>)
+plt.legend()
+plt.plot([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], <span class="hljs-string">&apos;k--&apos;</span>, label=<span class="hljs-string">&quot;random guess&quot;</span>)
+plt.xlabel(<span class="hljs-string">&apos;&#xC704;&#xC591;&#xC131;&#xB960;(Fall-Out)&apos;</span>)
+plt.ylabel(<span class="hljs-string">&apos;&#xC7AC;&#xD604;&#xB960;(Recall)&apos;</span>)
+plt.title(<span class="hljs-string">&apos;ROC &#xCEE4;&#xBE0C;&apos;</span>)
+plt.show()
+</code></pre>
+<h3 id="aucarea-under-the-curve">AUC(Area Under the Curve)</h3>
+<p>ROC courve&#xC758; &#xBA74;&#xC801;&#xC744; &#xB73B;&#xD55C;&#xB2E4;. </p>
+<p>&#xC704;&#xC591;&#xC131;&#xB960;&#xAC12;&#xC774; &#xAC19;&#xC744; &#xB54C; &#xC7AC;&#xD604;&#xB960;&#xAC12;&#xC774; &#xD06C;&#xAC70;&#xB098; &#xC7AC;&#xD604;&#xB960;&#xAC12;&#xC774; &#xAC19;&#xC744; &#xB54C; &#xC704;&#xC591;&#xC131;&#xB960;&#xAC12;&#xC774; &#xC791;&#xC744;&#xC218;&#xB85D; AUC&#xAC00; 1&#xC5D0; &#xAC00;&#xAE4C;&#xC6B4; &#xAC12;&#xC774;&#xACE0; &#xC88B;&#xC740; &#xBAA8;&#xD615;&#xC774;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> auc
+auc(fpr1, tpr1), auc(fpr2, tpr2)
+</code></pre>
+<p>&#xB2E4;&#xC911; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; &#xC815;&#xBC00;&#xB3C4;, &#xC7AC;&#xD604;&#xC728;&#xC744; &#xAD6C;&#xD558;&#xAC70;&#xB098; ROC &#xCEE4;&#xBE0C;&#xB97C; &#xADF8;&#xB9B4; &#xC218; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xAC01;&#xAC01;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xB300;&#xD574; OvR &#xBB38;&#xC81C;&#xB97C; &#xAC00;&#xC815;&#xD558;&#xACE0; &#xAC01;&#xAC01;&#xC758; OvR &#xBB38;&#xC81C;&#xC5D0; &#xB300;&#xD574; ROC &#xCEE4;&#xBE0C;&#xB97C; &#xADF8;&#xB9B0;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.naive_bayes <span class="hljs-keyword">import</span> GaussianNB
+<span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> load_iris
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> label_binarize
+
+iris = load_iris()
+X = iris.data
+y = label_binarize(iris.target, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
+
+fpr = [<span class="hljs-keyword">None</span>] * <span class="hljs-number">3</span>
+tpr = [<span class="hljs-keyword">None</span>] * <span class="hljs-number">3</span>
+thr = [<span class="hljs-keyword">None</span>] * <span class="hljs-number">3</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    model = GaussianNB().fit(X, y[:, i])
+    fpr[i], tpr[i], thr[i] = roc_curve(y[:, i], model.predict_proba(X)[:, <span class="hljs-number">1</span>])
+    plt.plot(fpr[i], tpr[i])
+
+plt.xlabel(<span class="hljs-string">&apos;&#xC704;&#xC591;&#xC131;&#xB960;(Fall-Out)&apos;</span>)
+plt.ylabel(<span class="hljs-string">&apos;&#xC7AC;&#xD604;&#xB960;(Recall)&apos;</span>)
+plt.show()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0503classification-model.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 분류 모형의 종류">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"분류 성능평가","level":"1.3.3.2","depth":3,"previous":{"title":"분류 모형의 종류","level":"1.3.3.1","depth":3,"path":"posts/datascience/machine-learning-supervised/0503classification-model.md","ref":"posts/datascience/machine-learning-supervised/0503classification-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/datascience/machine-learning-supervised/0504classification-estimation.md","mtime":"2020-04-08T01:06:27.099Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T01:08:06.410Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

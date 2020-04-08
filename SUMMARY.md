@@ -74,3 +74,4 @@
         - [일반선형확률과정 모형](posts/datascience/timeseries/0701general-linear-process.md)
     - [머신러닝-지도학습](posts/datascience/machine-learning-supervised/README.md)
         - [분류 모형의 종류](posts/datascience/machine-learning-supervised/0503classification-model.md)
+        - [분류 성능평가](posts/datascience/machine-learning-supervised/0504classification-estimation.md)
