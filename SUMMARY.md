@@ -99,3 +99,5 @@
         - [그래프 확률 모형](posts/datascience/probability-graph-model/1502graphical-probability-model.md)
         - [네트워크 추론](posts/datascience/probability-graph-model/1503network.md)
         - [히든마코프 모형](posts/datascience/probability-graph-model/1504hiddenmarkov.md)
+    - [머신러닝 심화편](posts/datascience/machine-learning-advanced/README.md)
+        - [변분법 추론](posts/datascience/machine-learning-advanced/1802calculus-of-variations.md)
