@@ -193,7 +193,9 @@ $$
 
 바이어스에 대한 미분은 $$\delta$$ 와 같다.  $$\frac{\partial C}{\partial b^{(l)}_{j}} = \delta^{(l)}_j$$
 
-![image-20200323221212483](/Users/jisuho/Library/Application Support/typora-user-images/image-20200323221212483.png)
+![image-20200323221153728](../../../resource/img/image-20200323221153728.png)
+
+![image-20200323221212483](../../../resource/img/image-20200323221212483.png)
 
 ### SGD
 
