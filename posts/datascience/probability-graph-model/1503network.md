@@ -11,7 +11,7 @@ ________________________
 
 확률모형에서 일부 확률변수의 값이 주어졌을 때 다른확률변수의 값이 얼마인지를 알아내는 것을 추론(inference)라고 한다. 
 
-조건부 확률분포함수 $$p(X_{\text{unknown}}|{X}_{\text{known}})$$를 알면 일부 확률변수의 값 $${X}_{\text{known}}$$ 이 주어졌을 때 다른 확률 변수 $$X_{\text{unknown}}$$ 의 확률 $$p(X_{\text{unknown}})$$ 을 알 수 있으므로 추론은 조건부 확률분포함수 $$p(X_{\text{unknown}}|{X}_{\text{known}})$$ 알아내는 것과 같다. 
+조건부 확률분포함수 $$p(X_{\text{unknown}}|\{X\}_{\text{known}})$$를 알면 일부 확률변수의 값 $$\{X\}_{\text{known}}$$ 이 주어졌을 때 다른 확률 변수 $$X_{\text{unknown}}$$ 의 확률 $$p(X_{\text{unknown}})$$ 을 알 수 있으므로 추론은 조건부 확률분포함수 $$p(X_{\text{unknown}}|\{X\}_{\text{known}})$$ 알아내는 것과 같다. 
 
 예시 
 
