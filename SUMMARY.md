@@ -102,3 +102,5 @@
     - [머신러닝 심화편](posts/datascience/machine-learning-advanced/README.md)
         - [변분법 추론](posts/datascience/machine-learning-advanced/1802calculus-of-variations.md)
         - [몬테카를로 베이지안 분석](posts/datascience/machine-learning-advanced/1701montecalro.md)
+    - [추천시스템](posts/datascience/recommendsystem/README.md)
+        - [추천시스템](posts/datascience/recommendsystem/recommend.md)

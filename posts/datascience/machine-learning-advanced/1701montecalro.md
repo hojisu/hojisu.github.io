@@ -65,7 +65,7 @@ $$
 \end{eqnarray}
 $$
 
-$$\dfrac{p(x_i)}{q(x_i)}$$ 은 표본에 대한 가중치 역할을 하므로 importance 라고 한다. rejection으로 인해 버리는 표본이 없기 때문에 더 효율적인 방법이라고 할 수 있다. 
+$$\dfrac{p(x_i)} {q(x_i)}$$ 은 표본에 대한 가중치 역할을 하므로 importance 라고 한다. rejection으로 인해 버리는 표본이 없기 때문에 더 효율적인 방법이라고 할 수 있다. 
 
 ### 마코프 체인 Markov chain
 
