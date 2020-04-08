@@ -113,4 +113,4 @@
     - [딥러닝](posts/datascience/deeplearning/README.md)
         - [신경망](posts/datascience/deeplearning/01neuralnetwork.md)
         - [그레디언트 소멸 문제](posts/datascience/deeplearning/02gradient-vanishing.md)
-        - [신경망 성능 개선 방법](posts/datascience/deeplearning/03neuralnetwork-preformance.md)
+        - [신경망 성능 개선 방법](posts/datascience/deeplearning/03neuralnetwork-performance.md)
