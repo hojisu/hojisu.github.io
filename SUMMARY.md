@@ -124,3 +124,4 @@
         - [DanseNet](posts/datascience/deeplearning-image-calssification/04densenet.md)
     - [딥러닝-이미지 생성 모형](posts/datascience/deeplearning-image-generator/README.md)
         - [AutoEncoder](posts/datascience/deeplearning-image-generator/autoencoder.md)
+        - [GAN](posts/datascience/deeplearning-image-generator/gan.md)
