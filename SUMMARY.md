@@ -119,3 +119,4 @@
     - [딥러닝-이미지 분류 모형](posts/datascience/deeplearning-image-calssification/README.md)
         - [CNN](posts/datascience/deeplearning-image-calssification/00cnn.md)
         - [AlexNet](posts/datascience/deeplearning-image-calssification/01alexnet.md)
+        - [GooLeNet](posts/datascience/deeplearning-image-calssification/02googlenet.md)
