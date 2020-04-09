@@ -118,3 +118,4 @@
         - [그레디언트 최적화 알고리즘 요약](posts/datascience/deeplearning-neuralnet/gd-algorithem.md)
     - [딥러닝-이미지 분류 모형](posts/datascience/deeplearning-image-calssification/README.md)
         - [CNN](posts/datascience/deeplearning-image-calssification/00cnn.md)
+        - [AlexNet](posts/datascience/deeplearning-image-calssification/01alexnet.md)
