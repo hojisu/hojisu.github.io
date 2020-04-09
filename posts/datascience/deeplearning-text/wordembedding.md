@@ -1,5 +1,7 @@
 <script> MathJax.Hub.Queue(["Typeset", MathJax.Hub]); </script>
 
+<script> MathJax.Hub.Queue(["Typeset", MathJax.Hub]); </script>
+
 # 단어 임베딩과 word2vec
 
 ### 단어 임베딩 Word Embedding

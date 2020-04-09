@@ -128,3 +128,4 @@
         - [VAE](posts/datascience/deeplearning-image-generator/vae.md)
     - [딥러닝-텍스트](posts/datascience/deeplearning-text/README.md)
         - [단어 임베딩 & Word2Vec](posts/datascience/deeplearning-text/wordembedding.md)
+        - [LSTM](posts/datascience/deeplearning-text/lstm.md)
