@@ -95,3 +95,8 @@ v_{k+1} = \gamma_v v_k + (1 - \gamma_v) g_k^2 \\
 w_{k+1} = w_k - \dfrac{\mu_k}{\sqrt{\hat{G}_k + \epsilon}} \hat{v}_k
 $$
 
+
+
+
+Reference
+- https://datascienceschool.net/

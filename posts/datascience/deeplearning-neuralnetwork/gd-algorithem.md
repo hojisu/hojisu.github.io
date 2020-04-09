@@ -107,7 +107,9 @@ $$
 위에서 설명한 알고리즘들은 SGD로 단순한 first-order optimization의 변형들이다. 이외에도 Newton's Method등 second-order optimizaion을 기반으로 한 알고리즘들도 있다. 단순한 second-order optimizaion을 사용하기 위해서는 Hessian Matrix라는 2차 편미분 행렬을 계산한 후 역행렬을 구해야는데 계산과정이 비싼 작업이여서 보통 잘 사용되지 않는다. 이러한 계산량을 줄이기 위해 hessian matrix를 근사하거나 추정해나가면서 계산을 진행하는 BFGS/L-BFGS 등의 알고리즘, 그리고 hessian matrix를 직접 계산하지 않으면서 second-order optimization인 Hessian-Free Optimization 등도 존재한다.
 
 
-Refernence
 
-- http://shuuki4.github.io/deep%20learning/2016/05/20/Gradient-Descent-Algorithm-Overview.html
+
+
+Reference
+- https://datascienceschool.net/
 
