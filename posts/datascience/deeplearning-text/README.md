@@ -1,5 +1,9 @@
+<script> MathJax.Hub.Queue(["Typeset", MathJax.Hub]); </script>
+
 # 딥러닝 - 텍스트편
 
-- 단어 임베딩 & Word2Vec
-- LSTM
-- RNN
+[단어 임베딩 & Word2Vec](posts/datascience/deeplearning-text/wordembedding.md)
+
+[LSTM](posts/datascience/deeplearning-text/lstm.md)
+
+[RNN](posts/datascience/deeplearning-text/rnn.md)
