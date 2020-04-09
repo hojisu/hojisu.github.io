@@ -1,6 +1,9 @@
 # 수학
 
-
+- [선형대수](https://hojisu.github.io/posts/math/linearalgebra/)
+- [미적분](https://hojisu.github.io/posts/math/calculus/)
+- [최적화](https://hojisu.github.io/posts/math/optimization/)
+- [확률과 통계](https://hojisu.github.io/posts/math/probability-statistics/)
 
 
 
