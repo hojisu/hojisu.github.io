@@ -120,3 +120,4 @@
         - [CNN](posts/datascience/deeplearning-image-calssification/00cnn.md)
         - [AlexNet](posts/datascience/deeplearning-image-calssification/01alexnet.md)
         - [GooLeNet](posts/datascience/deeplearning-image-calssification/02googlenet.md)
+        - [ResNet](posts/datascience/deeplearning-image-calssification/03resnet.md)
