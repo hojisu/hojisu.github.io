@@ -33,7 +33,32 @@ convolution 연산으로 Densely하게 연결되어 있는 것을 높은 관련�
 
 - 두번째는 1x1 convolution 연산으로 이미지의 채널을 줄여준다면, 3x3, 5x5 convolution레이어에서의 파라미터 개수를 절약할 수 있다. 그래서 망을 기존의 CNN 구조보다 깊게 만들어도 파라미터가 크지 않다. 
 
+### Inception V2 & V3
 
+Inception V2와 Inception V3은 GoogLeNet을 발전시킨 형태로 다음 두 가지 문제를 정의하고 이에 대한 해결책을 제시했다.
+
+1. representation bottleneck은 신경망 안에서 차원을 과도하게 줄일경우 정보의 양이 크게 줄어드는 현상이다.
+2. factorization은 기존의 convolution 연산에서 사용하는 커널을 개선하면 연산의 복잡도가 줄어들 수 있다는 것이다. 
+
+해결책은 다음과 같다.
+
+##### factorization
+
+기존의 5x5 convolution은 두 번의 3x3 convolution 연산으로 교체하였다. 
+
+![image-20200409175900964](../../../resource/img/image-20200409175900964.png)
+
+그리고 기존에 3x3 convolution은 1x3, 3x1 convolution 연산으로 바꾸어 연산의 복잡도를 줄어주었다. 예를 들어, (3,3,3) 형태의 이미지에 대해 convolution 연산을 한다면, 3x3 커널의 경우, 입출력을 같게 하기위해 padding을 사용한 경우, 3x3x3의 파라미터를 사용해 9번의 연산을 해야한다. 곱 연산만 고려했을 때, 243번의 곱을 하게된다. 같은 경우에 1x3, 3x1의 커널을 사용하면 각각 3x3의 파라미터를 사용하고 9번의 연산을 해야한다. 총 162번의 곱을 한다. 
+
+![image-20200409180306919](../../../resource/img/image-20200409180306919.png)
+
+##### representaion bottleneck
+
+pooling과 convolution을 병렬적으로 수행하고 합친다. 
+
+![image-20200409180421532](../../../resource/img/image-20200409180421532.png)
+
+마지막으로 Average pooing 전의 Inception module을 더 넓게 형성 했다. 차원을 줄이면서 발생하는 정보 손실을 막기위한 방법이다. 같은 입력값에 대하여 다양한 연산을 하도록 했다.
 
 
 
