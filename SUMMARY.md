@@ -110,7 +110,7 @@
     - [텍스트 데이터 전처리](posts/datascience/machine-learning-text/README.md)
         - [Scikit-Learn의 문서 전처리](posts/datascience/machine-learning-text/scikit-learn-preprocessing.md)
         - [확률론적 언어 모형](posts/datascience/machine-learning-text/probabilistic-language-model.md)
-    - [딥러닝](posts/datascience/deeplearning-neuralnetwork/README.md)
+    - [딥러닝-신경망](posts/datascience/deeplearning-neuralnetwork/README.md)
         - [신경망](posts/datascience/deeplearning-neuralnetwork/01neuralnetwork.md)
         - [그레디언트 소멸 문제](posts/datascience/deeplearning-neuralnetwork/02gradient-vanishing.md)
         - [신경망 성능 개선 방법](posts/datascience/deeplearning-neuralnetwork/03neuralnetwork-performance.md)
