@@ -116,5 +116,5 @@
         - [신경망 성능 개선 방법](posts/datascience/deeplearning-neuralnet/03neuralnetwork-performance.md)
         - [신경망 최적화 방법](posts/datascience/deeplearning-neuralnet/04neuralnetwork-optimization.md)
         - [그레디언트 최적화 알고리즘 요약](posts/datascience/deeplearning-neuralnet/gd-algorithem.md)
-    - [딥러닝-이미지 분류 모형](posts/datascience/deeplearning-image-calssification/REAMDE.md)
+    - [딥러닝-이미지 분류 모형](posts/datascience/deeplearning-image-calssification/README.md)
         - [CNN](posts/datascience/deeplearning-image-calssification/00cnn.md)
