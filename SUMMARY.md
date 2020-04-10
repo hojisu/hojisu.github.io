@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [목차](README.md)
 
 - [수학](posts/math/README.md)
     - [선형대수](posts/math/linearalgebra/README.md)
