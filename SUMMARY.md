@@ -95,7 +95,7 @@
         - [계층적 군집화](posts/machine-learning/machine-learning-unsupervised/1404hierachical-clustering.md)
         - [Affinity Propagation](posts/machine-learning/machine-learning-unsupervised/1405affinity-propagation.md)
         - [KNN](posts/machine-learning/machine-learning-unsupervised/knn.md)
-         - [가우시안 혼합 모형과 EM방법](posts/machine-learning/machine-learning-unsupervised/1801gmm.md)
+        - [가우시안 혼합 모형과 EM방법](posts/machine-learning/machine-learning-unsupervised/1801gmm.md)
     - [그래프 확률 모형](posts/machine-learning/probability-graph-model/README.md)
         - [그래프 기초](posts/machine-learning/probability-graph-model/1501graph.md)
         - [그래프 확률 모형](posts/machine-learning/probability-graph-model/1502graphical-probability-model.md)
