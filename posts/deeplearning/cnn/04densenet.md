@@ -10,7 +10,7 @@ ______________
 
 ### Dense connectivity
 
-![image-20200324151511467](../../../resource/img/image-20200324151511467.pmg)
+![image-20200324151511467](../../../resource/img/image-20200324151511467.png)
 
 DenseNet의 핵심은 Dense connectivity이다. Dense connectivity란 입력값을 계속해서 출력값의 채널 방향으로 합쳐주는 것(Concat)이다. 이를 ResNet과 수식으로 비교하면 다음과 같다.
 
