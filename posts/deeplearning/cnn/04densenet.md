@@ -55,7 +55,18 @@ Dense Block 사이에 있는 1x1 convolution 연산과 average pooling 연산을
 
 마지막 Dense Block 뒤에 연결이 되며 Batch Normalization, ReLU, 1x1 convolution, 2x2 average pooling으로 구성되어 있다. 1x1 convolution을 통해 featrue map의 개수를 줄어주고 줄여주는 정도 theta는 하이퍼 파라미터 이다. 
 
-transition layer를 통과하면 feature map의 개수(channel)이 줄어들고 2x2 average pooling layer를 통해 feature map의 가로세로 크기 또한 절반으로 줄어 든다. theta를 1로 사용하면 feature map의 개수를 그대로 가져가는 것을 의미한다. 
+transition layer를 통과하면 feature map의 개수(channel)이 줄어들고 2x2 average pooling layer를 통해 feature map의 가로세로 크기 또한 절반으로 줄어 든다. theta를 1로 사용하면 feature map의 개수를 그대로 가져가는 것을 의미한다.
+
+### ResNet과 비교
+- 파라미터의 크기(네트워크 크기)대비 성능이 우수하다. 즉, 네트워크의 학습이 더 쉽다.
+
+### 장점
+- 기울기 소실에 대한 해결(skip connection)
+- 네트워크의 크기가 작아진다.
+
+### 단점
+- 깊어질 수록 depth가 늘어남에 따라 연산량이 증가한다. (Depth압축으로 해결 가능)
+
 
 Reference
 - https://datascienceschool.net/
