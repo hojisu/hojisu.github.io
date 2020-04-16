@@ -55,7 +55,7 @@
     - [부분 회귀](posts/regression/0203partial-regression.md)
     - [누락데이터 처리](posts/regression/0301missingdata.md)
     - [스케일링 & 조건수](posts/regression/0304scale.md)
-    - [풀랭크 & 축소랭크 방식](posts/regression/0305dummy-variable.md)
+    - [범주형 독립변수](posts/regression/0305dummy-variable.md)
     - [확률론적 선형회귀 모형](posts/regression/0401probability-linear-regression.md)
     - [레버리지와 아웃라이어](posts/regression/0402laverage-outlier.md)
     - [분산분석](posts/regression/0403anova.md)
