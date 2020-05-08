@@ -2,7 +2,7 @@
 
 - [신경망](https://hojisu.github.io/posts/deeplearning/01neuralnetwork.html)
 - [그레디언트 소멸 문제](https://hojisu.github.io/posts/deeplearning/02gradient-vanishing.html)
-- [신경망 성능 개선 방법](https://hojisu.github.io/posts/deeplearning/02gradient-vanishing.html)
+- [신경망 성능 개선 방법](https://hojisu.github.io/posts/deeplearning/03neuralnetwork-performance.html)
 - [신경망 최적화 방법](https://hojisu.github.io/posts/deeplearning/04neuralnetwork-optimization.html)
 - [그레디언트 최적화 알고리즘 요약](https://hojisu.github.io/posts/deeplearning/gd-algorithem.html)
 - [CNN](https://hojisu.github.io/posts/deeplearning/cnn/)
