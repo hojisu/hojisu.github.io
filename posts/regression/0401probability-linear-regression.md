@@ -149,18 +149,18 @@ $$
 그런데 잡음의 분산 $$\text{E}[ \epsilon^2 ] = \sigma^2$$의 값은 알지 못하므로 다음과 같이 잔차의 분산 $$E[ \epsilon^2 ]$$으로부터 추정한다.
 
 $$
-E[ e^2 ] 
-&=& \text{E}[ (M\epsilon)^2 ] \\
-&=& \text{E}[(\epsilon^T M^T)(M\epsilon)] \\
-&=& \text{E}[ \epsilon^T M \epsilon] \\
-&=& \text{E}[ \text{tr}(\epsilon^T M \epsilon) ] \\
-&=& \text{tr}( \text{E}[ M \epsilon \epsilon^T ]) \\
-&=& \text{tr}( M \text{E}[\epsilon \epsilon^T ]) \\
-&=& \text{tr}( M \sigma^2 I ) \\
-&=& \sigma^2 \text{tr}(M) \\
-&=& \sigma^2 \text{tr}(I - X(X^TX)^{-1}X^T) \\
-&=& \sigma^2 \left( \text{tr}(I) - \text{tr}((X^TX)^{-1}(X^TX))  \right) \\
-&=& \sigma^2 (N-K) \\
+\text{E}[ e^2 ] 
+\text{E}[ (M\epsilon)^2 ] \\
+\text{E}[(\epsilon^T M^T)(M\epsilon)] \\
+\text{E}[ \epsilon^T M \epsilon] \\
+\text{E}[ \text{tr}(\epsilon^T M \epsilon) ] \\
+\text{tr}( \text{E}[ M \epsilon \epsilon^T ]) \\
+\text{tr}( M \text{E}[\epsilon \epsilon^T ]) \\
+\text{tr}( M \sigma^2 I ) \\
+\sigma^2 \text{tr}(M) \\
+\sigma^2 \text{tr}(I - X(X^TX)^{-1}X^T) \\
+\sigma^2 \left( \text{tr}(I) - \text{tr}((X^TX)^{-1}(X^TX))  \right) \\
+\sigma^2 (N-K) \\
 $$
 
 여기에서 N은 표본 데이터의 수, K는 X 행렬의 열의 수 즉 모수의 갯수이다. 상수항을 포함한 선형 모형이라면 모수의 갯수는 입력데이터 차원의 수 D에 1을 더한 값이 된다. 
