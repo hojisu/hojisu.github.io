@@ -8,6 +8,8 @@
 - 선형회귀모형의 가정은 가우시안 정규분포를 따르고 잡음의 기댓값은 항상 0이고 표본의 잡음들의 공분산 값도 항상 0이고 표본의 잡음들의 분산은 항상 같다. 
 - 단일 계수 t-검정의 귀무가설은 ''가중치가 0이다'' 로 유의확율이 0에 가깝다면 귀무가설은 기각이므로 가중치가 0일 확률이 적다. 두 독립변수의 계수를 비교할 때 쓸 수 있다. 범주형 독립변수의 범주값이 가지는 유의미함을 판단하는데 유용하다. 
 - 회귀분석 F-검정의 귀무가설은 ''가중치가 모두 0이다'' 로 유의 확률이 작으면 작을수록 더 강력하게 기각된 것이므로 더 의미가 있는 모형이라고 할 수 있다. 
+- 확률론적 선형회귀모형을 사용하면 부트스트래핑처럼 많은 계산을 하지 않아도 빠르고 안정적으로 가중치 추정값의 오차(std err)를 구할 수 있다. 이 값은 부트스트래핑을 사용하여 계산한 것이 아니라 확률론적 선형회귀모형을 사용하여 계산한 값이다.
+- 
 ______
 
 ### 부트스트래핑
@@ -25,7 +27,7 @@ statsmodels 의 summary 메서드로 출력한 보고서에서 `ste err`이라�
 선형 회귀분석의 기본 가정은 종속 변수 $$y$$ 가 독립 변수 $$x$$ 의 선형 조합으로 결정되는 기댓값과 고정된 분산 $$\sigma^2$$ 을 가지는 가우시안 정규 분포라는 것이다. 
 
 $$
-y ~ N(w^Tx, \sigma^2)
+ y ~ N(w^Tx, \sigma^2)
 $$
 
 $$y$$ 의 확률 밀도 함수는 다음처럼 쓸 수 있다. 이 식에서 모수 벡터 $$\theta=(w, \sigma^2)$$ 이다.
@@ -71,11 +73,132 @@ $$
 
 ### 잔차의 분포
 
-**잔차 $$e$$는 잡음 $$ϵ$$의 선형 변환(linear transform)**이다.
+확률론적 선형 회귀모형에 따르면 회귀분석에서 생기는 잔차 $$e = y - w^Tx$$도 정규분포를 따른다. 
 
-**잔차의 기댓값도 x와 상관없이 0이어야 한다.**
+확률룬적 선형회귀모형의 잡음과 잔차는 다음과 같은 관계를 가진다.
+
+$$
+\hat y = X \hat w = X(X^TX)^{-1}X^Ty = Hy
+$$
+
+행렬 H은 Hat 행렬 혹은 projection 행렬 또는 influence(영향도)행렬이라고 부르는 대칭행렬이다. 
+
+Hat 행렬을 이용하면 잔차는 다음처럼 표현된다.
+$$
+e = y - \hat y = y - Hy = (I-H)y = My
+$$
+
+행렬 M은 잔차(residual)행렬이라고 부른다. 
+확률론적 선형회귀 모형의 가정을 적용하면,
+
+$$
+e = My = M(Xw + \epsilon) = MXw + M \epsilon
+$$
+
+그런데 MX = 0 에서 $$e = M \epsilon$$ 이다.
+
+**잔차 $$e$$는 잡음 $$ϵ$$의 선형 변환(linear transform)**이다.
+정규분포의 선형변환은 마차간지로 정규분포이므로 잔차도 정규분포를 따른다.
+
+~~~python
+# 잔차 정규성 검정
+test = sm.stats.omni_normtest(result.resid)
+for xi in zip(['Chi^2', 'P-value'], test):
+    print("%-12s: %6.3f" % xi)
+~~~
+
+오차의 기대값이 x와 상관없이 0이므로 **잔차의 기댓값도 x와 상관없이 0이어야 한다.**
+
+$$
+E[e|x] = 0
+$$
+
+### 회귀 계수의 표준 오차
+
+가중치의 에측치 $$\hat{w}$$는 정규분포 확률변수인 $$\epsilon$$의 선형변환이므로 정규분포를 따른다.
+
+$$
+\hat = (X^TX)^{-1}X^Ty
+     = (X^TX)^{-1}X^T(Xw + \epsilon)
+     = w + (X^TX)^{-1}X^TE[ \epsilon ]
+     = w
+$$
+
+$$\hat w$$의 기댓값은 
+
+$$
+E[ \hat{w} ] = E[ w + (X^TX)^{-1}X^T \epsilon ]
+            = w + (X^TX)^{-1}X^TE[ \epsilon ]
+            = w
+$$
+
+따라서 $$\hat w$$의 w의 비편향 추정값(unbiased estimate)이다. 
+
+$$\hat w$$의 공분산은 
+
+$$
+\text{Cov}[ \hat{w} ] 
+&=& E[(\hat{w} - w)(\hat{w} - w)^T] \\
+&=& E[((X^TX)^{-1} X^T \epsilon)((X^TX)^{-1} X^T \epsilon)^T] \\
+&=& E[(X^TX)^{-1} X^T \epsilon \epsilon^T X(X^TX)^{−1} ] \\
+&=& (X^TX)^{-1} X^T E[\epsilon \epsilon^T] X(X^TX)^{−1} \\
+&=& (X^TX)^{-1} X^T (\sigma^2 I) X(X^TX)^{−1} \\
+&=& \sigma^2  (X^TX)^{-1}
+$$
+
+그런데 잡음의 분산 $$\text{E}[ \epsilon^2 ] = \sigma^2$$의 값은 알지 못하므로 다음과 같이 잔차의 분산 $$E[ \epsilon^2 ]$$으로부터 추정한다.
+
+$$
+\text{E}[ e^2 ] 
+&=& \text{E}[ (M\epsilon)^2 ] \\
+&=& \text{E}[(\epsilon^T M^T)(M\epsilon)] \\
+&=& \text{E}[ \epsilon^T M \epsilon] \\
+&=& \text{E}[ \text{tr}(\epsilon^T M \epsilon) ] \\
+&=& \text{tr}( \text{E}[ M \epsilon \epsilon^T ]) \\
+&=& \text{tr}( M \text{E}[\epsilon \epsilon^T ]) \\
+&=& \text{tr}( M \sigma^2 I ) \\
+&=& \sigma^2 \text{tr}(M) \\
+&=& \sigma^2 \text{tr}(I - X(X^TX)^{-1}X^T) \\
+&=& \sigma^2 \left( \text{tr}(I) - \text{tr}((X^TX)^{-1}(X^TX))  \right) \\
+&=& \sigma^2 (N-K) \\
+$$
+
+여기에서 N은 표본 데이터의 수, K는 X 행렬의 열의 수 즉 모수의 갯수이다. 상수항을 포함한 선형 모형이라면 모수의 갯수는 입력데이터 차원의 수 D에 1을 더한 값이 된다. 
+
+$$K = D + 1$$
+
+잡음에 대한 비편향 표본분산은 다음과 같다.
+
+$$
+s^2 = \dfrac{e^Te}{N-K} = \dfrac{RSS}{N-K}
+$$
+
+$$\hat w$$의 (공)분산의 추정값은 다음과 같다.
+
+$$
+\text{Cov}[ \hat{w}] \approx s^2(X^TX)^{-1}
+$$
+
+이 공분산 행렬에서 관심을 가져야하는 값은 $$w_i$$의 분산을 뜻하는 대각성분이다.
+
+$$
+\text{Var}[\hat{w}_i]  = \left( \text{Cov}[ \hat{w} ] \right)_{ii} \;\; (i=0, \ldots, K-1)
+$$
+
+이 값에서 구한 표준 편차를 **회귀 계수의 표준 오차(Standard Error of Regression Coefficient)**라고 한다.
+
+$$\sqrt{\text{Var}[\hat{w}_i]} \approx {se_i} = \sqrt{s^2 \big((X^TX)^{-1}\big)_{ii}} \;\; (i=0, \ldots, K-1)
+$$
+
+실제 가중치 계수 $$w_i$$와 우리가 추정한 가중치 계수 $$\hat{w}_i$$의 차이를 표준오차로 나눈 값, 즉 정규화된 모수 오차는 자유도 N - K인 표준 스튜던트 t분포를 따른다. 
+
+$$
+\dfrac{\hat{w}_i - w_i}{se_i} \sim t_{N-K} \;\; (i=0, \ldots, K-1)
+$$
 
 ### 단일 계수 t-검정(Single Coefficient t-test)
+
+정규화된 모수 오차를 검정 통계량으로 사용하면 $$w_i$$가 0인지 아닌지에 대한 검정을 실시할 수 있다.
 
 $$
 H_0 : w_i = 0 (i = 0, ... , K - 1)

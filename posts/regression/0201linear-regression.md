@@ -1,3 +1,5 @@
+<script> MathJax.Hub.Queue(["Typeset",MathJax.Hub]); </script>
+
 # 선형 회귀분석의 기초
 
 ### Summary
