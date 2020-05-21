@@ -2035,13 +2035,13 @@ E[ \hat{w} ] = E[ w + (X^TX)^{-1}X^T \epsilon ]
 <p>&#xB530;&#xB77C;&#xC11C; <script type="math/tex; ">\hat w</script>&#xC758; w&#xC758; &#xBE44;&#xD3B8;&#xD5A5; &#xCD94;&#xC815;&#xAC12;(unbiased estimate)&#xC774;&#xB2E4;. </p>
 <p><script type="math/tex; ">\hat w</script>&#xC758; &#xACF5;&#xBD84;&#xC0B0;&#xC740; </p>
 <p><script type="math/tex; mode=display">
-Cov[ \hat{w} ] 
-E[(\hat{w} - w)(\hat{w} - w)^T] 
-E[((X^TX)^{-1} X^T \epsilon)((X^TX)^{-1} X^T \epsilon)^T] 
-E[(X^TX)^{-1} X^T \epsilon \epsilon^T X(X^TX)^{−1} ] 
-(X^TX)^{-1} X^T E[\epsilon \epsilon^T] X(X^TX)^{−1} 
-(X^TX)^{-1} X^T (\sigma^2 I) X(X^TX)^{−1} 
-\sigma^2  (X^TX)^{-1}
+Cov[ \hat{w} ]  \\
+E[(\hat{w} - w)(\hat{w} - w)^T]  \\
+E[((X^TX)^{-1} X^T \epsilon)((X^TX)^{-1} X^T \epsilon)^T] \\ 
+E[(X^TX)^{-1} X^T \epsilon \epsilon^T X(X^TX)^{−1} ] \\
+(X^TX)^{-1} X^T E[\epsilon \epsilon^T] X(X^TX)^{−1} \\
+(X^TX)^{-1} X^T (\sigma^2 I) X(X^TX)^{−1} \\
+\sigma^2  (X^TX)^{-1} \\
 </script></p>
 <p>&#xADF8;&#xB7F0;&#xB370; &#xC7A1;&#xC74C;&#xC758; &#xBD84;&#xC0B0; <script type="math/tex; ">\text{E}[ \epsilon^2 ] = \sigma^2</script>&#xC758; &#xAC12;&#xC740; &#xC54C;&#xC9C0; &#xBABB;&#xD558;&#xBBC0;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC794;&#xCC28;&#xC758; &#xBD84;&#xC0B0; <script type="math/tex; ">E[ \epsilon^2 ]</script>&#xC73C;&#xB85C;&#xBD80;&#xD130; &#xCD94;&#xC815;&#xD55C;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
@@ -2141,7 +2141,7 @@ H_0 : w_0 = w_1 = ... = w_{k-1} = 0
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"확률론적 선형회귀 모형","level":"1.3.9","depth":2,"next":{"title":"레버리지와 아웃라이어","level":"1.3.10","depth":2,"path":"posts/regression/0402laverage-outlier.md","ref":"posts/regression/0402laverage-outlier.md","articles":[]},"previous":{"title":"범주형 독립변수","level":"1.3.8","depth":2,"path":"posts/regression/0305dummy-variable.md","ref":"posts/regression/0305dummy-variable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/regression/0401probability-linear-regression.md","mtime":"2020-05-21T15:55:41.406Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-21T15:57:20.545Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"확률론적 선형회귀 모형","level":"1.3.9","depth":2,"next":{"title":"레버리지와 아웃라이어","level":"1.3.10","depth":2,"path":"posts/regression/0402laverage-outlier.md","ref":"posts/regression/0402laverage-outlier.md","articles":[]},"previous":{"title":"범주형 독립변수","level":"1.3.8","depth":2,"path":"posts/regression/0305dummy-variable.md","ref":"posts/regression/0305dummy-variable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/regression/0401probability-linear-regression.md","mtime":"2020-05-21T16:00:32.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-21T16:01:42.585Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
