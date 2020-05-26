@@ -75,7 +75,7 @@ o_t = \sigma(W_o[h_{t-1}+b_o]) \\
 h_t = o_t \odot tanh(C_t)
 $$
 
-![image-20200323002013623](../../../resource/img/mage-20200323002013623.png)
+![image-20200323002013623](../../../resource/img/image-20200323002013623.png)
 
 LSTM은 4개의 가중치 셋을 가진다. 
 
