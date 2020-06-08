@@ -149,7 +149,6 @@ c_2\,\boxed{\begin{matrix} \phantom{\LARGE\mathstrut} \\ x_2 \\ \phantom{\LARGE\
 \cdots \!\!\!\!& + & 
 c_L\,\boxed{\begin{matrix} \phantom{\LARGE\mathstrut} \\ c_L \\ \phantom{\LARGE\mathstrut} \end{matrix}}
 \end{matrix}
-\tag{2.2.5}
 \end{align*}
 $$
 
@@ -164,7 +163,6 @@ c_2\,\boxed{\begin{matrix} \phantom{} & \phantom{} & \phantom{} \\ & A_2 & \\ \p
 & + &
 c_L\,\boxed{\begin{matrix} \phantom{} & \phantom{} & \phantom{} \\ & A_L & \\ \phantom{} & \phantom{} & \phantom{} \end{matrix}} 
 \end{matrix}
-\tag{2.2.6}
 \end{align*}
 $$
 
@@ -336,7 +334,6 @@ w_1 \\ w_2 \\ \vdots \\ w_M
 \end{bmatrix}
 =
 w_1 c_1 + w_2 c_2 + \cdots + w_M c_M
-\tag{2.2.72}
 \end{align}
 $$
 
@@ -479,7 +476,6 @@ x_{N} \\
 \\
 &= \sum_{i=1}^{N} \sum_{j=1}^{N} a_{i,j} x_i x_j 
 \end{aligned}
-\tag{2.2.41}
 \end{align}
 $$
 
