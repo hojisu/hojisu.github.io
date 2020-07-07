@@ -8,7 +8,7 @@
 - Momentum은 진행하던 방향으로 계속 진행한다.
 - Adagrad는 많이 이동한 가중치는 적게 변화한다. 
 - RMSProp은 누적변화를 지수 평균으로 계산한다.
-- Adam = Adagrad + RMSProp의 장점을 섞어 놓은것이다.
+- Adam = Momentum + RMSProp의 장점을 섞어 놓은것이다.
 ________
 
 ### 기본 Gradient 방법
