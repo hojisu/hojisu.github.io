@@ -403,7 +403,7 @@ $$
 x_e = \begin{bmatrix} x_{e1} \\ x_{e2} \end{bmatrix}
 $$
 
-를 벡터 x의 기저벡터 $$e_1, e_2}$$(이미 알고 있음, 벡터)에 대한 **좌표(coordinate)**라고 한다. 벡터와 기저벡터 그리고 좌표의 관계는 다음과 같다.
+를 벡터 x의 기저벡터 $$e_1, e_2}$$에 대한 **좌표(coordinate)**라고 한다. 벡터와 기저벡터 그리고 좌표의 관계는 다음과 같다.
 
 $$
 x = [ e_1 e_2 ] \begin{bmatrix} x_{e1} \\ x_{e2} \end{bmatrix} = [ e_1 e_2 ] \; x_e
