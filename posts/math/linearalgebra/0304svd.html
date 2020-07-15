@@ -2709,66 +2709,8 @@ A = \begin{bmatrix} a_1^T \\ a_2^T \\ \vdots \\ a_N^T \end{bmatrix}
 </script></p>
 <p><strong>&#xAC00;&#xC7A5; &#xD070; &#x1D43E;&#xAC1C;&#xC758; &#xD2B9;&#xC787;&#xAC12;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; &#xC624;&#xB978;&#xCABD; &#xD2B9;&#xC774;&#xBCA1;&#xD130;&#xAC00; &#xAE30;&#xC800;&#xBCA1;&#xD130;&#xC77C; &#xB54C; &#xAC00;&#xC7A5; &#xAC12;&#xC774; &#xCEE4;&#xC9C4;&#xB2E4;.</strong></p>
 <h3 id="&#xB7AD;&#xD06C;-k-&#xADFC;&#xC0AC;&#xBB38;&#xC81C;">&#xB7AD;&#xD06C;-K &#xADFC;&#xC0AC;&#xBB38;&#xC81C;</h3>
-<p>&#xC6B0;&#xB9AC;&#xAC00; &#xCC3E;&#xC544;&#xC57C; &#xD558;&#xB294; &#xAC83;&#xC740; &#xC774; &#xAC12;&#xC744; &#xAC00;&#xC7A5; &#xD06C;&#xAC8C; &#xD558;&#xB294; K&#xAC1C;&#xC758; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xC544;&#xB2CC; &#xC9C1;&#xAD50;&#xD558;&#xB294; &#xB2E8;&#xC704;&#xBCA1;&#xD130; <script type="math/tex; ">w_k$이다. 
-고유분해의 성질로부터 **오른쪽 기저벡터 중 가장 큰 𝐾개의 특잇값에 대응하는 오른쪽 특이벡터가 우리가 찾는 기저벡터가 된다.**
-
-랭크-𝐾 근사문제의 형태로 만들 수도 있다.
-
-</script>
-\begin{aligned}
-a^{\Vert w}_i 
-&amp;= 
-(a_i^Tw_1)w_1 +
-(a_i^Tw_2)w_2 +
-\cdots</p>
-<ul>
-<li>(a<em>i^Tw_K)w_K \
-&amp;=
-\begin{bmatrix} w_1 &amp; w_2 &amp; \cdots &amp; w_K \end{bmatrix}
-\begin{bmatrix} a_i^Tw_1 \ a_i^Tw_2 \ \vdots \ a_i^Tw_K \end{bmatrix} \
-&amp;=
-\begin{bmatrix} w_1 &amp; w_2 &amp; \cdots &amp; w_K \end{bmatrix}
-\begin{bmatrix} w_1^T \ w_2^T \ \vdots \ w_K^T \end{bmatrix} a_i \
-&amp;=
-WW^Ta_i
-\end{aligned}
-<script type="math/tex; mode=display">
-
-이러한 투영벡터를 모아놓은 행렬 A'는
-
-</script>
-A&apos;=
-\begin{bmatrix}
-\left(a^{\Vert w}_1\right)^T \
-\left(a^{\Vert w}_2\right)^T \
-\vdots \
-\left(a^{\Vert w}_N\right)^T
-\end{bmatrix}
-=
-\begin{bmatrix}
-a_1^TW^{}W^T \
-a_2^TW^{}W^T\
-\vdots \
-a_N^TW^{}W^T
-\end{bmatrix}
-=
-\begin{bmatrix}
-a_1^T \
-a_2^T \
-\vdots \
-a_N^T
-\end{bmatrix}
-W^{}W^T
-=
-AW^{}W^T
-<script type="math/tex; mode=display">
-
-이 문제는 원래 행렬 A에 랭크-K 행렬 </script>WW^T<script type="math/tex; ">를 곱해서 원래의 행렬 𝐴와 가장 비슷한 행렬 𝐴′을 만드는 문제와 같다
-
-</script>
-\arg\min</em>{w_1,\cdots,w_K} \Vert A - AW^{}W^T \Vert
-$$</li>
-</ul>
+<p>&#xC6B0;&#xB9AC;&#xAC00; &#xCC3E;&#xC544;&#xC57C; &#xD558;&#xB294; &#xAC83;&#xC740; &#xC774; &#xAC12;&#xC744; &#xAC00;&#xC7A5; &#xD06C;&#xAC8C; &#xD558;&#xB294; K&#xAC1C;&#xC758; &#xC601;&#xBCA1;&#xD130;&#xAC00; &#xC544;&#xB2CC; &#xC9C1;&#xAD50;&#xD558;&#xB294; &#xB2E8;&#xC704;&#xBCA1;&#xD130; <script type="math/tex; ">w_k</script>&#xC774;&#xB2E4;. &#xACE0;&#xC720;&#xBD84;&#xD574;&#xC758; &#xC131;&#xC9C8;&#xB85C;&#xBD80;&#xD130; &#xC624;&#xB978;&#xCABD; &#xAE30;&#xC800;&#xBCA1;&#xD130; &#xC911; &#xAC00;&#xC7A5; &#xD070; K&#xAC1C;&#xC758; &#xD2B9;&#xC787;&#xAC12;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; &#xC624;&#xB978;&#xCABD; &#xD2B9;&#xC774;&#xBCA1;&#xD130;&#xAC00; &#xC6B0;&#xB9AC;&#xAC00; &#xCC3E;&#xB294; &#xAE30;&#xC800;&#xBCA1;&#xD130;&#xAC00; &#xB41C;&#xB2E4;.</p>
+<p>&#xC774; &#xBB38;&#xC81C;&#xB294; &#xB7AD;&#xD06C;-K &#xADFC;&#xC0AC;&#xBB38;&#xC81C;&#xC758; &#xD615;&#xD0DC;&#xB85C; &#xB9CC;&#xB4E4; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -2812,7 +2754,7 @@ $$</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"특이값 분해","level":"1.2.1.8","depth":3,"next":{"title":"PCA","level":"1.2.1.9","depth":3,"path":"posts/math/linearalgebra/0305pca.md","ref":"posts/math/linearalgebra/0305pca.md","articles":[]},"previous":{"title":"고윳값 분해","level":"1.2.1.7","depth":3,"path":"posts/math/linearalgebra/0303eigenvalue-decomposition.md","ref":"posts/math/linearalgebra/0303eigenvalue-decomposition.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/linearalgebra/0304svd.md","mtime":"2020-07-15T08:23:22.949Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-15T08:24:18.417Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"특이값 분해","level":"1.2.1.8","depth":3,"next":{"title":"PCA","level":"1.2.1.9","depth":3,"path":"posts/math/linearalgebra/0305pca.md","ref":"posts/math/linearalgebra/0305pca.md","articles":[]},"previous":{"title":"고윳값 분해","level":"1.2.1.7","depth":3,"path":"posts/math/linearalgebra/0303eigenvalue-decomposition.md","ref":"posts/math/linearalgebra/0303eigenvalue-decomposition.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/linearalgebra/0304svd.md","mtime":"2020-07-15T08:29:09.567Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-15T08:30:03.773Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
