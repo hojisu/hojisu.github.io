@@ -4,10 +4,10 @@
 
 ### Summary
 
-- 결합확률(joint probability)는 사건 A,B가 동시에 발생할 확률이다. $$P(A,B)$$ 
-- 주변확률(marginal probability)는 결합되지 않는 개별사건 P(A), P(B)이다.
-- 조건부확률(conditional probability)는 B가 사실일 경우 사건 A대한 확률이다. P(A|B)
-- 확률변수는 확률적인 숫자값을 가지는 변수로 확률분포 그 안에 내포하고 있어 그 확률분포에 따라 숫자를 출력할 수 있다. 
+- 결합확률(joint probability)은 사건 A,B가 동시에 발생할 확률이다. $$P(A,B)$$ 
+- 주변확률(marginal probability)은 결합되지 않는 개별사건 P(A), P(B)이다.
+- 조건부확률(conditional probability)은 B가 사실일 경우 사건 A대한 확률이다. P(A|B)
+- 확률변수는 확률분포에서 발생한 데이터이다.
 
 _____________
 
