@@ -44,14 +44,7 @@ $$
 g_j(x) = 0 \;\; (j=1, \ldots, M)  
 $$
 
-식 4.2.1만 보면 단순히 목적함수 $$f(x)$$ 를 가장 작게하는 $$N$$ 차원 벡터 $$x$$ 값을 찾는 문제이다. 하지만 식 4.2.2에 있는 $$M$$ 개의 등식 제한 조건이 있으면 $$M$$ 개 연립 방정식을 동시에 모두 만족시키면서 목적함수 $$f(x)$$ 를 가장 작게하는 $$x$$ 값을 찾아야 한다. 
-
-$$
-g_1(x) &= 0 \\
-g_2(x) &= 0 \\
-&\vdots \\
-g_M(x) &= 0 \\
-$$
+첫번째 식만 보면 단순히 목적함수 $$f(x)$$ 를 가장 작게하는 $$N$$ 차원 벡터 $$x$$ 값을 찾는 문제이다. 하지만 두번째 식에 있는 $$M$$ 개의 등식 제한 조건이 있으면 $$M$$ 개 연립 방정식을 동시에 모두 만족시키면서 목적함수 $$f(x)$$ 를 가장 작게하는 $$x$$ 값을 찾아야 한다. 
 
 예제 
 
@@ -84,21 +77,6 @@ $$
 
 이 때 제한조건 등식 하나마다 새로운 $$\lambda_i$$ 를 추가해주어야 한다. 만약 제한조건이 $$M$$ 개 이면 $$\lambda_1, \cdots , \lambda_M$$ 개의 변수가 새로 생긴 것과 같다. 이렇게 확장된 목적함수 $$h$$ 는 입력변수가 더 늘어났기 때문에 그레디언트 벡터를 영벡터로 만드는 최적화 필요 조건이 다음처럼 $$N + M$$ 개가 된다.
 
-$$
-\dfrac{\partial h}{\partial x_1} 
-&= \dfrac{\partial f}{\partial x_1} + \sum_{j=1}^M \lambda_j\dfrac{\partial g_j}{\partial x_1} = 0 \\
-\dfrac{\partial h}{\partial x_2} 
-&= \dfrac{\partial f}{\partial x_2} + \sum_{j=1}^M \lambda_j\dfrac{\partial g_j}{\partial x_2} = 0 \\
-& \vdots  \\
-\dfrac{\partial h}{\partial x_N} 
-&= \dfrac{\partial f}{\partial x_N} + \sum_{j=1}^M \lambda_j\dfrac{\partial g_j}{\partial x_N} = 0 \\
-\dfrac{\partial h}{\partial \lambda_1} 
-&= g_1 = 0 \\
-& \vdots  \\
-\dfrac{\partial h}{\partial \lambda_M} 
-&= g_M = 0 
-$$
-
 $$N + M$$ 개의 연립 방정식을 풀면 $$N + M$$ 개의 미지수 $$x_1, x_2, \ldots, x_N, , \lambda_1, \ldots , \lambda_M$$ 를 구할 수 있다. 구한 결과에서 $$x_1, x_2, \cdots, x_N$$ 가 우리가 찾는 최소값 $$x$$ 이다. 나머지 라그랑주 승수값은 필요 없다. 
 
 예제 
@@ -110,12 +88,16 @@ h(x_1, x_2, \lambda)  = f(x_1, x_2) + \lambda g(x_1, x_2)  = x_1^2 + x_2^2 + \la
 $$
 
 $$
+\begin{align}
+\begin{aligned}
 \dfrac{\partial h}{\partial x_1} 
 &= 2{x_1} + \lambda = 0 \\
 \dfrac{\partial h}{\partial x_2} 
 &= 2{x_2} + \lambda = 0 \\
 \dfrac{\partial h}{\partial \lambda} 
 &= x_1 + x_2 - 1 = 0 
+\end{aligned}
+\end{align}
 $$
 
 $$
@@ -172,14 +154,20 @@ h(x_1, x_2, \lambda)
 $$
 
 최적화 조건은
+
 $$
+\begin{align}
+\begin{aligned}
 \dfrac{\partial h}{\partial x_1} 
 &= 2{x_1} + \lambda = 0 \\
 \dfrac{\partial h}{\partial x_2} 
 &= 2{x_2} + \lambda = 0 \\
 \dfrac{\partial h}{\partial \lambda} 
 &= x_1 + x_2 = 0 
+\end{aligned}
+\end{align}
 $$
+
 
 이를 풀면 $$x_1 = x_2 = \lambda = 0$$ 으로 제한조건이 있으나 없으나 해는 같고 라그랑지 승수가 0이다.
 
