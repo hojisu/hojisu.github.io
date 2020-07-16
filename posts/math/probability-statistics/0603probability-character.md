@@ -31,4 +31,10 @@ C_1 \cup C_2 \cup \cdots  = \Omega \\
 P(A) = \sum_i P(A, C_i) \\
 $$
 
+교집합의 확률은 다음처럼 쉼표로 표시하기도 한다.
+
+$$
+P(A \cap B) = P(A, B)
+$$
+
 ![image-20200326220259012.png](../../../resource/img/image-20200326220259012.png)
