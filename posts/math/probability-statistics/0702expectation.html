@@ -1969,7 +1969,7 @@ E[c_1X+c_2Y]=c_1E[X]+c_2E[Y]
 <h3 id="&#xD1B5;&#xACC4;&#xB7C9;">&#xD1B5;&#xACC4;&#xB7C9;</h3>
 <p>&#xD1B5;&#xACC4;&#xB7C9;(statistics)&#xC740; &#xD45C;&#xBCF8; &#xB370;&#xC774;&#xD130; &#xC9D1;&#xD569;&#xC744; &#xC815;&#xD574;&#xC9C4; &#xACF5;&#xC2DD;&#xC5D0; &#xB123;&#xC5B4;&#xC11C; &#xD558;&#xB098;&#xC758; &#xC22B;&#xC790;&#xB97C; &#xAD6C;&#xD55C; &#xAC83;&#xC774;&#xB2E4;. &#xD45C;&#xBCF8;&#xC758; &#xD569;, &#xD45C;&#xBCF8;&#xD3C9;&#xADE0;, &#xD45C;&#xBCF8;&#xC911;&#xC559;&#xAC12;, &#xD45C;&#xBCF8;&#xBD84;&#xC0B0; &#xB4F1;&#xC740; &#xBAA8;&#xB450; &#xD1B5;&#xACC4;&#xB7C9;&#xC774;&#xB2E4;. &#xD1B5;&#xACC4;&#xB7C9;&#xB3C4; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCC0;&#xD658;&#xC5D0; &#xD3EC;&#xD568;&#xB41C;&#xB2E4;. </p>
 <p><img src="../../../resource/img/image-20190521123251925.png" alt="image-20190521123251925"></p>
-<p>&#xB2E4;&#xB9CC; &#xD655;&#xB960;&#xBCC0;&#xC218; X&#xC5D0;&#xC11C; &#xD45C;&#xBCF8;&#xC744; N&#xBC88; &#xBF51;&#xC544;&#xC11C; &#xADF8; &#xAC12;&#xC5D0; &#xB300;&#xD574; &#xC5F0;&#xC0B0;&#xC744; &#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xC6D0;&#xB798; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCF5;&#xC0AC;&#xBCF8; <script type="math/tex; ">X_1,X_2,\dots,X_N</script>&#xC744; &#xB9CC;&#xB4E0; &#xB2E4;&#xC74C; &#xC774; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xD45C;&#xBCF8;&#xAC12;&#xC744; &#xB354;&#xD55C; &#xD615;&#xD0DC;&#xB85C; &#xBCC0;&#xD658;&#xC2DD;&#xC744; &#xC368;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xB2E4;&#xB9CC; &#xD655;&#xB960;&#xBCC0;&#xC218; X&#xC5D0;&#xC11C; &#xD45C;&#xBCF8;&#xC744; N&#xBC88; &#xBF51;&#xC544;&#xC11C; &#xADF8; &#xAC12;&#xC5D0; &#xB300;&#xD574; &#xC5F0;&#xC0B0;&#xC744; &#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xB2E4;&#xC74C;&#xCC98;&#xB7FC; &#xC6D0;&#xB798; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xBCF5;&#xC0AC;&#xBCF8;&#xC744; &#xB9CC;&#xB4E0; &#xB2E4;&#xC74C; &#xC774; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xD45C;&#xBCF8;&#xAC12;&#xC744; &#xB354;&#xD55C; &#xD615;&#xD0DC;&#xB85C; &#xBCC0;&#xD658;&#xC2DD;&#xC744; &#xC368;&#xC57C; &#xD55C;&#xB2E4;.</p>
 <p><script type="math/tex; mode=display">
 Y = X_1 + X_2 + \cdots X_N
 </script></p>
@@ -1986,12 +1986,14 @@ Y = X_1 + X_2 + \cdots X_N
 E[\bar X] = E[X]
 </script></p>
 <p><script type="math/tex; mode=display">
-\operatorname{E}[\bar{X}] 
-&= \operatorname{E}\left[\dfrac{1}{N}\sum_{i=1}^{N}X_i \right]  \\
-&= \dfrac{1}{N}\sum_{i=1}^{N}\operatorname{E}[X_i] \ (선형성) \\
-&= \dfrac{1}{N}\sum_{i=1}^{N}\operatorname{E}[X] \ (X_i는 X의 복사본이므로 기댓값이 같다) \\
-&= \dfrac{1}{N} N \operatorname{E}[X] \ \ (동일한 값의 합) \\ 
-&= \operatorname{E}[X]  \\
+\begin{aligned}
+\text{E}[\bar{X}] 
+&= \text{E}\left[\dfrac{1}{N}\sum_{i=1}^{N}X_i \right]  \\
+&= \dfrac{1}{N}\sum_{i=1}^{N}\text{E}[X_i]  \\
+&= \dfrac{1}{N}\sum_{i=1}^{N}\text{E}[X] \\
+&= \dfrac{1}{N} N \text{E}[X] \\ 
+&= \text{E}[X]  \\
+\end{aligned}
 </script></p>
 <p>&#xD45C;&#xBCF8;&#xD3C9;&#xADE0;&#xC740; &#xD655;&#xB960;&#xBCC0;&#xC218;&#xC758; &#xAE30;&#xB313;&#xAC12; &#xADFC;&#xCC98;&#xC758; &#xAC12;&#xC774; &#xB41C;&#xB2E4;. </p>
 <h3 id="&#xC911;&#xC559;&#xAC12;">&#xC911;&#xC559;&#xAC12;</h3>
@@ -2051,7 +2053,7 @@ median = F^{-1}(0.5)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"기댓값","level":"1.2.4.7","depth":3,"next":{"title":"분산 & 표준편차","level":"1.2.4.8","depth":3,"path":"posts/math/probability-statistics/0703variance.md","ref":"posts/math/probability-statistics/0703variance.md","articles":[]},"previous":{"title":"확률적데이터와 확률변수","level":"1.2.4.6","depth":3,"path":"posts/math/probability-statistics/0701probabilistic-data-descriptive.md","ref":"posts/math/probability-statistics/0701probabilistic-data-descriptive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0702expectation.md","mtime":"2020-07-16T14:56:00.365Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-16T14:56:39.444Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"기댓값","level":"1.2.4.7","depth":3,"next":{"title":"분산 & 표준편차","level":"1.2.4.8","depth":3,"path":"posts/math/probability-statistics/0703variance.md","ref":"posts/math/probability-statistics/0703variance.md","articles":[]},"previous":{"title":"확률적데이터와 확률변수","level":"1.2.4.6","depth":3,"path":"posts/math/probability-statistics/0701probabilistic-data-descriptive.md","ref":"posts/math/probability-statistics/0701probabilistic-data-descriptive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/math/probability-statistics/0702expectation.md","mtime":"2020-07-16T14:58:17.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-16T14:58:54.537Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -68,7 +68,8 @@ $$
 
 ![image-20190521123251925](../../../resource/img/image-20190521123251925.png)
 
-다만 확률변수 X에서 표본을 N번 뽑아서 그 값에 대해 연산을 하는 경우에는 다음처럼 원래 확률변수의 복사본 $$X_1,X_2,\dots,X_N$$을 만든 다음 이 확률변수의 표본값을 더한 형태로 변환식을 써야 한다.
+
+다만 확률변수 X에서 표본을 N번 뽑아서 그 값에 대해 연산을 하는 경우에는 다음처럼 원래 확률변수의 복사본을 만든 다음 이 확률변수의 표본값을 더한 형태로 변환식을 써야 한다.
 
 $$
 Y = X_1 + X_2 + \cdots X_N
@@ -95,12 +96,14 @@ E[\bar X] = E[X]
 $$
 
 $$
-\operatorname{E}[\bar{X}] 
-&= \operatorname{E}\left[\dfrac{1}{N}\sum_{i=1}^{N}X_i \right]  \\
-&= \dfrac{1}{N}\sum_{i=1}^{N}\operatorname{E}[X_i] \ (선형성) \\
-&= \dfrac{1}{N}\sum_{i=1}^{N}\operatorname{E}[X] \ (X_i는 X의 복사본이므로 기댓값이 같다) \\
-&= \dfrac{1}{N} N \operatorname{E}[X] \ \ (동일한 값의 합) \\ 
-&= \operatorname{E}[X]  \\
+\begin{aligned}
+\text{E}[\bar{X}] 
+&= \text{E}\left[\dfrac{1}{N}\sum_{i=1}^{N}X_i \right]  \\
+&= \dfrac{1}{N}\sum_{i=1}^{N}\text{E}[X_i]  \\
+&= \dfrac{1}{N}\sum_{i=1}^{N}\text{E}[X] \\
+&= \dfrac{1}{N} N \text{E}[X] \\ 
+&= \text{E}[X]  \\
+\end{aligned}
 $$
 
 표본평균은 확률변수의 기댓값 근처의 값이 된다. 
