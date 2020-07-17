@@ -45,6 +45,9 @@ $$
 \text{E}[g(X) Y \vert X] = g(X) \text{E}[Y \vert X]
 $$
 
+![image-20200717165049290](../../../resource/img/image-20200717165049290.png)
+
+
 ### 예측문제
 
 두 확률변수 $$X, Y$$ 에서 $$X$$ 의 값을 알고 있을 때 $$Y$$ 의 값을 알아내는 것을 **예측(prediction)** 문제이다.
@@ -65,13 +68,17 @@ $$
 
 **전체 기댓값의 법칙(law of total expectation)** 또는 **반복 기댓값의 법칙(law of iterated expectation)** 이다. 
 
-### 조건부 분산
+### 조건부분산
 
 $$
 \text{Var}_Y[Y \vert X] 
 = \text{E}_Y[(Y - \text{E}_Y[Y \vert X])^2 \vert X] 
 = \int (Y - \text{E}_Y[Y \vert X])^2 f_{Y \vert X}(y \vert x) dy
 $$
+
+![image-20200717165516415](../../../resource/img/image-20200717165516415.png)
+
+조건부분산은 x의 값을 알고 있을 때 이에 대한 조건부확률분포의 분산이다. 예측문제의 관점으로 보면 조건부분산은 예측의 불확실성, 즉 예측으로 맞출 수 없는 범위를 뜻한다.
 
 ### 전체 분산의 법칙
 
