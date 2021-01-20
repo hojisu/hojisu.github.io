@@ -146,7 +146,7 @@ E[(X^TX)^{-1} X^T \epsilon \epsilon^T X(X^TX)^{−1} ] \\
 \sigma^2  (X^TX)^{-1} \\
 $$
 
-그런데 잡음의 분산 $$\text{E}[ \epsilon^2 ] = \sigma^2$$의 값은 알지 못하므로 다음과 같이 잔차의 분산 $$E[ \epsilon^2 ]$$으로부터 추정한다.
+그런데 잡음의 분산 $$\text{E}[ \epsilon^2 ] = \sigma^2$$의 값은 알지 못하므로 다음과 같이 잔차의 분산 $$E[ \e^2 ]$$으로부터 추정한다.
 
 $$
 \text{E}[ e^2 ] 
