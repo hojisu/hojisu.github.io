@@ -108,6 +108,8 @@ $$
 
 
 
+#### Optimizer 종류
+![optimizer](../../../resource/img/optimizer.png)
 
 
 Reference
