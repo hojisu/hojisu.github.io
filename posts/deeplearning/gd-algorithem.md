@@ -112,6 +112,7 @@ $$
 ![optimizer](../../../resource/img/optimizer.png)
 
 
+
 Reference
 - https://datascienceschool.net/
 - http://shuuki4.github.io/deep%20learning/2016/05/20/Gradient-Descent-Algorithm-Overview.html
