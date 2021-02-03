@@ -96,6 +96,8 @@ w_{k+1} = w_k - \dfrac{\mu_k}{\sqrt{\hat{G}_k + \epsilon}} \hat{v}_k
 $$
 
 
+#### Optimizer 종류
+![optimizer](../../../resource/img/optimizer.png)
 
 
 Reference
