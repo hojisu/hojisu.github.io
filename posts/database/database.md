@@ -8,22 +8,22 @@
 ## DBMS(Database Management System)
 데이터베이스를 관리하는 미들웨어 시스템을 데이터베이스 관리시스템입니다. 
 
-## RDBMS (Relational Database Management System) 
+### RDBMS (Relational Database Management System) 
 Oracel, Mysql등이 있습니다.
 데이터 테이블 사이에 키값으로 관계를 가지고 있는 데이터베이스 입니다. 
 데이터 사이의 관계 설정으로 최적화된 스키마를 설계 할 수 있습니다.
 
-### Feature
+#### Feature
 데이터 분류, 정렬, 탐색 속도가 빠릅니다.
 오래 사용된 만큼 신뢰성이 높습니다.
 단점으로는 스키마 수정이 어렵습니다. 
 
-## NoSQL
+### NoSQL
 Mongodb, Hbase, Cassandra가 있습니다.
 데이터 테이블 사이에 관계가 없이 저장하는 데이터베이스 입니다.
 데이터 사이의 관계가 없으므로 복잡성이 줄고 많은 데이터를 저장 가능합니다. 
 
-### Feature
+#### Feature
 확장성이 좋아 데이터의 분산처리에 용이합니다. 
 데이터 저장이 유연합니다. 
 스키마 및 Join이 없습니다. 

@@ -127,7 +127,8 @@
     - [Scikit-Learn의 텍스트 전처리](https://hojisu.github.io/posts/natural-language/scikit-learn-text-preprocess.html)
     - [확률론적 언어 모형](https://hojisu.github.io/posts/natural-language/probabilistic-language.html)
     - [단어 임베딩](https://hojisu.github.io/posts/natural-language/wordembedding.html)
-
+- [데이터베이스](https://hojisu.github.io/posts/database/)
+- [컴퓨터사이언스](https://hojisu.github.io/posts/computer-science/)
 
 ___________________________________
 ###### Reference
