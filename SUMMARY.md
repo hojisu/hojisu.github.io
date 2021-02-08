@@ -130,6 +130,7 @@
     - [확률론적 언어 모형](posts/natural-language/probabilistic-language.md)
     - [단어 임베딩](posts/natural-language/wordembedding.md)
 - [데이터베이스](posts/data-base/README.md)
+    - [RDBMS](posts/data-base/rdbms.md)
 
 
 
