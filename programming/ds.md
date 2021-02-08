@@ -101,5 +101,5 @@
 ![graph_tree.png](../../../resource/img/graph_tree.png)
 
 
-Inference
+Reference
 - https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-algorithm.html
