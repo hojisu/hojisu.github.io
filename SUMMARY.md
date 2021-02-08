@@ -129,6 +129,7 @@
     - [Scikit-Learn의 텍스트 전처리](posts/natural-language/scikit-learn-text-preprocess.md)
     - [확률론적 언어 모형](posts/natural-language/probabilistic-language.md)
     - [단어 임베딩](posts/natural-language/wordembedding.md)
+- [데이터베이스](posts/data-base/README.md)
 
 
 
