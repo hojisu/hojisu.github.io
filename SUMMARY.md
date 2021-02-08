@@ -133,6 +133,7 @@
     - [RDBMS](posts/data-base/rdbms.md)
     - [NoSQL](posts/data-base/nosql.md)
 - [프로그래밍](posts/programming/README.md)
+    - [자료구조](posts/programming/ds.md)
 
     
     
