@@ -131,8 +131,8 @@
     - [단어 임베딩](posts/natural-language/wordembedding.md)
 - [데이터베이스](posts/data-base/README.md)
     - [RDBMS](posts/data-base/rdbms.md)
-
-
+    - [NoSQL](posts/data-base/nosql.md)
+- [프로그래밍](posts/programming/README.md)
 
     
     
