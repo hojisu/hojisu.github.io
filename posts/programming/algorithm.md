@@ -5,7 +5,7 @@
 ### insertion sort(삽입 정렬)
 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여 자신의 위치를 찾아 삽입
 
-```python
+~~~python
 def insertion_sort(ls):
     sort = False
     while sort == False:
@@ -15,19 +15,19 @@ def insertion_sort(ls):
                 ls[i], ls[i+1] = ls[i+1], ls[i]
                 sort = False
     return ls
-```
+~~~
 
 - 시간 복잡도 : 최선의 경우 $$O(n)$$, 최악의 경우 $$O(n^2)$$
 - 사용 상황 : 레코드의 수가 적을 때, 대부분의 레코드가 이미 정렬 되어 있을 때 효율적이다.
 
 ### selection sort(선택 정렬)
 - 과정 설명
-    1. 주어진 배열 중에서 최소값을 찾는다. 
-    2. 그 값을 맨 앞에 위치한 값과 교체한다.
-    3. 맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체 한다.
-    4. 하나의 원소만 남을 때까지 1~3 과정을 반복한다. 
+1. 주어진 배열 중에서 최소값을 찾는다. 
+2. 그 값을 맨 앞에 위치한 값과 교체한다.
+3. 맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체 한다.
+4. 하나의 원소만 남을 때까지 1~3 과정을 반복한다. 
 
-```python
+~~~python
 def selection_sort(ls):
     for i in range(len(ls)-1):
         idx = i + 1
@@ -37,13 +37,13 @@ def selection_sort(ls):
         if ls[i] > ls[idx]:
             ls[i], ls[idx] = ls[idx], ls[i]
     return ls
-```
+~~~
 - 시간 복잡도 :  $$O(n^2)$$
 
 ### Bubble Sort(버블 정렬)
 서로 인접한 두 원소를 검사하여 크기가 순서대로 되어 있지 않으면 서로 교환한다.
 
-```python
+~~~python
 def bubble_sort(ls):
     swap = True
     while swap:
@@ -53,7 +53,7 @@ def bubble_sort(ls):
                 ls[i], ls[i+1] = ls[i+1], ls[i]
     				swap = True
     return ls
-```
+~~~
 - 시간 복잡도 : $$O(n^2)$$
   
 ### Quick Sort
@@ -65,7 +65,7 @@ def bubble_sort(ls):
     3. 피벗을 제외한 왼쪽/오른쪽 리스트를 다시 정렬한다. 
     4. 분할이 불가능할 때까지 반복한다.
 
-```python
+~~~python
 def quick_sort(ls):
     if len(ls) <= 0:
         return ls
@@ -84,7 +84,7 @@ def quick_sort(ls):
             same.append(i)
                 
     return quick_sort(small) + same + quick_sort(big)
-```
+~~~
 - 시간 복잡도 : $$nlog_2 n$$
 
 ### Heap Sort
@@ -98,93 +98,95 @@ def quick_sort(ls):
 - 사용 상황 : 가장 큰 값 몇개만 필요할 때
 - 시간 복잡도 : $$O(nlog_2n)$$
 
-[정렬 알고리즘 시간 복잡도 비교](https://www.notion.so/a26669ed40b04e97ae9808fc2daa3a60)
+### 정렬 알고리즘 시간복잡도 비교
+![sort_time](../../resource/img/sort_time.png)
 
-[정렬 알고리즘 선택 기준](https://www.notion.so/503ef28906764a2eb80e1f2258cc7c95)
+### 정렬 알고리즘 선택 기준
+![sort](../../resource/img/sort.png)
 
-1. 단순(구현 간단)하지만 비효율적인 방법 : 삽입  정렬, 선택정렬, 버블 정렬
-2. 복잡하지만 효율적인 방법 : 퀵 정렬, 힙 정렬
+- 단순(구현 간단)하지만 비효율적인 방법 : 삽입  정렬, 선택정렬, 버블 정렬
+- 복잡하지만 효율적인 방법 : 퀵 정렬, 힙 정렬
 
-### 검색 알고리즘
+## 검색 알고리즘
 
-- Binary Search
-    - 정렬 리스트에서 특정한 숫자 index를 찾을 때 사용
-    - 시간 복잡도 : $$log N$$
+### Binary Search
+- 정렬 리스트에서 특정한 숫자 index를 찾을 때 사용
+- 시간 복잡도 : $$log N$$
 
-    ```python
-    def binary_search(ls, target):
-        start = 0
-        end = len(ls)-1
-        while start < end:
-            mid = int(end - start / 2) + start
-            if target == ls[mid]:
-                return mid
-            elif target > ls[mid]:
-                start = mid - 1
-            else:
-                end = mid - 1
-        return -1
-    ```
-
-    ```python
-    def binary_search2(ls, target, start, end):
-        if start > end:
-            return ls
-        
+~~~python
+def binary_search(ls, target):
+    start = 0
+    end = len(ls)-1
+    while start < end:
         mid = int(end - start / 2) + start
         if target == ls[mid]:
             return mid
         elif target > ls[mid]:
-            return binary_search2(ls, target, mid-1, end)
+            start = mid - 1
         else:
-            return binary_search2(ls, target, start, mid-1)
-    ```
+            end = mid - 1
+    return -1
+~~~
 
-- Depth First Search(깊이 우선 탐색)
-    - 사용하는 경우 : 모든 노드를 방문 하고자 하는 경우 사용
-    - 단순 검색 속도 자체는 너비 우선 탐색에 비해서 느리다.
-    - 너비 우선 탐색보다 간단하다.
-    - 자기 자신을 호출하는 순환 알고리즘의 형태를 가지고 있다.
+~~~python
+def binary_search2(ls, target, start, end):
+    if start > end:
+        return ls
+        
+    mid = int(end - start / 2) + start
+    if target == ls[mid]:
+        return mid
+    elif target > ls[mid]:
+        return binary_search2(ls, target, mid-1, end)
+    else:
+        return binary_search2(ls, target, start, mid-1)
+~~~
 
-    ```python
-    def dfs(graph, start):
-        visit = []
-        stack = []
-        stack.append(start)
-        while stack:
-            node = stack.pop()
-            if not node in visit:
-                visit.append(node)
-                stack.extend(graph[node])
-        return visit
-    ```
+### Depth First Search(깊이 우선 탐색)
+- 사용하는 경우 : 모든 노드를 방문 하고자 하는 경우 사용
+- 단순 검색 속도 자체는 너비 우선 탐색에 비해서 느리다.
+- 너비 우선 탐색보다 간단하다.
+- 자기 자신을 호출하는 순환 알고리즘의 형태를 가지고 있다.
 
-    - 시간 복잡도 : 정점의 수 N, 간선의 수 E
-        - 인접 리스트로 표현된 그래프 :  $$O(N+E)$$
-        - 인접 행렬로 표현된 그래프 : $$O(N^2)$$
-        - 그래프 내에 적은 숫자의 간선만을 가지는 회소 그래프(Sparse Graph)의 경우 인접 행렬보다 인접 리스트를 사용하는 것이 유리하다.
-- Breath First Search
-    - 루트 노드에서 시작해서 인접한 노드를 먼저 탐색하는 방법
-    - 사용하는 경우 : 두 노드 사이의 최단 경로, 임의의 경로를 찾고 싶을 때 사용
-    - 재귀적으로 동작하지 않는다.
+~~~python
+def dfs(graph, start):
+    visit = []
+    stack = []
+    stack.append(start)
+    while stack:
+        node = stack.pop()
+        if not node in visit:
+            visit.append(node)
+            stack.extend(graph[node])
+    return visit
+~~~
 
-    ```python
-    def bfs(graph, start):
-        visit = []
-        queue = []
-        queue.append(start)
-        while queue:
-            node = queue.pop(0)
-            if not node in visit:
-                visit.append(node)
-                queue.extend(graph[node])
-        return visit
-    ```
+- 시간 복잡도 : 정점의 수 N, 간선의 수 E
+    - 인접 리스트로 표현된 그래프 :  $$O(N+E)$$
+    - 인접 행렬로 표현된 그래프 : $$O(N^2)$$
+    - 그래프 내에 적은 숫자의 간선만을 가지는 회소 그래프(Sparse Graph)의 경우 인접 행렬보다 인접 리스트를 사용하는 것이 유리하다.
 
-    - 시간 복잡도
-        - 인접 리스트로 표현된 그래프 :  $$O(N+E)$$
-        - 인접 행렬로 표현된 그래프 : $$O(N^2)$$
-        - 그래프 내에 적은 숫자의 간선만을 가지는 회소 그래프(Sparse Graph)의 경우 인접 행렬보다 인접 리스트를 사용하는 것이 유리하다.
+### Breath First Search(BFS)
+- 루트 노드에서 시작해서 인접한 노드를 먼저 탐색하는 방법
+- 사용하는 경우 : 두 노드 사이의 최단 경로, 임의의 경로를 찾고 싶을 때 사용
+- 재귀적으로 동작하지 않는다.
+
+~~~python
+def bfs(graph, start):
+    visit = []
+    queue = []
+    queue.append(start)
+    while queue:
+        node = queue.pop(0)
+        if not node in visit:
+            visit.append(node)
+            queue.extend(graph[node])
+    return visit
+~~~
+- 시간 복잡도
+    - 인접 리스트로 표현된 그래프 :  $$O(N+E)$$
+    - 인접 행렬로 표현된 그래프 : $$O(N^2)$$
+    - 그래프 내에 적은 숫자의 간선만을 가지는 회소 그래프(Sparse Graph)의 경우 인접 행렬보다 인접 리스트를 사용하는 것이 유리하다.
 
 Reference
 - https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html

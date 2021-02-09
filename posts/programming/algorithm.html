@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>확률론적 언어 모형 · GitBook</title>
+        <title>알고리즘 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="wordembedding.html" />
     
-    
-    <link rel="prev" href="scikit-learn-text-preprocess.html" />
+    <link rel="prev" href="ds.html" />
     
 
     </head>
@@ -1805,9 +1803,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="./">
+        <li class="chapter " data-level="1.7" data-path="../natural-language/">
             
-                <a href="./">
+                <a href="../natural-language/">
             
                     
                     자연어 처리
@@ -1819,9 +1817,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="scikit-learn-text-preprocess.html">
+        <li class="chapter " data-level="1.7.1" data-path="../natural-language/scikit-learn-text-preprocess.html">
             
-                <a href="scikit-learn-text-preprocess.html">
+                <a href="../natural-language/scikit-learn-text-preprocess.html">
             
                     
                     Scikit-Learn의 텍스트 전처리
@@ -1832,9 +1830,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2" data-path="probabilistic-language.html">
+        <li class="chapter " data-level="1.7.2" data-path="../natural-language/probabilistic-language.html">
             
-                <a href="probabilistic-language.html">
+                <a href="../natural-language/probabilistic-language.html">
             
                     
                     확률론적 언어 모형
@@ -1845,9 +1843,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="wordembedding.html">
+        <li class="chapter " data-level="1.7.3" data-path="../natural-language/wordembedding.html">
             
-                <a href="wordembedding.html">
+                <a href="../natural-language/wordembedding.html">
             
                     
                     단어 임베딩
@@ -1908,9 +1906,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../programming/">
+        <li class="chapter " data-level="1.9" data-path="./">
             
-                <a href="../programming/">
+                <a href="./">
             
                     
                     프로그래밍
@@ -1922,9 +1920,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../programming/ds.html">
+        <li class="chapter " data-level="1.9.1" data-path="ds.html">
             
-                <a href="../programming/ds.html">
+                <a href="ds.html">
             
                     
                     자료구조
@@ -1935,9 +1933,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../programming/algorithm.html">
+        <li class="chapter active" data-level="1.9.2" data-path="algorithm.html">
             
-                <a href="../programming/algorithm.html">
+                <a href="algorithm.html">
             
                     
                     알고리즘
@@ -1983,7 +1981,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >확률론적 언어 모형</a>
+        <a href="../.." >알고리즘</a>
     </h1>
 </div>
 
@@ -1998,163 +1996,225 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <script> MathJax.Hub.Queue(["Typeset", MathJax.Hub]); </script> 
-
-<h1 id="&#xD655;&#xB960;&#xB860;&#xC801;-&#xC5B8;&#xC5B4;-&#xBAA8;&#xD615;probabilistic-language-model">&#xD655;&#xB960;&#xB860;&#xC801; &#xC5B8;&#xC5B4; &#xBAA8;&#xD615;(Probabilistic Language Model)</h1>
+                                <h1 id="&#xC54C;&#xACE0;&#xB9AC;&#xC998;">&#xC54C;&#xACE0;&#xB9AC;&#xC998;</h1>
 <!-- toc --><div id="toc" class="toc">
 
 <ul>
-<li><a href="#&#xC720;&#xB2C8;&#xADF8;&#xB7A8;-&#xBAA8;&#xD615;unigram-model">&#xC720;&#xB2C8;&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(Unigram Model)</a></li>
-<li><a href="#&#xBC14;&#xC774;&#xADF8;&#xB7A8;-&#xBAA8;&#xD615;bigram-model">&#xBC14;&#xC774;&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(Bigram Model)</a></li>
-<li><a href="#n&#xADF8;&#xB7A8;-&#xBAA8;&#xD615;n-gram-model">N&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(N-gram Model)</a></li>
-<li><a href="#nltk&#xC758;-n&#xADF8;&#xB7A8;-&#xAE30;&#xB2A5;">NLTK&#xC758; N&#xADF8;&#xB7A8; &#xAE30;&#xB2A5;</a></li>
-<li><a href="#&#xC870;&#xAC74;&#xBD80;-&#xD655;&#xB960;-&#xCD94;&#xC815;-&#xBC29;&#xBC95;">&#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960; &#xCD94;&#xC815; &#xBC29;&#xBC95;</a></li>
+<li><a href="#sorting-&#xC54C;&#xACE0;&#xB9AC;&#xC998;">sorting &#xC54C;&#xACE0;&#xB9AC;&#xC998;</a><ul>
+<li><a href="#insertion-sort&#xC0BD;&#xC785;-&#xC815;&#xB82C;">insertion sort(&#xC0BD;&#xC785; &#xC815;&#xB82C;)</a></li>
+<li><a href="#selection-sort&#xC120;&#xD0DD;-&#xC815;&#xB82C;">selection sort(&#xC120;&#xD0DD; &#xC815;&#xB82C;)</a></li>
+<li><a href="#bubble-sort&#xBC84;&#xBE14;-&#xC815;&#xB82C;">Bubble Sort(&#xBC84;&#xBE14; &#xC815;&#xB82C;)</a></li>
+<li><a href="#quick-sort">Quick Sort</a></li>
+<li><a href="#heap-sort">Heap Sort</a></li>
+<li><a href="#&#xC815;&#xB82C;-&#xC54C;&#xACE0;&#xB9AC;&#xC998;-&#xC2DC;&#xAC04;&#xBCF5;&#xC7A1;&#xB3C4;-&#xBE44;&#xAD50;">&#xC815;&#xB82C; &#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xC2DC;&#xAC04;&#xBCF5;&#xC7A1;&#xB3C4; &#xBE44;&#xAD50;</a></li>
+<li><a href="#&#xC815;&#xB82C;-&#xC54C;&#xACE0;&#xB9AC;&#xC998;-&#xC120;&#xD0DD;-&#xAE30;&#xC900;">&#xC815;&#xB82C; &#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xC120;&#xD0DD; &#xAE30;&#xC900;</a></li>
+</ul>
+</li>
+<li><a href="#&#xAC80;&#xC0C9;-&#xC54C;&#xACE0;&#xB9AC;&#xC998;">&#xAC80;&#xC0C9; &#xC54C;&#xACE0;&#xB9AC;&#xC998;</a><ul>
+<li><a href="#binary-search">Binary Search</a></li>
+<li><a href="#depth-first-search&#xAE4A;&#xC774;-&#xC6B0;&#xC120;-&#xD0D0;&#xC0C9;">Depth First Search(&#xAE4A;&#xC774; &#xC6B0;&#xC120; &#xD0D0;&#xC0C9;)</a></li>
+<li><a href="#breath-first-searchbfs">Breath First Search(BFS)</a></li>
+</ul>
+</li>
 </ul>
 
 </div><!-- tocstop -->
-<p><script type="math/tex; ">m</script> &#xAC1C;&#xC758; &#xB2E8;&#xC5B4; <script type="math/tex; ">w_1, w_2, …, w_m</script> &#xC5F4;(word sequence) &#xC774; &#xC8FC;&#xC5B4;&#xC84C;&#xC744; &#xB54C; &#xBB38;&#xC7A5;&#xC73C;&#xB85C;&#xC368; &#xC131;&#xB9BD;&#xB420; &#xD655;&#xB960; <script type="math/tex; ">P(w_1, w_2, … , w_m)</script> &#xC744; &#xCD9C;&#xB825;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xC774; &#xB2E8;&#xC5B4; &#xC5F4;&#xC774; &#xC2E4;&#xC81C;&#xB85C; &#xD604;&#xC2E4;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB420; &#xC218; &#xC788;&#xB294; &#xBB38;&#xC7A5;(sentence) &#xC778;&#xC9C0;&#xB97C; &#xD310;&#xBCC4;&#xD558;&#xB294; &#xBAA8;&#xD615;&#xC774;&#xB2E4;. &#xAC01; &#xB2E8;&#xC5B4;&#xC758; &#xD655;&#xB960;&#xACFC; &#xB2E8;&#xC5B4;&#xB4E4;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xACC4;&#xC0B0;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
-<p><script type="math/tex; mode=display">
-\begin{eqnarray}
-P(w_1, w_2, \ldots, w_m) &=& P(w_1, w_2, \ldots, w_{m-1}) \cdot P(w_m\;|\; w_1, w_2, \ldots, w_{m-1}) \\
-&=& P(w_1, w_2, \ldots, w_{m-2}) \cdot P(w_{m-1}\;|\; w_1, w_2, \ldots, w_{m-2}) \cdot P(w_m\;|\; w_1, w_2, \ldots, w_{m-1}) \\
-&=& P(w_1) \cdot P(w_2 \;|\; w_1) \cdot  P(w_3 \;|\; w_1, w_2) P(w_4 \;|\; w_1, w_2, w_3) \cdots P(w_m\;|\; w_1, w_2, \ldots, w_{m-1})
-\end{eqnarray}
-</script></p>
-<p>&#xBB38;&#xB9E5;(context)&#xC740; &#xC9C0;&#xAE08;&#xAE4C;&#xC9C0; &#xB098;&#xC628; &#xB2E8;&#xC5B4; &#xC815;&#xBCF4;&#xC774;&#xB2E4;.  <script type="math/tex; ">P(w_m | w_1, w_2, … , w_{m-1})</script> &#xC740; &#xC9C0;&#xAE08;&#xAE4C;&#xC9C0; <script type="math/tex; ">w_1, w_2, … , w_{m-1}</script> &#xB77C;&#xB294; &#xB2E8;&#xC5B4; &#xC5F4;&#xC774; &#xB098;&#xC654;&#xC744; &#xB54C;, &#xADF8; &#xB2E4;&#xC74C; &#xB2E8;&#xC5B4;&#xB85C; <script type="math/tex; ">w_m</script> &#xC774; &#xB098;&#xC62C; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. </p>
-<p>&#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC744; &#xC5B4;&#xB5BB;&#xAC8C; &#xBAA8;&#xD615;&#xD654;&#xD558;&#xB290;&#xB0D0;&#xC5D0; &#xB530;&#xB77C;</p>
-<ul>
-<li>&#xC720;&#xB2C8;&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(Unigram Model)</li>
-<li>&#xBC14;&#xC774;&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(Bigram Model)</li>
-<li>N&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(N-gram Model)</li>
-</ul>
-<h3 id="&#xC720;&#xB2C8;&#xADF8;&#xB7A8;-&#xBAA8;&#xD615;unigram-model">&#xC720;&#xB2C8;&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(Unigram Model)</h3>
-<p>&#xBAA8;&#xB4E0; &#xB2E8;&#xC5B4;&#xC758; &#xD65C;&#xC6A9;&#xC774; &#xC644;&#xC804;&#xD788; &#xC11C;&#xB85C; &#xB3C5;&#xB9BD;&#xC774;&#xB77C;&#xBA74; &#xB2E8;&#xC5B4; &#xC5F4;&#xC758; &#xD655;&#xB960;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAC01; &#xB2E8;&#xC5B4;&#xC758; &#xD655;&#xB960;&#xC758; &#xACF1;&#xC774; &#xB41C;&#xB2E4;. </p>
-<p><script type="math/tex; mode=display">
-P(w_1, w_2, \ldots, w_m) = \prod_{i=1}^m P(w_i)
-</script></p>
-<h3 id="&#xBC14;&#xC774;&#xADF8;&#xB7A8;-&#xBAA8;&#xD615;bigram-model">&#xBC14;&#xC774;&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(Bigram Model)</h3>
-<p>&#xB2E8;&#xC5B4;&#xC758; &#xD65C;&#xC6A9;&#xC774; &#xBC14;&#xB85C; &#xC804; &#xB2E8;&#xC5B4;&#xC5D0;&#xB9CC; &#xC758;&#xC874;&#xD560; &#xB54C; (=&#xB9C8;&#xCF54;&#xD504; &#xBAA8;&#xD615;(Markov Model))</p>
-<p><script type="math/tex; mode=display">
-P(w_1, w_2, \ldots, w_m) = P(w_1) \prod_{i=2}^{m} P(w_{i}\;|\; w_{i-1})
-</script></p>
-<h3 id="n&#xADF8;&#xB7A8;-&#xBAA8;&#xD615;n-gram-model">N&#xADF8;&#xB7A8; &#xBAA8;&#xD615;(N-gram Model)</h3>
-<p>&#xB2E8;&#xC5B4;&#xC758; &#xD65C;&#xC6A9;&#xC774; &#xBC14;&#xB85C; &#xC804; <script type="math/tex; ">n-1</script> &#xAC1C;&#xC758; &#xB2E8;&#xC5B4;&#xC5D0;&#xB9CC; &#xC758;&#xC874;&#xD560; &#xB54C; </p>
-<p><script type="math/tex; mode=display">
-P(w_1, w_2, \ldots, w_m) = P(w_1) \prod_{i=n}^{m} P(w_{i}\;|\; w_{i-1}, \ldots, w_{i-n})
-</script></p>
-<h3 id="nltk&#xC758;-n&#xADF8;&#xB7A8;-&#xAE30;&#xB2A5;">NLTK&#xC758; N&#xADF8;&#xB7A8; &#xAE30;&#xB2A5;</h3>
-<p>NLTK &#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xB294; &#xBC14;&#xC774;&#xADF8;&#xB7A8;&#xACFC; N-&#xADF8;&#xB7A8;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xB294; <code>bigrams</code>, <code>ngrams</code> &#xBA85;&#xB839;&#xC774; &#xC788;&#xB2E4;.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> nltk <span class="hljs-keyword">import</span> bigrams, word_tokenize
-<span class="hljs-keyword">from</span> nltk.util <span class="hljs-keyword">import</span> ngrams
-
-sentence = <span class="hljs-string">&quot;I am a boy.&quot;</span>
-tokens = word_tokenize(sentence)
-
-bigram = bigrams(tokens)
-trigram = ngrams(tokens, <span class="hljs-number">3</span>)
-
-print(<span class="hljs-string">&quot;\nbigram:&quot;</span>)
-<span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> bigram:
-    print(t)
-
-print(<span class="hljs-string">&quot;\ntrigram:&quot;</span>)
-<span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> trigram:
-    print(t)
-
-<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
-bigram:
-(<span class="hljs-string">&apos;I&apos;</span>, <span class="hljs-string">&apos;am&apos;</span>)
-(<span class="hljs-string">&apos;am&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>)
-(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;boy&apos;</span>)
-(<span class="hljs-string">&apos;boy&apos;</span>, <span class="hljs-string">&apos;.&apos;</span>)
-
-trigram:
-(<span class="hljs-string">&apos;I&apos;</span>, <span class="hljs-string">&apos;am&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>)
-(<span class="hljs-string">&apos;am&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;boy&apos;</span>)
-(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;boy&apos;</span>, <span class="hljs-string">&apos;.&apos;</span>)
-</code></pre>
-<p>&#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC744; &#xCD94;&#xC815;&#xD560; &#xB54C;&#xB294; &#xBB38;&#xC7A5;&#xC758; &#xC2DC;&#xC791;&#xACFC; &#xB05D;&#xC774;&#xB77C;&#xB294; &#xC870;&#xAC74;&#xC744; &#xD45C;&#xC2DC;&#xD558;&#xAE30; &#xC704;&#xD574; &#xBAA8;&#xB4E0; &#xBB38;&#xC7A5;&#xC5D0; &#xBB38;&#xC7A5;&#xC758; &#xC2DC;&#xC791;&#xACFC; &#xB05D;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xD2B9;&#xBCC4; &#xD1A0;&#xD070;&#xC744; &#xCD94;&#xAC00;&#xD55C;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xBB38;&#xC7A5;&#xC758; &#xC2DC;&#xC791;&#xC740; <code>SS</code>, &#xBB38;&#xC7A5;&#xC758; &#xB05D;&#xC740; <code>SE</code>&#xC774;&#xB77C;&#xB294; &#xD1A0;&#xD070;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
-<p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; [&quot;I&quot;, &quot;am&quot;, &quot;a&quot;, &quot;boy&quot;, &quot;.&quot;]&#xB77C;&#xB294; &#xD1A0;&#xD070;&#xC5F4;(&#xBB38;&#xC7A5;)&#xC740; [&quot;SS&quot;, &quot;I&quot;, &quot;am&quot;, &quot;a&quot;, &quot;boy&quot;, &quot;.&quot;, &quot;SE&quot;]&#xB77C;&#xB294; &#xD1A0;&#xD070;&#xC5F4;&#xC774; &#xB41C;&#xB2E4;. ngrams &#xBA85;&#xB839;&#xC740; padding &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC774;&#xB7F0; &#xD2B9;&#xBCC4; &#xD1A0;&#xD070;&#xC744; &#xCD94;&#xAC00;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
-<pre><code class="lang-python">bigram = ngrams(tokens, <span class="hljs-number">2</span>, pad_left=<span class="hljs-keyword">True</span>, pad_right=<span class="hljs-keyword">True</span>, left_pad_symbol=<span class="hljs-string">&quot;SS&quot;</span>, right_pad_symbol=<span class="hljs-string">&quot;SE&quot;</span>)
-<span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> bigram:
-    print(t)
-
-<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
-(<span class="hljs-string">&apos;SS&apos;</span>, <span class="hljs-string">&apos;I&apos;</span>)
-(<span class="hljs-string">&apos;I&apos;</span>, <span class="hljs-string">&apos;am&apos;</span>)
-(<span class="hljs-string">&apos;am&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>)
-(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;boy&apos;</span>)
-(<span class="hljs-string">&apos;boy&apos;</span>, <span class="hljs-string">&apos;.&apos;</span>)
-(<span class="hljs-string">&apos;.&apos;</span>, <span class="hljs-string">&apos;SE&apos;</span>)
-</code></pre>
-<h3 id="&#xC870;&#xAC74;&#xBD80;-&#xD655;&#xB960;-&#xCD94;&#xC815;-&#xBC29;&#xBC95;">&#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960; &#xCD94;&#xC815; &#xBC29;&#xBC95;</h3>
-<p>NLTK&#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xBC14;&#xC774;&#xADF8;&#xB7A8; &#xD615;&#xD0DC;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC744; &#xC27D;&#xAC8C; &#xCD94;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC6B0;&#xC120; <code>ConditionalFreqDist</code> &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xAC01; &#xBB38;&#xB9E5;&#xBCC4; &#xB2E8;&#xC5B4; &#xBE48;&#xB3C4;&#xB97C; &#xCE21;&#xC815;&#xD55C; &#xD6C4;&#xC5D0; <code>ConditionalProbDist</code> &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC744; &#xCD94;&#xC815;&#xD55C;&#xB2E4;.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> nltk <span class="hljs-keyword">import</span> ConditionalFreqDist
-
-sentence = <span class="hljs-string">&quot;I am a boy.&quot;</span>
-tokens = word_tokenize(sentence)
-bigram = ngrams(tokens, <span class="hljs-number">2</span>, pad_left=<span class="hljs-keyword">True</span>, pad_right=<span class="hljs-keyword">True</span>, left_pad_symbol=<span class="hljs-string">&quot;SS&quot;</span>, right_pad_symbol=<span class="hljs-string">&quot;SE&quot;</span>)
-cfd = ConditionalFreqDist([(t[<span class="hljs-number">0</span>], t[<span class="hljs-number">1</span>]) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> bigram])
-</code></pre>
-<p><code>ConditionalFreqDist</code> &#xD074;&#xB798;&#xC2A4;&#xB294; &#xBB38;&#xB9E5;&#xC744; &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xB294; &#xC0AC;&#xC804; &#xC790;&#xB8CC;&#xD615;&#xACFC; &#xBE44;&#xC2B7;&#xD558;&#xB2E4;.</p>
-<pre><code class="lang-python">cfd.conditions()
-
-<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
-[<span class="hljs-string">&apos;SS&apos;</span>, <span class="hljs-string">&apos;I&apos;</span>, <span class="hljs-string">&apos;am&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;boy&apos;</span>, <span class="hljs-string">&apos;.&apos;</span>]
-</code></pre>
-<pre><code class="lang-python">cfd[<span class="hljs-string">&quot;SS&quot;</span>]
-
-<span class="hljs-comment"># &#xACB0;&#xACFC;</span>
-FreqDist({<span class="hljs-string">&apos;I&apos;</span>: <span class="hljs-number">1</span>})
-</code></pre>
-<p>&#xC608;&#xC2DC;</p>
-<p>nltk &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xC0D8;&#xD50C; &#xCF54;&#xD37C;&#xC2A4;&#xC778; movie_reviews&#xC758; &#xD14D;&#xC2A4;&#xD2B8;&#xB85C;&#xBD80;&#xD130; &#xBC14;&#xC774;&#xADF8;&#xB7A8; &#xD655;&#xB960;&#xC744; &#xCD94;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC774;&#xB2E4;.</p>
-<pre><code class="lang-python">  <span class="hljs-keyword">import</span> nltk
-  nltk.download(<span class="hljs-string">&apos;movie_reviews&apos;</span>)
-  nltk.download(<span class="hljs-string">&apos;punkt&apos;</span>)
-  <span class="hljs-keyword">from</span> nltk.corpus <span class="hljs-keyword">import</span> movie_reviews
-
-  sentences = []
-  <span class="hljs-keyword">for</span> tokens <span class="hljs-keyword">in</span> movie_reviews.sents():
-      bigram = ngrams(tokens, <span class="hljs-number">2</span>, pad_left=<span class="hljs-keyword">True</span>, pad_right=<span class="hljs-keyword">True</span>, left_pad_symbol=<span class="hljs-string">&quot;SS&quot;</span>, right_pad_symbol=<span class="hljs-string">&quot;SE&quot;</span>)
-      sentences += [t <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> bigram]
-
-  sentences[:<span class="hljs-number">20</span>]
-</code></pre>
-<p>&#xBB38;&#xC7A5;&#xC758; &#xCC98;&#xC74C;(SS &#xBB38;&#xB9E5;), i&#xB77C;&#xB294; &#xB2E8;&#xC5B4; &#xB2E4;&#xC74C;, &#xB9C8;&#xCE68;&#xD45C; &#xB2E4;&#xC74C;&#xC5D0; &#xB098;&#xC624;&#xB294; &#xB2E8;&#xC5B4;&#xC758; &#xBE48;&#xB3C4;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
-<pre><code class="lang-python">cfd = ConditionalFreqDist(sentences)
-</code></pre>
-<p>&#xBB38;&#xC7A5;&#xC758; &#xCC98;&#xC74C;&#xC5D0; &#xC62C; &#xC218; &#xC788;&#xB294; &#xB2E8;&#xC5B4;&#xB4E4;</p>
-<pre><code class="lang-python">cfd[<span class="hljs-string">&quot;SS&quot;</span>].most_common(<span class="hljs-number">5</span>)
+<h2 id="sorting-&#xC54C;&#xACE0;&#xB9AC;&#xC998;">sorting &#xC54C;&#xACE0;&#xB9AC;&#xC998;</h2>
+<h3 id="insertion-sort&#xC0BD;&#xC785;-&#xC815;&#xB82C;">insertion sort(&#xC0BD;&#xC785; &#xC815;&#xB82C;)</h3>
+<p>&#xC55E;&#xC5D0;&#xC11C;&#xBD80;&#xD130; &#xCC28;&#xB840;&#xB300;&#xB85C; &#xC774;&#xBBF8; &#xC815;&#xB82C;&#xB41C; &#xBC30;&#xC5F4; &#xBD80;&#xBD84;&#xACFC; &#xBE44;&#xAD50;&#xD558;&#xC5EC; &#xC790;&#xC2E0;&#xC758; &#xC704;&#xCE58;&#xB97C; &#xCC3E;&#xC544; &#xC0BD;&#xC785;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insertion_sort</span><span class="hljs-params">(ls)</span>:</span>
+    sort = <span class="hljs-keyword">False</span>
+    <span class="hljs-keyword">while</span> sort == <span class="hljs-keyword">False</span>:
+        sort = <span class="hljs-keyword">True</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(ls)<span class="hljs-number">-1</span>):
+            <span class="hljs-keyword">if</span> ls[i] &gt; ls[i+<span class="hljs-number">1</span>]:
+                ls[i], ls[i+<span class="hljs-number">1</span>] = ls[i+<span class="hljs-number">1</span>], ls[i]
+                sort = <span class="hljs-keyword">False</span>
+    <span class="hljs-keyword">return</span> ls
 </code></pre>
 <ul>
-<li>i &#xB2E4;&#xC74C;&#xC5D0; &#xC62C; &#xC218; &#xC788;&#xB294; &#xB2E8;&#xC5B4;&#xB4E4;</li>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4; : &#xCD5C;&#xC120;&#xC758; &#xACBD;&#xC6B0; <script type="math/tex; ">O(n)</script>, &#xCD5C;&#xC545;&#xC758; &#xACBD;&#xC6B0; <script type="math/tex; ">O(n^2)</script></li>
+<li>&#xC0AC;&#xC6A9; &#xC0C1;&#xD669; : &#xB808;&#xCF54;&#xB4DC;&#xC758; &#xC218;&#xAC00; &#xC801;&#xC744; &#xB54C;, &#xB300;&#xBD80;&#xBD84;&#xC758; &#xB808;&#xCF54;&#xB4DC;&#xAC00; &#xC774;&#xBBF8; &#xC815;&#xB82C; &#xB418;&#xC5B4; &#xC788;&#xC744; &#xB54C; &#xD6A8;&#xC728;&#xC801;&#xC774;&#xB2E4;.</li>
 </ul>
-<pre><code class="lang-python">cfd[<span class="hljs-string">&quot;i&quot;</span>].most_common(<span class="hljs-number">5</span>)
+<h3 id="selection-sort&#xC120;&#xD0DD;-&#xC815;&#xB82C;">selection sort(&#xC120;&#xD0DD; &#xC815;&#xB82C;)</h3>
+<ul>
+<li>&#xACFC;&#xC815; &#xC124;&#xBA85;</li>
+<li>&#xC8FC;&#xC5B4;&#xC9C4; &#xBC30;&#xC5F4; &#xC911;&#xC5D0;&#xC11C; &#xCD5C;&#xC18C;&#xAC12;&#xC744; &#xCC3E;&#xB294;&#xB2E4;. </li>
+<li>&#xADF8; &#xAC12;&#xC744; &#xB9E8; &#xC55E;&#xC5D0; &#xC704;&#xCE58;&#xD55C; &#xAC12;&#xACFC; &#xAD50;&#xCCB4;&#xD55C;&#xB2E4;.</li>
+<li>&#xB9E8; &#xCC98;&#xC74C; &#xC704;&#xCE58;&#xB97C; &#xBE80; &#xB098;&#xBA38;&#xC9C0; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xAD50;&#xCCB4; &#xD55C;&#xB2E4;.</li>
+<li>&#xD558;&#xB098;&#xC758; &#xC6D0;&#xC18C;&#xB9CC; &#xB0A8;&#xC744; &#xB54C;&#xAE4C;&#xC9C0; 1~3 &#xACFC;&#xC815;&#xC744; &#xBC18;&#xBCF5;&#xD55C;&#xB2E4;. </li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selection_sort</span><span class="hljs-params">(ls)</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(ls)<span class="hljs-number">-1</span>):
+        idx = i + <span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(idx, len(ls)<span class="hljs-number">-1</span>):
+            <span class="hljs-keyword">if</span> ls[j] &lt; ls[idx]:
+                idx = j
+        <span class="hljs-keyword">if</span> ls[i] &gt; ls[idx]:
+            ls[i], ls[idx] = ls[idx], ls[i]
+    <span class="hljs-keyword">return</span> ls
 </code></pre>
 <ul>
-<li>&#xB9C8;&#xCE68;&#xD45C; &#xB2E4;&#xC74C;&#xC5D0; &#xC62C; &#xC218; &#xC788;&#xB294; &#xB2E8;&#xC5B4;&#xB4E4;</li>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4; :  <script type="math/tex; ">O(n^2)</script></li>
 </ul>
-<pre><code class="lang-python">cfd[<span class="hljs-string">&quot;.&quot;</span>].most_common(<span class="hljs-number">5</span>)
+<h3 id="bubble-sort&#xBC84;&#xBE14;-&#xC815;&#xB82C;">Bubble Sort(&#xBC84;&#xBE14; &#xC815;&#xB82C;)</h3>
+<p>&#xC11C;&#xB85C; &#xC778;&#xC811;&#xD55C; &#xB450; &#xC6D0;&#xC18C;&#xB97C; &#xAC80;&#xC0AC;&#xD558;&#xC5EC; &#xD06C;&#xAE30;&#xAC00; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xB418;&#xC5B4; &#xC788;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC11C;&#xB85C; &#xAD50;&#xD658;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bubble_sort</span><span class="hljs-params">(ls)</span>:</span>
+    swap = <span class="hljs-keyword">True</span>
+    <span class="hljs-keyword">while</span> swap:
+        swap = <span class="hljs-keyword">False</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(ls)<span class="hljs-number">-1</span>):
+            <span class="hljs-keyword">if</span> ls[i] &gt; ls[i+<span class="hljs-number">1</span>]:
+                ls[i], ls[i+<span class="hljs-number">1</span>] = ls[i+<span class="hljs-number">1</span>], ls[i]
+                    swap = <span class="hljs-keyword">True</span>
+    <span class="hljs-keyword">return</span> ls
 </code></pre>
-<p>&#xBE48;&#xB3C4;&#xB97C; &#xCD94;&#xC815;&#xD558;&#xBA74; &#xAC01;&#xAC01;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCD94;&#xC815;
-<script type="math/tex; mode=display">
-P(w\;|\; w_c) = \dfrac{C((w_c, w))}{C((w_c))}
-</script></p>
-<p><script type="math/tex; ">C((w_c, w))</script> &#xC740; &#xC804;&#xCCB4; &#xB9D0;&#xBB49;&#xCE58;&#xC5D0;&#xC11C; <script type="math/tex; ">(w_c, w)</script> &#xB77C;&#xB294; &#xBC14;&#xC774;&#xADF8;&#xB7A8;&#xC774; &#xB098;&#xD0C0;&#xB098;&#xB294; &#xD69F;&#xC218;&#xC774;&#xACE0;, <script type="math/tex; ">C(w_c)</script> &#xC740; &#xC804;&#xCCB4; &#xB9D0;&#xBB49;&#xCE58;&#xC5D0;&#xC11C; <script type="math/tex; ">C(w_c)</script> &#xB77C;&#xB294; &#xC720;&#xB2C8;&#xADF8;&#xB7A8;(&#xB2E8;&#xC5B4;)&#xC774; &#xB098;&#xD0C0;&#xB098;&#xB294; &#xD69F;&#xC218;&#xC774;&#xB2E4;.</p>
-<p>NLTK&#xC758; <code>ConditionalProbDist</code> &#xD074;&#xB798;&#xC2A4;&#xC5D0; <code>MLEProbDist</code> &#xD074;&#xB798;&#xC2A4; &#xD329;&#xD1A0;&#xB9AC;&#xB97C; &#xC778;&#xC218;&#xB85C; &#xB123;&#xC5B4; &#xC704;&#xC640; &#xAC19;&#xC774; &#xBE48;&#xB3C4;&#xB97C; &#xCD94;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
-<pre><code class="lang-python">    <span class="hljs-keyword">from</span> nltk.probability <span class="hljs-keyword">import</span> ConditionalProbDist, MLEProbDist
-    cpd = ConditionalProbDist(cfd, MLEProbDist)
+<ul>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4; : <script type="math/tex; ">O(n^2)</script></li>
+</ul>
+<h3 id="quick-sort">Quick Sort</h3>
+<ul>
+<li>&#xB2E4;&#xB978; &#xC6D0;&#xC18C;&#xC640;&#xC758; &#xBE44;&#xAD50;&#xB9CC;&#xC73C;&#xB85C; &#xC815;&#xB82C;&#xC744; &#xC218;&#xD589;&#xD558;&#xB294; &#xBE44;&#xAD50; &#xC815;&#xB82C;&#xC5D0; &#xC18D;&#xD55C;&#xB2E4;.</li>
+<li>&#xBD84;&#xD560; &#xC815;&#xBCF5; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC758; &#xD558;&#xB098;&#xB85C; &#xD3C9;&#xADE0;&#xC801;&#xC73C;&#xB85C; &#xB9E4;&#xC6B0; &#xBE60;&#xB978; &#xC218;&#xD589; &#xC18D;&#xB3C4;&#xB97C; &#xC790;&#xB791;&#xD558;&#xB294; &#xC815;&#xB82C; &#xBC29;&#xBC95;</li>
+<li>&#xACFC;&#xC815; :<ol>
+<li>&#xB9AC;&#xC2A4;&#xD2B8; &#xC548;&#xC5D0; &#xC788;&#xB294; &#xD55C; &#xC694;&#xC18C;&#xB97C; &#xC120;&#xD0DD;&#xD55C;&#xB2E4;. (&#xD53C;&#xBC97;)</li>
+<li>&#xD53C;&#xBC97;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xD53C;&#xBC97;&#xBCF4;&#xB2E4; &#xC791;&#xC740; &#xC694;&#xC18C;&#xB4E4;&#xC740; &#xBAA8;&#xB450; &#xD53C;&#xBC97;&#xC758; &#xC67C;&#xCABD;&#xC73C;&#xB85C; &#xD070; &#xC694;&#xC18C;&#xB4E4;&#xC740; &#xD53C;&#xBC97;&#xC758; &#xC624;&#xB978;&#xCABD;&#xC73C;&#xB85C;</li>
+<li>&#xD53C;&#xBC97;&#xC744; &#xC81C;&#xC678;&#xD55C; &#xC67C;&#xCABD;/&#xC624;&#xB978;&#xCABD; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xB2E4;&#xC2DC; &#xC815;&#xB82C;&#xD55C;&#xB2E4;. </li>
+<li>&#xBD84;&#xD560;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD560; &#xB54C;&#xAE4C;&#xC9C0; &#xBC18;&#xBCF5;&#xD55C;&#xB2E4;.</li>
+</ol>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">quick_sort</span><span class="hljs-params">(ls)</span>:</span>
+    <span class="hljs-keyword">if</span> len(ls) &lt;= <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> ls
+
+    pivot = ls[<span class="hljs-number">0</span>]
+    small = []
+    same = []
+    big = []
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> ls:
+        <span class="hljs-keyword">if</span> i &gt; pivot:
+            big.append(i)
+        <span class="hljs-keyword">elif</span> i &lt; pivot:
+            small.append(i)
+        <span class="hljs-keyword">else</span>:
+            same.append(i)
+
+    <span class="hljs-keyword">return</span> quick_sort(small) + same + quick_sort(big)
 </code></pre>
-<p>&#xD2B8;&#xB808;&#xC774;&#xB2DD;&#xC774; &#xB05D;&#xB098;&#xBA74; &#xC870;&#xAC74;&#xBD80; &#xD655;&#xB960;&#xC758; &#xAC12;&#xC744; &#xBCF4;&#xAC70;&#xB098; &#xC0D8;&#xD50C; &#xBB38;&#xC815;&#xC744; &#xC785;&#xB825;&#xD574;&#xC11C; &#xBB38;&#xC7A5;&#xC758; &#xB85C;&#xADF8; &#xD655;&#xB960;&#xC744; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
-<pre><code class="lang-python">    cpd[<span class="hljs-string">&quot;i&quot;</span>].prob(<span class="hljs-string">&quot;am&quot;</span>)
-    cpd[<span class="hljs-string">&quot;i&quot;</span>].prob(<span class="hljs-string">&quot;is&quot;</span>)
-    cpd[<span class="hljs-string">&quot;we&quot;</span>].prob(<span class="hljs-string">&quot;are&quot;</span>)
-    cpd[<span class="hljs-string">&quot;we&quot;</span>].prob(<span class="hljs-string">&quot;is&quot;</span>)
+<ul>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4; : <script type="math/tex; ">nlog_2 n</script></li>
+</ul>
+<h3 id="heap-sort">Heap Sort</h3>
+<ul>
+<li>&#xC644;&#xC804; &#xC774;&#xC9C4; &#xD2B8;&#xB9AC;&#xC758; &#xC77C;&#xC885;&#xC73C;&#xB85C; &#xC6B0;&#xC120;&#xC21C;&#xC704; &#xD050;&#xB97C; &#xC704;&#xD558;&#xC5EC; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xC790;&#xB8CC;&#xAD6C;&#xC870;</li>
+<li>&#xCD5C;&#xB313;&#xAC12;, &#xCD5C;&#xC19F;&#xAC12;&#xC744; &#xC27D;&#xAC8C; &#xCD94;&#xCD9C;&#xD560; &#xC218; &#xC788;&#xB294; &#xC790;&#xB8CC;&#xAD6C;&#xC870;</li>
+<li>&#xACFC;&#xC815;<ol>
+<li>&#xC815;&#xB82C;&#xD574;&#xC57C; &#xD560; n&#xAC1C;&#xC758; &#xC694;&#xC18C;&#xB4E4;&#xB85C; &#xCD5C;&#xB300; &#xD799;(&#xC644;&#xC804; &#xC774;&#xC9C4; &#xD2B8;&#xB9AC; &#xD615;&#xD0DC;)&#xC744; &#xB9CC;&#xB4E0;&#xB2E4;. <ul>
+<li>&#xB0B4;&#xB9BC;&#xCC28;&#xC21C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC815;&#xB82C;</li>
+</ul>
+</li>
+<li>&#xADF8; &#xB2E4;&#xC74C;&#xC73C;&#xB85C; &#xD55C; &#xBC88;&#xC5D0; &#xD558;&#xB098;&#xC529; &#xC694;&#xC18C;&#xB97C; &#xD799;&#xC5D0;&#xC11C; &#xAEBC;&#xB0B4;&#xC11C; &#xBC30;&#xC5F4;&#xC758; &#xB4A4;&#xBD80;&#xD130; &#xC800;&#xC7A5;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</li>
+<li>&#xC0AD;&#xC81C;&#xB418;&#xB294; &#xC694;&#xC18C;&#xB4E4;(&#xCD5C;&#xB313;&#xAC12;&#xBD80;&#xD130; &#xC0AD;&#xC81C;)&#xC740; &#xAC12;&#xC774; &#xAC10;&#xC18C;&#xB418;&#xB294; &#xC21C;&#xC11C;&#xB85C; &#xC815;&#xB82C;&#xB418;&#xAC8C; &#xB41C;&#xB2E4;. </li>
+</ol>
+</li>
+<li>&#xC0AC;&#xC6A9; &#xC0C1;&#xD669; : &#xAC00;&#xC7A5; &#xD070; &#xAC12; &#xBA87;&#xAC1C;&#xB9CC; &#xD544;&#xC694;&#xD560; &#xB54C;</li>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4; : <script type="math/tex; ">O(nlog_2n)</script></li>
+</ul>
+<h3 id="&#xC815;&#xB82C;-&#xC54C;&#xACE0;&#xB9AC;&#xC998;-&#xC2DC;&#xAC04;&#xBCF5;&#xC7A1;&#xB3C4;-&#xBE44;&#xAD50;">&#xC815;&#xB82C; &#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xC2DC;&#xAC04;&#xBCF5;&#xC7A1;&#xB3C4; &#xBE44;&#xAD50;</h3>
+<p><img src="../../resource/img/sort_time.png" alt="sort_time"></p>
+<h3 id="&#xC815;&#xB82C;-&#xC54C;&#xACE0;&#xB9AC;&#xC998;-&#xC120;&#xD0DD;-&#xAE30;&#xC900;">&#xC815;&#xB82C; &#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xC120;&#xD0DD; &#xAE30;&#xC900;</h3>
+<p><img src="../../resource/img/sort.png" alt="sort"></p>
+<ul>
+<li>&#xB2E8;&#xC21C;(&#xAD6C;&#xD604; &#xAC04;&#xB2E8;)&#xD558;&#xC9C0;&#xB9CC; &#xBE44;&#xD6A8;&#xC728;&#xC801;&#xC778; &#xBC29;&#xBC95; : &#xC0BD;&#xC785;  &#xC815;&#xB82C;, &#xC120;&#xD0DD;&#xC815;&#xB82C;, &#xBC84;&#xBE14; &#xC815;&#xB82C;</li>
+<li>&#xBCF5;&#xC7A1;&#xD558;&#xC9C0;&#xB9CC; &#xD6A8;&#xC728;&#xC801;&#xC778; &#xBC29;&#xBC95; : &#xD035; &#xC815;&#xB82C;, &#xD799; &#xC815;&#xB82C;</li>
+</ul>
+<h2 id="&#xAC80;&#xC0C9;-&#xC54C;&#xACE0;&#xB9AC;&#xC998;">&#xAC80;&#xC0C9; &#xC54C;&#xACE0;&#xB9AC;&#xC998;</h2>
+<h3 id="binary-search">Binary Search</h3>
+<ul>
+<li>&#xC815;&#xB82C; &#xB9AC;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xD2B9;&#xC815;&#xD55C; &#xC22B;&#xC790; index&#xB97C; &#xCC3E;&#xC744; &#xB54C; &#xC0AC;&#xC6A9;</li>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4; : <script type="math/tex; ">log N</script></li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">binary_search</span><span class="hljs-params">(ls, target)</span>:</span>
+    start = <span class="hljs-number">0</span>
+    end = len(ls)<span class="hljs-number">-1</span>
+    <span class="hljs-keyword">while</span> start &lt; end:
+        mid = int(end - start / <span class="hljs-number">2</span>) + start
+        <span class="hljs-keyword">if</span> target == ls[mid]:
+            <span class="hljs-keyword">return</span> mid
+        <span class="hljs-keyword">elif</span> target &gt; ls[mid]:
+            start = mid - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            end = mid - <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
 </code></pre>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">binary_search2</span><span class="hljs-params">(ls, target, start, end)</span>:</span>
+    <span class="hljs-keyword">if</span> start &gt; end:
+        <span class="hljs-keyword">return</span> ls
+
+    mid = int(end - start / <span class="hljs-number">2</span>) + start
+    <span class="hljs-keyword">if</span> target == ls[mid]:
+        <span class="hljs-keyword">return</span> mid
+    <span class="hljs-keyword">elif</span> target &gt; ls[mid]:
+        <span class="hljs-keyword">return</span> binary_search2(ls, target, mid<span class="hljs-number">-1</span>, end)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> binary_search2(ls, target, start, mid<span class="hljs-number">-1</span>)
+</code></pre>
+<h3 id="depth-first-search&#xAE4A;&#xC774;-&#xC6B0;&#xC120;-&#xD0D0;&#xC0C9;">Depth First Search(&#xAE4A;&#xC774; &#xC6B0;&#xC120; &#xD0D0;&#xC0C9;)</h3>
+<ul>
+<li>&#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0; : &#xBAA8;&#xB4E0; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38; &#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xACBD;&#xC6B0; &#xC0AC;&#xC6A9;</li>
+<li>&#xB2E8;&#xC21C; &#xAC80;&#xC0C9; &#xC18D;&#xB3C4; &#xC790;&#xCCB4;&#xB294; &#xB108;&#xBE44; &#xC6B0;&#xC120; &#xD0D0;&#xC0C9;&#xC5D0; &#xBE44;&#xD574;&#xC11C; &#xB290;&#xB9AC;&#xB2E4;.</li>
+<li>&#xB108;&#xBE44; &#xC6B0;&#xC120; &#xD0D0;&#xC0C9;&#xBCF4;&#xB2E4; &#xAC04;&#xB2E8;&#xD558;&#xB2E4;.</li>
+<li>&#xC790;&#xAE30; &#xC790;&#xC2E0;&#xC744; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xC21C;&#xD658; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC758; &#xD615;&#xD0DC;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dfs</span><span class="hljs-params">(graph, start)</span>:</span>
+    visit = []
+    stack = []
+    stack.append(start)
+    <span class="hljs-keyword">while</span> stack:
+        node = stack.pop()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> node <span class="hljs-keyword">in</span> visit:
+            visit.append(node)
+            stack.extend(graph[node])
+    <span class="hljs-keyword">return</span> visit
+</code></pre>
+<ul>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4; : &#xC815;&#xC810;&#xC758; &#xC218; N, &#xAC04;&#xC120;&#xC758; &#xC218; E<ul>
+<li>&#xC778;&#xC811; &#xB9AC;&#xC2A4;&#xD2B8;&#xB85C; &#xD45C;&#xD604;&#xB41C; &#xADF8;&#xB798;&#xD504; :  <script type="math/tex; ">O(N+E)</script></li>
+<li>&#xC778;&#xC811; &#xD589;&#xB82C;&#xB85C; &#xD45C;&#xD604;&#xB41C; &#xADF8;&#xB798;&#xD504; : <script type="math/tex; ">O(N^2)</script></li>
+<li>&#xADF8;&#xB798;&#xD504; &#xB0B4;&#xC5D0; &#xC801;&#xC740; &#xC22B;&#xC790;&#xC758; &#xAC04;&#xC120;&#xB9CC;&#xC744; &#xAC00;&#xC9C0;&#xB294; &#xD68C;&#xC18C; &#xADF8;&#xB798;&#xD504;(Sparse Graph)&#xC758; &#xACBD;&#xC6B0; &#xC778;&#xC811; &#xD589;&#xB82C;&#xBCF4;&#xB2E4; &#xC778;&#xC811; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC720;&#xB9AC;&#xD558;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<h3 id="breath-first-searchbfs">Breath First Search(BFS)</h3>
+<ul>
+<li>&#xB8E8;&#xD2B8; &#xB178;&#xB4DC;&#xC5D0;&#xC11C; &#xC2DC;&#xC791;&#xD574;&#xC11C; &#xC778;&#xC811;&#xD55C; &#xB178;&#xB4DC;&#xB97C; &#xBA3C;&#xC800; &#xD0D0;&#xC0C9;&#xD558;&#xB294; &#xBC29;&#xBC95;</li>
+<li>&#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0; : &#xB450; &#xB178;&#xB4DC; &#xC0AC;&#xC774;&#xC758; &#xCD5C;&#xB2E8; &#xACBD;&#xB85C;, &#xC784;&#xC758;&#xC758; &#xACBD;&#xB85C;&#xB97C; &#xCC3E;&#xACE0; &#xC2F6;&#xC744; &#xB54C; &#xC0AC;&#xC6A9;</li>
+<li>&#xC7AC;&#xADC0;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bfs</span><span class="hljs-params">(graph, start)</span>:</span>
+    visit = []
+    queue = []
+    queue.append(start)
+    <span class="hljs-keyword">while</span> queue:
+        node = queue.pop(<span class="hljs-number">0</span>)
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> node <span class="hljs-keyword">in</span> visit:
+            visit.append(node)
+            queue.extend(graph[node])
+    <span class="hljs-keyword">return</span> visit
+</code></pre>
+<ul>
+<li>&#xC2DC;&#xAC04; &#xBCF5;&#xC7A1;&#xB3C4;<ul>
+<li>&#xC778;&#xC811; &#xB9AC;&#xC2A4;&#xD2B8;&#xB85C; &#xD45C;&#xD604;&#xB41C; &#xADF8;&#xB798;&#xD504; :  <script type="math/tex; ">O(N+E)</script></li>
+<li>&#xC778;&#xC811; &#xD589;&#xB82C;&#xB85C; &#xD45C;&#xD604;&#xB41C; &#xADF8;&#xB798;&#xD504; : <script type="math/tex; ">O(N^2)</script></li>
+<li>&#xADF8;&#xB798;&#xD504; &#xB0B4;&#xC5D0; &#xC801;&#xC740; &#xC22B;&#xC790;&#xC758; &#xAC04;&#xC120;&#xB9CC;&#xC744; &#xAC00;&#xC9C0;&#xB294; &#xD68C;&#xC18C; &#xADF8;&#xB798;&#xD504;(Sparse Graph)&#xC758; &#xACBD;&#xC6B0; &#xC778;&#xC811; &#xD589;&#xB82C;&#xBCF4;&#xB2E4; &#xC778;&#xC811; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC720;&#xB9AC;&#xD558;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
 <p>Reference</p>
 <ul>
-<li><a href="https://datascienceschool.net/" target="_blank">https://datascienceschool.net/</a></li>
+<li><a href="https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html" target="_blank">https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html</a></li>
 </ul>
 
                                 
@@ -2183,14 +2243,10 @@ P(w\;|\; w_c) = \dfrac{C((w_c, w))}{C((w_c))}
 
             
                 
-                <a href="scikit-learn-text-preprocess.html" class="navigation navigation-prev " aria-label="Previous page: Scikit-Learn의 텍스트 전처리">
+                <a href="ds.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 자료구조">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="wordembedding.html" class="navigation navigation-next " aria-label="Next page: 단어 임베딩">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -2199,7 +2255,7 @@ P(w\;|\; w_c) = \dfrac{C((w_c, w))}{C((w_c))}
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"확률론적 언어 모형","level":"1.7.2","depth":2,"next":{"title":"단어 임베딩","level":"1.7.3","depth":2,"path":"posts/natural-language/wordembedding.md","ref":"posts/natural-language/wordembedding.md","articles":[]},"previous":{"title":"Scikit-Learn의 텍스트 전처리","level":"1.7.1","depth":2,"path":"posts/natural-language/scikit-learn-text-preprocess.md","ref":"posts/natural-language/scikit-learn-text-preprocess.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/natural-language/probabilistic-language.md","mtime":"2020-04-09T16:16:04.165Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-09T12:49:30.381Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"알고리즘","level":"1.9.2","depth":2,"previous":{"title":"자료구조","level":"1.9.1","depth":2,"path":"posts/programming/ds.md","ref":"posts/programming/ds.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","collapsible-menu","etoc","splitter"],"pluginsConfig":{"collapsible-menu":{},"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/programming/algorithm.md","mtime":"2021-02-09T12:48:04.029Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-09T12:49:30.381Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
