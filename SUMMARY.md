@@ -47,7 +47,7 @@
         - [검정과 유의확률](posts/math/probability-statistics/0904test-pvalue.md)
         - [Scipy를 사용한 검정](posts/math/probability-statistics/0905scipy-estimation.md)
         - [신뢰구간 추정](posts/math/probability-statistics/0906confidence-interval.md)
-        - [통계적 추정](posts/math/probability-statistics/0907stactistical-estimation.md)
+        - [통계적 추정](posts/math/probability-statistics/0907statistical-estimation.md)
 - [회귀분석](posts/regression/README.md)
     - [데이터분석 기초](posts/regression/0101dataintro.md)
     - [데이터와 파이썬 패키지](posts/regression/0102python-package-data.md)
