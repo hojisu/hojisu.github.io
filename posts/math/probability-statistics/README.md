@@ -24,7 +24,7 @@
 - [검정과 유의확률](https://hojisu.github.io/posts/math/probability-statistics/0904test-pvalue.html)
 - [Scipy 이용한 검정](https://hojisu.github.io/posts/math/probability-statistics/0905scipy-estimation.html)
 - [신뢰구간 추정](https://hojisu.github.io/posts/math/probability-statistics/0906confidence-interval.html)
-
+- [통계적 추정](https://hojisu.github.io/posts/math/probability-statistics/0907statistical-estimation.html)
 
 ___________________________________
 ###### Reference
