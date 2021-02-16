@@ -127,6 +127,13 @@
     - [Scikit-Learn의 텍스트 전처리](https://hojisu.github.io/posts/natural-language/scikit-learn-text-preprocess.html)
     - [확률론적 언어 모형](https://hojisu.github.io/posts/natural-language/probabilistic-language.html)
     - [단어 임베딩](https://hojisu.github.io/posts/natural-language/wordembedding.html)
+- [데이터베이스](https://hojisu.github.io/posts/data-base/)
+    - [RDBMS](https://hojisu.github.io/posts/data-base/rdbms.html)
+    - [NOSQL](https://hojisu.github.io/posts/data-base/nosql.html)
+- [프로그래밍](https://hojisu.github.io/posts/programming/)
+    - [자료구조](https://hojisu.github.io/posts/programming/ds.html)
+    - [알고리즘](https://hojisu.github.io/posts/programming/algorithm.html)
+    - [운영체제](https://hojisu.github.io/posts/programming/os.html)
 
 
 ___________________________________

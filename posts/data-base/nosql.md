@@ -6,7 +6,6 @@
 
 
 ## NoSQL
-
 - Not only SQL
 - Mongodb, Hbase, Cassandra
 - RDBMS 한계를 극복하기 위해 만들어진 데이터 베이스
