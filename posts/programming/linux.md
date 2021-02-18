@@ -27,8 +27,15 @@ ex) sudo apt-get update
 - cd : 디렉토리 이동
 - ls : 파일 목록 출력
   - ls와 와일드 카드
-    - * : 임의 문자열
-    - ? : 문자 하나
+    - `*` : 임의 문자열
+    - `?` : 문자 하나
   - ls와 파일 권한
     ![ls_file](../../../resource/img/ls_file.png)
-- man rm : 메뉴얼
+    출처 : http://gomguard.tistory.com/76
+
+reference
+- 이태일 강사님 온라인 강의를 수강하며 강의자료를 토대로 공부하며 정리한 내용임을 말씀드립니다. 
+
+
+
+
