@@ -137,6 +137,7 @@
     - [자료구조](posts/programming/ds.md)
     - [알고리즘](posts/programming/algorithm.md)
     - [운영체제](posts/programming/os.md)
+    - [shell](posts/programming/linux.md)
 
     
     
