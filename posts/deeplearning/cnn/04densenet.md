@@ -4,8 +4,10 @@
 
 ### Summary
 
+- 입력값을 계속해서 출력값 방향으로 합쳐주는 알고리즘이다. 
 - 이미지에서 저수준의 특징들이 잘 보존되고, gradient가 수월하게 흘러 gradient vanishing 문제가 발생하지 않으며 깊이에 비해 파라미터 수가 적기에 연산량이 절약됨과 동시에 적은 데이터셋에서도 비교적 잘 학습이 된다는 점이다. 
-- DenseNet은 Dense connectivity로 입력값을 계속해서 출력값의 방향으로 합쳐주기 때문에 최초의 정보가 비교적 온전히 남아있다.
+- DenseNet은 Dense connectivity로 입력값을 계속해서 출력값의 방향으로 합쳐주기 때문에 최초의 정보가 비교적 온전히 남아있다. 
+- 이전 레이어의 특징맵을 계속해서 다음 레이어의 입력과 연결하는데 이때 연결을 더하기가 아닌 이어붙이는 방식이다. 
 ______________
 
 ### Dense connectivity
@@ -35,7 +37,7 @@ DenseNet의 구조를 표현한 것이다. 첫번째 convolution과 maxpooling �
 
 ### Dense Block
 
-Dense connectivity를 적용하기 위해서는 피쳐맵의 크기가 동일해야 한다. 같은 피쳐맵 크기를 공유하는 연산을 모아서 Dense Block을 구성하고 이 안에서 Dence Connectivity를 적용한다. 이 때, ResNet에서 배웠던 병목레이어(bottleneck layer)를 사용한다. 이 또한 연산량을 줄이기 위해 적용한 것이다.
+Dense connectivity를 적용하기 위해서는 피쳐맵의 크기가 동일해야 한다. **같은 피쳐맵 크기를 공유하는 연산을 모아서** Dense Block을 구성하고 이 안에서 Dence Connectivity를 적용한다. 이 때, ResNet에서 배웠던 병목레이어(bottleneck layer)를 사용한다. 이 또한 연산량을 줄이기(계산의 복잡성을 줄이기) 위해 적용한 것이다. 
 
 전체 convolution 연산의 출력 피쳐맵 갯수가 동일하다. 이 피쳐맵의 갯수를 `growth rate`라고 하고 k로 표현한다. 이는 하이퍼 파라미터이며, 논문에서는 k=32로 설정하였다. 따라서, Dense Block 내의 3x3 convolution 연산의 출력 피쳐맵의 갯수는 32이다. 1x1 convolution의 출력 피쳐맵의 갯수 또한 하이퍼 파라미터 이지만, 논문에서 4k를 추천한다. 따라서 Dense Block 내의 1x1 convolution 연산의 출력 피쳐맵 갯수는 128이다.
 
@@ -51,7 +53,7 @@ DenseNet은 각 layer의 feature map의 channel 개수를 굉장히 작은 값�
 
 ### Transition layer
 
-Dense Block 사이에 있는 1x1 convolution 연산과 average pooling 연산을 묶어 Transition layer 라고 한다. 이 부분을 통과하면서 피쳐맵의 크기가 줄어들게 된다. 앞에 있는 1x1 convolution은 다음 Dense Block으로 전해지는 피쳐맵의 갯수를 조절하는 역할을 한다. 입력되는 피쳐맵의 갯수를 m이라고 했을 때, $$[\theta m], (0 < \theta \leq1)$$을 출력하는 피쳐맵의 갯수로 한다. $$\theta$$ 또한 하이퍼 파리미터로 논문에서는 0.5로 설정했다.
+Dense Block 사이에 있는 1x1 convolution 연산과 average pooling 연산을 묶어 Transition layer 라고 한다. 이 부분을 통과하면서 **피쳐맵의 크기가 줄어**들게 된다. 앞에 있는 1x1 convolution은 다음 Dense Block으로 전해지는 **피쳐맵의 갯수를 조절**하는 역할을 한다. 입력되는 피쳐맵의 갯수를 m이라고 했을 때, $$[\theta m], (0 < \theta \leq1)$$을 출력하는 피쳐맵의 갯수로 한다. $$\theta$$ 또한 하이퍼 파리미터로 논문에서는 0.5로 설정했다.
 
 마지막 Dense Block 뒤에 연결이 되며 Batch Normalization, ReLU, 1x1 convolution, 2x2 average pooling으로 구성되어 있다. 1x1 convolution을 통해 featrue map의 개수를 줄어주고 줄여주는 정도 theta는 하이퍼 파라미터 이다. 
 
