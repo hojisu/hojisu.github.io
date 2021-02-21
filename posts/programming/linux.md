@@ -3,7 +3,7 @@
 ## 리눅스
 - 컴퓨터의 운영체제 중 하나로 리누스 토르발스(Linus Torvalds)에 의해 시작된 다중 사용자, 다중 작업을 지원하는 유닉스(UNIX)와 유사한 운영체제이다. 
 
-### 특징
+#### 특징
 - 유닉스 기반이다. 
 - 다중 사용자(하나의 컴퓨터에 여러 사용자가 로그인 및 사용 가능)와 멀티 태스킹(한번에 여러 프로세스 실행 가능)을 지원한다. 
 - 자유 소프트웨어이다. 
@@ -60,8 +60,28 @@ ex) sudo apt-get update
   - f옵션: 강제로 파일이나 디렉토리 삭제
 - man : manual이라는 의미, mam rm을 입력하면 메뉴얼이 나온다.
 
+### 리눅스 리다이렉션(redirection)과 피아프(pipe)
+- standard stream
+  - command로 실행되는 process는 세가지 스트림을 가지고 있다.
+    - 표준 입력 스트림(standard input stream)
+    - 표준 출력 스트림(standard output stream)
+    - 오류 출력 스트림(standard error stream)
+  - 모든 스트림은 일반적으로 plain text로 console에 출력하도록 되어 있다.
 
-
+- 리다이렉션(redirection)
+  - 스트림 흐름을 바꿔주는 것으로 < 또는 >을 사용한다.
+  
+- 파이프(pipe)
+  - 두 프로세스 사이에서 한 프로세스의 출력 스트림이 또다른 프로세스의 입력 스트림으로 사용될 때 쓰인다. 
+  - grep : 검색 명령
+    - grep [-option] [pattern] [file or directory name]
+      - <option>
+        - `-i` : 영문의 대소문자를 구별하지 않는다. 
+        - `-v` : pattern을 포함하지 않는 라인을 출력한다.
+        - `-n` : 검색 결과의 각 행의 선두에 행 번호를 넣는다. (first line is 1)
+        - `-l` : 파일명만 출력한다.
+        - `-c` : 패턴과 일치하는 라인의 개수만 출력한다.
+        - `-r` : 하위 디렉토리까지 검색한다.
 reference
 - 이태일 강사님 온라인 강의를 수강하며 강의자료를 토대로 공부하며 정리한 내용임을 말씀드립니다. 
 
