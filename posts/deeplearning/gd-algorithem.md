@@ -85,7 +85,7 @@ $$
 
 #### Adam (Adaptive Moment Estimation)
 
-RMSProp과 Mementum 방식을 합친 것 같은 알고리즘이다. Momentum 방식과 유사하게 지금까지 계산해온 기울기의 지수평균을 저장하며 RMSProp과 유사하게 기울기의 제곱값의 지수평균을 저장한다. 
+RMSProp과 Momentum 방식을 합친 것 같은 알고리즘이다. Momentum 방식과 유사하게 지금까지 계산해온 기울기의 지수평균을 저장하며 RMSProp과 유사하게 기울기의 제곱값의 지수평균을 저장한다. 
 
 $$
 m_t = \beta_1 m_{t-1} + (1-\beta_1)\nabla_\theta J(\theta) \\
