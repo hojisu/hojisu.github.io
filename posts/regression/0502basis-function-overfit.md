@@ -49,3 +49,7 @@ sm.OLS.from_formula("y ~ x + I(x**2)", data=df).fit().summary()sm.OLS.from_formu
 과최적화가 문제가 되는 이유
 - 트레이닝에 사용되지 않은 새로운 독립 변수 값을 입력하면 오차가 커진다(**cross-validation 오차**)
 - 샘플이 조금만 변화해도 가중치의 계수의 값이 크게 달라진다.(추정의 부정확함)
+
+________________________________
+###### Reference
+김도형 박사님 강의를 수강하며 데이터사이언티스트스쿨(https://datascienceschool.net/) 강의자료를 토대로 공부하며 정리한 내용임을 말씀드립니다. 
