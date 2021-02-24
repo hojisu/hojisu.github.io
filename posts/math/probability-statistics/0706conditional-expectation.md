@@ -100,3 +100,6 @@ $$\text{E}[Y\vert X] = \hat{y}$$ 이면 $$\text{Var}[Y] = \text{E}[(\hat{y}-y)^2
 
 
 
+___________________________________
+###### Reference
+김도형 박사님 강의를 수강하며 데이터사이언티스트스쿨(https://datascienceschool.net/) 강의자료를 토대로 공부하며 정리한 내용임을 말씀드립니다.

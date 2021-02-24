@@ -26,6 +26,3 @@
 - [신뢰구간 추정](https://hojisu.github.io/posts/math/probability-statistics/0906confidence-interval.html)
 - [통계적 추정](https://hojisu.github.io/posts/math/probability-statistics/0907statistical-estimation.html)
 
-___________________________________
-###### Reference
-김도형 박사님 강의를 수강하며 데이터사이언티스트스쿨(https://datascienceschool.net/) 강의자료를 토대로 공부하며 정리한 내용임을 말씀드립니다.
