@@ -138,6 +138,7 @@
     - [알고리즘](posts/programming/algorithm.md)
     - [운영체제](posts/programming/os.md)
     - [리눅스](posts/programming/linux.md)
+- [이상탐지](posts/anomaly_detection.md)
 
     
     
