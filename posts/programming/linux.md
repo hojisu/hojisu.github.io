@@ -21,9 +21,9 @@
 
 ![system_call](../../../resource/img/system_call.png) 출저: https://m.blog.naver.com/PostList.nhn?blogId=scw0531
 
+C코딩에서 출력을 하려면 printf()를 사용한다. printf()는 #include<stdio.h>에 존재하는 라이브러리 함수이다. 즉 함수이지만 미리 정의된 곳에서 불러오는 것이다. 실제 컴퓨터에 명령을 내리는 것은 고급언어(C/JAVA,..)단에서 하는게 아니다. 하위언어(기계어)단에서 처리를 하게 된다. 실제 하드웨어를 빌려서 출력을 하게 할려면 write() 시스템 콜을 사용해야 한다. 실제 write()는 read()와 함께 시스템 프로그램이나 네트워크 프로그래밍에서 출력의 용도로 사용된다. 시스템 콜은 기존에 사용자 단에서 사용되어지는 printf()를 실제 하드웨어랑 연결시켜주면서 자원을 사용할 수 있게 해주는 역할이다. 
 
-
-
+**System Call은 커널모드에서 관리, 운영되는 하드웨어 자원을 실제 사용자 응용프로그램 부분에서 사용할 수 있게 인터페이스를 제공해주는 역할이다.**
 
 - 리눅스 커널 + 쉘 + 컴파일러 + 다양한 소프트웨어를 포함한 하나의 패키지를 지칭한다. 
 - 운영체제가 시스템 자원을 관리하고, 다양한 소프트웨어는 리눅스 커널이 제공하는 시스템 콜을 통해 시스템 자원 사용을 요청한다. 
@@ -34,6 +34,11 @@
   - 파일 시스템 관리(File System Management)
   - 디바이스 관리(Device Management)
   - 네트워크 관리(Network Management)
+
+
+## 리눅스위 주요 디렉터리 소개
+리눅스에 기본으로 구조화 되어있는 디렉터리 구조이다. 
+![linux_str.png](../../../resource/img/linux_str.png) 출저: https://m.blog.naver.com/PostList.nhn?blogId=scw0531
 
 
 ## shall 종류
