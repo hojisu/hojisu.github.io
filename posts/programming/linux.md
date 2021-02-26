@@ -150,5 +150,6 @@ C코딩에서 출력을 하려면 printf()를 사용한다. printf()는 #include
 
 reference
 - 이태일 강사님 온라인 강의를 수강하며 강의자료를 토대로 공부하며 정리한 내용임을 말씀드립니다. 
+- https://m.blog.naver.com/PostList.nhn?blogId=scw0531
 
 
