@@ -17,4 +17,5 @@
 - [AutoEncoder](https://hojisu.github.io/posts/deeplearning/autoencoder.html)
 - [GAN](https://hojisu.github.io/posts/deeplearning/gan.html)
 - [VAE](https://hojisu.github.io/posts/deeplearning/vae.html)
+- [이상탐지](https://hojisu.github.io/posts/deeplearning/anomaly_detection.html)
 
