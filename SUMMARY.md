@@ -126,7 +126,7 @@
     - [AutoEncoder](posts/deeplearning/autoencoder.md)
     - [GAN](posts/deeplearning/gan.md)
     - [VAE](posts/deeplearning/vae.md)
-    - [이상탐지](posts/anomaly_detection.md)
+    - [이상탐지](posts/deeplearning/anomaly_detection.md)
 - [자연어 처리](posts/natural-language/README.md)
     - [Scikit-Learn의 텍스트 전처리](posts/natural-language/scikit-learn-text-preprocess.md)
     - [확률론적 언어 모형](posts/natural-language/probabilistic-language.md)
