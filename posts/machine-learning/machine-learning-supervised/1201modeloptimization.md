@@ -35,3 +35,6 @@ scikit-learn이 제공하는 GridSearchCV 이외의 방법으로 그리드 탐�
 ### 병렬 처리
 
 `GridSearchCV` 명령에는 `n_jobs` 라는 인수가 있다. 디폴트 값은 1인데 이 값을 증가시키면 내부적으로 멀티 프로세스를 사용하여 그리드서치를 수행한다. 만약 CPU 코어의 수가 충분하다면 `n_jobs` 를 늘릴 수록 속도가 증가한다. 
+
+Reference
+- 김도형 박사님 강의를 수강하며 데이터사이언티스트스쿨(https://datascienceschool.net/) 강의자료를 토대로 공부하며 정리한 내용임을 말씀드립니다. 
